@@ -1,9 +1,13 @@
-vim.cmd('colorscheme default_lua')
+vim.cmd('colorscheme desert')
  
 -- options
 -- vim.o.cmdheight = 0
 vim.o.number = true
 vim.o.laststatus = 1
+
+-- color overrides
+vim.api.nvim_set_hl(0, 'LineNr', {fg='#4f5258'})
+
 
 -- lsp c/cpp
 --vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
