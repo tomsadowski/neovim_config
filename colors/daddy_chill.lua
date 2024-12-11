@@ -1,4 +1,4 @@
-
+-- default colorscheme but constrained to 256 terminal colors
 -- NvimDarkGreen            #005523 
 local dark_green         = '#005f00'
 local cterm_dark_green   = 22

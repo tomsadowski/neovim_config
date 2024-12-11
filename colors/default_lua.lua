@@ -1,4 +1,4 @@
-
+-- default colorscheme translated to lua for customization
 -- NvimDarkGreen            #005523 
 local dark_green         = '#005f23'
 local cterm_dark_green   = 22

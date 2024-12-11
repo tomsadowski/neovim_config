@@ -1,9 +1,17 @@
-vim.cmd('colorscheme default_lua')
- 
--- color overrides
--- vim.api.nvim_set_hl(0, 'LineNr', {fg='#4f5258'})
+vim.cmd('colorscheme default_lua') -- same as default, but written in lua for customization
+vim.cmd('set mouse=')              -- needed to paste text from clipboard 
 
--- lsp c/cpp
+-- options
+vim.o.number = true    -- see line numbers
+vim.o.laststatus = 1   -- i forget what this does
+
+-- tab stuff
+vim.o.expandtab = true -- turn tabs into spaces
+vim.o.shiftwidth=2      
+vim.o.tabstop=2        
+ 
+-- LSP
+-- * executables for Language Servers must be on $PATH
 vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
   pattern = {'*.c', '*.C', '*.h', '*.H', '*.cpp', '*.CPP', '*.hpp', '*.HPP'}, -- file name pattern
   callback = function(args)
@@ -14,7 +22,6 @@ vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
     })
   end,
 })
-
 vim.api.nvim_create_autocmd('FileType', {
   pattern = 'rust',
   callback = function(args)
@@ -26,11 +33,3 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
--- options
--- vim.o.cmdheight = 0
-vim.o.number = true
-vim.o.laststatus = 1
-
-vim.o.expandtab = true
-vim.o.shiftwidth=2
-vim.o.tabstop=2
