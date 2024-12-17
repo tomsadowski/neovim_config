@@ -1,32 +1,32 @@
 -- default colorscheme translated to lua for customization
--- NvimDarkGreen            #005523 
-local dark_green         = '#005f23'
-local cterm_dark_green   = 22
--- NvimDarkCyan             0x00, 0x73, 0x73 
-local dark_cyan          = '#007373'
-local cterm_dark_cyan    = 30
--- NvimDarkRed              0x59, 0x00, 0x08 
-local dark_red           = '#590008'
-local cterm_dark_red     = 52
--- NvimDarkYellow           0x6b, 0x53, 0x00 
-local dark_yellow        = '#6b5300'
-local cterm_dark_yellow  = 94 
 
--- NvimLightCyan            0x8c, 0xf8, 0xf7
-local light_cyan         = '#8cf8f7' -- afd7d7, 152 
-local cterm_light_cyan   = 123 
+-- NvimLightGrey1           0xee, 0xf1, 0xf8 
+local light_grey_1       = '#eef1f8'
+local cterm_light_grey_1 = 255 
+-- NvimLightGrey2           0xe0, 0xe2, 0xea 
+local light_grey_2       = '#e0e2ea'
+local cterm_light_grey_2 = 254
+-- NvimLightGrey3           0xc4, 0xc6, 0xcd 
+local light_grey_3       = '#c4c6cd'
+local cterm_light_grey_3 = 251
+-- NvimLightGrey4           0x9b, 0x9e, 0xa4 
+local light_grey_4       = '#9b9ea4'
+local cterm_light_grey_4 = 247 
 -- NvimLightBlue            0xa6, 0xdb, 0xff
 local light_blue         = '#a6dbff'  
 local cterm_light_blue   =  153
+-- NvimLightCyan            0x8c, 0xf8, 0xf7
+local light_cyan         = '#8cf8f7' -- afd7d7, 152 
+local cterm_light_cyan   = 123 
 -- NvimLightGreen           0xb3, 0xf6, 0xc0 
 local light_green        = '#b3f6c0'
 local cterm_light_green  = 158
--- NvimLightRed             0xff, 0xc0, 0xb9 
-local light_red          = '#ffc0b9'
-local cterm_light_red    = 223 
 -- NvimLightYellow          0xfc, 0xe0, 0x94 
 local light_yellow       = '#fce094'
 local cterm_light_yellow = 228
+-- NvimLightRed             0xff, 0xc0, 0xb9 
+local light_red          = '#ffc0b9'
+local cterm_light_red    = 223 
 
 -- NvimDarkGrey1            0x07, 0x08, 0x0d 
 local dark_grey_1        = '#07080d'
@@ -40,21 +40,19 @@ local cterm_dark_grey_3  = 235
 -- NvimDarkGrey4            0x4f, 0x52, 0x58 
 local dark_grey_4        = '#4f5258'
 local cterm_dark_grey_4  = 239
-
--- NvimLightGrey4           0x9b, 0x9e, 0xa4 
-local light_grey_4       = '#9b9ea4'
-local cterm_light_grey_4 = 247 
--- NvimLightGrey3           0xc4, 0xc6, 0xcd 
-local light_grey_3       = '#c4c6cd'
-local cterm_light_grey_3 = 251
--- NvimLightGrey2           0xe0, 0xe2, 0xea 
-local light_grey_2       = '#e0e2ea'
-local cterm_light_grey_2 = 254
--- NvimLightGrey1           0xee, 0xf1, 0xf8 
-local light_grey_1       = '#eef1f8'
-local cterm_light_grey_1 = 255 
-
--- 
+-- NvimDarkGreen            #005523 
+local dark_green         = '#005f23'
+local cterm_dark_green   = 22
+-- NvimDarkCyan             0x00, 0x73, 0x73 
+local dark_cyan          = '#007373'
+local cterm_dark_cyan    = 30
+-- NvimDarkRed              0x59, 0x00, 0x08 
+local dark_red           = '#590008'
+local cterm_dark_red     = 52
+-- NvimDarkYellow           0x6b, 0x53, 0x00 
+local dark_yellow        = '#6b5300'
+local cterm_dark_yellow  = 94 
+ 
 
 local definition_maps = {
   Normal = {fg=light_grey_2, bg=dark_grey_2, ctermfg=cterm_light_grey_2light_grey_2, ctermbg=cterm_dark_grey_2_dark_grey_2}, 
