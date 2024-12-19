@@ -22,6 +22,7 @@ vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
     })
   end,
 })
+--[[
 vim.api.nvim_create_autocmd('FileType', {
   pattern = 'rust',
   callback = function(args)
@@ -32,4 +33,4 @@ vim.api.nvim_create_autocmd('FileType', {
     })
   end,
 })
-
+]]

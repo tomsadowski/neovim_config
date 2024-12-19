@@ -4,7 +4,7 @@
 local fg_edg    = '#eeeeee'
 local ct_fg_edg = 255 
 -- 02 FG: Normal
-local fg_nor    = '#cec0c0'
+local fg_nor    = '#cfc5c5'
 local ct_fg_nor = 254
 -- 03 FG: StatusLine stuff and tabline stuff
 local fg_mu1    = '#c6c6c6'
@@ -16,11 +16,14 @@ local ct_fg_mu2 = 247
 local fg_blu    = '#afd7ff'  
 local ct_fg_blu =  153
 -- 06 FG: Function, DiagnosticInfo*, Special stuff, UI stuff
-local fg_cya    = '#87ffff' 
+local fg_cya    = '#d3aadb' 
 local ct_fg_cya = 123 
 -- 07 FG: String, DiagnosticOk*, UI stuff
-local fg_grn    = '#afffd7'
+local fg_grn    = '#b2dbaa'
 local ct_fg_grn = 158
+-- 97 FG: String, DiagnosticOk*, UI stuff
+local fg_mlg    = '#d2b191'
+local ct_fg_mlg = 158
 -- 08 **: DiagnosticWarn* FG, UI stuff FG, CurSearch BG, IncSearch BG
 local fg_yel    = '#ffff87'
 local ct_fg_yel = 228
@@ -29,10 +32,10 @@ local fg_red    = '#ffd7af'
 local ct_fg_red = 223 
 
 -- 10 **: CurSearch FG, IncSearch FG, misc BG
-local bg_edg    = '#080808'
+local bg_edg    = '#000000'
 local ct_bg_edg = 232 
 -- 11 BG: Normal 
-local bg_nor    = '#282726'
+local bg_nor    = '#262524'
 local ct_bg_nor = 233
 -- 12 BG: Folded, Pmenu, StatusLineNC
 local bg_mu1    = '#262626'
@@ -79,7 +82,7 @@ local definition_maps = {
   Label          = {link='Statement'}, 
   Keyword        = {link='Statement'}, 
   Exception      = {link='Statement'}, 
-  PreProc        = {fg=fg_nor}, 
+  PreProc        = {fg=fg_mlg, ctermfg=ct_fg_mlg}, 
   Include        = {link='PreProc'}, 
   Define         = {link='PreProc'}, 
   Macro          = {link='PreProc'}, 
@@ -181,7 +184,7 @@ local definition_maps = {
   PmenuExtra                  = {link='Pmenu'}, 
   PmenuMatch                  = {link='Pmenu'}, 
   PmenuSbar                   = {link='Pmenu'}, 
-  Search                      = {fg=fg_edg, bg=bg_yel, ctermfg=ct_fg_edg, ctermbg=ct_bg_yel}, 
+  Search                      = {fg=fg_mu2, bg=bg_edg, ctermfg=ct_fg_mu2, ctermbg=ct_bg_edg}, 
   Substitute                  = {link='Search'}, 
   StatusLineNC                = {fg=fg_mu1, bg=bg_mu1, bold=true, underline=true}, 
   StatusLineTermNC            = {link='StatusLineNC'}, 
