@@ -1,32 +1,41 @@
 -- carmella will you please shutda dooooooooOOOOOOOOOOOORRRRRrrrrr
 
 -- 01 FG: Search, Error, DiffAdd, DiffChange, DiffText 
-local fg_edg    = '#eeeeee'
+local fg_edg    = '#ededed'
 local ct_fg_edg = 255 
+
 -- 02 FG: Normal
-local fg_nor    = '#cfc5c5'
+local fg_nor    = '#c5c5c5'
 local ct_fg_nor = 254
+
 -- 03 FG: StatusLine stuff and tabline stuff
-local fg_mu1    = '#c6c6c6'
+local fg_mu1    = '#b4b4b4'
 local ct_fg_mu1 = 251
+
 -- 04 FG: Comment, Folded, Winbar stuff
 local fg_mu2    = '#9e9e9e'
 local ct_fg_mu2 = 247 
+
 -- 05 FG: Identifier, DiagnosticHint*
 local fg_blu    = '#afd7ff'  
 local ct_fg_blu =  153
+
 -- 06 FG: Function, DiagnosticInfo*, Special stuff, UI stuff
 local fg_cya    = '#d3aadb' 
 local ct_fg_cya = 123 
+
 -- 07 FG: String, DiagnosticOk*, UI stuff
 local fg_grn    = '#b2dbaa'
 local ct_fg_grn = 158
+
 -- 97 FG: String, DiagnosticOk*, UI stuff
 local fg_mlg    = '#d2b191'
 local ct_fg_mlg = 158
+
 -- 08 **: DiagnosticWarn* FG, UI stuff FG, CurSearch BG, IncSearch BG
 local fg_yel    = '#ffff87'
 local ct_fg_yel = 228
+
 -- 09 FG: DiagnosticError*, UI stuff 
 local fg_red    = '#ffd7af'
 local ct_fg_red = 223 
@@ -34,24 +43,35 @@ local ct_fg_red = 223
 -- 10 **: CurSearch FG, IncSearch FG, misc BG
 local bg_edg    = '#000000'
 local ct_bg_edg = 232 
+
 -- 11 BG: Normal 
-local bg_nor    = '#262524'
+local bg_ed1    = '#111111'
+local ct_bg_ed1 = 233
+
+-- 11 BG: Normal 
+local bg_nor    = '#222222'
 local ct_bg_nor = 233
+
 -- 12 BG: Folded, Pmenu, StatusLineNC
 local bg_mu1    = '#262626'
 local ct_bg_mu1 = 235
+
 -- 13 **: UI stuff **, LineNr FG, MatchParen BG, Visual BG
 local bg_mu2    = '#4e4e4e'
 local ct_bg_mu2 = 239
+
 -- 14 BG: DiffText
 local bg_cya    = '#008787'
 local ct_bg_cya = 30
+
 -- 15 BG: DiffAdd and RedrawDebugComposed
 local bg_grn    = '#005f00'
 local ct_bg_grn = 22
+
 -- 16 BG: Search, Substitute, RedrawDebugClear
 local bg_yel    = '#875f00'
 local ct_bg_yel = 94 
+
 -- 17 BG: Error and RedrawDebugRecompose
 local bg_red    = '#5f0000'
 local ct_bg_red = 52
@@ -69,7 +89,7 @@ local definition_maps = {
   Todo           = {fg=fg_nor, bold=true}, 
   Operator       = {fg=fg_nor}, 
   Delimiter      = {fg=fg_nor}, 
-  Comment        = {fg=fg_mu2}, 
+  Comment        = {fg=fg_mu1, bg=bg_ed1}, 
   Ignore         = {link='Normal'}, 
   Constant       = {link='Normal'}, 
   Character      = {link='Constant'}, 
