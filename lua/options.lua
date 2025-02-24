@@ -9,4 +9,4 @@ vim.o.number = true    -- see line numbers
 vim.o.laststatus = 1  
 
 -- folds
-vim.o.foldmethod='syntax'
+vim.o.foldmethod = 'syntax'
