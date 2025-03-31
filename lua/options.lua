@@ -1,6 +1,6 @@
 
 -- colorscheme
-vim.cmd.colorscheme('squirrels_in_the_rain')  
+vim.cmd.colorscheme('lichen')  
 
 -- turn tabs into spaces
 vim.o.expandtab = true 
