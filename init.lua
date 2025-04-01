@@ -2,5 +2,7 @@ require("options")
 
 require("keymap")
 
-require("lsp")
+--require("lsp")
 
+-- colorscheme
+vim.cmd.colorscheme('lichen')  

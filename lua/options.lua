@@ -1,6 +1,4 @@
 
--- colorscheme
-vim.cmd.colorscheme('lichen')  
 
 -- turn tabs into spaces
 vim.o.expandtab = true 

@@ -1,4 +1,3 @@
-
 return function(spec)
     return {
         Normal         = {fg=spec.TEXT, bg=spec.CANVAS}, 
@@ -26,8 +25,9 @@ return function(spec)
         Delimiter      = {fg=spec.TEXT}, 
 
         Comment                   = {fg=spec.TEXT2}, 
-        String                    = {link='Comment'}, 
+        String                    = {fg=spec.TEXT3}, 
         Character                 = {link='String'}, 
+        PreProc                   = {fg=spec.TEXT3},
         Include                   = {link='PreProc'}, 
         Define                    = {link='PreProc'}, 
         Macro                     = {link='PreProc'}, 
@@ -45,7 +45,6 @@ return function(spec)
         ['@markup.underline']     = {link='Comment'}, 
         ['@markup.strikethrough'] = {link='Comment'}, 
 
-        PreProc                   = {fg=spec.RUST}, 
 
         Statement      = {fg=spec.DULLER}, 
         Conditional    = {link='Statement'}, 
@@ -62,7 +61,17 @@ return function(spec)
 
         rustModPath       = {fg=spec.DULL},
         rustFoldBraces    = {fg=spec.DULL},
+        rustStorage       = {link='Statement'},
+        rustSelf          = {link='Statement'},
 
+        xmlTag            = {link='Comment'},
+        xmlTagName        = {link='Comment'},
+        xmlAttrib         = {link='Comment'},
+        xmlEqual          = {link='Comment'},
+        xmlString         = {link='Comment'},
+
+        csInterpolationDelimiter = {link='String'},
+        csSpecialChar     = {link='String'},
         csXmlTag          = {link='Comment'},
         csInterpolation   = {link='String'},
         csAccessModifier  = {link='Statement'},
@@ -71,6 +80,7 @@ return function(spec)
         csModifier        = {link='Statement'},
         csStorage         = {link='Statement'},
         csGeneric         = {fg=spec.DULL},
+        csGenericBraces   = {link='Normal'},
       
         -- treesitter-highlight, treesitter-highlight-groups --
         ['@label']       = {link='Label'}, 
@@ -244,10 +254,10 @@ return function(spec)
         TabLine          = {link='StatusLineNC'}, 
         TabLineFill      = {link='TabLine'}, 
 
-        Search     = {fg=spec.DULLER, bg=spec.DULL},
+        Search     = {fg=spec.TEXT, bg=spec.DULLEST},
         Substitute = {link='Search'}, 
 
-        CurSearch = {fg=spec.DULL, bg=spec.TEXT2, }, 
+        CurSearch = {fg=spec.CANVAS, bg=spec.TEXT, }, 
         IncSearch = {link='CurSearch'}, 
 
         DiagnosticDeprecated     = {sp=spec.TEXT2, strikethrough=true}, 
@@ -257,7 +267,7 @@ return function(spec)
         DiagnosticUnderlineOk    = {sp=spec.DULLER, underline=true}, 
         DiagnosticUnderlineHint  = {sp=spec.DULLER, underline=true}, 
         DiagnosticUnnecessary    = {link='Comment'}, 
-
+        
         DiagnosticError            = {fg=spec.TEXT2, }, 
         DiagnosticFloatingError    = {link='DiagnosticError'}, 
         DiagnosticVirtualTextError = {link='DiagnosticError'}, 

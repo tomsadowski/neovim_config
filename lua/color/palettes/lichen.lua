@@ -1,9 +1,9 @@
 return {
-    PURPLE        = '#070712',
-    BRIGHT_PURPLE = '#6c6c6f',
-    PALE_PURPLE   = '#808070',
-    GREY          = '#2e2e33',
-    SAND          = '#cece97',
-    YELLOWMOSS    = '#a7a740',
-    RUST          = '#b7a740',
+    GREY = '#2e2e33',
+    DUSK = '#070712',
+    PURP = '#6c6c78',
+    PINK = '#bf9876',
+    SAND = '#cfcf96',
+    MOSS = '#95ba30',
+    RUST = '#d39933',
 }
