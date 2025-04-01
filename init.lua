@@ -5,4 +5,4 @@ require("keymap")
 --require("lsp")
 
 -- colorscheme
-vim.cmd.colorscheme('lichen')  
+vim.cmd.colorscheme('shaded_citadel')  

@@ -5,5 +5,5 @@ return {
     PINK = '#bf9876',
     SAND = '#cfcf96',
     MOSS = '#95ba30',
-    RUST = '#d39933',
+    RUST = '#d3a933',
 }
