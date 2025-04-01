@@ -2,7 +2,7 @@ require("options")
 
 require("keymap")
 
---require("lsp")
+require("lsp")
 
 -- colorscheme
-vim.cmd.colorscheme('shaded_citadel')  
+vim.cmd.colorscheme('cave')  

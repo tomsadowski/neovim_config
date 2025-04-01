@@ -1,4 +1,6 @@
-return function(spec)
+local M = {}
+
+M.chill = function(spec)
     return {
         Normal         = {fg=spec.TEXT, bg=spec.CANVAS}, 
         Type           = {link='Normal'}, 
@@ -295,3 +297,4 @@ return function(spec)
     }
 end
 
+return M
