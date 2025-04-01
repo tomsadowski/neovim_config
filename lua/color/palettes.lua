@@ -6,8 +6,8 @@ M.cave = {
     dusk = '#070707',
     purp = '#6c6c5f',
     sand = '#cccaaa',
-    scum = '#868676',
-    moon = '#a7ccc0',
+    scum = '#a0a080',
+    moon = '#a7c7c0',
     fire = '#dac767',
 }
 
