@@ -51,6 +51,7 @@ M.chill = function(spec)
 
         ['@lsp.type.typeParameter'] = {link='@type.definition'}, 
         ['@lsp.type.parameter']     = {link='@variable.parameter'}, 
+        csClassType                 = {link='Normal'},
 
         -- TEXT2
         Comment                   = {fg=spec.TEXT2}, 
