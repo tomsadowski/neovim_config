@@ -1,73 +1,138 @@
 local M = {}
+M.chill = {}
 
-M.chill = function(spec)
+function M.chill.syntax(spec)
     return {
-        Ignore            = {link='Normal'}, 
+        Normal          = {fg=spec.FG, bg=spec.BG}, 
+        Ignore          = {link='Normal'}, 
+        Function        = {link='Normal'}, 
+        Identifier      = {link='Normal'}, 
+        Delimiter       = {link='Normal'}, 
+        Operator        = {link='Normal'}, 
+        Number          = {link='Normal'}, 
+        Float           = {link='Normal'}, 
+        Constant        = {link='Normal'}, 
 
-        ['@lsp.type.modifier']  = {link='@type.qualifier'}, 
-        ['@lsp.type.namespace'] = {link='@module'}, 
+        Comment         = {fg=spec.FG1}, 
+        xmlTag          = {fg=spec.FG1, bold=true},
+        xmlAttrib       = {link='Comment'},
+        xmlTagName      = {link='Comment'},
+        xmlEqual        = {link='Comment'},
+        xmlString       = {link='Comment'},
 
-        rustFoldBraces   = {fg=spec.DULL},
-        csGeneric        = {fg=spec.DULL},
-        csGenericBraces  = {link='csGeneric'},
+        String          = {fg=spec.FG2}, 
+        Character       = {fg=spec.FG2}, 
+        Special         = {fg=spec.FG2},
+        SpecialChar     = {link='Special'}, 
+        SpecialComment  = {link='Special'}, 
+        Debug           = {link='Special'}, 
+        Tag             = {link='Special'}, 
+        PreProc         = {link='Special'},
+        Include         = {link='Special'}, 
+        Define          = {link='Special'}, 
+        Macro           = {link='Special'}, 
+        PreCondit       = {link='Special'}, 
 
-        Error                    = {fg=spec.TEXT, bg=spec.DULLEST}, 
-        Todo                     = {fg=spec.TEXT}, 
+        Keyword         = {fg=spec.BG2}, 
+        Conditional     = {link='Keyword'}, 
+        Statement       = {link='Keyword'}, 
+        Repeat          = {link='Keyword'}, 
+        Exception       = {link='Keyword'}, 
+        Structure       = {link='Keyword'}, 
+        Boolean         = {link='Keyword'}, 
+        StorageClass    = {link='Keyword'}, 
 
-        Normal                   = {fg=spec.TEXT, bg=spec.CANVAS}, 
-        ['@variable']                   = {link='Normal'}, 
-        ['@variable.builtin']           = {link='@variable'}, 
-        ['@variable.parameter.builtin'] = {link='@variable'}, 
-        ['@lsp.type.variable']          = {link='@variable'}, 
-        Function                 = {link='Normal'}, 
-        ['@function']            = {link='Function'}, 
-        ['@function.method']     = {link='@function'}, 
-        ['@function.builtin']    = {link='@function'}, 
-        ['@lsp.type.function']   = {link='@function'}, 
-        ['@lsp.type.method']     = {link='@function.method'}, 
-        ['@lsp.type.enumMember'] = {link='Normal'}, 
-        Identifier               = {link='Normal'}, 
-        ['@property']            = {link='Identifier'}, 
-        ['@lsp.type.property']   = {link='@property'}, 
-        Delimiter                = {link='Normal'}, 
-        ['@punctuation']         = {link='Delimiter'},
-        ['@punctuation.special'] = {link='@punctuation'}, 
-        Operator                 = {link='Normal'}, 
-        ['@operator']            = {link='Operator'}, 
-        ['@lsp.type.operator']   = {link='@operator'}, 
-        rustSigil                = {link='Normal'},
-        rustEnum                 = {link='Normal'},
-        ['@constructor']         = {link='Normal'}, 
-        Boolean                  = {link='Normal'}, 
-        ['@boolean']             = {link='Boolean'}, 
-        Number                   = {link='Normal'}, 
-        ['@number']              = {link='Number'}, 
-        ['@lsp.type.number']     = {link='@number'}, 
-        Float                    = {link='Number'}, 
-        ['@number.float']        = {link='Float'}, 
-        Constant                 = {link='Normal'}, 
-        ['@constant']            = {link='Constant'}, 
-        ['@constant.builtin']    = {link='@constant'}, 
+        Label           = {fg=spec.BG2},
+        
+        Type            = {fg=spec.BG2}, 
+        Typedef         = {link='Type'}, 
 
-        ['@lsp.type.typeParameter'] = {link='@type.definition'}, 
-        ['@lsp.type.parameter']     = {link='@variable.parameter'}, 
-        csClassType                 = {link='Normal'},
+        Error           = {fg=spec.FG, bg=spec.BG3}, 
+        Todo            = {fg=spec.FG}, 
+    }
+end
 
-        -- TEXT2
-        Comment                   = {fg=spec.TEXT2}, 
-        xmlTag                    = {link='Comment'},
-        xmlTagName                = {link='Comment'},
-        xmlAttrib                 = {link='Comment'},
-        xmlEqual                  = {link='Comment'},
-        xmlString                 = {link='Comment'},
-        csXmlTag                  = {link='Comment'},
-        ['@comment']              = {link='Comment'}, 
-        ['@comment.warning']      = {link='@comment'}, 
-        ['@comment.error']        = {link='@comment'}, 
-        ['@comment.note']         = {link='@comment'}, 
-        ['@comment.todo']         = {link='@comment'}, 
-        ['@lsp.type.comment']     = {link='@comment'}, 
-        ['@markup']               = {link='@comment'}, 
+function M.chill.rust(spec)
+    return {
+        rustEnum       = {fg=spec.FG},
+        rustSigil      = {fg=spec.FG},
+
+        rustFoldBraces = {fg=spec.BG1},
+        rustModPath    = {fg=spec.BG1},
+
+        rustSelf       = {link='Keyword'},
+
+        rustStorage    = {link='StorageClass'},
+    }
+end
+
+function M.chill.c(spec)
+    return {
+        cType         = {link='Type'},
+        cTypeDef      = {link='Type'},
+
+        cFormat       = {link='Special'},
+        cStorageClass = {link='StorageClass'},
+    }
+end
+
+function M.chill.csharp(spec)
+    return {
+        csClassType              = {fg=spec.FG},
+
+        csGeneric                = {fg=spec.BG1},
+        csGenericBraces          = {link='csGeneric'},
+
+        csXmlTag                 = {link='xmlTag'},
+
+        csSpecialChar            = {link='Special'},
+        csInterpolation          = {link='Special'},
+        csInterpolationDelimiter = {link='Special'},
+
+        csType                   = {link='Type'},
+
+        csModifier               = {link='Keyword'},
+        csAccessModifier         = {link='Keyword'},
+        csClass                  = {link='Keyword'},
+
+        csStorage                = {link='StorageClass'},
+    }
+end
+
+function M.chill.treesitter(spec)
+    return {
+        ['@diff.plus']            = {link='Added'}, 
+        ['@diff.minus']           = {link='Removed'}, 
+        ['@diff.delta']           = {link='Changed'}, 
+
+        ['@module']               = {fg=spec.BG1}, 
+        ['@module.builtin']       = {link='Special'}, 
+
+        ['@keyword']              = {link='Keyword'}, 
+        ['@label']                = {link='Label'}, 
+
+        ['@type']                 = {link='Type'}, 
+        ['@type.builtin']         = {link='@type'}, 
+
+        ['@boolean']              = {link='Boolean'}, 
+        ['@number']               = {link='Number'}, 
+        ['@number.float']         = {link='Float'}, 
+        ['@constant']             = {link='Constant'}, 
+        ['@constant.builtin']     = {link='@constant'}, 
+
+        ['@string']               = {link='String'}, 
+        ['@string.regexp']        = {link='@string'}, 
+        ['@string.escape']        = {link='@string'}, 
+        ['@string.special']       = {link='@string'}, 
+        ['@string.special.url']   = {link='@string'}, 
+        ['@character']            = {link='Character'}, 
+        ['@character.special']    = {link='Character'}, 
+
+        ['@function']             = {link='Function'}, 
+        ['@function.method']      = {link='@function'}, 
+        ['@function.builtin']     = {link='@function'}, 
+
+        ['@markup']               = {fg=spec.FG1}, 
         ['@markup.link']          = {link='@markup'}, 
         ['@markup.strong']        = {link='@markup'}, 
         ['@markup.italic']        = {link='@markup'}, 
@@ -75,153 +140,152 @@ M.chill = function(spec)
         ['@markup.underline']     = {link='@markup'}, 
         ['@markup.strikethrough'] = {link='@markup'}, 
 
-        -- TEXT3
-        String                   = {fg=spec.TEXT3}, 
-        ['@string']              = {link='String'}, 
-        ['@string.regexp']       = {link='@string'}, 
-        ['@string.escape']       = {link='@string'}, 
-        ['@string.special']      = {link='@string'}, 
-        ['@string.special.url']  = {link='@string'}, 
-        ['@lsp.type.string']     = {link='@string'}, 
-        ['@lsp.type.regexp']     = {link='@string.regexp'}, 
-        Character                = {link='String'}, 
-        ['@character']           = {link='Character'}, 
-        ['@character.special']   = {link='Character'}, 
-        Special                  = {link='String'},
-        SpecialChar              = {link='Special'}, 
-        csSpecialChar            = {link='Special'},
-        SpecialComment           = {link='Special'}, 
-        Debug                    = {link='Special'}, 
-        cFormat                  = {link='Special'},
-        csInterpolation          = {link='Special'},
-        csInterpolationDelimiter = {link='Special'},
-        Tag                      = {link='Special'}, 
-        ['@tag']                 = {link='Tag'}, 
-        ['@tag.builtin']         = {link='Tag'}, 
-        PreProc                  = {link='Special'},
-        Include                  = {link='PreProc'}, 
-        Define                   = {link='PreProc'}, 
-        Macro                    = {link='PreProc'}, 
-        ['@lsp.type.macro']      = {link='Macro'}, 
-        PreCondit                = {link='PreProc'}, 
-        ['@attribute']           = {link='PreProc'}, 
-        ['@attribute.builtin']   = {link='@attribute'}, 
-        ['@lsp.type.decorator']  = {link='@attribute'}, 
+        ['@punctuation']          = {link='Delimiter'},
+        ['@punctuation.special']  = {link='@punctuation'}, 
 
-        -- DULLER
-        Keyword                 = {fg=spec.DULLER}, 
-        ['@keyword']            = {link='Keyword'}, 
-        ['@lsp.type.keyword']   = {link='@keyword'}, 
-        Conditional             = {link='Keyword'}, 
-        Statement               = {link='Keyword'}, 
-        Repeat                  = {link='Keyword'}, 
-        Exception               = {link='Keyword'}, 
-        csClass                 = {link='Keyword'},
-        csModifier              = {link='Keyword'},
-        csAccessModifier        = {link='Keyword'},
-        Structure               = {link='Keyword'}, 
-        rustSelf                = {link='Keyword'},
-        Label                   = {link='Keyword'}, 
-        ['@label']              = {link='Label'}, 
-        Type                    = {link='Keyword'}, 
-        cType                   = {link='Type'},
-        csType                  = {link='Type'},
-        ['@type']               = {link='Type'}, 
-        ['@type.builtin']       = {link='@type'}, 
-        ['@lsp.type.class']     = {link='@type'}, 
-        ['@lsp.type.struct']    = {link='@type'}, 
-        ['@lsp.type.type']      = {link='@type'}, 
-        ['@lsp.type.enum']      = {link='@type'}, 
-        ['@lsp.type.event']     = {link='@type'}, 
-        ['@lsp.type.interface'] = {link='@type'}, 
-        Typedef                 = {link='Type'}, 
-        cTypeDef                = {link='TypeDef'},
-        StorageClass            = {link='Keyword'}, 
-        cStorageClass           = {link='StorageClass'},
-        rustStorage             = {link='StorageClass'},
-        csStorage               = {link='StorageClass'},
+        ['@operator']             = {link='Operator'}, 
+        ['@property']             = {link='Identifier'}, 
+        ['@constructor']          = {link='Normal'}, 
+
+        ['@comment']              = {link='Comment'}, 
+        ['@comment.warning']      = {link='@comment'}, 
+        ['@comment.error']        = {link='@comment'}, 
+        ['@comment.note']         = {link='@comment'}, 
+        ['@comment.todo']         = {link='@comment'}, 
+
+        ['@tag']                  = {link='Tag'}, 
+        ['@tag.builtin']          = {link='Tag'}, 
+
+        ['@attribute']            = {link='PreProc'}, 
+        ['@attribute.builtin']    = {link='@attribute'}, 
+
+        ['@variable']                   = {link='Normal'}, 
+        ['@variable.builtin']           = {link='@variable'}, 
+        ['@variable.parameter']         = {link='@variable'}, 
+        ['@variable.parameter.builtin'] = {link='@parameter'}, 
+    }
+end
+
+function M.chill.lsp(spec)
+    return {
+        ['@lsp.type.property']      = {link='@property'}, 
+        ['@lsp.type.operator']      = {link='@operator'}, 
+        ['@lsp.type.comment']       = {link='@comment'}, 
+        ['@lsp.type.typeParameter'] = {link='@type.definition'}, 
+        ['@lsp.type.modifier']      = {link='@type.qualifier'}, 
+        ['@lsp.type.namespace']     = {link='@module'}, 
+        ['@lsp.type.enumMember']    = {fg=spec.FG}, 
+
+        ['@lsp.type.variable']      = {link='@variable'}, 
+        ['@lsp.type.parameter']     = {link='@variable.parameter'}, 
+
+        ['@lsp.type.function']      = {link='@function'}, 
+        ['@lsp.type.method']        = {link='@function.method'}, 
+
+        ['@lsp.type.number']        = {link='@number'}, 
+
+        ['@lsp.type.string']        = {link='@string'}, 
+        ['@lsp.type.regexp']        = {link='@string'}, 
+
+        ['@lsp.type.macro']         = {link='Macro'}, 
+        ['@lsp.type.decorator']     = {link='@attribute'}, 
+        ['@lsp.type.keyword']       = {link='@keyword'}, 
+
+        ['@lsp.type.class']         = {link='@type'}, 
+        ['@lsp.type.struct']        = {link='@type'}, 
+        ['@lsp.type.type']          = {link='@type'}, 
+        ['@lsp.type.enum']          = {link='@type'}, 
+        ['@lsp.type.event']         = {link='@type'}, 
+        ['@lsp.type.interface']     = {link='@type'}, 
+
+        ['@lsp.mod.deprecated']     = {link='DiagnosticDeprecated'}, 
+    }
+end
 
 
-        -- treesitter-highlight, treesitter-highlight-groups --
-
-        ['@module']            = {fg=spec.DULL}, 
-        ['@module.builtin']    = {link='Special'}, 
-        rustModPath            = {link='@module'},
-
-        ['@diff.plus']  = {link='Added'}, 
-        ['@diff.minus'] = {link='Removed'}, 
-        ['@diff.delta'] = {link='Changed'}, 
-
-        -- UI
-        LineNr               = {fg=spec.DULLEST}, 
+function M.chill.ui(spec)
+    return {
+        LineNr               = {fg=spec.BG3}, 
         LineNrAbove          = {link='LineNr'}, 
         LineNrBelow          = {link='LineNr'}, 
-        Cursor               = {fg=CANVAS, bg=TEXT}, 
-        CursorIM             = {link='Cursor'}, 
-        CursorColumn         = {bg=spec.CANVAS}, 
-        TermCursor           = {reverse=true}, 
+
+        Cursor               = {fg=BG, bg=FG}, 
+        CursorLine           = {bg=spec.BG, underline=true}, 
+        CursorLineNr         = {bold=true}, 
         CursorLineSign       = {link='SignColumn'}, 
         CursorLineFold       = {link='FoldColumn'}, 
-        lCursor              = {fg='bg', bg='fg'}, 
-        CursorLine           = {bg=spec.CANVAS, underline=true}, 
-        CursorLineNr         = {bold=true}, 
 
-        Visual               = {bg=spec.DULLEST}, 
+        CursorIM             = {link='Cursor'}, 
+
+        lCursor              = {fg='bg', bg='fg'}, 
+        TermCursor           = {reverse=true}, 
+
+        Visual               = {bg=spec.BG3}, 
         VisualNOS            = {link='Visual'}, 
-        Search               = {fg=spec.TEXT, bg=spec.DULLEST},
-        Substitute           = {link='Search'}, 
-        CurSearch            = {fg=spec.CANVAS, bg=spec.TEXT, }, 
+
+
+        Search               = {fg=spec.FG, bg=spec.BG3},
+        CurSearch            = {fg=spec.BG, bg=spec.FG}, 
         IncSearch            = {link='CurSearch'}, 
+
+        Substitute           = {link='Search'}, 
 
         StatusLine           = {link='Normal'},
         StatusLineTerm       = {link='StatusLine'}, 
-        StatusLineNC = {fg=spec.DULLER, bg=spec.CANVAS, bold=true, underline=true}, 
+        StatusLineNC         = {
+            fg=spec.BG2, 
+            bg=spec.BG, 
+            bold=true, 
+            underline=true
+        }, 
         StatusLineTermNC     = {link='StatusLineNC'}, 
+
         TabLine              = {link='StatusLineNC'}, 
         TabLineFill          = {link='TabLine'}, 
         TabLineSel           = {bold=true}, 
 
-        ColorColumn          = {bg=spec.DULLEST, reverse=true}, 
-        SignColumn           = {fg=spec.DULLEST}, 
+        CursorColumn         = {bg=spec.BG}, 
+        ColorColumn          = {bg=spec.BG3, reverse=true}, 
+        SignColumn           = {fg=spec.BG3}, 
         FoldColumn           = {link='SignColumn'}, 
 
         WinSeparator         = {link='Normal'}, 
         VertSplit            = {link='WinSeparator'}, 
-        WinBar               = {fg=spec.DULLER, bg=spec.DULL, bold=true}, 
-        WinBarNC             = {fg=spec.DULLER, bg=spec.DULL, bold=true}, 
+        WinBar               = {fg=spec.BG2, bg=spec.BG1, bold=true}, 
+        WinBarNC             = {fg=spec.BG2, bg=spec.BG1, bold=true}, 
 
-        Added                = {fg=spec.DULLER}, 
-        Changed              = {fg=spec.DULLER}, 
-        Conceal              = {fg=spec.DULLEST}, 
-        DiffAdd              = {fg=spec.TEXT, bg=spec.DULLEST}, 
-        DiffChange           = {fg=spec.TEXT, bg=spec.DULLEST}, 
-        DiffDelete           = {fg=spec.TEXT2, bold=true}, 
-        DiffText             = {fg=spec.TEXT, bg=spec.DULLEST}, 
-        Directory            = {fg=spec.DULLER}, 
-        ErrorMsg             = {fg=spec.TEXT2}, 
-        FloatShadow          = {bg=spec.DULLEST, blend=80}, 
-        FloatShadowThrough   = {bg=spec.DULLEST, blend=100}, 
-        Folded               = {fg=spec.DULLER, bg=spec.CANVAS}, 
-        MatchParen           = {bg=spec.DULLEST, bold=true, underline=true}, 
-        ModeMsg              = {fg=spec.DULLER}, 
-        MoreMsg              = {fg=spec.DULLER}, 
-        PmenuThumb           = {bg=spec.DULLEST}, 
-        Question             = {fg=spec.DULLER}, 
-        QuickFixLine         = {fg=spec.DULLER}, 
-        RedrawDebugClear     = {bg=spec.DULLEST}, 
-        RedrawDebugComposed  = {bg=spec.DULLEST}, 
-        RedrawDebugRecompose = {bg=spec.DULLEST}, 
-        Removed              = {fg=spec.TEXT2}, 
-        SpecialKey           = {fg=spec.DULLEST}, 
-        SpellBad             = {sp=spec.TEXT2, undercurl=true}, 
-        SpellCap             = {sp=spec.TEXT2, undercurl=true}, 
-        SpellLocal           = {sp=spec.DULLER, undercurl=true}, 
-        SpellRare            = {sp=spec.DULLER, undercurl=true}, 
-        WarningMsg           = {fg=spec.TEXT2}, 
+        Added                = {fg=spec.BG2}, 
+        DiffAdd              = {fg=spec.FG, bg=spec.BG3}, 
+        Changed              = {fg=spec.BG2}, 
+        DiffChange           = {fg=spec.FG, bg=spec.BG3}, 
+        DiffDelete           = {fg=spec.FG1, bold=true}, 
+        DiffText             = {fg=spec.FG, bg=spec.BG3}, 
+        Directory            = {fg=spec.BG2}, 
+        Conceal              = {fg=spec.BG3}, 
+        ErrorMsg             = {fg=spec.FG1}, 
+        FloatShadow          = {bg=spec.BG3, blend=80}, 
+        FloatShadowThrough   = {bg=spec.BG3, blend=100}, 
+        Folded               = {fg=spec.BG2, bg=spec.BG}, 
+        MatchParen           = {bg=spec.BG3, bold=true, underline=true}, 
+        ModeMsg              = {fg=spec.BG2}, 
+        MoreMsg              = {fg=spec.BG2}, 
+        PmenuThumb           = {bg=spec.BG3}, 
+        Question             = {fg=spec.BG2}, 
+        QuickFixLine         = {fg=spec.BG2}, 
+        RedrawDebugClear     = {bg=spec.BG3}, 
+        RedrawDebugComposed  = {bg=spec.BG3}, 
+        RedrawDebugRecompose = {bg=spec.BG3}, 
+        Removed              = {fg=spec.FG1}, 
+        SpecialKey           = {fg=spec.BG3}, 
+        SpellBad             = {sp=spec.FG1, undercurl=true}, 
+        SpellCap             = {sp=spec.FG1, undercurl=true}, 
+        SpellLocal           = {sp=spec.BG2, undercurl=true}, 
+        SpellRare            = {sp=spec.BG2, undercurl=true}, 
+        WarningMsg           = {fg=spec.FG1}, 
         RedrawDebugNormal    = {reverse=true}, 
         Underlined           = {underline=true}, 
 
-        NonText              = {fg=spec.DULLEST}, 
+        NonText              = {fg=spec.BG3}, 
         EndOfBuffer          = {link='NonText'}, 
         Whitespace           = {link='NonText'}, 
         LspInlayHint         = {link='NonText'}, 
@@ -231,68 +295,76 @@ M.chill = function(spec)
         LspReferenceText     = {link='Visual'}, 
         LspReferenceRead     = {link='LspReferenceText'}, 
         LspReferenceWrite    = {link='LspReferenceText'}, 
-        LspSignatureActiveParameter = {link='Visual'}, 
+        LspSignatureActiveParameter 
+            = {link='Visual'}, 
 
         LspCodeLensSeparator = {link='LspCodeLens'}, 
 
-        NormalFloat   = {bg=spec.DULL}, 
+        NormalFloat   = {bg=spec.BG1}, 
         FloatBorder   = {link='NormalFloat'}, 
 
-        Title         = {fg=spec.TEXT, bold=true}, 
+        Title         = {fg=spec.FG, bold=true}, 
         FloatTitle    = {link='Title'}, 
         FloatFooter   = {link='FloatTitle'}, 
 
-        MsgSeparator  = {fg=spec.CANVAS, bg=spec.TEXT}, 
+        MsgSeparator  = {fg=spec.BG, bg=spec.FG}, 
         MsgArea       = {link='NONE'}, 
         NormalNC      = {link='NONE'}, 
         TermCursorNC  = {link='NONE'}, 
 
-        Pmenu         = {bg=spec.CANVAS, reverse=true}, 
+        Pmenu         = {
+            bg=spec.BG, 
+            reverse=true
+        }, 
+
         PmenuKind     = {link='Pmenu'}, 
         PmenuExtra    = {link='Pmenu'}, 
         PmenuMatch    = {link='Pmenu'}, 
         PmenuSbar     = {link='Pmenu'}, 
 
-        PmenuSel      = {reverse=true, underline=true, blend=0}, 
+        PmenuSel      = {
+            reverse=true, 
+            underline=true, 
+            blend=0
+        }, 
+
         PmenuExtraSel = {link='PmenuSel'}, 
         PmenuKindSel  = {link='PmenuSel'}, 
         PmenuMatchSel = {link='PmenuSel'}, 
         WildMenu      = {link='PmenuSel'}, 
 
-        DiagnosticDeprecated     = {sp=spec.TEXT2, strikethrough=true}, 
-        ['@lsp.mod.deprecated']  = {link='DiagnosticDeprecated'}, 
-        DiagnosticUnderlineError = {sp=spec.TEXT2, underline=true}, 
-        DiagnosticUnderlineWarn  = {sp=spec.TEXT2, underline=true}, 
-        DiagnosticUnderlineInfo  = {sp=spec.DULLER, underline=true}, 
-        DiagnosticUnderlineOk    = {sp=spec.DULLER, underline=true}, 
-        DiagnosticUnderlineHint  = {sp=spec.DULLER, underline=true}, 
-        DiagnosticUnnecessary    = {link='Comment'}, 
+        DiagnosticDeprecated       = {sp=spec.FG1, strikethrough=true}, 
+        DiagnosticUnderlineError   = {sp=spec.FG1, underline=true}, 
+        DiagnosticUnderlineWarn    = {sp=spec.FG1, underline=true}, 
+        DiagnosticUnderlineInfo    = {sp=spec.BG2, underline=true}, 
+        DiagnosticUnderlineOk      = {sp=spec.BG2, underline=true}, 
+        DiagnosticUnderlineHint    = {sp=spec.BG2, underline=true}, 
+        DiagnosticUnnecessary      = {link='Comment'}, 
         
-        DiagnosticError            = {fg=spec.TEXT2}, 
+        DiagnosticError            = {fg=spec.FG1}, 
         DiagnosticFloatingError    = {link='DiagnosticError'}, 
         DiagnosticVirtualTextError = {link='DiagnosticError'}, 
         DiagnosticSignError        = {link='DiagnosticError'}, 
 
-        DiagnosticWarn            = {fg=spec.TEXT2}, 
-        DiagnosticFloatingWarn    = {link='DiagnosticWarn'}, 
-        DiagnosticVirtualTextWarn = {link='DiagnosticWarn'}, 
-        DiagnosticSignWarn        = {link='DiagnosticWarn'}, 
+        DiagnosticWarn             = {fg=spec.FG1}, 
+        DiagnosticFloatingWarn     = {link='DiagnosticWarn'}, 
+        DiagnosticVirtualTextWarn  = {link='DiagnosticWarn'}, 
+        DiagnosticSignWarn         = {link='DiagnosticWarn'}, 
 
-        DiagnosticInfo            = {fg=spec.DULLER}, 
-        DiagnosticFloatingInfo    = {link='DiagnosticInfo'}, 
-        DiagnosticVirtualTextInfo = {link='DiagnosticInfo'}, 
-        DiagnosticSignInfo        = {link='DiagnosticInfo'}, 
+        DiagnosticInfo             = {fg=spec.BG2}, 
+        DiagnosticFloatingInfo     = {link='DiagnosticInfo'}, 
+        DiagnosticVirtualTextInfo  = {link='DiagnosticInfo'}, 
+        DiagnosticSignInfo         = {link='DiagnosticInfo'}, 
 
-        DiagnosticHint            = {fg=spec.DULLER}, 
-        DiagnosticFloatingHint    = {link='DiagnosticHint'}, 
-        DiagnosticVirtualTextHint = {link='DiagnosticHint'}, 
-        DiagnosticSignHint        = {link='DiagnosticHint'}, 
+        DiagnosticHint             = {fg=spec.BG2}, 
+        DiagnosticFloatingHint     = {link='DiagnosticHint'}, 
+        DiagnosticVirtualTextHint  = {link='DiagnosticHint'}, 
+        DiagnosticSignHint         = {link='DiagnosticHint'}, 
 
-        DiagnosticOk              = {fg=spec.DULLER}, 
-        DiagnosticFloatingOk      = {link='DiagnosticOk'}, 
-        DiagnosticVirtualTextOk   = {link='DiagnosticOk'}, 
-        DiagnosticSignOk          = {link='DiagnosticOk'}, 
+        DiagnosticOk               = {fg=spec.BG2}, 
+        DiagnosticFloatingOk       = {link='DiagnosticOk'}, 
+        DiagnosticVirtualTextOk    = {link='DiagnosticOk'}, 
+        DiagnosticSignOk           = {link='DiagnosticOk'}, 
     }
 end
-
 return M
