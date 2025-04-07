@@ -2,7 +2,9 @@ require("options")
 
 require("keymap")
 
-require("lsp")
+--require("lsp")
 
-require("color/cave")
+require("color/ship")
+--require("color/cave")
+--require("color/weed")
 

@@ -1,111 +1,61 @@
 local M = {}
 M.chill = {}
 
-function M.chill.syntax(spec)
+function M.chill.syntax(_palette)
     return {
-        Normal          = {fg=spec.FG, bg=spec.BG}, 
-        Ignore          = {link='Normal'}, 
-        Function        = {link='Normal'}, 
-        Identifier      = {link='Normal'}, 
-        Delimiter       = {link='Normal'}, 
-        Operator        = {link='Normal'}, 
-        Number          = {link='Normal'}, 
-        Float           = {link='Normal'}, 
-        Constant        = {link='Normal'}, 
+        Normal         = {fg=_palette.MAIN1, bg=_palette.CANV1}, 
+        Ignore         = {link='Normal'}, 
+        Function       = {link='Normal'}, 
+        Identifier     = {link='Normal'}, 
+        Delimiter      = {link='Normal'}, 
+        Operator       = {link='Normal'}, 
+        Number         = {link='Normal'}, 
+        Float          = {link='Normal'}, 
+        Constant       = {link='Normal'}, 
 
-        Comment         = {fg=spec.FG1}, 
-        xmlTag          = {fg=spec.FG1, bold=true},
-        xmlAttrib       = {link='Comment'},
-        xmlTagName      = {link='Comment'},
-        xmlEqual        = {link='Comment'},
-        xmlString       = {link='Comment'},
+        Comment        = {fg=_palette.ALT11}, 
+        xmlTag         = {fg=_palette.ALT11},
+        xmlAttrib      = {link='Comment'},
+        xmlTagName     = {link='Comment'},
+        xmlEqual       = {link='Comment'},
+        xmlString      = {link='Comment'},
 
-        String          = {fg=spec.FG2}, 
-        Character       = {fg=spec.FG2}, 
-        Special         = {fg=spec.FG2},
-        SpecialChar     = {link='Special'}, 
-        SpecialComment  = {link='Special'}, 
-        Debug           = {link='Special'}, 
-        Tag             = {link='Special'}, 
-        PreProc         = {link='Special'},
-        Include         = {link='Special'}, 
-        Define          = {link='Special'}, 
-        Macro           = {link='Special'}, 
-        PreCondit       = {link='Special'}, 
+        String         = {fg=_palette.ALT13}, 
+        Character      = {fg=_palette.ALT13}, 
+        Special        = {fg=_palette.ALT13},
+        SpecialChar    = {link='Special'}, 
+        SpecialComment = {link='Special'}, 
+        Debug          = {link='Special'}, 
+        Tag            = {link='Special'}, 
+        PreProc        = {link='Special'},
+        Include        = {link='Special'}, 
+        Define         = {link='Special'}, 
+        Macro          = {link='Special'}, 
+        PreCondit      = {link='Special'}, 
 
-        Keyword         = {fg=spec.BG2}, 
-        Conditional     = {link='Keyword'}, 
-        Statement       = {link='Keyword'}, 
-        Repeat          = {link='Keyword'}, 
-        Exception       = {link='Keyword'}, 
-        Structure       = {link='Keyword'}, 
-        Boolean         = {link='Keyword'}, 
-        StorageClass    = {link='Keyword'}, 
+        Keyword        = {fg=_palette.MAIN3}, 
+        Conditional    = {link='Keyword'}, 
+        Statement      = {link='Keyword'}, 
+        Repeat         = {link='Keyword'}, 
+        Exception      = {link='Keyword'}, 
+        Structure      = {link='Keyword'}, 
+        Boolean        = {link='Keyword'}, 
+        StorageClass   = {link='Keyword'}, 
 
-        Label           = {fg=spec.BG2},
+        Label          = {fg=_palette.MAIN3},
         
-        Type            = {fg=spec.BG2}, 
-        Typedef         = {link='Type'}, 
+        Type           = {fg=_palette.MAIN3}, 
+        Typedef        = {link='Type'}, 
 
-        Error           = {fg=spec.FG, bg=spec.BG3}, 
-        Todo            = {fg=spec.FG}, 
-    }
-end
+        Error          = {fg=_palette.MAIN1, bg=_palette.CANV2}, 
+        Todo           = {fg=_palette.MAIN1}, 
 
-function M.chill.rust(spec)
-    return {
-        rustEnum       = {fg=spec.FG},
-        rustSigil      = {fg=spec.FG},
-
-        rustFoldBraces = {fg=spec.BG1},
-        rustModPath    = {fg=spec.BG1},
-
-        rustSelf       = {link='Keyword'},
-
-        rustStorage    = {link='StorageClass'},
-    }
-end
-
-function M.chill.c(spec)
-    return {
-        cType         = {link='Type'},
-        cTypeDef      = {link='Type'},
-
-        cFormat       = {link='Special'},
-        cStorageClass = {link='StorageClass'},
-    }
-end
-
-function M.chill.csharp(spec)
-    return {
-        csClassType              = {fg=spec.FG},
-
-        csGeneric                = {fg=spec.BG1},
-        csGenericBraces          = {link='csGeneric'},
-
-        csXmlTag                 = {link='xmlTag'},
-
-        csSpecialChar            = {link='Special'},
-        csInterpolation          = {link='Special'},
-        csInterpolationDelimiter = {link='Special'},
-
-        csType                   = {link='Type'},
-
-        csModifier               = {link='Keyword'},
-        csAccessModifier         = {link='Keyword'},
-        csClass                  = {link='Keyword'},
-
-        csStorage                = {link='StorageClass'},
-    }
-end
-
-function M.chill.treesitter(spec)
-    return {
+        -- treesitter
         ['@diff.plus']            = {link='Added'}, 
         ['@diff.minus']           = {link='Removed'}, 
         ['@diff.delta']           = {link='Changed'}, 
 
-        ['@module']               = {fg=spec.BG1}, 
+        ['@module']               = {fg=_palette.MAIN2}, 
         ['@module.builtin']       = {link='Special'}, 
 
         ['@keyword']              = {link='Keyword'}, 
@@ -132,7 +82,7 @@ function M.chill.treesitter(spec)
         ['@function.method']      = {link='@function'}, 
         ['@function.builtin']     = {link='@function'}, 
 
-        ['@markup']               = {fg=spec.FG1}, 
+        ['@markup']               = {fg=_palette.ALT11}, 
         ['@markup.link']          = {link='@markup'}, 
         ['@markup.strong']        = {link='@markup'}, 
         ['@markup.italic']        = {link='@markup'}, 
@@ -159,22 +109,18 @@ function M.chill.treesitter(spec)
         ['@attribute']            = {link='PreProc'}, 
         ['@attribute.builtin']    = {link='@attribute'}, 
 
-        ['@variable']                   = {link='Normal'}, 
-        ['@variable.builtin']           = {link='@variable'}, 
-        ['@variable.parameter']         = {link='@variable'}, 
+        ['@variable']             = {link='Normal'}, 
+        ['@variable.builtin']     = {link='@variable'}, 
+        ['@variable.parameter']   = {link='@variable'}, 
         ['@variable.parameter.builtin'] = {link='@parameter'}, 
-    }
-end
 
-function M.chill.lsp(spec)
-    return {
+        -- lsp
         ['@lsp.type.property']      = {link='@property'}, 
         ['@lsp.type.operator']      = {link='@operator'}, 
         ['@lsp.type.comment']       = {link='@comment'}, 
         ['@lsp.type.typeParameter'] = {link='@type.definition'}, 
         ['@lsp.type.modifier']      = {link='@type.qualifier'}, 
         ['@lsp.type.namespace']     = {link='@module'}, 
-        ['@lsp.type.enumMember']    = {fg=spec.FG}, 
 
         ['@lsp.type.variable']      = {link='@variable'}, 
         ['@lsp.type.parameter']     = {link='@variable.parameter'}, 
@@ -194,23 +140,72 @@ function M.chill.lsp(spec)
         ['@lsp.type.class']         = {link='@type'}, 
         ['@lsp.type.struct']        = {link='@type'}, 
         ['@lsp.type.type']          = {link='@type'}, 
-        ['@lsp.type.enum']          = {link='@type'}, 
         ['@lsp.type.event']         = {link='@type'}, 
         ['@lsp.type.interface']     = {link='@type'}, 
+
+        ['@lsp.type.enumMember']    = {fg=_palette.MAIN1}, 
+        ['@lsp.type.enum']          = {fg=_palette.MAIN1}, 
 
         ['@lsp.mod.deprecated']     = {link='DiagnosticDeprecated'}, 
     }
 end
 
-
-function M.chill.ui(spec)
+function M.chill.rust(_palette)
     return {
-        LineNr               = {fg=spec.BG3}, 
+        rustEnum       = {fg=_palette.MAIN1},
+        rustSigil      = {fg=_palette.MAIN1},
+
+        rustFoldBraces = {fg=_palette.MAIN2},
+        rustModPath    = {fg=_palette.MAIN2},
+
+        rustSelf       = {link='Keyword'},
+
+        rustStorage    = {link='StorageClass'},
+        ['@lsp.type.enum.rust'] = {fg=_palette.MAIN2},
+    }
+end
+
+function M.chill.c(_palette)
+    return {
+        cType         = {link='Type'},
+        cTypeDef      = {link='Type'},
+
+        cFormat       = {link='Special'},
+        cStorageClass = {link='StorageClass'},
+    }
+end
+
+function M.chill.csharp(_palette)
+    return {
+        csClassType              = {fg=_palette.MAIN1},
+
+        csGeneric                = {fg=_palette.MAIN2},
+        csGenericBraces          = {link='csGeneric'},
+
+        csXmlTag                 = {fg=_palette.ALT12},
+
+        csSpecialChar            = {fg=_palette.ALT12},
+        csInterpolation          = {link='Special'},
+        csInterpolationDelimiter = {link='Special'},
+
+        csType                   = {link='Type'},
+
+        csModifier               = {link='Keyword'},
+        csAccessModifier         = {link='Keyword'},
+        csClass                  = {link='Keyword'},
+
+        csStorage                = {link='StorageClass'},
+    }
+end
+
+function M.chill.ui(_palette)
+    return {
+        LineNr               = {fg=_palette.CANV2}, 
         LineNrAbove          = {link='LineNr'}, 
         LineNrBelow          = {link='LineNr'}, 
 
         Cursor               = {fg=BG, bg=FG}, 
-        CursorLine           = {bg=spec.BG, underline=true}, 
+        CursorLine           = {underline=true}, 
         CursorLineNr         = {bold=true}, 
         CursorLineSign       = {link='SignColumn'}, 
         CursorLineFold       = {link='FoldColumn'}, 
@@ -220,12 +215,12 @@ function M.chill.ui(spec)
         lCursor              = {fg='bg', bg='fg'}, 
         TermCursor           = {reverse=true}, 
 
-        Visual               = {bg=spec.BG3}, 
+        Visual               = {bg=_palette.CANV2}, 
         VisualNOS            = {link='Visual'}, 
 
 
-        Search               = {fg=spec.FG, bg=spec.BG3},
-        CurSearch            = {fg=spec.BG, bg=spec.FG}, 
+        Search               = {fg=_palette.MAIN1, bg=_palette.CANV2},
+        CurSearch            = {fg=_palette.CANV1, bg=_palette.MAIN1}, 
         IncSearch            = {link='CurSearch'}, 
 
         Substitute           = {link='Search'}, 
@@ -233,8 +228,8 @@ function M.chill.ui(spec)
         StatusLine           = {link='Normal'},
         StatusLineTerm       = {link='StatusLine'}, 
         StatusLineNC         = {
-            fg=spec.BG2, 
-            bg=spec.BG, 
+            fg=_palette.MAIN3, 
+            bg=_palette.CANV1, 
             bold=true, 
             underline=true
         }, 
@@ -244,48 +239,48 @@ function M.chill.ui(spec)
         TabLineFill          = {link='TabLine'}, 
         TabLineSel           = {bold=true}, 
 
-        CursorColumn         = {bg=spec.BG}, 
-        ColorColumn          = {bg=spec.BG3, reverse=true}, 
-        SignColumn           = {fg=spec.BG3}, 
+        CursorColumn         = {bg=_palette.CANV1}, 
+        ColorColumn          = {bg=_palette.CANV2, reverse=true}, 
+        SignColumn           = {fg=_palette.CANV2}, 
         FoldColumn           = {link='SignColumn'}, 
 
         WinSeparator         = {link='Normal'}, 
         VertSplit            = {link='WinSeparator'}, 
-        WinBar               = {fg=spec.BG2, bg=spec.BG1, bold=true}, 
-        WinBarNC             = {fg=spec.BG2, bg=spec.BG1, bold=true}, 
+        WinBar               = {fg=_palette.MAIN3, bg=_palette.MAIN2, bold=true}, 
+        WinBarNC             = {fg=_palette.MAIN3, bg=_palette.MAIN2, bold=true}, 
 
-        Added                = {fg=spec.BG2}, 
-        DiffAdd              = {fg=spec.FG, bg=spec.BG3}, 
-        Changed              = {fg=spec.BG2}, 
-        DiffChange           = {fg=spec.FG, bg=spec.BG3}, 
-        DiffDelete           = {fg=spec.FG1, bold=true}, 
-        DiffText             = {fg=spec.FG, bg=spec.BG3}, 
-        Directory            = {fg=spec.BG2}, 
-        Conceal              = {fg=spec.BG3}, 
-        ErrorMsg             = {fg=spec.FG1}, 
-        FloatShadow          = {bg=spec.BG3, blend=80}, 
-        FloatShadowThrough   = {bg=spec.BG3, blend=100}, 
-        Folded               = {fg=spec.BG2, bg=spec.BG}, 
-        MatchParen           = {bg=spec.BG3, bold=true, underline=true}, 
-        ModeMsg              = {fg=spec.BG2}, 
-        MoreMsg              = {fg=spec.BG2}, 
-        PmenuThumb           = {bg=spec.BG3}, 
-        Question             = {fg=spec.BG2}, 
-        QuickFixLine         = {fg=spec.BG2}, 
-        RedrawDebugClear     = {bg=spec.BG3}, 
-        RedrawDebugComposed  = {bg=spec.BG3}, 
-        RedrawDebugRecompose = {bg=spec.BG3}, 
-        Removed              = {fg=spec.FG1}, 
-        SpecialKey           = {fg=spec.BG3}, 
-        SpellBad             = {sp=spec.FG1, undercurl=true}, 
-        SpellCap             = {sp=spec.FG1, undercurl=true}, 
-        SpellLocal           = {sp=spec.BG2, undercurl=true}, 
-        SpellRare            = {sp=spec.BG2, undercurl=true}, 
-        WarningMsg           = {fg=spec.FG1}, 
+        Added                = {fg=_palette.MAIN3}, 
+        DiffAdd              = {fg=_palette.MAIN1, bg=_palette.CANV2}, 
+        Changed              = {fg=_palette.MAIN3}, 
+        DiffChange           = {fg=_palette.MAIN1, bg=_palette.CANV2}, 
+        DiffDelete           = {fg=_palette.ALT11, bold=true}, 
+        DiffText             = {fg=_palette.MAIN1, bg=_palette.CANV2}, 
+        Directory            = {fg=_palette.MAIN3}, 
+        Conceal              = {fg=_palette.CANV2}, 
+        ErrorMsg             = {fg=_palette.ALT11}, 
+        FloatShadow          = {bg=_palette.CANV2, blend=80}, 
+        FloatShadowThrough   = {bg=_palette.CANV2, blend=100}, 
+        Folded               = {fg=_palette.MAIN3, bg=_palette.CANV1}, 
+        MatchParen           = {bg=_palette.CANV2, bold=true, underline=true}, 
+        ModeMsg              = {fg=_palette.MAIN3}, 
+        MoreMsg              = {fg=_palette.MAIN3}, 
+        PmenuThumb           = {bg=_palette.CANV2}, 
+        Question             = {fg=_palette.MAIN3}, 
+        QuickFixLine         = {fg=_palette.MAIN3}, 
+        RedrawDebugClear     = {bg=_palette.CANV2}, 
+        RedrawDebugComposed  = {bg=_palette.CANV2}, 
+        RedrawDebugRecompose = {bg=_palette.CANV2}, 
+        Removed              = {fg=_palette.ALT11}, 
+        SpecialKey           = {fg=_palette.CANV2}, 
+        SpellBad             = {sp=_palette.ALT11, undercurl=true}, 
+        SpellCap             = {sp=_palette.ALT11, undercurl=true}, 
+        SpellLocal           = {sp=_palette.MAIN3, undercurl=true}, 
+        SpellRare            = {sp=_palette.MAIN3, undercurl=true}, 
+        WarningMsg           = {fg=_palette.ALT11}, 
         RedrawDebugNormal    = {reverse=true}, 
-        Underlined           = {underline=true}, 
+        Underlined           = {bg=_palette.MAIN2, underline=true}, 
 
-        NonText              = {fg=spec.BG3}, 
+        NonText              = {fg=_palette.CANV2}, 
         EndOfBuffer          = {link='NonText'}, 
         Whitespace           = {link='NonText'}, 
         LspInlayHint         = {link='NonText'}, 
@@ -300,20 +295,20 @@ function M.chill.ui(spec)
 
         LspCodeLensSeparator = {link='LspCodeLens'}, 
 
-        NormalFloat   = {bg=spec.BG1}, 
+        NormalFloat   = {bg=_palette.MAIN2}, 
         FloatBorder   = {link='NormalFloat'}, 
 
-        Title         = {fg=spec.FG, bold=true}, 
+        Title         = {fg=_palette.MAIN1, bold=true}, 
         FloatTitle    = {link='Title'}, 
         FloatFooter   = {link='FloatTitle'}, 
 
-        MsgSeparator  = {fg=spec.BG, bg=spec.FG}, 
+        MsgSeparator  = {fg=_palette.CANV1, bg=_palette.MAIN1}, 
         MsgArea       = {link='NONE'}, 
         NormalNC      = {link='NONE'}, 
         TermCursorNC  = {link='NONE'}, 
 
         Pmenu         = {
-            bg=spec.BG, 
+            bg=_palette.CANV1, 
             reverse=true
         }, 
 
@@ -333,35 +328,35 @@ function M.chill.ui(spec)
         PmenuMatchSel = {link='PmenuSel'}, 
         WildMenu      = {link='PmenuSel'}, 
 
-        DiagnosticDeprecated       = {sp=spec.FG1, strikethrough=true}, 
-        DiagnosticUnderlineError   = {sp=spec.FG1, underline=true}, 
-        DiagnosticUnderlineWarn    = {sp=spec.FG1, underline=true}, 
-        DiagnosticUnderlineInfo    = {sp=spec.BG2, underline=true}, 
-        DiagnosticUnderlineOk      = {sp=spec.BG2, underline=true}, 
-        DiagnosticUnderlineHint    = {sp=spec.BG2, underline=true}, 
+        DiagnosticDeprecated       = {sp=_palette.ALT11, strikethrough=true}, 
+        DiagnosticUnderlineError   = {sp=_palette.ALT11, underline=true}, 
+        DiagnosticUnderlineWarn    = {sp=_palette.ALT11, underline=true}, 
+        DiagnosticUnderlineInfo    = {sp=_palette.MAIN3, underline=true}, 
+        DiagnosticUnderlineOk      = {sp=_palette.MAIN3, underline=true}, 
+        DiagnosticUnderlineHint    = {sp=_palette.MAIN3, underline=true}, 
         DiagnosticUnnecessary      = {link='Comment'}, 
         
-        DiagnosticError            = {fg=spec.FG1}, 
+        DiagnosticError            = {fg=_palette.ALT11}, 
         DiagnosticFloatingError    = {link='DiagnosticError'}, 
         DiagnosticVirtualTextError = {link='DiagnosticError'}, 
         DiagnosticSignError        = {link='DiagnosticError'}, 
 
-        DiagnosticWarn             = {fg=spec.FG1}, 
+        DiagnosticWarn             = {fg=_palette.ALT11}, 
         DiagnosticFloatingWarn     = {link='DiagnosticWarn'}, 
         DiagnosticVirtualTextWarn  = {link='DiagnosticWarn'}, 
         DiagnosticSignWarn         = {link='DiagnosticWarn'}, 
 
-        DiagnosticInfo             = {fg=spec.BG2}, 
+        DiagnosticInfo             = {fg=_palette.MAIN3}, 
         DiagnosticFloatingInfo     = {link='DiagnosticInfo'}, 
         DiagnosticVirtualTextInfo  = {link='DiagnosticInfo'}, 
         DiagnosticSignInfo         = {link='DiagnosticInfo'}, 
 
-        DiagnosticHint             = {fg=spec.BG2}, 
+        DiagnosticHint             = {fg=_palette.MAIN3}, 
         DiagnosticFloatingHint     = {link='DiagnosticHint'}, 
         DiagnosticVirtualTextHint  = {link='DiagnosticHint'}, 
         DiagnosticSignHint         = {link='DiagnosticHint'}, 
 
-        DiagnosticOk               = {fg=spec.BG2}, 
+        DiagnosticOk               = {fg=_palette.MAIN3}, 
         DiagnosticFloatingOk       = {link='DiagnosticOk'}, 
         DiagnosticVirtualTextOk    = {link='DiagnosticOk'}, 
         DiagnosticSignOk           = {link='DiagnosticOk'}, 

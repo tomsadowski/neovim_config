@@ -1,8 +1,8 @@
 local M = {}
 
-function M.apply(scheme)
-    for group, value in pairs(scheme) do
-        vim.api.nvim_set_hl(0, group, value)
+function M.apply(_scheme)
+    for k, v in pairs(_scheme) do
+        vim.api.nvim_set_hl(0, k, v)
     end
 end
 
