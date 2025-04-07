@@ -4,7 +4,7 @@ require("keymap")
 
 --require("lsp")
 
-require("color/ship")
+require("color/fountain")
 --require("color/cave")
 --require("color/weed")
 

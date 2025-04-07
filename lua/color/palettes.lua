@@ -1,40 +1,37 @@
 local M = {}
 
-M.ship = {
-    CANV1 = '#040602',
-    CANV2 = '#3e4321',
+M.fountain = {
+    CANV1 = '#040402', -- grey
+    CANV2 = '#2e2e21', -- brown
 
-    MAIN1 = '#c2bc93',
-    MAIN2 = '#a3995c', 
-    MAIN3 = '#797244',
+    MAIN1 = '#c8bfa0', -- beige
+    MAIN2 = '#a3995c', -- yellow
+    MAIN3 = '#797244', -- brown
 
-    ALT11 = '#71858e',
-    ALT12 = '#947a8b',
-    ALT13 = '#74a780',
+    ALT1  = '#74a790', -- blue 
+    ALT2  = '#9ea040', -- green
 }
 M.cave = {
-    CANV1 = '#070707',
-    CANV2 = '#2e2e33',
+    CANV1 = '#070707', -- grey
+    CANV2 = '#2e2e33', -- blue
 
-    MAIN1 = '#cccaaa',
-    MAIN2 = '#a0a080',
-    MAIN3 = '#6c6c5f',
+    MAIN1 = '#cccaaa', -- beige
+    MAIN2 = '#a0a080', -- grey
+    MAIN3 = '#6c6c5f', -- grey
 
-    ALT11 = '#a7c7c0',
-    ALT12 = '#947a8b',
-    ALT13 = '#dac767',
+    ALT1  = '#a7c7c0', -- blue
+    ALT2  = '#dac767', -- orange
 }
 M.weed = {
-    CANV1 = '#070712',
-    CANV2 = '#2e2e33',
+    CANV1 = '#070712', -- purple
+    CANV2 = '#2e2e33', -- purple
 
-    MAIN1 = '#cfcf96',
+    MAIN1 = '#cfcf96', -- 
     MAIN2 = '#bf9876',
     MAIN3 = '#6c6c78',
 
-    ALT11 = '#95ba30',
-    ALT12 = '#85aa20',
-    ALT13 = '#d3a933',
+    ALT1  = '#95ba30',
+    ALT2  = '#d3a933',
 }
 
 return M
