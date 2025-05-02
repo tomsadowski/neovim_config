@@ -1,17 +1,20 @@
 local M = {}
 
 M.fountain = {
-    CANV1 = '#040402', -- grey
+    CANV0 = '#040404', -- grey
+    CANV1 = '#1a1a1a', -- grey
     CANV2 = '#2e2e21', -- brown
 
-    MAIN1 = '#c8bfa0', -- beige
-    MAIN2 = '#a3995c', -- yellow
-    MAIN3 = '#797244', -- brown
+    MAIN1 = '#c8bfa8', -- beige
+    MAIN2 = '#b3a95c', -- yellow
+    MAIN3 = '#686038', -- brown
 
     ALT1  = '#74a790', -- blue 
-    ALT2  = '#9ea040', -- green
+    ALT2  = '#9ea020', -- green
 }
+
 M.cave = {
+    CANV0 = '#000000', -- grey
     CANV1 = '#070707', -- grey
     CANV2 = '#2e2e33', -- blue
 
@@ -22,7 +25,9 @@ M.cave = {
     ALT1  = '#a7c7c0', -- blue
     ALT2  = '#dac767', -- orange
 }
+
 M.weed = {
+    CANV0 = '#000000', -- grey
     CANV1 = '#070712', -- purple
     CANV2 = '#2e2e33', -- purple
 

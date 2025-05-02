@@ -115,38 +115,38 @@ function M.chill.syntax(_palette)
         ['@variable.parameter.builtin'] = {link='@parameter'}, 
 
         -- lsp
-        ['@lsp.type.property']      = {link='@property'}, 
-        ['@lsp.type.operator']      = {link='@operator'}, 
-        ['@lsp.type.comment']       = {link='@comment'}, 
-        ['@lsp.type.typeParameter'] = {link='@type.definition'}, 
-        ['@lsp.type.modifier']      = {link='@type.qualifier'}, 
-        ['@lsp.type.namespace']     = {link='@module'}, 
+--      ['@lsp.type.property']      = {link='@property'}, 
+--      ['@lsp.type.operator']      = {link='@operator'}, 
+--      ['@lsp.type.comment']       = {link='@comment'}, 
+--      ['@lsp.type.typeParameter'] = {link='@type.definition'}, 
+--      ['@lsp.type.modifier']      = {link='@type.qualifier'}, 
+--      ['@lsp.type.namespace']     = {link='@module'}, 
 
-        ['@lsp.type.variable']      = {link='@variable'}, 
-        ['@lsp.type.parameter']     = {link='@variable.parameter'}, 
+--      ['@lsp.type.variable']      = {link='@variable'}, 
+--      ['@lsp.type.parameter']     = {link='@variable.parameter'}, 
 
-        ['@lsp.type.function']      = {link='@function'}, 
-        ['@lsp.type.method']        = {link='@function.method'}, 
+--      ['@lsp.type.function']      = {link='@function'}, 
+--      ['@lsp.type.method']        = {link='@function.method'}, 
 
-        ['@lsp.type.number']        = {link='@number'}, 
+--      ['@lsp.type.number']        = {link='@number'}, 
 
-        ['@lsp.type.string']        = {link='@string'}, 
-        ['@lsp.type.regexp']        = {link='@string'}, 
+--      ['@lsp.type.string']        = {link='@string'}, 
+--      ['@lsp.type.regexp']        = {link='@string'}, 
 
-        ['@lsp.type.macro']         = {link='Macro'}, 
-        ['@lsp.type.decorator']     = {link='@attribute'}, 
-        ['@lsp.type.keyword']       = {link='@keyword'}, 
+--      ['@lsp.type.macro']         = {link='Macro'}, 
+--      ['@lsp.type.decorator']     = {link='@attribute'}, 
+--      ['@lsp.type.keyword']       = {link='@keyword'}, 
 
-        ['@lsp.type.class']         = {link='@type'}, 
-        ['@lsp.type.struct']        = {link='@type'}, 
-        ['@lsp.type.type']          = {link='@type'}, 
-        ['@lsp.type.event']         = {link='@type'}, 
-        ['@lsp.type.interface']     = {link='@type'}, 
+--      ['@lsp.type.class']         = {link='Normal'}, 
+--      ['@lsp.type.struct']        = {link='Normal'}, 
+--      ['@lsp.type.type']          = {link='Normal'}, 
+--      ['@lsp.type.event']         = {link='Normal'}, 
+--      ['@lsp.type.interface']     = {link='Normal'}, 
 
-        ['@lsp.type.enumMember']    = {fg=_palette.MAIN1}, 
-        ['@lsp.type.enum']          = {fg=_palette.MAIN1}, 
+--      ['@lsp.type.enumMember']    = {fg=_palette.MAIN1}, 
+--      ['@lsp.type.enum']          = {fg=_palette.MAIN1}, 
 
-        ['@lsp.mod.deprecated']     = {link='DiagnosticDeprecated'}, 
+--      ['@lsp.mod.deprecated']     = {link='DiagnosticDeprecated'}, 
     }
 end
 
@@ -180,7 +180,7 @@ function M.chill.csharp(_palette)
         csClassType              = {fg=_palette.MAIN1},
 
         csGeneric                = {fg=_palette.MAIN2},
-        csGenericBraces          = {link='csGeneric'},
+        csGenericBraces          = {fg=_palette.MAIN1},
 
         csXmlTag                 = {fg=_palette.ALT2},
 
@@ -219,7 +219,7 @@ function M.chill.ui(_palette)
         VisualNOS            = {link='Visual'}, 
 
 
-        Search               = {fg=_palette.MAIN1, bg=_palette.CANV2},
+        Search               = {fg=_palette.MAIN1, bg=_palette.CANV0},
         CurSearch            = {fg=_palette.CANV1, bg=_palette.MAIN1}, 
         IncSearch            = {link='CurSearch'}, 
 
