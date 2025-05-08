@@ -113,44 +113,14 @@ function M.chill.syntax(_palette)
         ['@variable.builtin']     = {link='@variable'}, 
         ['@variable.parameter']   = {link='@variable'}, 
         ['@variable.parameter.builtin'] = {link='@parameter'}, 
-
-        -- lsp
---      ['@lsp.type.property']      = {link='@property'}, 
---      ['@lsp.type.operator']      = {link='@operator'}, 
---      ['@lsp.type.comment']       = {link='@comment'}, 
---      ['@lsp.type.typeParameter'] = {link='@type.definition'}, 
---      ['@lsp.type.modifier']      = {link='@type.qualifier'}, 
---      ['@lsp.type.namespace']     = {link='@module'}, 
-
---      ['@lsp.type.variable']      = {link='@variable'}, 
---      ['@lsp.type.parameter']     = {link='@variable.parameter'}, 
-
---      ['@lsp.type.function']      = {link='@function'}, 
---      ['@lsp.type.method']        = {link='@function.method'}, 
-
---      ['@lsp.type.number']        = {link='@number'}, 
-
---      ['@lsp.type.string']        = {link='@string'}, 
---      ['@lsp.type.regexp']        = {link='@string'}, 
-
---      ['@lsp.type.macro']         = {link='Macro'}, 
---      ['@lsp.type.decorator']     = {link='@attribute'}, 
---      ['@lsp.type.keyword']       = {link='@keyword'}, 
-
---      ['@lsp.type.class']         = {link='Normal'}, 
---      ['@lsp.type.struct']        = {link='Normal'}, 
---      ['@lsp.type.type']          = {link='Normal'}, 
---      ['@lsp.type.event']         = {link='Normal'}, 
---      ['@lsp.type.interface']     = {link='Normal'}, 
-
---      ['@lsp.type.enumMember']    = {fg=_palette.MAIN1}, 
---      ['@lsp.type.enum']          = {fg=_palette.MAIN1}, 
-
---      ['@lsp.mod.deprecated']     = {link='DiagnosticDeprecated'}, 
     }
 end
 
 function M.chill.rust(_palette)
+    -- Hide all semantic highlights
+    for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
+      vim.api.nvim_set_hl(0, group, {})
+    end
     return {
         rustEnum       = {fg=_palette.MAIN1},
         rustSigil      = {fg=_palette.MAIN1},
@@ -161,7 +131,8 @@ function M.chill.rust(_palette)
         rustSelf       = {link='Keyword'},
 
         rustStorage    = {link='StorageClass'},
-        ['@lsp.type.enum.rust'] = {fg=_palette.MAIN2},
+      --  ['@lsp.type.enum.rust'] = {fg=_palette.MAIN2},
+        ['@lsp.type.method.rust'] = {fg=_palette.MAIN2},
     }
 end
 
@@ -278,7 +249,7 @@ function M.chill.ui(_palette)
         SpellRare            = {sp=_palette.MAIN3, undercurl=true}, 
         WarningMsg           = {fg=_palette.ALT1}, 
         RedrawDebugNormal    = {reverse=true}, 
-        Underlined           = {bg=_palette.MAIN2, underline=true}, 
+        Underlined           = {underline=true}, 
 
         NonText              = {fg=_palette.CANV2}, 
         EndOfBuffer          = {link='NonText'}, 
@@ -295,7 +266,7 @@ function M.chill.ui(_palette)
 
         LspCodeLensSeparator = {link='LspCodeLens'}, 
 
-        NormalFloat   = {bg=_palette.MAIN2}, 
+        NormalFloat   = {bg=_palette.CANV0},
         FloatBorder   = {link='NormalFloat'}, 
 
         Title         = {fg=_palette.MAIN1, bold=true}, 

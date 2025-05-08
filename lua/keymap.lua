@@ -14,8 +14,7 @@ map(modes, "H", "O")
 map(modes, "o", "k")
 map(modes, "O", "H")
 
-map(modes, "k", "w")
-map(modes, "K", "W")
+--map(modes, "k", "w")
 
 map(modes, "w", "n")
 map(modes, "W", "N")

@@ -6,11 +6,11 @@ M.fountain = {
     CANV2 = '#2e2e21', -- brown
 
     MAIN1 = '#c8bfa8', -- beige
-    MAIN2 = '#b3a95c', -- yellow
+    MAIN2 = '#a3995c', -- yellow
     MAIN3 = '#686038', -- brown
 
-    ALT1  = '#74a790', -- blue 
-    ALT2  = '#9ea020', -- green
+    ALT2  = '#74a790', -- blue 
+    ALT1  = '#8ea020', -- green
 }
 
 M.cave = {
