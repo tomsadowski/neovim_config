@@ -231,7 +231,7 @@ function M.chill.ui(_palette)
         ErrorMsg             = {fg=_palette.ALT1}, 
         FloatShadow          = {bg=_palette.CANV2, blend=80}, 
         FloatShadowThrough   = {bg=_palette.CANV2, blend=100}, 
-        Folded               = {fg=_palette.MAIN3, bg=_palette.CANV1}, 
+        Folded               = {fg=_palette.MAIN2, bg=_palette.CANV0}, 
         MatchParen           = {bg=_palette.CANV2, bold=true, underline=true}, 
         ModeMsg              = {fg=_palette.MAIN3}, 
         MoreMsg              = {fg=_palette.MAIN3}, 
