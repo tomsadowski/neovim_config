@@ -20,16 +20,16 @@ local p = {
     keyword    = {12,  12, "#6890c8"}, -- blue
     str        = {12,  12, "#6890c8"}, -- blue
 
-    errorbg    = { 1,   1, "#201414"}, -- darkred
-    error      = {10,  10, "#c06858"}, -- red
-    removed    = {10,  10, "#c06858"}, -- red
-    type       = { 9,   9, "#c06858"}, -- red
-    enum       = { 9,   9, "#c06858"}, -- red
-    class      = { 9,   9, "#c06858"}, -- red
-    struct     = { 9,   9, "#c06858"}, -- red
-
     changed    = {10,  10, "#a88ca8"}, -- magenta
     func       = { 9,   9, "#a88ca8"}, -- magenta
+
+    errorbg    = { 1,   1, "#201414"}, -- darkred
+    error      = {10,  10, "#c07060"}, -- red
+    removed    = {10,  10, "#c07060"}, -- red
+    type       = { 9,   9, "#c07060"}, -- red
+    enum       = { 9,   9, "#c07060"}, -- red
+    class      = { 9,   9, "#c07060"}, -- red
+    struct     = { 9,   9, "#c07060"}, -- red
 }
 
 local cap = 2
