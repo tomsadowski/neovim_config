@@ -1,64 +1,41 @@
 -- rose
 
 local p = {
-    window     = {4, 4, "#000000"}, -- black
-    background = {0, 0, "#101010"}, -- grey
-    curlinenbg = {2, 2, "#101010"}, -- darkgreen
-    visualbg   = {2, 2, "#303030"}, -- grey
+    window     = { 4,   4, "#000000"}, -- black
+    background = { 0,   0, "#101010"}, -- darkgrey
+    curlinenbg = { 2,   2, "#101010"}, -- darkgrey
+    visualbg   = { 2,   2, "#303030"}, -- darkishgrey
+    linenumber = {10,  10, "#606060"}, -- grey
+    comment    = {10,  10, "#606060"}, -- grey
+    curlinenum = {10,  10, "#606060"}, -- grey
 
-    macro      = {10, 10, "#89f098"}, -- green
-    added      = {10, 10, "#89f098"}, -- green
-    changed    = {10, 10, "#89f098"}, -- green
-    removed    = {10, 10, "#89f098"}, -- green
+    added      = {10,  10, "#90b090"}, -- green
+    macro      = {10,  10, "#90b090"}, -- green
+    visual     = {10,  10, "#90b090"}, -- green
+    text       = {10,  10, "#90b090"}, -- green
+    identifier = {10,  10, "#90b090"}, -- green
 
-    linenumber = {10, 10, "#606060"}, -- grey
-    comment    = {10, 10, "#606060"}, -- grey
-    curlinenum = {10, 10, "#606060"}, -- grey
+    warnbg     = {10,  10, "#141420"}, -- darkblue
+    warn       = {10,  10, "#6890c8"}, -- blue
+    keyword    = {12,  12, "#6890c8"}, -- blue
+    str        = {12,  12, "#6890c8"}, -- blue
 
-    visual     = {10, 10, "#90c090"}, -- green
-    text       = {10, 10, "#90c090"}, -- green
-    identifier = {10, 10, "#90c090"}, -- green
+    errorbg    = { 1,   1, "#201414"}, -- darkred
+    error      = {10,  10, "#c06858"}, -- red
+    removed    = {10,  10, "#c06858"}, -- red
+    type       = { 9,   9, "#c06858"}, -- red
+    enum       = { 9,   9, "#c06858"}, -- red
+    class      = { 9,   9, "#c06858"}, -- red
+    struct     = { 9,   9, "#c06858"}, -- red
 
-    warnbg     = {10, 10, "#141420"}, -- darkblue
-    warn       = {10, 10, "#6898c8"}, -- blue
-    keyword    = {12, 12, "#6898c8"}, -- blue
-    str        = {12, 12, "#6898c8"}, -- blue
-
-    errorbg    = {1, 1,   "#201414"}, -- darkred
-    error      = {10, 10, "#ffa080"}, -- red
-
-    type       = {9, 9,   "#c87868"}, -- red
-    enum       = {9, 9,   "#c87868"}, -- red
-    class      = {9, 9,   "#c87868"}, -- red
-    struct     = {9, 9,   "#c87868"}, -- red
-
-    func       = {9, 9,   "#b090b0"}, -- magenta
+    changed    = {10,  10, "#a88ca8"}, -- magenta
+    func       = { 9,   9, "#a88ca8"}, -- magenta
 }
 
 local cap = 2
 local gui = 3
 
---  'winborder'		string	(default "")
---              global
---      Defines the default border style of floating windows. The default value
---      is empty, which is equivalent to "none". Valid values include:
---      - "bold": Bold line box.
---      - "double": Double-line box.
---      - "none": No border.
---      - "rounded": Like "single", but with rounded corners ("╭" etc.).
---      - "shadow": Drop shadow effect, by blending with the background.
---      - "single": Single-line box.
---      - "solid": Adds padding by a single whitespace cell.
-
-vim.cmd("set background=dark")
-vim.cmd("set winborder=rounded")
-vim.cmd("syntax clear")
-vim.cmd("highlight clear")
-
 local hl_groups = {
--- These are the builtin highlighting groups.  Note that the highlighting depends
--- on the value of 'background'.  You can see the current settings with the
--- ":highlight" command.
     Normal = {
         ctermfg = p.text[cap], 
         fg      = p.text[gui], 
@@ -83,7 +60,7 @@ local hl_groups = {
         ctermbg = p.window[cap], 
         bg      = p.window[gui], 
     }, 
-    DiffAdd       = {
+    DiffAdd = {
         ctermfg = p.added[cap], 
         fg      = p.added[gui], 
     }, 
@@ -95,9 +72,7 @@ local hl_groups = {
         ctermfg = p.removed[cap], 
         fg      = p.removed[gui], 
     }, 
-    DiffText      = {
-        link = 'Normal'
-    }, 
+    DiffText     = {link='Normal'}, 
     Cursor       = {link='Normal'}, 
     lCursor      = {link='Cursor'}, 
     CursorIM     = {link='Cursor'}, 
@@ -209,17 +184,7 @@ local hl_groups = {
     }, 
     ColorColumn    = {link='NONE'}, 
     Conceal        = {link='NONE'}, 
--- NAMING CONVENTIONS		    *group-name* *{group-name}* *E669* *E5248*
--- A syntax group name is to be used for syntax items that match the same kind of
--- thing.  These are then linked to a highlight group that specifies the color.
--- A syntax group name doesn't specify any color or attributes itself.
--- The name for a highlight or syntax group must consist of ASCII letters,
--- digits, underscores, dots, hyphens, or `@`.  As a regexp: `[a-zA-Z0-9_.@-]*`.
--- The maximum length of a group name is about 200 bytes.  *E1249*
--- To be able to allow each user to pick their favorite set of colors, there must
--- be preferred names for highlight groups that are common for many languages.
--- These are the suggested group names (if syntax highlighting works properly
--- you can see the actual color, except for "Ignore"):
+
     Comment = {
         ctermfg = p.comment[cap], 
         fg      = p.comment[gui], 
@@ -302,12 +267,6 @@ local hl_groups = {
         ctermfg = p.removed[cap], 
         fg      = p.removed[gui], 
     }, 
--- Reference Highlights:
--- Highlight groups that are meant to be used by 
--- |vim.lsp.buf.document_highlight()|.
--- You can see more about the differences in types here:
--- https://microsoft.github.io/language-server-protocol/
--- specification#textDocument_documentHighlight
     LspReferenceText            = {link='Normal'}, 
     LspReferenceRead            = {link='Normal'},
     LspReferenceWrite           = {link='Normal'},
@@ -316,16 +275,6 @@ local hl_groups = {
     LspCodeLens                 = {link='Normal'},
     LspCodeLensSeparator        = {link='Normal'},
     LspSignatureActiveParameter = {link='Normal'},
--- All highlights defined for diagnostics begin with `Diagnostic` followed by
--- the type of highlight (e.g., `Sign`, `Underline`, etc.) and the severity (e.g.
--- `Error`, `Warn`, etc.)
--- By default, highlights for signs, floating windows, and virtual text are 
--- linked to the corresponding default highlight. Underline highlights are not
--- linked and use their own default highlight groups.
--- For example, the default highlighting for |hl-DiagnosticSignError| is linked
--- to |hl-DiagnosticError|. To change the default (and therefore the linked
--- highlights), use the |:highlight| command: 
---    >vim highlight DiagnosticError guifg="BrightRed"
     DiagnosticOk                = {link='Normal'},
     DiagnosticError             = {link='ErrorMsg'},
     DiagnosticWarn              = {link='WarningMsg'},
@@ -358,7 +307,7 @@ local hl_groups = {
     DiagnosticSignOk            = {link='Normal'},
     DiagnosticDeprecated        = {link='Normal'},
     DiagnosticUnnecessary       = {link='Normal'},
--- treesitter
+
     ['@variable']                    = {link='Identifier'}, 
     ['@variable.parameter']          = {link='@variable'}, 
     ['@variable.builtin']            = {link='Keyword'}, 
@@ -457,6 +406,23 @@ local hl_groups = {
     ['@diff.minus']                  = {link='Normal'}, 
     ['@diff.delta']                  = {link='Normal'}, 
 }
+
+--  'winborder'		string	(default "")
+--              global
+--      Defines the default border style of floating windows. The default value
+--      is empty, which is equivalent to "none". Valid values include:
+--      - "bold": Bold line box.
+--      - "double": Double-line box.
+--      - "none": No border.
+--      - "rounded": Like "single", but with rounded corners ("╭" etc.).
+--      - "shadow": Drop shadow effect, by blending with the background.
+--      - "single": Single-line box.
+--      - "solid": Adds padding by a single whitespace cell.
+
+vim.cmd("set background=dark")
+vim.cmd("set winborder=rounded")
+vim.cmd("syntax clear")
+vim.cmd("highlight clear")
 
 require "nvim-treesitter.configs".setup {
     highlight = {
