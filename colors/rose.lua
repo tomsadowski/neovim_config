@@ -2,34 +2,39 @@
 
 local p = {
     window     = { 4,   4, "#000000"}, -- black
+
     background = { 0,   0, "#101010"}, -- darkgrey
     curlinenbg = { 2,   2, "#101010"}, -- darkgrey
-    visualbg   = { 2,   2, "#303030"}, -- darkishgrey
-    linenumber = {10,  10, "#606060"}, -- grey
-    comment    = {10,  10, "#606060"}, -- grey
-    curlinenum = {10,  10, "#606060"}, -- grey
 
-    added      = {10,  10, "#90b090"}, -- green
-    macro      = {10,  10, "#90b090"}, -- green
-    visual     = {10,  10, "#90b090"}, -- green
-    text       = {10,  10, "#90b090"}, -- green
-    identifier = {10,  10, "#90b090"}, -- green
+    linenumber = {10,  10, "#505050"}, -- grey
+    comment    = {10,  10, "#505050"}, -- grey
+    curlinenum = {10,  10, "#505050"}, -- grey
+
+    visualbg   = { 2,   2, "#182018"}, -- darkgreen
+
+    added      = {10,  10, "#a0b8a0"}, -- green
+    macro      = {10,  10, "#a0b8a0"}, -- green
+    visual     = {10,  10, "#a0b8a0"}, -- green
+    text       = {10,  10, "#a0b8a0"}, -- green
+    identifier = {10,  10, "#a0b8a0"}, -- green
 
     warnbg     = {10,  10, "#141420"}, -- darkblue
-    warn       = {10,  10, "#6890c8"}, -- blue
-    keyword    = {12,  12, "#6890c8"}, -- blue
-    str        = {12,  12, "#6890c8"}, -- blue
 
-    changed    = {10,  10, "#a88ca8"}, -- magenta
-    func       = { 9,   9, "#a88ca8"}, -- magenta
+    warn       = {10,  10, "#7490b0"}, -- blue
+    keyword    = {12,  12, "#7490b0"}, -- blue
+    str        = {12,  12, "#7490b0"}, -- blue
+
+    changed    = {10,  10, "#b296b2"}, -- magenta
+    func       = { 9,   9, "#b296b2"}, -- magenta
 
     errorbg    = { 1,   1, "#201414"}, -- darkred
-    error      = {10,  10, "#c07060"}, -- red
-    removed    = {10,  10, "#c07060"}, -- red
-    type       = { 9,   9, "#c07060"}, -- red
-    enum       = { 9,   9, "#c07060"}, -- red
-    class      = { 9,   9, "#c07060"}, -- red
-    struct     = { 9,   9, "#c07060"}, -- red
+
+    error      = {10,  10, "#b88272"}, -- red
+    removed    = {10,  10, "#b88272"}, -- red
+    type       = { 9,   9, "#b88272"}, -- red
+    enum       = { 9,   9, "#b88272"}, -- red
+    class      = { 9,   9, "#b88272"}, -- red
+    struct     = { 9,   9, "#b88272"}, -- red
 }
 
 local cap = 2
