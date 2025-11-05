@@ -21,8 +21,8 @@ vim.o.scrolloff = 10
 vim.o.undofile = false
 vim.o.wrap = true
 vim.o.expandtab = true
-vim.o.shiftwidth=4
-vim.o.tabstop=4
+vim.o.shiftwidth=2
+vim.o.tabstop=2
 vim.o.number = true   
 vim.o.laststatus = 1  
 vim.o.foldmethod = 'syntax'
@@ -195,5 +195,5 @@ vim.lsp.config.clangd = {
 
 -- COMMANDS ---------------------------------------------------
 
-vim.cmd "colo rose"
+vim.cmd "colo sun"
 vim.cmd "com LspCap lua =vim.lsp.get_clients()[1].server_capabilities"
