@@ -8,16 +8,20 @@ require "colorscheme" {
     linenumber = {10,  10, "#505050"}, -- grey
     comment    = {10,  10, "#505050"}, -- grey
     curlinenum = {10,  10, "#505050"}, -- grey
+
     added      = {10,  10, "#a0b8a0"}, -- green
     macro      = {10,  10, "#a0b8a0"}, -- green
     text       = {10,  10, "#a0b8a0"}, -- green
     identifier = {10,  10, "#a0b8a0"}, -- green
+
+    changed    = {10,  10, "#a07ca0"}, -- magenta
+    func       = { 9,   9, "#a07ca0"}, -- magenta
+
     warnbg     = {10,  10, "#141420"}, -- darkblue
     warn       = {10,  10, "#7490b0"}, -- blue
     keyword    = {12,  12, "#7490b0"}, -- blue
     str        = {12,  12, "#7490b0"}, -- blue
-    changed    = {10,  10, "#a07ca0"}, -- magenta
-    func       = { 9,   9, "#a07ca0"}, -- magenta
+
     errorbg    = { 1,   1, "#201414"}, -- darkred
     error      = {10,  10, "#c48070"}, -- red
     removed    = {10,  10, "#c48070"}, -- red

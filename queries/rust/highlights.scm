@@ -4,6 +4,9 @@
 ((identifier) @type
   (#match? @type "^[A-Z]"))
 
+;(use_list (identifier) @function
+;  (#match? @function "^[a-z][a-z_]+"))
+
 ; enum variants (in the enum definition) are variable members
 (enum_variant
   name: (identifier) @variable.member)
@@ -25,7 +28,7 @@
 (mod_item
   name: (identifier) @module)
 
-(self) @variable.builtin
+((self) @variable.builtin (#set! priority 105))
 
 "_" @character.special
 
