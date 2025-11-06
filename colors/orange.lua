@@ -1,6 +1,6 @@
 -- sun
 
-require "colorscheme" {
+require "tsad_colorscheme_main" {
     window     = { 4,   4, "#000000"}, -- black
     background = { 0,   0, "#141414"}, -- darkgrey
     curlinenbg = { 2,   2, "#141414"}, -- darkgrey
