@@ -9,10 +9,10 @@ require "tsad_colorscheme_main" {
     comment    = {10,  10, "#505050"}, -- grey
     curlinenum = {10,  10, "#505050"}, -- grey
 
-    added      = {10,  10, "#92acac"}, -- cyan
-    macro      = {10,  10, "#92acac"}, -- cyan
-    text       = {10,  10, "#92acac"}, -- cyan
-    identifier = {10,  10, "#92acac"}, -- cyan
+    added      = {10,  10, "#80a2a2"}, -- cyan
+    macro      = {10,  10, "#80a2a2"}, -- cyan
+    text       = {10,  10, "#80a2a2"}, -- cyan
+    identifier = {10,  10, "#80a2a2"}, -- cyan
 
     changed    = {10,  10, "#b07878"}, -- red
     func       = { 9,   9, "#b07878"}, -- red
