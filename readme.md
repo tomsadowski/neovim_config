@@ -4,16 +4,14 @@ just comment-out what you dont want. see init.lua for the top-level options, or 
 
 to use the colorschemes, copy the following heirarchies into your nvim config directory:
 - lua/tsad_colorscheme_main.lua
-- colors/moss.lua
-- colors/rose.lua
-- colors/orange.lua
+- colors/*
 - queries/*
-
-### lav colorscheme
-![lav](docs/lav.png)  
 
 ### rose colorscheme
 ![rose](docs/rose.png)  
+
+### lav colorscheme
+![lav](docs/lav.png)  
 
 ### autumn colorscheme
 ![autumn](docs/autumn.png)  
