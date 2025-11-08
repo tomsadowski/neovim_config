@@ -9,11 +9,12 @@ to use the colorschemes, copy the following heirarchies into your nvim config di
 - colors/orange.lua
 - queries/*
 
+### rose colorscheme
+![rose](docs/rose.png)  
+
 ### autumn colorscheme
 ![autumn](docs/autumn.png)  
 
 ### moss colorscheme
 ![moss](docs/moss.png)  
 
-### rose colorscheme
-![rose](docs/rose.png)  
