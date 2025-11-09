@@ -7,6 +7,9 @@ to use the colorschemes, copy the following heirarchies into your nvim config di
 - colors/*
 - queries/*
 
+### deep colorscheme
+![deep](docs/deep.png)  
+
 ### rose colorscheme
 ![rose](docs/rose.png)  
 
