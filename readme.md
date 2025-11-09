@@ -7,27 +7,8 @@ to use the colorschemes, copy the following heirarchies into your nvim config di
 - colors/*
 - queries/*
 
-### leep colorscheme
-![leep](docs/leep.png)  
-
-### geep colorscheme
-![geep](docs/geep.png)  
-
-### yeep colorscheme
-![yeep](docs/yeep.png)  
-
-### deep colorscheme
-![deep](docs/deep.png)  
-
-### rose colorscheme
-![rose](docs/rose.png)  
-
-### lav colorscheme
-![lav](docs/lav.png)  
-
-### autumn colorscheme
-![autumn](docs/autumn.png)  
-
 ### moss colorscheme
 ![moss](docs/moss.png)  
 
+### autumn colorscheme
+![autumn](docs/autumn.png)  
