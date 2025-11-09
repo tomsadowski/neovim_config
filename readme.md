@@ -7,6 +7,9 @@ to use the colorschemes, copy the following heirarchies into your nvim config di
 - colors/*
 - queries/*
 
+### geep colorscheme
+![geep](docs/geep.png)  
+
 ### yeep colorscheme
 ![yeep](docs/yeep.png)  
 
