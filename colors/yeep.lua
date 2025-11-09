@@ -10,8 +10,8 @@ require "tsad_colorscheme_main" {
     comment = {10,  10, "#106060"}, -- deepgreen
 
     warnbg  = { 1,   1, "#102010"}, -- darkstone
-    warn    = {10,  10, "#609060"}, -- stone
-    keyword = {10,  10, "#609060"}, -- stone
+    warn    = {10,  10, "#609040"}, -- stone
+    keyword = {10,  10, "#609040"}, -- stone
 
     text    = {10,  10, "#909040"}, -- limesand
 
