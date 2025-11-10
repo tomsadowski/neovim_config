@@ -11,13 +11,13 @@ require "tsad_colorscheme_main" {
 
     warnbg  = { 1,   1, "#102010"}, -- darkgreen
 
-    warn    = {10,  10, "#609030"}, -- green
-    keyword = {10,  10, "#609030"}, -- green
+    warn    = {10,  10, "#609050"}, -- green
+    keyword = {10,  10, "#609050"}, -- green
 
-    text    = {10,  10, "#b0a030"}, -- yellow
+    text    = {10,  10, "#b0a040"}, -- yellow
 
     errorbg = {10,  10, "#201010"}, -- darkclay
-    error   = {12,  12, "#a07080"}, -- clay
-    func    = {12,  12, "#a07080"}, -- clay
-    type    = { 9,   9, "#a07080"}, -- clay
+    error   = {12,  12, "#b07080"}, -- clay
+    func    = {12,  12, "#b07080"}, -- clay
+    type    = { 9,   9, "#b07080"}, -- clay
 }
