@@ -7,16 +7,16 @@ require "tsad_colorscheme_main" {
 
     visual  = { 2,   2, "#203030"}, -- cyan
 
-    comment = {10,  10, "#006040"}, -- blue
+    comment = {10,  10, "#005050"}, -- blue
 
     warnbg  = { 1,   1, "#102010"}, -- darkgreen
-    warn    = {10,  10, "#409040"}, -- green
-    keyword = {10,  10, "#409040"}, -- green
+    warn    = {10,  10, "#309030"}, -- green
+    keyword = {10,  10, "#309030"}, -- green
 
-    text    = {10,  10, "#a08040"}, -- sand
+    text    = {10,  10, "#a09830"}, -- sand
 
     errorbg = {10,  10, "#201010"}, -- darkclay
-    error   = {12,  12, "#907090"}, -- clay
-    func    = {12,  12, "#907090"}, -- clay
-    type    = { 9,   9, "#907090"}, -- clay
+    error   = {12,  12, "#a07890"}, -- clay
+    func    = {12,  12, "#a07890"}, -- clay
+    type    = { 9,   9, "#a07890"}, -- clay
 }

@@ -3,20 +3,20 @@
 require "tsad_colorscheme_main" {
     black   = { 4,   4, "#000000"}, -- black
 
-    canvas  = { 0,   0, "#002000"}, -- blue
+    canvas  = { 0,   0, "#001c00"}, -- green
 
-    visual  = { 2,   2, "#203030"}, -- cyan
+    visual  = { 2,   2, "#103010"}, -- green
 
-    comment = {10,  10, "#406020"}, -- blue
+    comment = {10,  10, "#306030"}, -- green
 
     warnbg  = { 1,   1, "#102010"}, -- darkgreen
-    warn    = {10,  10, "#909020"}, -- green
-    keyword = {10,  10, "#909020"}, -- green
+    warn    = {10,  10, "#608000"}, -- green
+    keyword = {10,  10, "#608000"}, -- green
 
-    text    = {10,  10, "#c09020"}, -- sand
+    text    = {10,  10, "#908030"}, -- blush
 
     errorbg = {10,  10, "#201010"}, -- darkclay
-    error   = {12,  12, "#8080a0"}, -- clay
-    func    = {12,  12, "#8080a0"}, -- clay
-    type    = { 9,   9, "#8080a0"}, -- clay
+    error   = {12,  12, "#608090"}, -- clay
+    func    = {12,  12, "#608090"}, -- clay
+    type    = { 9,   9, "#608090"}, -- clay
 }
