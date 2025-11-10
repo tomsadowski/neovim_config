@@ -7,11 +7,11 @@ to use the colorschemes, copy the following heirarchies into your nvim config di
 - colors/*
 - queries/*
 
-### wiffle colorscheme
-![wiffle](docs/wiffle.png)  
+### cyan colorscheme
+![cyan](docs/cyan.png)  
+
+### blue colorscheme
+![blue](docs/blue.png)  
 
 ### moss colorscheme
 ![moss](docs/moss.png)  
-
-### autumn colorscheme
-![autumn](docs/autumn.png)  

@@ -1,4 +1,4 @@
--- wiffle
+-- blue
 
 require "tsad_colorscheme_main" {
     black   = { 4,   4, "#000000"}, -- black
