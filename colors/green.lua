@@ -10,8 +10,8 @@ require "tsad_colorscheme_main" {
     comment = {10,  10, "#306030"}, -- green
 
     warnbg  = { 1,   1, "#102010"}, -- darkgreen
-    warn    = {10,  10, "#608000"}, -- green
-    keyword = {10,  10, "#608000"}, -- green
+    warn    = {10,  10, "#906060"}, -- green
+    keyword = {10,  10, "#906060"}, -- green
 
     text    = {10,  10, "#908030"}, -- blush
 
