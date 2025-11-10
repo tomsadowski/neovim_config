@@ -4,8 +4,9 @@ just comment-out what you dont want. see init.lua for the top-level options, or 
 
 to use the colorschemes, copy the following heirarchies into your nvim config directory:
 - lua/tsad_colorscheme_main.lua
-- colors/*
-- queries/*
+- colors
+- queries
+- parser
 
 ### green colorscheme
 ![green](docs/green.png)  
