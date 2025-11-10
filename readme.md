@@ -7,6 +7,9 @@ to use the colorschemes, copy the following heirarchies into your nvim config di
 - colors/*
 - queries/*
 
+### green colorscheme
+![green](docs/green.png)  
+
 ### cyan colorscheme
 ![cyan](docs/cyan.png)  
 
