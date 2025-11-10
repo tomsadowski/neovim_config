@@ -9,16 +9,16 @@ require "tsad_colorscheme_main" {
 
     comment = {10,  10, "#306030"}, -- green
 
-    warnbg  = { 1,   1, "#201010"}, -- darkred
+    warnbg  = { 1,   1, "#101020"}, -- darkblue
 
-    warn    = {10,  10, "#b07070"}, -- red
-    keyword = {10,  10, "#b07070"}, -- red
+    warn    = {10,  10, "#6080a0"}, -- blue
+    keyword = {10,  10, "#6080a0"}, -- blue
 
-    text    = {10,  10, "#b09030"}, -- yellow
+    text    = {10,  10, "#a08030"}, -- yellow
 
-    errorbg = {10,  10, "#101020"}, -- darkblue
+    errorbg = {10,  10, "#201010"}, -- darkred
 
-    error   = {12,  12, "#6080a0"}, -- blue
-    func    = {12,  12, "#7090a0"}, -- blue
-    type    = { 9,   9, "#7090a0"}, -- blue
+    error   = {12,  12, "#a06080"}, -- red
+    func    = {12,  12, "#a06080"}, -- red
+    type    = { 9,   9, "#a06080"}, -- red
 }
