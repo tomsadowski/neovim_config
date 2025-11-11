@@ -11,8 +11,8 @@ require "tsad_colorscheme_main" {
 
     warnbg  = { 1,   1, "#102010"}, -- darkgreen
 
-    warn    = {10,  10, "#50d060"}, -- green
-    keyword = {10,  10, "#50d060"}, -- green
+    warn    = {10,  10, "#40c060"}, -- green
+    keyword = {10,  10, "#40c060"}, -- green
 
     text    = {10,  10, "#f0d050"}, -- yellow
 
