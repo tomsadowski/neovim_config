@@ -229,6 +229,7 @@ return function(p)
       Underlined = {link='Normal'}, 
       Ignore     = {link='Normal'}, 
       Todo       = {link='Normal'}, 
+
       LspReferenceText            = {link='Normal'}, 
       LspReferenceRead            = {link='Normal'},
       LspReferenceWrite           = {link='Normal'},
@@ -237,11 +238,18 @@ return function(p)
       LspCodeLens                 = {link='Normal'},
       LspCodeLensSeparator        = {link='Normal'},
       LspSignatureActiveParameter = {link='Normal'},
-      DiagnosticOk                = {link='Normal'},
+
       DiagnosticError             = {link='ErrorMsg'},
       DiagnosticWarn              = {link='WarningMsg'},
       DiagnosticInfo              = {link='Normal'},
-      DiagnosticHint              = {link='Normal'},
+      DiagnosticOk                = {link='Normal'},
+      DiagnosticHint              = {
+        ctermfg = p.comment[cap],
+        fg      = p.comment[gui],
+        ctermbg = p.canvas[cap],
+        bg      = p.canvas[gui],
+      },
+
       DiagnosticVirtualTextError  = {link='DiagnosticError'},
       DiagnosticVirtualTextWarn   = {link='NONE'},
       DiagnosticVirtualTextInfo   = {link='NONE'},
@@ -264,8 +272,8 @@ return function(p)
       DiagnosticFloatingOk        = {link='Normal'},
       DiagnosticSignError         = {link='DiagnosticError'},
       DiagnosticSignWarn          = {link='DiagnosticWarn'},
+      DiagnosticSignHint          = {link='DiagnosticHint'},
       DiagnosticSignInfo          = {link='Normal'},
-      DiagnosticSignHint          = {link='Normal'},
       DiagnosticSignOk            = {link='Normal'},
       DiagnosticDeprecated        = {link='Normal'},
       DiagnosticUnnecessary       = {link='Normal'},

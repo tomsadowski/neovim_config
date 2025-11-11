@@ -8,11 +8,11 @@ to use the colorschemes, copy the following heirarchies into your nvim config di
 - queries
 - parser
 
-### green colorscheme
-![green](docs/green.png)  
-
 ### cyan colorscheme
 ![cyan](docs/cyan.png)  
+
+### green colorscheme
+![green](docs/green.png)  
 
 ### blue colorscheme
 ![blue](docs/blue.png)  
