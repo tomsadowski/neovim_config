@@ -7,7 +7,7 @@ require "tsad_colorscheme_main" {
 
     visual  = { 2,   2, "#103010"}, -- green
 
-    comment = {10,  10, "#306030"}, -- green
+    comment = {10,  10, "#506020"}, -- green
 
     warnbg  = { 1,   1, "#101020"}, -- darkblue
 

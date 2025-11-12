@@ -7,17 +7,17 @@ require "tsad_colorscheme_main" {
 
     visual  = { 2,   2, "#203030"}, -- cyan
 
-    comment = {10,  10, "#006060"}, -- blue
+    comment = {10,  10, "#206040"}, -- blue
 
     warnbg  = { 1,   1, "#102010"}, -- darkgreen
 
-    warn    = {10,  10, "#40b060"}, -- green
-    keyword = {10,  10, "#40b060"}, -- green
+    warn    = {10,  10, "#50a050"}, -- green
+    keyword = {10,  10, "#50a050"}, -- green
 
-    text    = {10,  10, "#f0d050"}, -- yellow
+    text    = {10,  10, "#d0b050"}, -- yellow
 
     errorbg = {10,  10, "#201010"}, -- darkpink
-    error   = {12,  12, "#f07878"}, -- pink
-    func    = {12,  12, "#f07878"}, -- pink
-    type    = { 9,   9, "#f07878"}, -- pink
+    error   = {12,  12, "#e87868"}, -- pink
+    func    = {12,  12, "#e87868"}, -- pink
+    type    = { 9,   9, "#e87868"}, -- pink
 }
