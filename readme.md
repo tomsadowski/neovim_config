@@ -11,14 +11,14 @@ to use the colorschemes, copy the following heirarchies into your nvim config di
 ### day colorscheme (super bright)
 ![day](docs/day.png)  
 
-### cyan colorscheme (acidic)
+### cyan colorscheme (semi bright)
 ![cyan](docs/cyan.png)  
 
-### green colorscheme (minigolf)
+### green colorscheme (medium)
 ![green](docs/green.png)  
 
-### blue colorscheme (dark blueberries and bright grapes)
+### blue colorscheme (dark)
 ![blue](docs/blue.png)  
 
-### moss colorscheme (oldie)
+### moss colorscheme (semi bright)
 ![moss](docs/moss.png)  
