@@ -3,11 +3,11 @@
 require "tsad_colorscheme_main" {
     black   = { 4,   4, "#000000"}, -- black
 
-    canvas  = { 0,   0, "#002020"}, -- blue
+    canvas  = { 0,   0, "#002020"}, -- cyan
 
     visual  = { 2,   2, "#203030"}, -- cyan
 
-    comment = {10,  10, "#206040"}, -- blue
+    comment = {10,  10, "#206060"}, -- cyan
 
     warnbg  = { 1,   1, "#102010"}, -- darkgreen
 

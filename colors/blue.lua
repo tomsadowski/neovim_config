@@ -16,7 +16,7 @@ require "tsad_colorscheme_main" {
     text    = {10,  10, "#c06090"}, -- magenta
 
     errorbg = {10,  10, "#202010"}, -- darkgreen
-    error   = {12,  12, "#70a030"}, -- green
-    func    = {12,  12, "#70a030"}, -- green
-    type    = { 9,   9, "#70a030"}, -- green
+    error   = {12,  12, "#709030"}, -- green
+    func    = {12,  12, "#709030"}, -- green
+    type    = { 9,   9, "#709030"}, -- green
 }
