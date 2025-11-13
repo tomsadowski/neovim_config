@@ -10,10 +10,10 @@ require "tsad_colorscheme_main" {
     comment = {10,  10, "#104050"}, -- blue
 
     warnbg  = { 1,   1, "#102010"}, -- darkpurple
-    warn    = {10,  10, "#7060c0"}, -- purple
-    keyword = {10,  10, "#7060c0"}, -- purple
+    warn    = {10,  10, "#6060a0"}, -- purple
+    keyword = {10,  10, "#6060a0"}, -- purple
 
-    text    = {10,  10, "#c06090"}, -- magenta
+    text    = {10,  10, "#a06080"}, -- magenta
 
     errorbg = {10,  10, "#202010"}, -- darkgreen
     error   = {12,  12, "#709030"}, -- green
