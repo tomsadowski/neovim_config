@@ -8,20 +8,20 @@ to use the colorschemes, copy the following heirarchies into your nvim config di
 - queries
 - parser
 
-### geen colorscheme (bright)
-![geen](docs/geen.png)  
+### queen
+![queen](docs/queen.png)  
 
-### cyan colorscheme (semi bright)
-![cyan](docs/cyan.png)  
-
-### day colorscheme (super bright)
-![day](docs/day.png)  
-
-### green colorscheme (medium)
+### green
 ![green](docs/green.png)  
 
-### blue colorscheme (dark)
+### cyan
+![cyan](docs/cyan.png)  
+
+### blue
 ![blue](docs/blue.png)  
 
-### moss colorscheme (semi bright)
+### day
+![day](docs/day.png)  
+
+### moss
 ![moss](docs/moss.png)  
