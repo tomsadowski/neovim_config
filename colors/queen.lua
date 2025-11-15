@@ -1,4 +1,4 @@
--- geen
+-- queen
 
 require "tsad_colorscheme_main" {
     black   = { 4,   4, "#000000"}, -- black
@@ -9,14 +9,14 @@ require "tsad_colorscheme_main" {
 
     comment = {10,  10, "#505860"}, -- grey
 
-    text    = {10,  10, "#809070"}, -- white
+    text    = {10,  10, "#90a070"}, -- white
 
     warnbg  = { 1,   1, "#203010"}, -- green
-    warn    = {10,  10, "#60a090"}, -- green
-    keyword = {10,  10, "#60a090"}, -- green
+    warn    = {10,  10, "#70a090"}, -- green
+    keyword = {10,  10, "#70a090"}, -- green
 
     errorbg = {10,  10, "#201020"}, -- red
-    error   = {12,  12, "#8080b0"}, -- red
-    func    = {12,  12, "#8080b0"}, -- red
-    type    = { 9,   9, "#8080b0"}, -- red
+    error   = {12,  12, "#a07090"}, -- red
+    func    = {12,  12, "#a07090"}, -- red
+    type    = { 9,   9, "#a07090"}, -- red
 }
