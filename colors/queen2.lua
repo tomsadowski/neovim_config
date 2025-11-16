@@ -9,14 +9,14 @@ require "tsad_colorscheme_main" {
 
     comment = {10,  10, "#505860"}, -- grey
 
-    text    = {10,  10, "#90a080"}, -- white
+    text    = {10,  10, "#90a070"}, -- white
 
     warnbg  = { 1,   1, "#203010"}, -- green
     warn    = {10,  10, "#70a090"}, -- green
     keyword = {10,  10, "#70a090"}, -- green
 
     errorbg = {10,  10, "#201020"}, -- red
-    error   = {12,  12, "#9090a0"}, -- red
-    func    = {12,  12, "#9090a0"}, -- red
-    type    = { 9,   9, "#9090a0"}, -- red
+    error   = {12,  12, "#a07090"}, -- red
+    func    = {12,  12, "#a07090"}, -- red
+    type    = { 9,   9, "#a07090"}, -- red
 }
