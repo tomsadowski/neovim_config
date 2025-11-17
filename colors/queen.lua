@@ -12,14 +12,14 @@ require "tsad_colorscheme_main" {
 
     comment = {10,  10, "#806070"}, -- rose
 
-    text    = {10,  10, "#90a080"}, -- green
+    text    = {10,  10, "#889078"}, -- green
 
     warnbg  = { 1,   1, "#203010"}, -- cyan
-    warn    = {10,  10, "#70a090"}, -- cyan
-    keyword = {10,  10, "#70a090"}, -- cyan
+    warn    = {10,  10, "#609090"}, -- cyan
+    keyword = {10,  10, "#609090"}, -- cyan
 
     errorbg = {10,  10, "#201020"}, -- violet
-    error   = {12,  12, "#8888a8"}, -- violet
-    func    = {12,  12, "#8888a8"}, -- violet
-    type    = { 9,   9, "#8888a8"}, -- violet
+    error   = {12,  12, "#8878a0"}, -- violet
+    func    = {12,  12, "#8878a0"}, -- violet
+    type    = { 9,   9, "#8878a0"}, -- violet
 }
