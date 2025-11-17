@@ -5,18 +5,21 @@ require "tsad_colorscheme_main" {
 
     canvas  = { 0,   0, "#101a20"}, -- grey
 
-    visual  = { 2,   2, "#203040"}, -- grey
+    visual  = { 2,   2, "#203030"}, -- cyan
 
-    comment = {10,  10, "#505860"}, -- grey
+    lineno  = {10,  10, "#404850"}, -- grey
+    msgarea = {10,  10, "#404850"}, -- grey
 
-    text    = {10,  10, "#90a080"}, -- white
+    comment = {10,  10, "#806070"}, -- rose
 
-    warnbg  = { 1,   1, "#203010"}, -- green
-    warn    = {10,  10, "#70a090"}, -- green
-    keyword = {10,  10, "#70a090"}, -- green
+    text    = {10,  10, "#90a080"}, -- green
 
-    errorbg = {10,  10, "#201020"}, -- red
-    error   = {12,  12, "#9090a0"}, -- red
-    func    = {12,  12, "#9090a0"}, -- red
-    type    = { 9,   9, "#9090a0"}, -- red
+    warnbg  = { 1,   1, "#203010"}, -- cyan
+    warn    = {10,  10, "#70a090"}, -- cyan
+    keyword = {10,  10, "#70a090"}, -- cyan
+
+    errorbg = {10,  10, "#201020"}, -- violet
+    error   = {12,  12, "#8888a8"}, -- violet
+    func    = {12,  12, "#8888a8"}, -- violet
+    type    = { 9,   9, "#8888a8"}, -- violet
 }

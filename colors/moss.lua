@@ -7,6 +7,7 @@ require "tsad_colorscheme_main" {
 
     visual  = { 2,   2, "#102020"}, -- cyan
 
+    lineno  = {10,  10, "#506070"}, -- blue
     comment = {10,  10, "#506070"}, -- blue
 
     warnbg  = { 1,   1, "#102010"}, -- darkgreen

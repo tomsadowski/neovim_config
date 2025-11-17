@@ -7,6 +7,7 @@ require "tsad_colorscheme_main" {
 
     visual  = { 2,   2, "#000080"}, -- blue
 
+    lineno  = {10,  10, "#004080"}, -- green
     comment = {10,  10, "#004080"}, -- green
 
     text    = {10,  10, "#00f060"}, -- green
