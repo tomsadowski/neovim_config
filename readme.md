@@ -8,8 +8,8 @@ to use the colorschemes, copy the following heirarchies into your nvim config di
 - queries
 - parser
 
-### food
-![food](docs/food.png)  
+### road
+![road](docs/road.png)  
 
 ### queen
 ![queen](docs/queen.png)  

@@ -212,7 +212,7 @@
 ] @keyword.modifier
 
 (lifetime
-  "'" @keyword.modifier)
+  "'" @label)
 
 (lifetime
   (identifier) @attribute)
