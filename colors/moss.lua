@@ -9,6 +9,7 @@ require "tsad_colorscheme_main" {
 
     lineno  = {10,  10, "#506070"}, -- blue
     comment = {10,  10, "#506070"}, -- blue
+    msgarea = {10,  10, "#506070"}, -- blue
 
     warnbg  = { 1,   1, "#102010"}, -- darkgreen
     warn    = {10,  10, "#809040"}, -- green

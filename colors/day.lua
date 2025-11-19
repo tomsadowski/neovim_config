@@ -1,4 +1,4 @@
--- day (cyan-based)
+-- day
 
 require "tsad_colorscheme_main" {
     black   = { 4,   4, "#000000"}, -- black
@@ -9,6 +9,7 @@ require "tsad_colorscheme_main" {
 
     lineno  = {10,  10, "#507080"}, -- cyan
     comment = {10,  10, "#507080"}, -- cyan
+    msgarea = {10,  10, "#507080"}, -- cyan
 
     warnbg  = { 1,   1, "#102010"}, -- darkgreen
 
