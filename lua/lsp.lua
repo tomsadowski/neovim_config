@@ -1,24 +1,24 @@
 -- LSP ----------------------------------------------------------
 
-vim.api.nvim_create_autocmd(
-    {'BufEnter', 'BufWinEnter'}, {
-        pattern = {
-            '*.c', '*.C', '*.h', '*.H', 
-            '*.cpp', '*.CPP', '*.hpp', '*.HPP'
-        },
-        callback = function(args) 
-            vim.lsp.start({
-                    name = 'clang-lsp',
-                    cmd = {'clangd'},
-                    root_dir = vim.fs.root(
-                        args.buf, 
-                        {'.git'}
-                    )
-                }
-            )
-        end
-    }
-)
+--vim.api.nvim_create_autocmd(
+--    {'BufEnter', 'BufWinEnter'}, {
+--        pattern = {
+--            '*.c', '*.C', '*.h', '*.H', 
+--            '*.cpp', '*.CPP', '*.hpp', '*.HPP'
+--        },
+--        callback = function(args) 
+--            vim.lsp.start({
+--                    name = 'clang-lsp',
+--                    cmd = {'clangd'},
+--                    root_dir = vim.fs.root(
+--                        args.buf, 
+--                        {'.git'}
+--                    )
+--                }
+--            )
+--        end
+--    }
+--)
 vim.api.nvim_create_autocmd(
     'FileType', {
         pattern  = 'rust',

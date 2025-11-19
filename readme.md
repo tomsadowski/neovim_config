@@ -11,17 +11,8 @@ to use the colorschemes, copy the following heirarchies into your nvim config di
 ### road
 ![road](docs/road.png)  
 
-### queen
-![queen](docs/queen.png)  
-
-### green
-![green](docs/green.png)  
-
-### cyan
-![cyan](docs/cyan.png)  
-
-### blue
-![blue](docs/blue.png)  
+### load
+![load](docs/load.png)  
 
 ### day
 ![day](docs/day.png)  

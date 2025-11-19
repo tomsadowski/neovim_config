@@ -5,11 +5,11 @@ require "keymaps"
 require "settings"
 
 -- supplementary lsp settings
-require "lsp"
+--require "lsp"
 
 -- supplementary treesitter settings
---require "treesitter"
+require "treesitter"
 
 -- comment this line out if you want the default colorscheme
-vim.cmd "colo road"
+vim.cmd "colo load"
 

@@ -65,7 +65,7 @@
 (field_identifier) @property
 (statement_identifier) @label
 (type_identifier) @type
-(primitive_type) @type
+(primitive_type) @keyword
 (sized_type_specifier) @type
 
 (call_expression
