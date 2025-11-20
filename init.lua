@@ -5,7 +5,7 @@ require "keymaps"
 require "settings"
 
 -- supplementary lsp settings
---require "lsp"
+require "lsp"
 
 -- supplementary treesitter settings
 require "treesitter"
