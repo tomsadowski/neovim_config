@@ -13,9 +13,3 @@ to use the colorschemes, copy the following heirarchies into your nvim config di
 
 ### load
 ![load](docs/load.png)  
-
-### day
-![day](docs/day.png)  
-
-### moss
-![moss](docs/moss.png)  
