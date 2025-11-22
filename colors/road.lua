@@ -7,19 +7,17 @@ require "tsad_colorscheme_main" {
 
     visual  = { 2,   2, "#103010"}, -- green
 
-    lineno  = {10,  10, "#505050"}, -- grey
-    msgarea = {10,  10, "#505050"}, -- grey
-
-    comment = {10,  10, "#508050"}, -- green
+    lineno  = {10,  10, "#707070"}, -- grey
+    msgarea = {10,  10, "#707070"}, -- grey
+    comment = {10,  10, "#707070"}, -- grey
 
     warnbg  = { 1,   1, "#101020"}, -- darkblue
+    errorbg = {10,  10, "#201010"}, -- darkred
 
     warn    = {10,  10, "#6090c0"}, -- blue
     keyword = {10,  10, "#6090c0"}, -- blue
 
     text    = {10,  10, "#c0a050"}, -- yellow
-
-    errorbg = {10,  10, "#201010"}, -- darkred
 
     error   = {12,  12, "#c07080"}, -- red
     func    = {12,  12, "#c07080"}, -- red
