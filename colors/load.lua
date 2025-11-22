@@ -7,7 +7,7 @@ require "tsad_colorscheme_main" {
 
     visual  = { 2,   2, "#303030"}, -- grey
 
-    lineno  = {10,  10, "#707070"}, -- grey
+    lineno  = {10,  10, "#505050"}, -- grey
     msgarea = {10,  10, "#707070"}, -- grey
     comment = {10,  10, "#707070"}, -- grey
 
