@@ -18,8 +18,8 @@ return function(p)
           bg      = p.black[gui]
       }, 
       Search = {
-          ctermbg = p.black[cap], 
-          bg      = p.black[gui], 
+          ctermbg = p.search[cap], 
+          bg      = p.search[gui], 
       },
       LineNr = {
           ctermfg = p.lineno[cap], 

@@ -2,6 +2,7 @@
 
 require "tsad_colorscheme_main" {
     black   = { 4,   4, "#000000"}, -- black
+    search  = { 4,   4, "#000000"}, -- black
 
     canvas  = { 0,   0, "#141414"}, -- green
 
