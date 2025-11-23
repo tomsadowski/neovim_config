@@ -6,6 +6,8 @@
 
 ;(use_list (identifier) @function
 ;  (#match? @function "^[a-z][a-z_]+"))
+((identifier) @constant
+  (#match? @constant "^[A-Z][A-Z_]") (#set! priority 105))
 
 ; enum variants (in the enum definition) are variable members
 (enum_variant
