@@ -8,11 +8,9 @@ to use the colorschemes, copy the following heirarchies into your nvim config di
 - queries
 - parser
 
+### bzzt
+![bzzt](docs/bzzt.png)  
+
 ### trees
 ![trees](docs/trees.png)  
 
-### road
-![road](docs/road.png)  
-
-### load
-![load](docs/load.png)  

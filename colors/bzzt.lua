@@ -1,30 +1,30 @@
 -- bzzt
 
 require "tsad_colorscheme_main" {
-    black   = { 4,   4, "#000000"}, -- grey
+    black   = { 0,   0, "#000000"}, -- grey
 
-    canvas  = { 0,   0, "#101010"}, -- blue
+    canvas  = { 0, 233, "#101010"}, -- grey
 
-    lineno  = {10,  10, "#606060"}, -- grey
-    msgarea = {10,  10, "#606060"}, -- grey
-    comment = {10,  10, "#606060"}, -- blue
+    lineno  = { 8,   8, "#808080"}, -- grey
+    msgarea = { 8,   8, "#808080"}, -- grey
+    comment = { 8,   8, "#808080"}, -- grey
 
 
-    text    = {10,  10, "#c0b040"}, -- green
-    func    = {12,  12, "#c0b040"}, -- green
-    type    = { 9,   9, "#c0b040"}, -- green
+    error   = {11, 184, "#c0b040"}, -- yellow
+    text    = {11, 184, "#c0b040"}, -- yellow
+    func    = {11, 184, "#c0b040"}, -- yellow
+    type    = {11, 184, "#c0b040"}, -- yellow
 
-    warn    = {10,  10, "#40b0c0"}, -- pink
-    prim    = {10,  10, "#40b0c0"}, -- pink
-    num     = {10,  10, "#40b0c0"}, -- pink
-    delim   = {10,  10, "#40b0c0"}, -- pink
-    op      = {10,  10, "#40b0c0"}, -- pink
-    module  = {10,  10, "#40b0c0"}, -- pink
+    warn    = {14,  44, "#40b0c0"}, -- cyan
+    prim    = {14,  44, "#40b0c0"}, -- cyan
+    num     = {14,  44, "#40b0c0"}, -- cyan
+    delim   = {14,  44, "#40b0c0"}, -- cyan
+    op      = {14,  44, "#40b0c0"}, -- cyan
+    module  = {14,  44, "#40b0c0"}, -- cyan
 
-    warnbg  = { 1,   1, "#303010"}, -- yellow
-    search  = { 4,   4, "#103010"}, -- yellow
+    warnbg  = { 6,  23, "#003030"}, -- cyan
+    search  = { 6,  23, "#003030"}, -- cyan
 
-    error   = {12,  12, "#b040b0"}, -- pink
-    errorbg = {10,  10, "#301030"}, -- magenta
-    visual  = { 2,   2, "#301030"}, -- magenta
+    errorbg = { 3,  58, "#303000"}, -- yellow
+    visual  = { 3,  58, "#303000"}, -- yellow
 }
