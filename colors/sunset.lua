@@ -16,6 +16,7 @@ require "tsad_colorscheme_main" {
     errorbg = {10,  10, "#201020"}, -- magenta
 
     text    = {10,  10, "#a09050"}, -- orange
+    module  = {10,  10, "#a09050"}, -- orange
     delim   = {10,  10, "#a09050"}, -- orange
     op      = {10,  10, "#a09050"}, -- orange
     num     = {10,  10, "#a09050"}, -- orange

@@ -90,6 +90,10 @@ return function(p)
           bg      = p.visual[gui], 
       },
 
+      ['@module'] = {
+          ctermfg = p.module[cap], 
+          fg      = p.module[gui], 
+      }, 
       Number  = {
           ctermfg = p.num[cap], 
           fg      = p.num[gui], 
@@ -300,7 +304,6 @@ return function(p)
       ['@constant']                    = {link='@variable'}, 
       ['@constant.builtin']            = {link='@keyword'}, 
       ['@constant.macro']              = {link='@constant'}, 
-      ['@module']                      = {link='Normal'}, 
       ['@module.builtin']              = {link='@keyword'}, 
       ['@string']                      = {link='String'}, 
       ['@string.documentation']        = {link='@string'}, 

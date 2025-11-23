@@ -20,6 +20,7 @@ require "tsad_colorscheme_main" {
     num     = {10,  10, "#ff9030"}, -- brown
     delim   = {10,  10, "#ff9030"}, -- brown
     op      = {10,  10, "#ff9030"}, -- brown
+    module  = {10,  10, "#ff9030"}, -- brown
 
     warnbg  = { 1,   1, "#303018"}, -- yellow
     search  = { 4,   4, "#303018"}, -- yellow

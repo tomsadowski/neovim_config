@@ -16,6 +16,7 @@ require "tsad_colorscheme_main" {
     errorbg = {10,  10, "#201010"}, -- red
 
     text    = {10,  10, "#a0a060"}, -- yellow
+    module  = {10,  10, "#a0a060"}, -- yellow
     delim   = {10,  10, "#a0a060"}, -- yellow
     op      = {10,  10, "#a0a060"}, -- yellow
     num     = {10,  10, "#a0a060"}, -- yellow

@@ -1,4 +1,4 @@
--- trees
+-- flowers
 
 require "tsad_colorscheme_main" {
     black   = { 4,   4, "#000000"}, -- grey
@@ -21,6 +21,7 @@ require "tsad_colorscheme_main" {
     num     = {10,  10, "#d080a0"}, -- brown
     delim   = {10,  10, "#d080a0"}, -- brown
     op      = {10,  10, "#d080a0"}, -- brown
+    module  = {10,  10, "#d080a0"}, -- brown
 
     warnbg  = { 1,   1, "#303018"}, -- yellow
     search  = { 4,   4, "#303018"}, -- yellow
