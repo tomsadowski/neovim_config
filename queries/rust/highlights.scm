@@ -310,7 +310,7 @@
   "|="
   "||"
 ] @operator
-["?"] @function
+["?"] @operator
 
 (use_wildcard
   "*" @character.special)
