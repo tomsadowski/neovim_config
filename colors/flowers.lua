@@ -9,17 +9,18 @@ require "tsad_colorscheme_main" {
     msgarea = {10,  10, "#708090"}, -- grey
     comment = {10,  10, "#708090"}, -- blue
 
-    text    = {10,  10, "#90ff30"}, -- green
 
-    func    = {12,  12, "#e0b0ff"}, -- indigo
-    type    = { 9,   9, "#e0b0ff"}, -- indigo
+    text    = {10,  10, "#c0c034"}, -- green
 
-    error   = {12,  12, "#ff9030"}, -- brown
-    warn    = {10,  10, "#ff9030"}, -- brown
-    prim    = {10,  10, "#ff9030"}, -- brown
-    num     = {10,  10, "#ff9030"}, -- brown
-    delim   = {10,  10, "#ff9030"}, -- brown
-    op      = {10,  10, "#ff9030"}, -- brown
+    func    = {12,  12, "#80d080"}, -- cyan
+    type    = { 9,   9, "#80d080"}, -- cyan
+
+    error   = {12,  12, "#d080a0"}, -- brown
+    warn    = {10,  10, "#d080a0"}, -- brown
+    prim    = {10,  10, "#d080a0"}, -- brown
+    num     = {10,  10, "#d080a0"}, -- brown
+    delim   = {10,  10, "#d080a0"}, -- brown
+    op      = {10,  10, "#d080a0"}, -- brown
 
     warnbg  = { 1,   1, "#303018"}, -- yellow
     search  = { 4,   4, "#303018"}, -- yellow
