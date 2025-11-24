@@ -11,3 +11,7 @@ to use the colorschemes, copy the following heirarchies into your nvim config di
 ### bzzt
 ![bzzt](docs/bzzt.png)  
 
+### brush
+![brush](docs/brush.png)  
+
+
