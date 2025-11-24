@@ -21,6 +21,15 @@ require "tsad_colorscheme_main" {
     op      = {10,  10, "#a09050"}, -- orange
     num     = {10,  10, "#a09050"}, -- orange
 
+    uselist = {14,  44, "#b08020"}, -- blue
+    call    = {14,  44, "#b08020"}, -- blue
+    member  = {14,  44, "#b08020"}, -- blue
+    var     = {11, 184, "#2080b0"}, -- red
+    decl    = {11, 184, "#2080b0"}, -- red
+    const   = {11, 184, "#2080b0"}, -- red
+    str     = {11, 184, "#2080b0"}, -- red
+    vbuilt  = {11, 184, "#2080b0"}, -- red
+
     warn    = {10,  10, "#5090a0"}, -- blue
     func    = {12,  12, "#5090a0"}, -- blue
     type    = { 9,   9, "#5090a0"}, -- blue

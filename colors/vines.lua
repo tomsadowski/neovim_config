@@ -15,6 +15,15 @@ require "tsad_colorscheme_main" {
     warnbg  = { 1,   1, "#101020"}, -- blue
     errorbg = {10,  10, "#201010"}, -- red
 
+    uselist = {14,  44, "#b08020"}, -- blue
+    call    = {14,  44, "#b08020"}, -- blue
+    member  = {14,  44, "#b08020"}, -- blue
+    var     = {11, 184, "#2080b0"}, -- red
+    decl    = {11, 184, "#2080b0"}, -- red
+    const   = {11, 184, "#2080b0"}, -- red
+    str     = {11, 184, "#2080b0"}, -- red
+    vbuilt  = {11, 184, "#2080b0"}, -- red
+
     text    = {10,  10, "#a0c070"}, -- green
     module  = {10,  10, "#a0c070"}, -- green
     delim   = {10,  10, "#a0c070"}, -- green

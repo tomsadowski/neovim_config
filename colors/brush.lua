@@ -8,30 +8,30 @@ require "tsad_colorscheme_main" {
     search  = { 6,  23, "#301030"}, -- magenta
     errorbg = { 3,  58, "#301030"}, -- magenta
 
-    warnbg  = { 6,  23, "#000080"}, -- green
-    visual  = { 3,  58, "#000080"}, -- green
+    warnbg  = { 6,  23, "#004000"}, -- green
+    visual  = { 3,  58, "#004000"}, -- green
 
-    msgarea = { 8,   8, "#801080"}, -- grey
-    lineno  = { 8,   8, "#801080"}, -- grey
-    comment = { 8,   8, "#801080"}, -- grey
+    lineno  = { 8,   8, "#603060"}, -- magenta
+    msgarea = { 8,   8, "#803080"}, -- magenta
+    comment = { 8,   8, "#803080"}, -- magenta
 
-    error   = {11, 184, "#2080b0"}, -- red
-    var     = {11, 184, "#2080b0"}, -- red
-    decl    = {11, 184, "#2080b0"}, -- red
-    const   = {11, 184, "#2080b0"}, -- red
-    str     = {11, 184, "#2080b0"}, -- red
-    vbuilt  = {11, 184, "#2080b0"}, -- red
+    error   = {11, 184, "#7080c0"}, -- blue
+    var     = {11, 184, "#7080c0"}, -- blue
+    decl    = {11, 184, "#7080c0"}, -- blue
+    const   = {11, 184, "#7080c0"}, -- blue
+    str     = {11, 184, "#7080c0"}, -- blue
+    vbuilt  = {11, 184, "#7080c0"}, -- blue
 
-    warn    = {14,  44, "#b08020"}, -- blue
-    text    = {14,  44, "#b08020"}, -- blue
-    uselist = {14,  44, "#b08020"}, -- blue
-    func    = {14,  44, "#b08020"}, -- blue
-    call    = {14,  44, "#b08020"}, -- blue
-    type    = {14,  44, "#b08020"}, -- blue
-    member  = {14,  44, "#b08020"}, -- blue
-    prim    = {14,  44, "#b08020"}, -- blue
-    num     = {14,  44, "#b08020"}, -- blue
-    delim   = {14,  44, "#b08020"}, -- blue
-    op      = {14,  44, "#b08020"}, -- blue
-    module  = {14,  44, "#b08020"}, -- blue
+    warn    = {14,  44, "#a08070"}, -- red
+    text    = {14,  44, "#a08070"}, -- red
+    uselist = {14,  44, "#a08070"}, -- red
+    func    = {14,  44, "#a08070"}, -- red
+    call    = {14,  44, "#a08070"}, -- red
+    type    = {14,  44, "#a08070"}, -- red
+    member  = {14,  44, "#a08070"}, -- red
+    prim    = {14,  44, "#a08070"}, -- red
+    num     = {14,  44, "#a08070"}, -- red
+    delim   = {14,  44, "#a08070"}, -- red
+    op      = {14,  44, "#a08070"}, -- red
+    module  = {14,  44, "#a08070"}, -- red
 }

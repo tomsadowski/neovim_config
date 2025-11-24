@@ -15,6 +15,15 @@ require "tsad_colorscheme_main" {
     func    = {11, 184, "#c0b040"}, -- yellow
     type    = {11, 184, "#c0b040"}, -- yellow
 
+    uselist = {14,  44, "#b08020"}, -- blue
+    call    = {14,  44, "#b08020"}, -- blue
+    member  = {14,  44, "#b08020"}, -- blue
+    var     = {11, 184, "#2080b0"}, -- red
+    decl    = {11, 184, "#2080b0"}, -- red
+    const   = {11, 184, "#2080b0"}, -- red
+    str     = {11, 184, "#2080b0"}, -- red
+    vbuilt  = {11, 184, "#2080b0"}, -- red
+
     warn    = {14,  44, "#40b0c0"}, -- cyan
     prim    = {14,  44, "#40b0c0"}, -- cyan
     num     = {14,  44, "#40b0c0"}, -- cyan

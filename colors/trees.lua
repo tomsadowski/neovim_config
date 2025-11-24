@@ -14,6 +14,15 @@ require "tsad_colorscheme_main" {
     func    = {12,  12, "#e0b0ff"}, -- indigo
     type    = { 9,   9, "#e0b0ff"}, -- indigo
 
+    uselist = {14,  44, "#b08020"}, -- blue
+    call    = {14,  44, "#b08020"}, -- blue
+    member  = {14,  44, "#b08020"}, -- blue
+    var     = {11, 184, "#2080b0"}, -- red
+    decl    = {11, 184, "#2080b0"}, -- red
+    const   = {11, 184, "#2080b0"}, -- red
+    str     = {11, 184, "#2080b0"}, -- red
+    vbuilt  = {11, 184, "#2080b0"}, -- red
+
     error   = {12,  12, "#ff9030"}, -- brown
     warn    = {10,  10, "#ff9030"}, -- brown
     prim    = {10,  10, "#ff9030"}, -- brown
