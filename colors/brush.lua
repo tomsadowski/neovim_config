@@ -12,9 +12,10 @@ require "tsad_colorscheme_main" {
     visual  = { 3,  58, "#003000"}, -- green
 
     lineno  = { 8,   8, "#807080"}, -- magenta
-
     msgarea = { 8,   8, "#807080"}, -- magenta
-    comment = { 8,   8, "#807080"}, -- magenta
+
+    comment = {14,  44, "#8872b0"}, -- blue
+    path    = {14,  44, "#b07288"}, -- red
 
     error   = {11, 184, "#b090f0"}, -- blue
     var     = {11, 184, "#b090f0"}, -- blue
@@ -24,6 +25,7 @@ require "tsad_colorscheme_main" {
     vbuilt  = {11, 184, "#b090f0"}, -- blue
     num     = {14,  44, "#b090f0"}, -- blue
     bool    = {14,  44, "#b090f0"}, -- blue
+
 
     warn    = {14,  44, "#f090b0"}, -- red
     text    = {14,  44, "#f090b0"}, -- red

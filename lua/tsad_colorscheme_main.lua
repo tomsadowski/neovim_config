@@ -106,6 +106,10 @@ return function(p)
           fg      = p.call[gui], 
       }, 
       ['@function.macro'] = {link='@function'}, 
+      ['@path'] = {
+          ctermfg = p.path[cap], 
+          fg      = p.path[gui], 
+      }, 
       ['@module'] = {
           ctermfg = p.module[cap], 
           fg      = p.module[gui], 

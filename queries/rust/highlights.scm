@@ -12,6 +12,13 @@
 ((identifier) @constant
   (#match? @constant "^[A-Z][A-Z_]") (#set! priority 105))
 
+(scoped_identifier
+  path: (identifier) @path (#set! priority 101)
+  name: (identifier))
+([
+ "::"
+] @path (#set! priority 101))
+
 ; enum variants (in the enum definition) are variable members
 ;(enum_variant
 ;  name: (identifier) @declaration)
@@ -102,15 +109,16 @@
 
 ; Assume that uppercase names in paths are types
 (scoped_identifier
-  path: (identifier) @module)
+  path: (identifier) @path)
+
+(scoped_type_identifier
+  path: (identifier) @path)
 
 (scoped_identifier
   (scoped_identifier
     name: (identifier) @module)
   (#set! priority 105))
 
-(scoped_type_identifier
-  path: (identifier) @module)
 
 (scoped_type_identifier
   path: (identifier) @module
@@ -131,9 +139,9 @@
 [
   (crate)
   (super)
-] @module
+] @path
 (scoped_use_list
-  path: (identifier) @module)
+  path: (identifier) @path)
 (scoped_use_list
   path: (scoped_identifier
     (identifier) @module))
