@@ -14,14 +14,18 @@ require "tsad_colorscheme_main" {
     lineno  = { 8,   8, "#506050"}, -- green
     msgarea = { 8,   8, "#506050"}, -- green
 
-    comment = { 8,   8, "#905090"}, -- magenta
+    comment = { 8,   8, "#507050"}, -- magenta
 
-    error   = {11, 184, "#b09040"}, -- orange
-    text    = {11, 184, "#b09040"}, -- orange
-    const   = {11, 184, "#b09040"}, -- orange
-    vbuilt  = {11, 184, "#b09040"}, -- orange
+    error   = {11, 184, "#a09040"}, -- orange
+    var     = {11, 184, "#a09040"}, -- orange
+    decl    = {11, 184, "#a09040"}, -- orange
+    const   = {11, 184, "#a09040"}, -- orange
+    str     = {11, 184, "#a09040"}, -- orange
+    vbuilt  = {11, 184, "#a09040"}, -- orange
 
     warn    = {14,  44, "#90a0c0"}, -- blue
+    text    = {14,  44, "#90a0c0"}, -- blue
+    uselist = {14,  44, "#90a0c0"}, -- blue
     func    = {14,  44, "#90a0c0"}, -- blue
     call    = {14,  44, "#90a0c0"}, -- blue
     type    = {14,  44, "#90a0c0"}, -- blue

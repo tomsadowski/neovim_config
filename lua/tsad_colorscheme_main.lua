@@ -90,6 +90,10 @@ return function(p)
           bg      = p.visual[gui], 
       },
 
+      ['@uselist'] = {
+          ctermfg = p.uselist[cap],
+          fg      = p.uselist[gui], 
+      }, 
       ['@function']                    = {link='Function'}, 
       ['@function.builtin']            = {link='@function'}, 
       ['@function.method']             = {link='@function'}, 
@@ -101,7 +105,7 @@ return function(p)
           ctermfg = p.call[cap],
           fg      = p.call[gui], 
       }, 
-      ['@function.macro']              = {link='@function'}, 
+      ['@function.macro'] = {link='@function'}, 
       ['@module'] = {
           ctermfg = p.module[cap], 
           fg      = p.module[gui], 
@@ -113,6 +117,10 @@ return function(p)
       ['@variable.member'] = {
           ctermfg = p.member[cap], 
           fg      = p.member[gui], 
+      }, 
+      ['@declaration'] = {
+          ctermfg = p.decl[cap], 
+          fg      = p.decl[gui], 
       }, 
       Constant  = {
           ctermfg = p.const[cap], 
@@ -135,8 +143,8 @@ return function(p)
           fg      = p.op[gui], 
       }, 
       Identifier = {
-          ctermfg = p.text[cap], 
-          fg      = p.text[gui], 
+          ctermfg = p.var[cap], 
+          fg      = p.var[gui], 
       },
       Macro = {
           ctermfg = p.text[cap], 
@@ -147,8 +155,8 @@ return function(p)
           fg      = p.prim[gui], 
       }, 
       String = {
-          ctermfg = p.prim[cap], 
-          fg      = p.prim[gui], 
+          ctermfg = p.str[cap], 
+          fg      = p.str[gui], 
       },
       Function = {
           ctermfg = p.func[cap], 

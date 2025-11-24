@@ -4,17 +4,30 @@
 ((identifier) @type
   (#match? @type "^[A-Z]"))
 
-;(use_list (identifier) @function
-;  (#match? @function "^[a-z][a-z_]+"))
+(use_list (identifier) @uselist (#set! priority 106))
+(use_list (self) @uselist (#set! priority 106))
+
+(use_list (use_wildcard(identifier)) @uselist (#set! priority 101))
+
 ((identifier) @constant
   (#match? @constant "^[A-Z][A-Z_]") (#set! priority 105))
 
 ; enum variants (in the enum definition) are variable members
-(enum_variant
-  name: (identifier) @variable.member)
+;(enum_variant
+;  name: (identifier) @declaration)
+
+
+(enum_item
+  (visibility_modifier)
+  name: (type_identifier)
+  body: (enum_variant_list
+    (enum_variant
+      name: (identifier) @declaration)))
+(field_declaration
+  name: (field_identifier) @declaration (#set! priority 105))
 
 ; identifiers
-;(identifier) @variable
+(identifier) @variable
 
 (type_identifier) @type
 
