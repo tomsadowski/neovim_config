@@ -8,10 +8,7 @@ to use the colorschemes, copy the following heirarchies into your nvim config di
 - queries
 - parser
 
-### bzzt
-![bzzt](docs/bzzt.png)  
-
-### brush
-![brush](docs/brush.png)  
+### lava
+![lava](docs/lava.png)  
 
 
