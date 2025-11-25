@@ -90,42 +90,6 @@ return function(p)
           bg      = p.visual[gui], 
       },
 
-      ['@uselist'] = {
-          ctermfg = p.uselist[cap],
-          fg      = p.uselist[gui], 
-      }, 
-      ['@function']                    = {link='Function'}, 
-      ['@function.builtin']            = {link='@function'}, 
-      ['@function.method']             = {link='@function'}, 
-      ['@function.call']               = {
-          ctermfg = p.call[cap],
-          fg      = p.call[gui], 
-      }, 
-      ['@function.method.call']        = {
-          ctermfg = p.call[cap],
-          fg      = p.call[gui], 
-      }, 
-      ['@function.macro'] = {link='@function'}, 
-      ['@path'] = {
-          ctermfg = p.path[cap], 
-          fg      = p.path[gui], 
-      }, 
-      ['@module'] = {
-          ctermfg = p.module[cap], 
-          fg      = p.module[gui], 
-      }, 
-      ['@variable.builtin'] = {
-          ctermfg = p.vbuilt[cap], 
-          fg      = p.vbuilt[gui], 
-      }, 
-      ['@variable.member'] = {
-          ctermfg = p.member[cap], 
-          fg      = p.member[gui], 
-      }, 
-      ['@declaration'] = {
-          ctermfg = p.decl[cap], 
-          fg      = p.decl[gui], 
-      }, 
       Constant  = {
           ctermfg = p.const[cap], 
           fg      = p.const[gui], 
@@ -155,8 +119,8 @@ return function(p)
           fg      = p.text[gui], 
       }, 
       Keyword = {
-          ctermfg = p.prim[cap], 
-          fg      = p.prim[gui], 
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
       }, 
       String = {
           ctermfg = p.str[cap], 
@@ -330,6 +294,40 @@ return function(p)
       DiagnosticDeprecated        = {link='Normal'},
       DiagnosticUnnecessary       = {link='Normal'},
 
+      ['@uselist'] = {
+          ctermfg = p.uselist[cap],
+          fg      = p.uselist[gui], 
+      }, 
+      ['@path'] = {
+          ctermfg = p.path[cap], 
+          fg      = p.path[gui], 
+      }, 
+      ['@declaration'] = {
+          ctermfg = p.decl[cap], 
+          fg      = p.decl[gui], 
+      }, 
+      ['@module'] = {
+          ctermfg = p.module[cap], 
+          fg      = p.module[gui], 
+      }, 
+      ['@type.builtin']     = {
+          ctermfg = p.tbuilt[cap], 
+          fg      = p.tbuilt[gui], 
+      }, 
+      ['@variable.builtin'] = {
+          ctermfg = p.vbuilt[cap], 
+          fg      = p.vbuilt[gui], 
+      }, 
+      ['@variable.member'] = {
+          ctermfg = p.member[cap], 
+          fg      = p.member[gui], 
+      }, 
+      ['@function']                    = {link='Function'}, 
+      ['@function.builtin']            = {link='@function'}, 
+      ['@function.method']             = {link='@function'}, 
+      ['@function.call']               = {link='@function'},
+      ['@function.method.call']        = {link='@function'},
+      ['@function.macro']              = {link='@function'}, 
       ['@variable']                    = {link='Identifier'}, 
       ['@variable.parameter']          = {link='@variable'}, 
       ['@variable.parameter.builtin']  = {link='Keyword'}, 
@@ -352,7 +350,6 @@ return function(p)
       ['@character']                   = {link='@string'}, 
       ['@character.special']           = {link='@string'}, 
       ['@type']                        = {link='Type'},
-      ['@type.builtin']                = {link='Keyword'}, 
       ['@type.definition']             = {link='@type'}, 
       ['@attribute']                   = {link='Operator'}, 
       ['@attribute.builtin']           = {link='@keyword'}, 

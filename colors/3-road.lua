@@ -1,4 +1,4 @@
--- 0_day_yrb
+-- 3-road
 
 require "tsad_colorscheme_main" {
     black   = { 4,   4, "#000000"}, -- grey
@@ -16,15 +16,11 @@ require "tsad_colorscheme_main" {
     errorbg = {10,  10, "#201010"}, -- red
 
     uselist = {14,  44, "#b08020"}, -- blue
-    call    = {14,  44, "#b08020"}, -- blue
-    member  = {14,  44, "#b08020"}, -- blue
-    var     = {11, 184, "#2080b0"}, -- red
-    decl    = {11, 184, "#2080b0"}, -- red
-    const   = {11, 184, "#2080b0"}, -- red
-    str     = {11, 184, "#2080b0"}, -- red
-    vbuilt  = {11, 184, "#2080b0"}, -- red
 
     text    = {10,  10, "#a0a060"}, -- yellow
+    path    = {11, 184, "#a0a060"}, -- red
+    member  = {14,  44, "#a0a060"}, -- blue
+    var     = {11, 184, "#a0a060"}, -- red
     module  = {10,  10, "#a0a060"}, -- yellow
     delim   = {10,  10, "#a0a060"}, -- yellow
     op      = {10,  10, "#a0a060"}, -- yellow
@@ -33,7 +29,13 @@ require "tsad_colorscheme_main" {
     error   = {12,  12, "#b06080"}, -- red
     func    = {12,  12, "#b06080"}, -- red
     type    = { 9,   9, "#b06080"}, -- red
+    const   = {11, 184, "#b06080"}, -- red
+    decl    = {11, 184, "#b06080"}, -- red
 
     warn    = {10,  10, "#6080c0"}, -- blue
-    prim    = {10,  10, "#6080c0"}, -- blue
+    str     = {11, 184, "#6080c0"}, -- blue
+    keyword = {10,  10, "#6080c0"}, -- blue
+    bool    = {11, 184, "#6080c0"}, -- red
+    vbuilt  = {11, 184, "#6080c0"}, -- blue
+    tbuilt  = {11, 184, "#6080c0"}, -- blue
 }
