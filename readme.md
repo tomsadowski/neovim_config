@@ -8,7 +8,7 @@ to use the colorschemes, copy the following heirarchies into your nvim config di
 - queries
 - parser
 
-### lava
-![lava](docs/lava.png)  
+### gm
+![gm](docs/gm.png)  
 
 

@@ -1,5 +1,9 @@
 ; Identifier naming conventions
 
+(attribute
+  object: (identifier) @path (#set! priority 105)
+  attribute: (identifier))
+
 (identifier) @variable
 
 ((identifier) @constructor
@@ -94,6 +98,9 @@
   "|="
   "~"
   "@="
+] @operator
+
+[
   "and"
   "in"
   "is"
@@ -101,9 +108,6 @@
   "or"
   "is not"
   "not in"
-] @operator
-
-[
   "as"
   "assert"
   "async"

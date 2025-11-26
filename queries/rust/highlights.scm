@@ -4,13 +4,60 @@
 ((identifier) @type
   (#match? @type "^[A-Z]"))
 
+
+;((identifier) @constant
+;  (#match? @constant "^[A-Z][A-Z_]") (#set! priority 105))
+
 (use_list (identifier) @uselist (#set! priority 106))
 (use_list (self) @uselist (#set! priority 106))
 
 (use_list (use_wildcard(identifier)) @uselist (#set! priority 101))
 
-((identifier) @constant
-  (#match? @constant "^[A-Z][A-Z_]") (#set! priority 105))
+(ordered_field_declaration_list
+   type: (type_identifier) @declist (#set! priority 105))
+
+(tuple_expression
+   (identifier) @tuplist (#set! priority 105))
+
+(tuple_struct_pattern type: (identifier) @type
+  (tuple_pattern (identifier) @tuplist) (#set! priority 105))
+
+(tuple_struct_pattern
+   (identifier) @tuplist 
+   (#set! priority 101))
+
+(parameter
+  pattern: (identifier) @declist (#set! priority 105))
+
+(tuple_struct_pattern 
+  type: (identifier) @type (#set! priority 105)
+  (identifier)) 
+
+(arguments
+   (identifier) @arglist (#set! priority 105))
+
+(field_expression
+  value: (identifier) @path (#set! priority 105)
+  field: (field_identifier))
+
+(arguments
+  (call_expression
+    function: (field_expression
+      value: (identifier) @arglist
+      field: (field_identifier))))
+
+(arguments 
+  (reference_expression
+    value: (identifier) @arglist (#set! priority 105)))
+
+(arguments
+  (field_expression
+    value: (identifier) @declist (#set! priority 105)
+    field: (field_identifier)))
+
+(type_arguments (primitive_type) @declist (#set! priority 105))
+
+((generic_type) @type)
 
 (scoped_identifier
   path: (identifier) @path (#set! priority 101)
