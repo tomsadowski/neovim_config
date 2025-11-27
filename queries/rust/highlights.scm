@@ -24,7 +24,7 @@
 (use_list (use_wildcard(identifier)) @uselist (#set! priority 101))
 
 (ordered_field_declaration_list
-   type: (type_identifier) @declist (#set! priority 105))
+   type: (type_identifier) @type)
 
 (tuple_expression
    (identifier) @tuplist (#set! priority 105))

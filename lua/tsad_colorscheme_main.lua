@@ -127,12 +127,12 @@ return function(p)
           fg      = p.str[gui], 
       },
       Function = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.func[cap], 
+          fg      = p.func[gui], 
       },
       Type = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.type[cap], 
+          fg      = p.type[gui], 
       },
       Structure = {
           ctermfg = p.primary[cap], 
@@ -143,8 +143,8 @@ return function(p)
           fg      = p.primary[gui], 
       },
       Enum = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.enum[cap], 
+          fg      = p.enum[gui], 
       },
       Error = {
           ctermfg = p.primary[cap], 
@@ -334,8 +334,8 @@ return function(p)
           fg      = p.primary[gui], 
       }, 
       ['@type.builtin']     = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
       }, 
       ['@variable.builtin'] = {
           ctermfg = p.secondary[cap], 
