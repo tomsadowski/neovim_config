@@ -7,7 +7,7 @@ require "tsad_colorscheme_main" {
 
   -- highlight
   search     = { 6,  23, "#000060"}, -- blue
-  visual     = { 3,  58, "#003000"}, -- green
+  visual     = { 3,  58, "#300030"}, -- magenta
 
   -- normal
   primary    = {11, 184, "#c0c0c0"}, -- white
@@ -26,9 +26,12 @@ require "tsad_colorscheme_main" {
   bool       = {11, 184, "#e05050"}, -- red
 
   -- literal
-  msgarea    = { 8,   8, "#30c030"}, -- green
   str        = {11, 184, "#30c030"}, -- green
   literal    = {11, 184, "#30c030"}, -- green
+
+  msgarea    = { 8,   8, "#c030c0"}, -- green
+  matchparen = {11, 184, "#c030c0"}, -- red
+  curlineno  = {11, 184, "#c030c0"}, -- red
 
   -- peripheral
   peripheral = { 8,   8, "#707070"}, -- magenta

@@ -40,8 +40,8 @@ return function(p)
           fg      = p.primary[gui], 
       }, 
       CursorLineNr = {
-          ctermfg = p.peripheral[cap], 
-          fg      = p.peripheral[gui],
+          ctermfg = p.curlineno[cap], 
+          fg      = p.curlineno[gui],
           ctermbg = p.canvas[cap], 
           bg      = p.canvas[gui],
       }, 
@@ -97,6 +97,10 @@ return function(p)
       Comment = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui], 
+      }, 
+      MatchParen = {
+          ctermfg = p.matchparen[cap], 
+          fg      = p.matchparen[gui], 
       }, 
       Delimiter = {
           ctermfg = p.primary[cap], 
@@ -181,7 +185,6 @@ return function(p)
       LineNrBelow    = {link='LineNr'}, 
       CursorLineFold = {link='FoldColumn'}, 
       CursorLineSign = {link='SignColumn'}, 
-      MatchParen     = {link='Comment'}, 
       ModeMsg        = {link='Normal'}, 
       MoreMsg        = {link='Normal'}, 
       MsgSeparator   = {link='Normal'}, 
