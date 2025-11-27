@@ -22,8 +22,8 @@ return function(p)
           bg      = p.search[gui], 
       },
       LineNr = {
-          ctermfg = p.peripheral[cap], 
-          fg      = p.peripheral[gui], 
+          ctermfg = p.lineno[cap], 
+          fg      = p.lineno[gui], 
           ctermbg = p.black[cap], 
           bg      = p.black[gui], 
       }, 
@@ -91,12 +91,12 @@ return function(p)
           fg      = p.secondary[gui], 
       }, 
       Number  = {
-          ctermfg = p.secondary[cap], 
-          fg      = p.secondary[gui], 
+          ctermfg = p.literal[cap], 
+          fg      = p.literal[gui], 
       }, 
       Comment = {
-          ctermfg = p.peripheral[cap], 
-          fg      = p.peripheral[gui], 
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui], 
       }, 
       Delimiter = {
           ctermfg = p.primary[cap], 
@@ -107,20 +107,20 @@ return function(p)
           fg      = p.primary[gui], 
       }, 
       Identifier = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.variable[cap], 
+          fg      = p.variable[gui], 
       },
       Macro = {
           ctermfg = p.primary[cap], 
           fg      = p.primary[gui], 
       }, 
       Keyword = {
-          ctermfg = p.secondary[cap], 
-          fg      = p.secondary[gui], 
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
       }, 
       String = {
-          ctermfg = p.secondary[cap], 
-          fg      = p.secondary[gui], 
+          ctermfg = p.str[cap], 
+          fg      = p.str[gui], 
       },
       Function = {
           ctermfg = p.primary[cap], 
@@ -159,8 +159,8 @@ return function(p)
           fg      = p.primary[gui], 
       }, 
       Boolean   = {
-          ctermfg = p.secondary[cap], 
-          fg      = p.secondary[gui], 
+          ctermfg = p.bool[cap], 
+          fg      = p.bool[gui], 
       },
       DiffText       = {link='Normal'}, 
       Cursor         = {link='Normal'}, 
@@ -290,7 +290,15 @@ return function(p)
       DiagnosticDeprecated        = {link='Normal'},
       DiagnosticUnnecessary       = {link='Normal'},
 
+      ['@param'] = {
+          ctermfg = p.param[cap], 
+          fg      = p.param[gui], 
+      }, 
       ['@path'] = {
+          ctermfg = p.path[cap], 
+          fg      = p.path[gui], 
+      }, 
+      ['@fieldexpression'] = {
           ctermfg = p.secondary[cap], 
           fg      = p.secondary[gui], 
       }, 
@@ -310,13 +318,17 @@ return function(p)
           ctermfg = p.secondary[cap], 
           fg      = p.secondary[gui], 
       }, 
-      ['@declaration'] = {
-          ctermfg = p.secondary[cap], 
-          fg      = p.secondary[gui], 
+      ['@enumdecl'] = {
+          ctermfg = p.enumdecl[cap], 
+          fg      = p.enumdecl[gui], 
+      }, 
+      ['@letdecl'] = {
+          ctermfg = p.letdecl[cap], 
+          fg      = p.letdecl[gui], 
       }, 
       ['@module'] = {
-          ctermfg = p.secondary[cap], 
-          fg      = p.secondary[gui], 
+          ctermfg = p.primary[cap], 
+          fg      = p.primary[gui], 
       }, 
       ['@type.builtin']     = {
           ctermfg = p.primary[cap], 
@@ -337,8 +349,8 @@ return function(p)
       ['@function.method.call']        = {link='@function'},
       ['@function.macro']              = {link='@function'}, 
       ['@variable']                    = {link='Identifier'}, 
-      ['@variable.parameter']          = {link='@variable'}, 
-      ['@variable.parameter.builtin']  = {link='Keyword'}, 
+      ['@variable.parameter']          = {link='@param'}, 
+      ['@variable.parameter.builtin']  = {link='@param'}, 
       ['@operator']                    = {link='Operator'}, 
       ['@boolean']                     = {link='Boolean'}, 
       ['@number']                      = {link='Number'}, 

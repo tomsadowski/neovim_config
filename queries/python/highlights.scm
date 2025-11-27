@@ -4,13 +4,25 @@
   object: (identifier) @path (#set! priority 105)
   attribute: (identifier))
 
-(identifier) @variable
+
+;(identifier) @variable
+
 
 ((identifier) @constructor
  (#match? @constructor "^[A-Z]"))
 
 ((identifier) @constant
  (#match? @constant "^[A-Z][A-Z_]*$"))
+
+; me
+(subscript 
+  value: (identifier)
+  subscript: (identifier) @param (#set! priority 105))
+
+(argument_list
+  (identifier) @param (#set! priority 105))
+
+(parameters (identifier) @param (#set! priority 105))
 
 ; Function calls
 

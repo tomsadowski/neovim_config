@@ -1,5 +1,6 @@
 ; Functions
 
+
 (call_expression
   function: (qualified_identifier
     name: (identifier) @function))

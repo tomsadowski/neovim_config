@@ -4,6 +4,16 @@
 ((identifier) @type
   (#match? @type "^[A-Z]"))
 
+(let_declaration ; [125, 8] - [125, 42]
+  (mutable_specifier) ; [125, 12] - [125, 15]
+  pattern: (identifier) @letdecl (#set! priority 105)) ; [125, 16] - [125, 26]
+
+(let_declaration
+  pattern: (identifier) @letdecl (#set! priority 105))
+
+(identifier) @variable
+
+
 
 ;((identifier) @constant
 ;  (#match? @constant "^[A-Z][A-Z_]") (#set! priority 105))
@@ -37,7 +47,7 @@
    (identifier) @arglist (#set! priority 105))
 
 (field_expression
-  value: (identifier) @path (#set! priority 105)
+  value: (identifier) @fieldexpression (#set! priority 105)
   field: (field_identifier))
 
 (arguments
@@ -62,13 +72,14 @@
 (scoped_identifier
   path: (identifier) @path (#set! priority 101)
   name: (identifier))
-([
- "::"
-] @path (#set! priority 101))
+;([
+; "::"
+; "."
+;] @keyword (#set! priority 101))
 
 ; enum variants (in the enum definition) are variable members
-;(enum_variant
-;  name: (identifier) @declaration)
+(enum_variant
+  name: (identifier) @enumdecl (#set! priority 105))
 
 
 (enum_item
