@@ -24,15 +24,15 @@ require "tsad_colorscheme_main" {
   bool       = {11, 184, "#d05050"}, -- red
 
   -- literal
-  str        = {11, 184, "#30b030"}, -- green
-  literal    = {11, 184, "#30b030"}, -- green
+  str        = {11, 184, "#20c070"}, -- green
+  literal    = {11, 184, "#20c070"}, -- green
+  matchparen = {11, 184, "#20c070"}, -- green
 
   -- peripheral
   peripheral = { 8,   8, "#606060"}, -- grey
   comment    = { 8,   8, "#606060"}, -- grey
   lineno     = {11, 184, "#606060"}, -- grey
 
-  matchparen = {11, 184, "#c040c0"}, -- magenta
   func       = {11, 184, "#c040c0"}, -- magenta
   enum       = {11, 184, "#c040c0"}, -- magenta
   type       = {11, 184, "#c040c0"}, -- magenta
