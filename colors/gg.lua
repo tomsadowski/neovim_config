@@ -1,6 +1,6 @@
 -- gg
 
-require "tsad_colorscheme_main" {
+require "tsad-colorscheme-main" {
   -- void
   black      = { 0,   0, "#000000"}, -- black
 
