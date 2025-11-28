@@ -1,5 +1,5 @@
 -- comment this line out if you aren't using a pearbear
-require "keymaps"
+require "pearbear_keymaps"
 
 -- comment this line out if you want default settings
 require "settings"

@@ -1,9 +1,11 @@
 -- gg
 
 require "tsad_colorscheme_main" {
-  -- background
+  -- void
   black      = { 0,   0, "#000000"}, -- black
-  canvas     = { 0, 233, "#000000"}, -- black
+
+  -- background
+  canvas     = { 0, 233, "#141414"}, -- black
 
   -- ephemeral
   search     = { 6,  23, "#000060"}, -- blue
