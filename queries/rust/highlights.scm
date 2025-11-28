@@ -11,8 +11,18 @@
 (let_declaration
   pattern: (identifier) @letdecl (#set! priority 105))
 
+(let_declaration ; [128, 8] - [129, 34]
+  pattern: (tuple_struct_pattern ; [128, 12] - [128, 28]
+    type: (identifier) ; [128, 12] - [128, 16]
+    (identifier) @letdecl (#set! priority 105))) ; [128, 17] - [128, 27]
+
 (identifier) @variable
 
+(use_declaration
+  (scoped_identifier) @uselist (#set! priority 105))
+
+(use_list
+  (scoped_identifier) @uselist (#set! priority 105))
 
 
 ;((identifier) @constant
@@ -42,6 +52,13 @@
 (tuple_struct_pattern 
   type: (identifier) @type (#set! priority 105)
   (identifier)) 
+
+(match_pattern ; [26, 12] - [26, 43]
+  (tuple_struct_pattern ; [26, 12] - [26, 43]
+    type: (scoped_identifier ; [26, 12] - [26, 27]
+      path: (identifier) ; [26, 12] - [26, 18]
+      name: (identifier)) ; [26, 20] - [26, 27]
+    (identifier) @patdecl (#set! priority 105))) ; [26, 28] - [26, 36]
 
 (arguments
    (identifier) @arglist (#set! priority 105))

@@ -297,6 +297,10 @@ return function(p)
           ctermfg = p.param[cap], 
           fg      = p.param[gui], 
       }, 
+      ['@patdecl'] = {
+          ctermfg = p.patdecl[cap], 
+          fg      = p.patdecl[gui], 
+      }, 
       ['@path'] = {
           ctermfg = p.path[cap], 
           fg      = p.path[gui], 
@@ -306,8 +310,8 @@ return function(p)
           fg      = p.secondary[gui], 
       }, 
       ['@uselist'] = {
-          ctermfg = p.primary[cap],
-          fg      = p.primary[gui], 
+          ctermfg = p.uselist[cap],
+          fg      = p.uselist[gui], 
       }, 
       ['@arglist'] = {
           ctermfg = p.secondary[cap], 
