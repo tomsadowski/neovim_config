@@ -52,12 +52,16 @@ return function(p)
           bg      = p.black[gui],
       }, 
       WarningMsg = {
-          ctermfg = p.secondary[cap], 
-          fg      = p.secondary[gui],
+          ctermfg = p.warnfg[cap], 
+          fg      = p.warnfg[gui],
+          ctermbg = p.warnbg[cap], 
+          bg      = p.warnbg[gui],
       }, 
       ErrorMsg = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui],
+          ctermfg = p.errorfg[cap], 
+          fg      = p.errorfg[gui],
+          ctermbg = p.errorbg[cap], 
+          bg      = p.errorbg[gui],
       }, 
       EndOfBuffer = {
           ctermfg = p.peripheral[cap], 
@@ -259,10 +263,10 @@ return function(p)
       DiagnosticInfo              = {link='Normal'},
       DiagnosticOk                = {link='Normal'},
       DiagnosticHint              = {
-        ctermfg = p.peripheral[cap],
-        fg      = p.peripheral[gui],
-        ctermbg = p.canvas[cap],
-        bg      = p.canvas[gui],
+        ctermfg = p.hintfg[cap],
+        fg      = p.hintfg[gui],
+        ctermbg = p.hintbg[cap],
+        bg      = p.hintbg[gui],
       },
 
       DiagnosticVirtualTextError  = {link='DiagnosticError'},
