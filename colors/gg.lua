@@ -1,46 +1,53 @@
 -- gg
 
 require "tsad-colorscheme-main" {
-  black      = { 0,   0, "#181818"}, -- grey
-  canvas     = { 0, 233, "#181818"}, -- grey
 
-  peripheral = { 8,   8, "#808080"}, -- grey
-  lineno     = {11, 184, "#808080"}, -- grey
-  msgarea    = { 8,   8, "#808080"}, -- grey
+-- GREY ######################################
+  black      = { 0, 234, "#1c1c1c"}, 
+  canvas     = { 0, 234, "#1c1c1c"}, 
 
-  primary    = {11, 184, "#d0d0c0"}, -- white
-  enumdecl   = {11, 184, "#d0d0c0"}, -- white
-  path       = {11, 184, "#d0d0c0"}, -- white
-  curlineno  = { 8,   8, "#d0d0c0"}, -- white
-  uselist    = { 8,   8, "#d0d0c0"}, -- white
+  peripheral = { 8,   8, "#808080"}, 
+  lineno     = { 8,   8, "#808080"}, 
+  msgarea    = { 8,   8, "#808080"}, 
 
-  errorbg    = { 0,   0, "#301818"}, -- red
+-- WHITE #####################################
+  primary    = { 7, 253, "#d0d0c0"}, 
+  enumdecl   = { 7, 253, "#d0d0c0"}, 
+  path       = { 7, 253, "#d0d0c0"}, 
+  curlineno  = { 7, 253, "#d0d0c0"}, 
+  uselist    = { 7, 253, "#d0d0c0"}, 
 
-  search     = { 6,  23, "#183040"}, -- blue
-  hintbg     = { 0,   0, "#183040"}, -- blue
+-- RED #######################################
+  errorbg    = { 1,  52, "#301818"},
 
-  visual     = { 3,  58, "#301840"}, -- magenta
-  warnbg     = { 0,   0, "#301840"}, -- magenta
+  errorfg    = { 9, 210, "#e07070"},
+  keyword    = { 9, 210, "#e07070"},
 
-  errorfg    = { 0,   0, "#e07070"}, -- red
-  keyword    = {11, 184, "#e07070"}, -- red
+-- CYAN-BLUE #################################
+  search     = { 6,  17, "#183040"}, 
+  hintbg     = { 6,  17, "#183040"}, 
 
-  hintfg     = { 0,   0, "#80b0f0"}, -- blue
-  variable   = {11, 184, "#80b0f0"}, -- blue
-  letdecl    = {11, 184, "#80b0f0"}, -- blue
-  patdecl    = {11, 184, "#80b0f0"}, -- blue
-  param      = {11, 184, "#80b0f0"}, -- blue
-  args       = {11, 184, "#80b0f0"}, -- blue
-  secondary  = {11, 184, "#80b0f0"}, -- blue
+  hintfg     = {14, 111, "#80b0f0"}, 
+  variable   = {14, 111, "#80b0f0"}, 
+  letdecl    = {14, 111, "#80b0f0"}, 
+  patdecl    = {14, 111, "#80b0f0"}, 
+  param      = {14, 111, "#80b0f0"}, 
+  args       = {14, 111, "#80b0f0"}, 
+  secondary  = {14, 111, "#80b0f0"}, 
 
-  str        = {11, 184, "#70c040"}, -- green
-  matchparen = {11, 184, "#70c040"}, -- green
-  literal    = {11, 184, "#70c040"}, -- green
-  bool       = {11, 184, "#70c040"}, -- green
-  comment    = { 8,   8, "#70c040"}, -- green
+-- GREEN #####################################
+  str        = {10, 113, "#70c040"}, 
+  matchparen = {10, 113, "#70c040"}, 
+  literal    = {10, 113, "#70c040"}, 
+  bool       = {10, 113, "#70c040"}, 
+  comment    = {10, 113, "#70c040"}, 
 
-  warnfg     = { 0,   0, "#b080f0"}, -- magenta
-  type       = {11, 184, "#b080f0"}, -- magenta
-  enum       = {11, 184, "#b080f0"}, -- magenta
-  func       = {11, 184, "#b080f0"}, -- magenta
+-- MAGENTA ###################################
+  visual     = { 5,  54, "#301840"}, 
+  warnbg     = { 5,  54, "#301840"}, 
+
+  warnfg     = {13, 141, "#b080f0"}, 
+  type       = {13, 141, "#b080f0"}, 
+  enum       = {13, 141, "#b080f0"}, 
+  func       = {13, 141, "#b080f0"}, 
 }
