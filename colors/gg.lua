@@ -14,18 +14,18 @@ require "tsad-colorscheme-main" {
   primary    = { 7, 253, "#d0d0c0"}, 
   enumdecl   = { 7, 253, "#d0d0c0"}, 
   path       = { 7, 253, "#d0d0c0"}, 
-  curlineno  = { 7, 253, "#d0d0c0"}, 
   uselist    = { 7, 253, "#d0d0c0"}, 
+  curlineno  = { 7, 253, "#d0d0c0"}, 
 
 -- RED #######################################
-  errorbg    = { 1,  52, "#301818"},
+  errorbg    = { 1,  52, "#301c1c"},
 
   errorfg    = { 9, 210, "#e07070"},
   keyword    = { 9, 210, "#e07070"},
 
 -- CYAN-BLUE #################################
-  search     = { 6,  17, "#183040"}, 
-  hintbg     = { 6,  17, "#183040"}, 
+  search     = { 6,  17, "#1c3040"}, 
+  hintbg     = { 6,  17, "#1c3040"}, 
 
   hintfg     = {14, 111, "#80b0f0"}, 
   variable   = {14, 111, "#80b0f0"}, 
@@ -36,7 +36,7 @@ require "tsad-colorscheme-main" {
   secondary  = {14, 111, "#80b0f0"}, 
 
 -- GREEN #####################################
-  comment    = { 2, 108, "#80a080"}, 
+  comment    = { 2, 108, "#709090"}, 
 
   str        = {10, 113, "#70c040"}, 
   matchparen = {10, 113, "#70c040"}, 
@@ -44,8 +44,8 @@ require "tsad-colorscheme-main" {
   bool       = {10, 113, "#70c040"}, 
 
 -- MAGENTA ###################################
-  visual     = { 5,  54, "#301840"}, 
-  warnbg     = { 5,  54, "#301840"}, 
+  visual     = { 5,  54, "#301c40"}, 
+  warnbg     = { 5,  54, "#301c40"}, 
 
   warnfg     = {13, 141, "#b080f0"}, 
   type       = {13, 141, "#b080f0"}, 
