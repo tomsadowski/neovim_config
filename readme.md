@@ -15,4 +15,6 @@ Note that these colorschemes use custom treesitter captures specified in the ./q
 ### std-1
 ![std-1](docs/std-1.png)  
 
+### std-2
+![std-2](docs/std-2.png)  
 
