@@ -1,20 +1,20 @@
--- std-2
+-- std-1
 
 local grey1    = { 0, 234, "#202020"}
 local grey2    = { 8,   8, "#808080"}
-local grey3    = { 7,   7, "#d0d0d0"}
+local grey3    = { 7,   7, "#c0c0c0"}
 
 local red1     = { 1,  52, "#302020"}
-local red2     = { 9, 210, "#e07070"}
+local red2     = { 9, 210, "#d09060"}
 
-local magenta1 = { 5,  54, "#302040"}
-local magenta2 = {13, 141, "#b080f0"}
+local magenta1 = { 5,  54, "#302030"}
+local magenta2 = {13, 141, "#c070c0"}
 
 local blue1    = { 6,  17, "#203040"}
 local blue2    = {14, 111, "#80b0f0"}
 
 local green1   = { 2, 108, "#50a080"}
-local green2   = {10, 113, "#80c050"}
+local green2   = {10, 113, "#80b050"}
 
 require "tsad-colorscheme-main" {
 

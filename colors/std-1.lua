@@ -2,19 +2,20 @@
 
 local grey1    = { 0, 234, "#202020"}
 local grey2    = { 8,   8, "#808080"}
-local grey3    = { 7,   7, "#c0c0c0"}
+
+local grey3    = { 7,   7, "#d0a070"}
 
 local red1     = { 1,  52, "#302020"}
-local red2     = { 9, 210, "#d09060"}
+local red2     = { 9, 210, "#d06070"}
 
 local magenta1 = { 5,  54, "#302030"}
-local magenta2 = {13, 141, "#c070c0"}
+local magenta2 = {13, 141, "#b070e0"}
 
 local blue1    = { 6,  17, "#203040"}
-local blue2    = {14, 111, "#80b0f0"}
+local blue2    = {14, 111, "#70a0f0"}
 
-local green1   = { 2, 108, "#50a080"}
-local green2   = {10, 113, "#80b050"}
+local green1   = { 2, 108, "#608080"}
+local green2   = {10, 113, "#90b060"}
 
 require "tsad-colorscheme-main" {
 
@@ -22,9 +23,9 @@ require "tsad-colorscheme-main" {
   black      = grey1, 
   canvas     = grey1, 
 
-  peripheral = grey2, 
-  lineno     = grey2, 
-  msgarea    = grey2, 
+  peripheral = green1, 
+  lineno     = green1, 
+  msgarea    = green1, 
 
   primary    = grey3, 
   enumdecl   = grey3, 
