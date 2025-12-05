@@ -358,7 +358,7 @@ return function(p)
       ['@function.method']             = {link='@function'}, 
       ['@function.call']               = {link='@function'},
       ['@function.method.call']        = {link='@function'},
-      ['@function.macro']              = {link='@function'}, 
+      ['@function.macro']              = {link='@keyword'}, 
       ['@variable']                    = {link='Identifier'}, 
       ['@variable.parameter']          = {link='@param'}, 
       ['@variable.parameter.builtin']  = {link='@param'}, 

@@ -1,66 +1,66 @@
 -- std-1
 
-local grey    = { 0, 234, "#202020"}
+local darkgrey    = { 0, 234, "#202020"}
+local darkred     = { 1,  52, "#402030"}
+local darkyellow  = { 3,  58, "#403020"}
+local darkgreen   = { 2,  22, "#304020"}
+local darkcyan    = { 6,  23, "#204030"}
+local darkblue    = { 4,  17, "#203040"}
+local darkmagenta = { 5,  53, "#302040"}
 
-local yellow  = { 1,  52, "#404020"}
-local magenta = { 5,  54, "#402040"}
-local cyan    = { 6,  17, "#204040"}
-
-local green1  = { 9, 210, "#a0d070"}
-local green2  = { 2, 108, "#70d0a0"}
-
-local red1    = { 7,   7, "#d0a070"}
-local red2    = {10, 113, "#d070a0"}
-
-local blue1   = {14, 111, "#70a0d0"}
-local blue2   = {13, 141, "#a070d0"}
-
+local grey        = { 8, 241, "#606060"}
+local red         = { 9, 205, "#f070b0"}
+local yellow      = {11, 215, "#f0b070"}
+local green       = {10, 155, "#b0f070"}
+local cyan        = {14,  85, "#70f0b0"}
+local blue        = {12,  75, "#70b0f0"}
+local magenta     = {13, 135, "#b070f0"}
 
 require "tsad-colorscheme-main" {
 
-  black      = grey, 
-  canvas     = grey, 
+  black      = darkgrey, 
+  canvas     = darkgrey, 
 
-  peripheral = blue2, 
-  lineno     = blue2, 
-  msgarea    = blue2, 
-  comment    = blue2, 
+  peripheral = grey, 
+  lineno     = grey, 
+  msgarea    = grey, 
 
+  comment    = magenta, 
 
-  type       = red2, 
-  enum       = red2, 
-  func       = red2, 
+  type       = red, 
+  enum       = red, 
+  func       = red, 
 
-  str        = green2, 
-  matchparen = green2, 
-  literal    = green2, 
-  bool       = green2, 
+  primary    = yellow, 
+  enumdecl   = yellow, 
+  path       = yellow, 
+  uselist    = yellow, 
 
-  primary    = red1, 
-  enumdecl   = red1, 
-  path       = red1, 
-  uselist    = red1, 
+  variable   = green, 
+  letdecl    = green, 
+  patdecl    = green, 
+  param      = green, 
+  args       = green, 
+  secondary  = green, 
+  curlineno  = green, 
 
-  hintbg     = cyan, 
-  hintfg     = blue1, 
+  str        = cyan, 
+  matchparen = cyan, 
+  literal    = cyan, 
+  bool       = cyan, 
 
-  warnbg     = yellow, 
-  warnfg     = red1, 
+  keyword    = blue,
 
-  errorbg    = magenta,
-  errorfg    = red2,
+  errorbg    = darkred,
+  errorfg    = red,
 
-  keyword    = blue1,
+  hintbg     = darkblue, 
+  hintfg     = blue, 
 
-  variable   = green1, 
-  letdecl    = green1, 
-  patdecl    = green1, 
-  param      = green1, 
-  args       = green1, 
-  secondary  = green1, 
-  curlineno  = green1, 
+  warnbg     = darkyellow, 
+  warnfg     = yellow, 
 
-  visual     = magenta, 
+  visual     = darkmagenta, 
 
-  search     = cyan, 
+  search     = darkcyan, 
 }
