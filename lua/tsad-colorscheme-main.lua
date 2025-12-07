@@ -321,10 +321,10 @@ return function(p)
           ctermfg = p.secondary[cap], 
           fg      = p.secondary[gui], 
       }, 
-      ['@tuplist'] = {
-          ctermfg = p.secondary[cap], 
-          fg      = p.secondary[gui], 
-      }, 
+    --['@tuplist'] = {
+    --    ctermfg = p.secondary[cap], 
+    --    fg      = p.secondary[gui], 
+    --}, 
       ['@declist'] = {
           ctermfg = p.secondary[cap], 
           fg      = p.secondary[gui], 
