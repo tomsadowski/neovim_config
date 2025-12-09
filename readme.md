@@ -14,3 +14,6 @@ Note that these colorschemes use custom treesitter captures specified in the ./q
 
 ### level
 ![level](docs/level.png)  
+
+### rose
+![rose](docs/rose.png)  

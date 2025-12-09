@@ -9,16 +9,13 @@ local darkcyan    = { 6,  23, "#204030"}
 local darkblue    = { 4,  17, "#203040"}
 local darkmagenta = { 5,  53, "#302040"}
 
-local grey    = { 8, 241, "#808080"}
+local grey    = { 8, 241, "#707070"}
 
-local red     = { 9, 205, "#e08080"}
-local green   = {10, 155, "#80e080"}
-local blue    = {12,  75, "#8080e0"}
+local red     = { 9, 205, "#c07070"}
+local blue    = {12,  75, "#7070c0"}
+local magenta = {13, 135, "#b070b0"}
 
-local yellow  = {11, 215, "#c0c080"}
-local cyan    = {14,  85, "#80c0c0"}
-local magenta = {13, 135, "#c080c0"}
-
+local green   = {11, 215, "#80a080"}
 
 
 require "tsad-colorscheme-main" {
@@ -29,29 +26,29 @@ require "tsad-colorscheme-main" {
   lineno     = grey, 
   msgarea    = grey, 
 
-  comment    = magenta, 
+  comment    = grey, 
 
   type       = red, 
   enum       = red, 
   func       = red, 
 
-  primary    = yellow, 
-  enumdecl   = yellow, 
-  path       = yellow, 
-  uselist    = yellow, 
+  primary    = green, 
+  enumdecl   = green, 
+  path       = green, 
+  uselist    = green, 
 
-  variable   = green, 
-  letdecl    = green, 
-  patdecl    = green, 
-  param      = green, 
-  args       = green, 
-  secondary  = green, 
+  variable   = magenta, 
+  letdecl    = magenta, 
+  patdecl    = magenta, 
+  param      = magenta, 
+  args       = magenta, 
+  secondary  = magenta, 
   curlineno  = green, 
 
-  str        = cyan, 
-  matchparen = cyan, 
-  literal    = cyan, 
-  bool       = cyan, 
+  str        = blue, 
+  matchparen = blue, 
+  literal    = blue, 
+  bool       = blue, 
 
   keyword    = blue,
 
@@ -62,7 +59,7 @@ require "tsad-colorscheme-main" {
   hintfg     = blue, 
 
   warnbg     = darkyellow, 
-  warnfg     = yellow, 
+  warnfg     = green, 
 
   visual     = darkmagenta, 
 
