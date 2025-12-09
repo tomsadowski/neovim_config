@@ -12,5 +12,5 @@ If you aren't using a pearbear keyboard, you'll want to comment out the `require
 ## Colorschemes
 Note that these colorschemes use custom treesitter captures specified in the ./queries directory. 
 
-### std1
-![std1](docs/std1.png)  
+### level
+![level](docs/level.png)  
