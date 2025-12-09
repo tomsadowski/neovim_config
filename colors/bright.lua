@@ -1,20 +1,20 @@
--- std-1
+-- bright
 
-local darkgrey    = { 0, 234, "#101010"}
-local darkred     = { 1,  52, "#402030"}
-local darkyellow  = { 3,  58, "#403020"}
-local darkgreen   = { 2,  22, "#304020"}
-local darkcyan    = { 6,  23, "#204030"}
-local darkblue    = { 4,  17, "#203040"}
-local darkmagenta = { 5,  53, "#302040"}
+local darkgrey    = { 0, 234, "#303030"}
+local darkred     = { 1,  52, "#503040"}
+local darkyellow  = { 3,  58, "#504030"}
+local darkgreen   = { 2,  22, "#405030"}
+local darkcyan    = { 6,  23, "#305040"}
+local darkblue    = { 4,  17, "#304050"}
+local darkmagenta = { 5,  53, "#403050"}
 
 local grey        = { 8, 241, "#606060"}
-local red         = { 9, 205, "#d070a0"}
-local yellow      = {11, 215, "#d0a070"}
-local green       = {10, 155, "#a0d070"}
-local cyan        = {14,  85, "#70d0a0"}
-local blue        = {12,  75, "#70a0d0"}
-local magenta     = {13, 135, "#a070d0"}
+local red         = { 9, 205, "#f090c0"}
+local yellow      = {11, 215, "#f0c090"}
+local green       = {10, 155, "#c0f090"}
+local cyan        = {14,  85, "#90f0c0"}
+local blue        = {12,  75, "#90c0f0"}
+local magenta     = {13, 135, "#c090f0"}
 
 require "tsad-colorscheme-main" {
 

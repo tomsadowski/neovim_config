@@ -1,6 +1,6 @@
--- std-1
+-- black
 
-local darkgrey    = { 0, 234, "#202020"}
+local darkgrey    = { 0, 234, "#000000"}
 local darkred     = { 1,  52, "#402030"}
 local darkyellow  = { 3,  58, "#403020"}
 local darkgreen   = { 2,  22, "#304020"}
