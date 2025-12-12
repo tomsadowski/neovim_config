@@ -17,3 +17,6 @@ Note that these colorschemes use custom treesitter captures specified in the ./q
 
 ### rose
 ![rose](docs/rose.png)  
+
+### rainbow
+![rainbow](docs/rainbow.png)  

@@ -11,13 +11,10 @@ local darkmagenta = { 5,  53, "#302040"}
 
 local grey    = { 8, 241, "#808080"}
 
-local red     = { 9, 205, "#e08080"}
-local green   = {10, 155, "#80e080"}
-local blue    = {12,  75, "#8080e0"}
-
-local yellow  = {11, 215, "#c0c080"}
-local cyan    = {14,  85, "#80c0c0"}
-local magenta = {13, 135, "#c080c0"}
+local red     = { 9, 205, "#c070a0"}
+local blue    = {12,  75, "#a070c0"}
+local green   = {10, 155, "#70b0a0"}
+local yellow  = {11, 215, "#b0b080"}
 
 
 
@@ -28,8 +25,7 @@ require "tsad-colorscheme-main" {
   peripheral = grey, 
   lineno     = grey, 
   msgarea    = grey, 
-
-  comment    = magenta, 
+  comment    = grey, 
 
   type       = red, 
   enum       = red, 
@@ -48,11 +44,10 @@ require "tsad-colorscheme-main" {
   secondary  = green, 
   curlineno  = green, 
 
-  str        = cyan, 
-  matchparen = cyan, 
-  literal    = cyan, 
-  bool       = cyan, 
-
+  str        = blue, 
+  matchparen = blue, 
+  literal    = blue, 
+  bool       = blue, 
   keyword    = blue,
 
   errorbg    = darkred,
