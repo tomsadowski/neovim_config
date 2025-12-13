@@ -15,11 +15,14 @@ Note that these colorschemes use custom treesitter captures specified in the ./q
 ### shells
 ![shells](docs/shells.png)  
 
-### level
-![level](docs/level.png)  
+### lava
+![lava](docs/lava.png)  
 
 ### rose
 ![rose](docs/rose.png)  
+
+### magic
+![magic](docs/magic.png)  
 
 ### bright
 ![bright](docs/bright.png)  
