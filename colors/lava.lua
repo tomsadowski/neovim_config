@@ -1,16 +1,16 @@
--- level
+-- lava
 
 local darkgrey    = { 0, 234, "#000000"}
 
 local darkred     = { 1,  52, "#402030"}
 local darkyellow  = { 3,  58, "#403020"}
-local darkcyan    = { 6,  23, "#204030"}
+local darkblue    = { 6,  23, "#204030"}
 local darkmagenta = { 5,  53, "#302040"}
 
-local grey   = { 8, 241, "#705090"}
-local red    = {12,  75, "#c07090"}
-local blue   = {10, 155, "#7090c0"}
-local yellow = {11, 215, "#c09070"}
+local magenta = { 8, 241, "#705090"}
+local red     = {12,  75, "#c07090"}
+local yellow  = {11, 215, "#c09070"}
+local blue    = {10, 155, "#7090c0"}
 
 
 
@@ -18,10 +18,10 @@ require "tsad-colorscheme-main" {
   black      = darkgrey, 
   canvas     = darkgrey, 
 
-  peripheral = grey, 
-  lineno     = grey, 
-  msgarea    = grey, 
-  comment    = grey, 
+  peripheral = magenta, 
+  lineno     = magenta, 
+  msgarea    = magenta, 
+  comment    = magenta, 
 
   type       = yellow, 
   enum       = yellow, 
@@ -49,7 +49,7 @@ require "tsad-colorscheme-main" {
   errorbg    = darkred,
   errorfg    = yellow,
 
-  hintbg     = darkcyan, 
+  hintbg     = darkblue, 
   hintfg     = blue, 
 
   warnbg     = darkyellow, 
@@ -57,5 +57,5 @@ require "tsad-colorscheme-main" {
 
   visual     = darkmagenta, 
 
-  search     = darkcyan, 
+  search     = darkblue, 
 }
