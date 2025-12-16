@@ -1,24 +1,27 @@
--- mells
+-- blood
 
-local darkgrey    = { 0, 234, "#101010"}
+local darkred     = { 1,  52, "#503040"}
+local darkyellow  = { 3,  58, "#504030"}
+local darkcyan    = { 6,  23, "#305040"}
+local darkblue    = { 4,  17, "#304050"}
+local darkmagenta = { 5,  53, "#403050"}
 
-local darkred     = { 1,  52, "#402030"}
-local darkyellow  = { 3,  58, "#403020"}
-local darkgreen   = { 2,  22, "#304020"}
-local darkcyan    = { 6,  23, "#204030"}
-local darkblue    = { 4,  17, "#203040"}
-local darkmagenta = { 5,  53, "#302040"}
+local darkgrey    = { 0, 234, "#202020"}
+local grey        = { 8, 241, "#808080"}
 
-local magenta = {12,  75, "#8060a0"}
-local blue    = { 9, 205, "#6080a0"}
+local red         = { 9, 205, "#e070a0"}
+local blue        = {12,  75, "#70a0e0"}
 
-local red     = {10, 155, "#a06080"}
-local yellow  = {11, 215, "#909080"}
-local grey    = { 8, 241, "#606070"}
+local yellow      = {11, 215, "#d0b070"}
+local green       = {10, 155, "#90d090"}
+
+--local magenta     = { 8, 241, "#a080e0"}
+local magenta     = { 8, 241, "#70a0e0"}
 
 
 
 require "tsad-colorscheme-main" {
+
   black      = darkgrey, 
   canvas     = darkgrey, 
 
@@ -27,34 +30,35 @@ require "tsad-colorscheme-main" {
   msgarea    = grey, 
   comment    = grey, 
 
-  type       = blue, 
-  enum       = blue, 
-  func       = blue, 
+  type       = red, 
+  enum       = red, 
+  func       = red, 
 
   primary    = yellow, 
   enumdecl   = yellow, 
   path       = yellow, 
   uselist    = yellow, 
 
-  variable   = red, 
-  letdecl    = red, 
-  patdecl    = red, 
-  param      = red, 
-  args       = red, 
-  secondary  = red, 
-  curlineno  = red, 
+  variable   = green, 
+  letdecl    = green, 
+  patdecl    = green, 
+  param      = green, 
+  args       = green, 
+  secondary  = green, 
+  curlineno  = green, 
 
   str        = magenta, 
   matchparen = magenta, 
   literal    = magenta, 
   bool       = magenta, 
-  keyword    = magenta,
+
+  keyword    = blue,
 
   errorbg    = darkred,
-  errorfg    = blue,
+  errorfg    = red,
 
   hintbg     = darkblue, 
-  hintfg     = magenta, 
+  hintfg     = blue, 
 
   warnbg     = darkyellow, 
   warnfg     = yellow, 
