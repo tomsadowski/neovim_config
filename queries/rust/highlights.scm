@@ -82,7 +82,7 @@
     value: (identifier) @declist (#set! priority 105)
     field: (field_identifier)))
 
-(type_arguments (primitive_type) @declist (#set! priority 105))
+(type_arguments (primitive_type) @type.builtin (#set! priority 100))
 
 ((generic_type) @type)
 
