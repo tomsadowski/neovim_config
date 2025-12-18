@@ -15,17 +15,11 @@ Note that these colorschemes use custom treesitter captures specified in the ./q
 ### reg
 ![reg](docs/reg.png)  
 
+### egg
+![egg](docs/egg.png)  
+
 ### shells
 ![shells](docs/shells.png)  
 
-### lava
-![lava](docs/lava.png)  
-
-### rose
-![rose](docs/rose.png)  
-
 ### magic
 ![magic](docs/magic.png)  
-
-### bright
-![bright](docs/bright.png)  
