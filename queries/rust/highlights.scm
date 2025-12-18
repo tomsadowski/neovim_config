@@ -60,6 +60,7 @@
       name: (identifier)) ; [26, 20] - [26, 27]
     (identifier) @patdecl (#set! priority 105))) ; [26, 28] - [26, 36]
 
+
 (arguments
    (identifier) @arglist (#set! priority 105))
 
@@ -86,6 +87,11 @@
 
 ((generic_type) @type)
 
+; (scoped_identifier
+;   path: (identifier)
+;   name: (identifier) @path (#set! priority 100))
+(scoped_type_identifier
+  (scoped_identifier) @path (#set! priority 101))
 (scoped_identifier
   path: (identifier) @path (#set! priority 101)
   name: (identifier))
@@ -108,8 +114,6 @@
 (field_declaration
   name: (field_identifier) @declaration (#set! priority 105))
 
-; identifiers
-(identifier) @variable
 
 (type_identifier) @type
 
