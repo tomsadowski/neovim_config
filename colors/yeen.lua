@@ -1,39 +1,41 @@
--- green
+-- green2
 
-local black    = { 0, 234, "#14181c"}
-local dgrey    = { 0, 234, "#20262c"}
-local dgreen   = { 0, 234, "#202c20"}
+local black    = { 0, 234, "#000000"}
 
-local grey     = { 8, 241, "#708090"}
+local grey1    = { 0, 234, "#102010"}
+local grey12   = { 0, 234, "#201020"}
 
-local cyan     = { 8, 241, "#70d0b0"}
-local white    = {11, 215, "#c0d0c0"}
-local green    = {11, 215, "#b0d070"}
+local grey22   = { 8, 241, "#506050"}
+local grey2    = { 8, 241, "#80a080"}
+local grey3    = {11, 215, "#70c070"}
+local white    = {11, 215, "#b0d0b0"}
 
 local p = {
   black      = black, 
   canvas     = black, 
 
-  errorbg    = dgrey,
-  warnbg     = dgrey, 
-  hintbg     = dgrey, 
-  search     = dgrey, 
 
-  visual     = dgreen, 
+  errorbg    = grey1,
+  warnbg     = grey1, 
+  hintbg     = grey1, 
+  visual     = grey12, 
+  search     = grey1, 
 
-  type       = green, 
-  enum       = green, 
-  func       = green, 
-  matchparen = green, 
 
-  keyword    = cyan,
-  bool       = cyan, 
-  str        = cyan, 
+  type       = grey3, 
+  enum       = grey3, 
+  func       = grey3, 
+  matchparen = grey3, 
 
-  comment    = grey, 
-  lineno     = grey, 
-  msgarea    = grey, 
-  peripheral = grey, 
+  keyword    = grey2,
+  bool       = grey2, 
+  str        = grey2, 
+
+  peripheral = grey2, 
+  msgarea    = grey2, 
+
+  comment    = grey22, 
+  lineno     = grey22, 
 
   primary    = white, 
   enumdecl   = white, 
