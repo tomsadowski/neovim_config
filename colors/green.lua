@@ -1,15 +1,14 @@
--- green
+-- green2
 
 local black    = { 0, 234, "#000000"}
 
 local grey1    = { 0, 234, "#102010"}
 local grey12   = { 0, 234, "#201020"}
 
-local grey2    = { 8, 241, "#70a070"}
 local grey22   = { 8, 241, "#506050"}
-
-local grey3    = {11, 215, "#40e040"}
-local white    = {11, 215, "#b0e0b0"}
+local grey2    = { 8, 241, "#80a080"}
+local grey3    = {11, 215, "#70c070"}
+local white    = {11, 215, "#b0d0b0"}
 
 local p = {
   black      = black, 
@@ -22,19 +21,21 @@ local p = {
   visual     = grey12, 
   search     = grey1, 
 
-  keyword    = grey2,
-  bool       = grey2, 
-  str        = grey2, 
-
-  comment    = grey22, 
-  peripheral = grey22, 
-  msgarea    = grey22, 
-  lineno     = grey22, 
 
   type       = grey3, 
   enum       = grey3, 
   func       = grey3, 
   matchparen = grey3, 
+
+  keyword    = grey2,
+  bool       = grey2, 
+  str        = grey2, 
+
+  peripheral = grey2, 
+  msgarea    = grey2, 
+
+  comment    = grey22, 
+  lineno     = grey22, 
 
   primary    = white, 
   enumdecl   = white, 
@@ -405,8 +406,8 @@ local hl_groups = {
         fg      = p.keyword[gui], 
     }, 
     ['@variable.builtin'] = {
-        ctermfg = p.keyword[cap], 
-        fg      = p.keyword[gui], 
+        ctermfg = p.variable[cap], 
+        fg      = p.variable[gui], 
     }, 
     ['@variable.member'] = {
         ctermfg = p.primary[cap], 
