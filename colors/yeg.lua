@@ -1,20 +1,21 @@
--- egg
+-- yeg
 
-local darkred     = { 1,  52, "#301020"}
-local darkblue    = { 4,  17, "#102030"}
-local darkgreen   = { 5,  53, "#203010"}
-local darkwhite   = { 5,  53, "#202020"}
+local darkred     = { 1,  52, "#402030"}
+local darkblue    = { 4,  17, "#203040"}
+local darkgreen   = { 5,  53, "#304020"}
+local darkwhite   = { 5,  53, "#303030"}
 
-local darkgrey    = { 0, 234, "#000000"}
-local grey        = { 8, 241, "#505050"}
-local white       = {11, 215, "#b0b0b0"}
+local darkgrey    = { 0, 234, "#202020"}
+local grey        = { 8, 241, "#707070"}
+local white       = {11, 215, "#d0d0d0"}
 
-local geen        = {11, 215, "#508050"}
+local geen        = {11, 215, "#60a060"}
 
-local red         = { 9, 205, "#d05060"}
-local green       = {12,  75, "#70a020"}
-local blue        = {12,  75, "#50a0e0"}
-local magenta     = {10, 155, "#a060e0"}
+local red         = { 9, 205, "#f06080"}
+local green       = {12,  75, "#80b030"}
+local blue        = {12,  75, "#70c0f0"}
+local magenta     = {10, 155, "#b080f0"}
+--                              413841
 
 
 require "tsad-colorscheme-main" {

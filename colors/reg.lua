@@ -9,13 +9,12 @@ local darkgrey    = { 0, 234, "#202020"}
 local grey        = { 8, 241, "#707070"}
 local white       = {11, 215, "#d0d0d0"}
 
-local geen        = {11, 215, "#60a060"}
+local geen        = {11, 215, "#509050"}
 
 local red         = { 9, 205, "#f06080"}
 local green       = {12,  75, "#80b030"}
-local blue        = {12,  75, "#70c0f0"}
+local blue        = {12,  75, "#70b0f0"}
 local magenta     = {10, 155, "#b080f0"}
---                              413841
 
 
 require "tsad-colorscheme-main" {
