@@ -20,9 +20,3 @@ Note that these colorschemes use custom treesitter captures specified in the ./q
 
 ### egg
 ![egg](docs/egg.png)  
-
-### shells
-![shells](docs/shells.png)  
-
-### magic
-![magic](docs/magic.png)  

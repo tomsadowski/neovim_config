@@ -29,6 +29,7 @@ local p = {
   keyword    = cyan,
   bool       = cyan, 
   str        = cyan, 
+  literal    = cyan, 
 
   comment    = grey, 
   lineno     = grey, 
@@ -46,7 +47,6 @@ local p = {
   param      = white, 
   args       = white, 
   secondary  = white, 
-  literal    = white, 
   errorfg    = white,
   warnfg     = white, 
   hintfg     = white, 
@@ -355,6 +355,10 @@ local hl_groups = {
     DiagnosticDeprecated        = {link='Normal'},
     DiagnosticUnnecessary       = {link='Normal'},
 
+    ['@indexid'] = {
+        ctermfg = p.func[cap], 
+        fg      = p.func[gui], 
+    }, 
     ['@param'] = {
         ctermfg = p.param[cap], 
         fg      = p.param[gui], 
@@ -416,7 +420,7 @@ local hl_groups = {
     ['@function.method']             = {link='@function'}, 
     ['@function.call']               = {link='@function'},
     ['@function.method.call']        = {link='@function'},
-    ['@function.macro']              = {link='@keyword'}, 
+    ['@function.macro']              = {link='@function'}, 
     ['@variable']                    = {link='Identifier'}, 
     ['@variable.parameter']          = {link='@param'}, 
     ['@variable.parameter.builtin']  = {link='@param'}, 

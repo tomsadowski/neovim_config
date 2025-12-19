@@ -4,6 +4,13 @@
 ;((identifier) @type
 ;  (#match? @type "^[A-Z]"))
 
+(index_expression 
+  (field_expression
+    field: (field_identifier) @indexid (#set! priority 101))
+  (field_expression
+    field: (field_identifier))
+  )
+
 (let_declaration ; [125, 8] - [125, 42]
   (mutable_specifier) ; [125, 12] - [125, 15]
   pattern: (identifier) @letdecl (#set! priority 105)) ; [125, 16] - [125, 26]
