@@ -1,8 +1,8 @@
 (shebang) @keyword.directive
 
-; identifier with caps is type (NO)
-;((identifier) @type
-;  (#match? @type "^[A-Z]"))
+; identifier with caps is type
+((identifier) @type
+  (#match? @type "^[A-Z]"))
 
 (let_declaration ; [125, 8] - [125, 42]
   (mutable_specifier) ; [125, 12] - [125, 15]
