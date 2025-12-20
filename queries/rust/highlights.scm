@@ -3,12 +3,36 @@
 ; identifier with caps is type (NO)
 ;((identifier) @type
 ;  (#match? @type "^[A-Z]"))
+(parameter ; [30, 23] - [30, 51]
+  (mutable_specifier) ; [30, 23] - [30, 26]
+  pattern: (identifier) ; [30, 27] - [30, 33]
+  type: (reference_type ; [30, 35] - [30, 51]
+    type: (scoped_type_identifier ; [30, 36] - [30, 51]
+      path: (scoped_identifier ; [30, 36] - [30, 43]
+        path: (identifier) ; [30, 36] - [30, 39]
+        name: (identifier)) ; [30, 41] - [30, 43]
+      name: (type_identifier) @partypeid (#set! priority 105))))
 
+(generic_type ; [16, 13] - [16, 27]
+  type: (scoped_type_identifier ; [16, 13] - [16, 23]
+;    path: (identifier) ; [16, 13] - [16, 15]
+    name: (type_identifier) @recurstype (#set! priority 101)))
+
+(struct_expression ; [35, 16] - [35, 51]
+  name: (scoped_type_identifier ; [35, 16] - [35, 26]
+    name: (type_identifier) @recurstype (#set! priority 101)) ; [35, 23] - [35, 26]
+  body: (field_initializer_list)) ; [35, 27] - [35, 51]
+
+(index_expression 
+  (identifier) @indexid (#set! priority 101))
+(index_expression 
+  (field_expression
+    field: (field_identifier) @indexid (#set! priority 101)))
 (index_expression 
   (field_expression
     field: (field_identifier) @indexid (#set! priority 101))
   (field_expression
-    field: (field_identifier))
+    field: (field_identifier) @variable)
   )
 
 (let_declaration ; [125, 8] - [125, 42]
@@ -22,6 +46,10 @@
   pattern: (tuple_struct_pattern ; [128, 12] - [128, 28]
     type: (identifier) ; [128, 12] - [128, 16]
     (identifier) @letdecl (#set! priority 105))) ; [128, 17] - [128, 27]
+
+; Some(DialogMsg::Submit) => {
+(tuple_struct_pattern ; [160, 16] - [160, 39]
+  type: (identifier) @enum (#set! priority 101)) ; [160, 16] - [160, 20]
 
 (identifier) @variable
 
@@ -46,19 +74,31 @@
 (tuple_expression
    (identifier) @tuplist (#set! priority 105))
 
-(tuple_struct_pattern type: (identifier) @type
-  (tuple_pattern (identifier) @tuplist) (#set! priority 105))
-
-(tuple_struct_pattern
-   (identifier) @tuplist 
-   (#set! priority 101))
-
-(parameter
-  pattern: (identifier) @declist (#set! priority 105))
-
 (tuple_struct_pattern 
-  type: (identifier) @type (#set! priority 105)
-  (identifier)) 
+  type: (identifier) @tuplestructpat
+  (tuple_pattern (identifier) @tuplist) (#set! priority 105))
+(tuple_struct_pattern
+   (identifier) @tuplestructpat (#set! priority 101)
+   (identifier) @variable)
+
+; (parameter
+;   pattern: (identifier) @declist (#set! priority 105))
+; (parameter
+;   type: (type_identifier) @partypeid (#set! priority 105))
+; (parameter
+;   type: (primitive_type) @partypeid (#set! priority 105))
+; (parameter
+;   pattern: (identifier)
+;   type: (reference_type
+;   type: (primitive_type) @partypeid (#set! priority 105)))
+; (parameter
+;   pattern: (identifier)
+;   type: (reference_type
+;   type: (type_identifier) @partypeid (#set! priority 105)))
+
+;(tuple_struct_pattern 
+;  type: (identifier) @type (#set! priority 105)
+;  (identifier)) 
 
 (match_pattern ; [26, 12] - [26, 43]
   (tuple_struct_pattern ; [26, 12] - [26, 43]
@@ -92,7 +132,8 @@
 
 (type_arguments (primitive_type) @type.builtin (#set! priority 100))
 
-((generic_type) @type)
+((generic_type 
+   type: (type_identifier) @gentype (#set! priority 101)))
 
 ; (scoped_identifier
 ;   path: (identifier)
@@ -173,6 +214,10 @@
 ; Function calls
 (call_expression
   function: (identifier) @function.call)
+(call_expression
+  function: (scoped_identifier
+  path: (identifier)
+  name: (identifier) @function.call (#set! priority 101)))
 
 (call_expression
   function: (scoped_identifier
@@ -211,9 +256,12 @@
   (#match? @module "^[A-Z]")
   (#set! priority 105))
 
-((scoped_identifier
-  name: (identifier) @type)
-  (#lua-match? @type "^[A-Z]"))
+(scoped_identifier
+  name: (identifier) @scopedtype)
+  (#lua-match? @scopedtype "^[A-Z]")
+(tuple_struct_pattern (scoped_identifier
+  name: (identifier) @tuplestructpat))
+;  (#lua-match? @type "^[A-Z]"))
 
 ; enum constructors
 (call_expression
@@ -496,10 +544,10 @@
 (never_type
   "!" @type.builtin)
 
-(macro_invocation
-  macro: (identifier) @_identifier @keyword.exception
-  "!" @keyword.exception
-  (#eq? @_identifier "panic"))
+;(macro_invocation
+; macro: (identifier) @_identifier @keyword.exception
+; "!" @keyword.exception
+; (#eq? @_identifier "panic"))
 
 (macro_invocation
   macro: (identifier) @_identifier @keyword.exception

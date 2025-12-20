@@ -1,16 +1,17 @@
--- green
+-- redblue
 
-local black    = { 0, 234, "#14181c"}
+local black    = { 0, 234, "#000000"}
 local dgrey    = { 0, 234, "#20262c"}
 local dgreen   = { 0, 234, "#202c20"}
 
-local grey     = { 8, 241, "#708090"}
-
-local cyan     = { 8, 241, "#50d0b0"}
-local white    = {11, 215, "#c0d0c0"}
-local green    = {11, 215, "#b0d050"}
+local grey     = { 8, 241, "#404040"}
+local mage     = { 8, 241, "#406040"}
+local cyan     = { 8, 241, "#3090a0"}
+local white    = {11, 215, "#a0a080"}
+local green    = {11, 215, "#c05060"}
 
 local p = {
+  comment    = mage, 
   black      = black, 
   canvas     = black, 
 
@@ -21,17 +22,21 @@ local p = {
 
   visual     = dgreen, 
 
-  type       = green, 
   enum       = green, 
+  recurstype = green, 
+  gentype    = green, 
   func       = green, 
   matchparen = green, 
+
+  type       = green, 
+  scopedtype = green, 
+  partypeid  = green,
 
   keyword    = cyan,
   bool       = cyan, 
   str        = cyan, 
   literal    = cyan, 
 
-  comment    = grey, 
   lineno     = grey, 
   msgarea    = grey, 
   peripheral = grey, 
@@ -402,6 +407,26 @@ local hl_groups = {
     ['@module'] = {
         ctermfg = p.primary[cap], 
         fg      = p.primary[gui], 
+    }, 
+    ['@gentype']     = {
+        ctermfg = p.gentype[cap], 
+        fg      = p.gentype[gui], 
+    }, 
+    ['@tuplestructpat']     = {
+        ctermfg = p.enum[cap], 
+        fg      = p.enum[gui], 
+    }, 
+    ['@partypeid']     = {
+        ctermfg = p.partypeid[cap], 
+        fg      = p.partypeid[gui], 
+    }, 
+    ['@recurstype']     = {
+        ctermfg = p.recurstype[cap], 
+        fg      = p.recurstype[gui], 
+    }, 
+    ['@scopedtype']     = {
+        ctermfg = p.scopedtype[cap], 
+        fg      = p.scopedtype[gui], 
     }, 
     ['@type.builtin']     = {
         ctermfg = p.keyword[cap], 

@@ -6,9 +6,9 @@ local dgreen   = { 0, 234, "#202c20"}
 
 local grey     = { 8, 241, "#708090"}
 
-local cyan     = { 8, 241, "#50d0b0"}
+local cyan     = { 8, 241, "#70d0b0"}
 local white    = {11, 215, "#c0d0c0"}
-local green    = {11, 215, "#b0d050"}
+local green    = {11, 215, "#b0d070"}
 
 local p = {
   black      = black, 
