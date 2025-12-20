@@ -14,3 +14,6 @@ Note that these colorschemes use custom treesitter captures specified in the ./q
 
 ### Y
 ![Y](docs/Y.png)  
+
+### dark
+![dark](docs/dark.png)  
