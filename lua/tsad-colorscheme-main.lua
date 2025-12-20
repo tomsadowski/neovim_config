@@ -4,8 +4,8 @@ return function(p)
 
   local hl_groups = {
       Normal = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
           ctermbg = p.canvas[cap],
           bg      = p.canvas[gui],
       },
@@ -28,16 +28,16 @@ return function(p)
           bg      = p.black[gui], 
       }, 
       DiffAdd = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       DiffChange = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       DiffDelete = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       CursorLineNr = {
           ctermfg = p.curlineno[cap], 
@@ -64,8 +64,8 @@ return function(p)
           bg      = p.errorbg[gui],
       }, 
       EndOfBuffer = {
-          ctermfg = p.peripheral[cap], 
-          fg      = p.peripheral[gui], 
+          ctermfg = p.msgarea[cap], 
+          fg      = p.msgarea[gui], 
           ctermbg = p.black[cap],
           bg      = p.black[gui],
       }, 
@@ -74,14 +74,14 @@ return function(p)
           bg      = p.canvas[gui],
       },
       FloatBorder = {
-          ctermfg = p.peripheral[cap], 
-          fg      = p.peripheral[gui],
+          ctermfg = p.msgarea[cap], 
+          fg      = p.msgarea[gui],
           ctermbg = p.canvas[cap], 
           bg      = p.canvas[gui],
       }, 
       StatusLine = {
-          ctermfg = p.peripheral[cap],
-          fg      = p.peripheral[gui], 
+          ctermfg = p.msgarea[cap],
+          fg      = p.msgarea[gui], 
           ctermbg = p.black[cap],
           bg      = p.black[gui], 
       },
@@ -91,8 +91,8 @@ return function(p)
       },
 
       Constant  = {
-          ctermfg = p.secondary[cap], 
-          fg      = p.secondary[gui], 
+          ctermfg = p.variable[cap], 
+          fg      = p.variable[gui], 
       }, 
       Number  = {
           ctermfg = p.literal[cap], 
@@ -105,22 +105,23 @@ return function(p)
       MatchParen = {
           ctermfg = p.matchparen[cap], 
           fg      = p.matchparen[gui], 
+          --bold = true,
       }, 
       Delimiter = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       },
       Operator = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       Identifier = {
           ctermfg = p.variable[cap], 
           fg      = p.variable[gui], 
       },
       Macro = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       Keyword = {
           ctermfg = p.keyword[cap], 
@@ -133,38 +134,41 @@ return function(p)
       Function = {
           ctermfg = p.func[cap], 
           fg      = p.func[gui], 
+          --bold = true,
       },
       Type = {
           ctermfg = p.type[cap], 
           fg      = p.type[gui], 
+          --bold = true,
       },
       Structure = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       Class = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       },
       Enum = {
           ctermfg = p.enum[cap], 
           fg      = p.enum[gui], 
+          --bold = true,
       },
       Error = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui]
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui]
       }, 
       Added = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       Changed = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       Removed = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       Boolean   = {
           ctermfg = p.bool[cap], 
@@ -297,6 +301,10 @@ return function(p)
       DiagnosticDeprecated        = {link='Normal'},
       DiagnosticUnnecessary       = {link='Normal'},
 
+      ['@indexid'] = {
+          ctermfg = p.func[cap], 
+          fg      = p.func[gui], 
+      }, 
       ['@param'] = {
           ctermfg = p.param[cap], 
           fg      = p.param[gui], 
@@ -310,24 +318,24 @@ return function(p)
           fg      = p.path[gui], 
       }, 
       ['@fieldexpression'] = {
-          ctermfg = p.secondary[cap], 
-          fg      = p.secondary[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       ['@uselist'] = {
           ctermfg = p.uselist[cap],
           fg      = p.uselist[gui], 
       }, 
       ['@arglist'] = {
-          ctermfg = p.secondary[cap], 
-          fg      = p.secondary[gui], 
+          ctermfg = p.args[cap], 
+          fg      = p.args[gui], 
       }, 
     --['@tuplist'] = {
-    --    ctermfg = p.secondary[cap], 
-    --    fg      = p.secondary[gui], 
+    --    ctermfg = p.normal[cap], 
+    --    fg      = p.normal[gui], 
     --}, 
       ['@declist'] = {
-          ctermfg = p.secondary[cap], 
-          fg      = p.secondary[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       ['@enumdecl'] = {
           ctermfg = p.enumdecl[cap], 
@@ -338,27 +346,47 @@ return function(p)
           fg      = p.letdecl[gui], 
       }, 
       ['@module'] = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
+      ['@gentype']     = {
+          ctermfg = p.gentype[cap], 
+          fg      = p.gentype[gui], 
+      }, 
+      ['@tuplestructpat']     = {
+          ctermfg = p.enum[cap], 
+          fg      = p.enum[gui], 
+      }, 
+      ['@partypeid']     = {
+          ctermfg = p.partypeid[cap], 
+          fg      = p.partypeid[gui], 
+      }, 
+      ['@recurstype']     = {
+          ctermfg = p.recurstype[cap], 
+          fg      = p.recurstype[gui], 
+      }, 
+      ['@scopedtype']     = {
+          ctermfg = p.scopedtype[cap], 
+          fg      = p.scopedtype[gui], 
       }, 
       ['@type.builtin']     = {
           ctermfg = p.keyword[cap], 
           fg      = p.keyword[gui], 
       }, 
       ['@variable.builtin'] = {
-          ctermfg = p.secondary[cap], 
-          fg      = p.secondary[gui], 
+          ctermfg = p.variable[cap], 
+          fg      = p.variable[gui], 
       }, 
       ['@variable.member'] = {
-          ctermfg = p.primary[cap], 
-          fg      = p.primary[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       ['@function']                    = {link='Function'}, 
       ['@function.builtin']            = {link='@function'}, 
       ['@function.method']             = {link='@function'}, 
       ['@function.call']               = {link='@function'},
       ['@function.method.call']        = {link='@function'},
-      ['@function.macro']              = {link='@keyword'}, 
+      ['@function.macro']              = {link='@function'}, 
       ['@variable']                    = {link='Identifier'}, 
       ['@variable.parameter']          = {link='@param'}, 
       ['@variable.parameter.builtin']  = {link='@param'}, 
@@ -421,7 +449,7 @@ return function(p)
       ['@tag.attribute']               = {link='@type'}, 
       ['@tag.delimiter']               = {link='Delimiter'}, 
       ['@markup']                      = {link='Normal'}, 
-      ['@markup.secondaryong']               = {link='@markup'}, 
+      ['@markup.secondary']            = {link='@markup'}, 
       ['@markup.italic']               = {link='@markup'}, 
       ['@markup.strikethrough']        = {link='@markup'}, 
       ['@markup.underline']            = {link='@markup'}, 
@@ -450,7 +478,8 @@ return function(p)
 
   --  'winborder'		string	(default "")
   --              global
-  --      Defines the default border style of floating windows. The default value
+  --      Defines the default border style of floating windows. 
+  --      The default value
   --      is empty, which is equivalent to "none". Valid values include:
   --      - "bold": Bold line box.
   --      - "double": Double-line box.

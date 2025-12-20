@@ -1,55 +1,50 @@
 (shebang) @keyword.directive
 
-; identifier with caps is type (NO)
-;((identifier) @type
-;  (#match? @type "^[A-Z]"))
-(parameter ; [30, 23] - [30, 51]
-  (mutable_specifier) ; [30, 23] - [30, 26]
-  pattern: (identifier) ; [30, 27] - [30, 33]
-  type: (reference_type ; [30, 35] - [30, 51]
-    type: (scoped_type_identifier ; [30, 36] - [30, 51]
-      path: (scoped_identifier ; [30, 36] - [30, 43]
-        path: (identifier) ; [30, 36] - [30, 39]
-        name: (identifier)) ; [30, 41] - [30, 43]
+(parameter
+  (mutable_specifier)
+  pattern: (identifier)
+  type: (reference_type 
+    type: (scoped_type_identifier
+      path: (scoped_identifier
+        path: (identifier)
+        name: (identifier))
       name: (type_identifier) @partypeid (#set! priority 105))))
 
-(generic_type ; [16, 13] - [16, 27]
-  type: (scoped_type_identifier ; [16, 13] - [16, 23]
-;    path: (identifier) ; [16, 13] - [16, 15]
+(generic_type
+  type: (scoped_type_identifier
     name: (type_identifier) @recurstype (#set! priority 101)))
 
-(struct_expression ; [35, 16] - [35, 51]
-  name: (scoped_type_identifier ; [35, 16] - [35, 26]
-    name: (type_identifier) @recurstype (#set! priority 101)) ; [35, 23] - [35, 26]
-  body: (field_initializer_list)) ; [35, 27] - [35, 51]
+(struct_expression
+  name: (scoped_type_identifier
+    name: (type_identifier) @recurstype (#set! priority 101))
+  body: (field_initializer_list))
 
 (index_expression 
-  (identifier) @indexid (#set! priority 101))
+  (identifier) @indexid (#set! priority 103))
 (index_expression 
   (field_expression
-    field: (field_identifier) @indexid (#set! priority 101)))
+    field: (field_identifier) @indexid (#set! priority 103)))
 (index_expression 
   (field_expression
-    field: (field_identifier) @indexid (#set! priority 101))
+    field: (field_identifier) @indexid (#set! priority 103))
   (field_expression
-    field: (field_identifier) @variable)
-  )
+    field: (field_identifier) @variable.member (#set! priority 105)))
 
-(let_declaration ; [125, 8] - [125, 42]
-  (mutable_specifier) ; [125, 12] - [125, 15]
-  pattern: (identifier) @letdecl (#set! priority 105)) ; [125, 16] - [125, 26]
+(let_declaration
+  (mutable_specifier)
+  pattern: (identifier) @letdecl (#set! priority 105))
 
 (let_declaration
   pattern: (identifier) @letdecl (#set! priority 105))
 
-(let_declaration ; [128, 8] - [129, 34]
-  pattern: (tuple_struct_pattern ; [128, 12] - [128, 28]
-    type: (identifier) ; [128, 12] - [128, 16]
-    (identifier) @letdecl (#set! priority 105))) ; [128, 17] - [128, 27]
+(let_declaration
+  pattern: (tuple_struct_pattern
+    type: (identifier)
+    (identifier) @letdecl (#set! priority 105)))
 
 ; Some(DialogMsg::Submit) => {
-(tuple_struct_pattern ; [160, 16] - [160, 39]
-  type: (identifier) @enum (#set! priority 101)) ; [160, 16] - [160, 20]
+(tuple_struct_pattern
+  type: (identifier) @enum (#set! priority 101))
 
 (identifier) @variable
 
@@ -58,10 +53,6 @@
 
 (use_list
   (scoped_identifier) @uselist (#set! priority 105))
-
-
-;((identifier) @constant
-;  (#match? @constant "^[A-Z][A-Z_]") (#set! priority 105))
 
 (use_list (identifier) @uselist (#set! priority 106))
 (use_list (self) @uselist (#set! priority 106))
@@ -81,39 +72,15 @@
    (identifier) @tuplestructpat (#set! priority 101)
    (identifier) @variable)
 
-; (parameter
-;   pattern: (identifier) @declist (#set! priority 105))
-; (parameter
-;   type: (type_identifier) @partypeid (#set! priority 105))
-; (parameter
-;   type: (primitive_type) @partypeid (#set! priority 105))
-; (parameter
-;   pattern: (identifier)
-;   type: (reference_type
-;   type: (primitive_type) @partypeid (#set! priority 105)))
-; (parameter
-;   pattern: (identifier)
-;   type: (reference_type
-;   type: (type_identifier) @partypeid (#set! priority 105)))
-
-;(tuple_struct_pattern 
-;  type: (identifier) @type (#set! priority 105)
-;  (identifier)) 
-
-(match_pattern ; [26, 12] - [26, 43]
-  (tuple_struct_pattern ; [26, 12] - [26, 43]
-    type: (scoped_identifier ; [26, 12] - [26, 27]
-      path: (identifier) ; [26, 12] - [26, 18]
-      name: (identifier)) ; [26, 20] - [26, 27]
-    (identifier) @patdecl (#set! priority 105))) ; [26, 28] - [26, 36]
-
+(match_pattern
+  (tuple_struct_pattern
+    type: (scoped_identifier
+      path: (identifier)
+      name: (identifier))
+    (identifier) @patdecl (#set! priority 105)))
 
 (arguments
    (identifier) @arglist (#set! priority 105))
-
-(field_expression
-  value: (identifier) @fieldexpression (#set! priority 105)
-  field: (field_identifier))
 
 (arguments
   (call_expression
@@ -125,19 +92,11 @@
   (reference_expression
     value: (identifier) @arglist (#set! priority 105)))
 
-(arguments
-  (field_expression
-    value: (identifier) @declist (#set! priority 105)
-    field: (field_identifier)))
-
 (type_arguments (primitive_type) @type.builtin (#set! priority 100))
 
 ((generic_type 
    type: (type_identifier) @gentype (#set! priority 101)))
 
-; (scoped_identifier
-;   path: (identifier)
-;   name: (identifier) @path (#set! priority 100))
 (scoped_type_identifier
   (scoped_identifier) @path (#set! priority 101))
 (scoped_identifier
@@ -167,7 +126,7 @@
 
 (primitive_type) @type.builtin
 
-(field_identifier) @variable.member
+((field_identifier) @variable.member (#set! priority 102))
 
 (shorthand_field_identifier) @variable.member
 
@@ -212,31 +171,31 @@
   (_) @variable.parameter)
 
 ; Function calls
-(call_expression
-  function: (identifier) @function.call)
+;(call_expression
+;  function: (identifier) @function.call (#set! priority 104))
 (call_expression
   function: (scoped_identifier
-  path: (identifier)
-  name: (identifier) @function.call (#set! priority 101)))
+  path: (identifier) @path (#set! priority 105)
+  name: (identifier) @function.call (#set! priority 105)))
 
-(call_expression
-  function: (scoped_identifier
-    (identifier) @function.call .))
+;(call_expression
+;  function: (scoped_identifier
+;    (identifier) @function.call) (#set! priority 105))
 
 (call_expression
   function: (field_expression
-    field: (field_identifier) @function.call))
+    field: (field_identifier) @function.call) (#set! priority 105))
 
 (generic_function
-  function: (identifier) @function.call)
+  function: (identifier) @function.call (#set! priority 105))
 
 (generic_function
   function: (scoped_identifier
-    name: (identifier) @function.call))
+    name: (identifier) @function.call) (#set! priority 105))
 
 (generic_function
   function: (field_expression
-    field: (field_identifier) @function.call))
+    field: (field_identifier) @function.call) (#set! priority 105))
 
 ; Assume that uppercase names in paths are types
 (scoped_identifier
