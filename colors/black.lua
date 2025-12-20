@@ -1,12 +1,12 @@
 -- black
 
-local black   = { 0, 234, "#000000"}
-local dgreen  = { 0, 234, "#008000"}
-local blue    = { 0, 234, "#000080"}
-local green   = { 8, 241, "#00f000"}
-local magenta = { 8, 241, "#f000f0"}
-local yellow  = {11, 215, "#f0f000"}
-local cyan    = {11, 215, "#00f0f0"}
+local black   = { 0,   0, "#000000"}
+local dgreen  = { 2,   2, "#008000"}
+local blue    = { 4,   4, "#000080"}
+local green   = {10,  10, "#00ff00"}
+local magenta = {13,  13, "#ff00ff"}
+local yellow  = {11,  11, "#ffff00"}
+local cyan    = {14,  14, "#00fff0"}
 
 local p = {
   black      = black, 
