@@ -1,57 +1,56 @@
--- green2
+-- black
 
-local black    = { 0, 234, "#000000"}
-
-local grey1    = { 0, 234, "#102010"}
-local grey12   = { 0, 234, "#201020"}
-
-local grey22   = { 8, 241, "#506050"}
-local grey2    = { 8, 241, "#80a080"}
-local grey3    = {11, 215, "#70c070"}
-local white    = {11, 215, "#b0d0b0"}
+local black   = { 0, 234, "#000000"}
+local dgreen  = { 0, 234, "#008000"}
+local blue    = { 0, 234, "#000080"}
+local green   = { 8, 241, "#00f000"}
+local magenta = { 8, 241, "#f000f0"}
+local yellow  = {11, 215, "#f0f000"}
+local cyan    = {11, 215, "#00f0f0"}
 
 local p = {
   black      = black, 
   canvas     = black, 
 
+  errorbg    = dgreen,
+  warnbg     = dgreen, 
+  hintbg     = dgreen, 
+  search     = dgreen, 
+  visual     = blue, 
 
-  errorbg    = grey1,
-  warnbg     = grey1, 
-  hintbg     = grey1, 
-  visual     = grey12, 
-  search     = grey1, 
+  enum       = yellow, 
+  recurstype = yellow, 
+  gentype    = yellow, 
+  func       = yellow, 
+  matchparen = yellow, 
+  type       = yellow, 
+  scopedtype = yellow, 
+  partypeid  = yellow,
 
+  keyword    = magenta,
+  bool       = magenta, 
+  str        = magenta, 
+  literal    = magenta, 
 
-  type       = grey3, 
-  enum       = grey3, 
-  func       = grey3, 
-  matchparen = grey3, 
+  lineno     = green, 
+  msgarea    = green, 
+  peripheral = green, 
+  comment    = green, 
 
-  keyword    = grey2,
-  bool       = grey2, 
-  str        = grey2, 
-
-  peripheral = grey2, 
-  msgarea    = grey2, 
-
-  comment    = grey22, 
-  lineno     = grey22, 
-
-  primary    = white, 
-  enumdecl   = white, 
-  path       = white, 
-  uselist    = white, 
-  curlineno  = white, 
-  variable   = white, 
-  letdecl    = white, 
-  patdecl    = white, 
-  param      = white, 
-  args       = white, 
-  secondary  = white, 
-  literal    = white, 
-  errorfg    = white,
-  warnfg     = white, 
-  hintfg     = white, 
+  primary    = cyan, 
+  enumdecl   = cyan, 
+  path       = cyan, 
+  uselist    = cyan, 
+  curlineno  = cyan, 
+  variable   = cyan, 
+  letdecl    = cyan, 
+  patdecl    = cyan, 
+  param      = cyan, 
+  args       = cyan, 
+  secondary  = cyan, 
+  errorfg    = cyan,
+  warnfg     = cyan, 
+  hintfg     = cyan, 
 }
 
 
@@ -357,6 +356,10 @@ local hl_groups = {
     DiagnosticDeprecated        = {link='Normal'},
     DiagnosticUnnecessary       = {link='Normal'},
 
+    ['@indexid'] = {
+        ctermfg = p.func[cap], 
+        fg      = p.func[gui], 
+    }, 
     ['@param'] = {
         ctermfg = p.param[cap], 
         fg      = p.param[gui], 
@@ -401,6 +404,26 @@ local hl_groups = {
         ctermfg = p.primary[cap], 
         fg      = p.primary[gui], 
     }, 
+    ['@gentype']     = {
+        ctermfg = p.gentype[cap], 
+        fg      = p.gentype[gui], 
+    }, 
+    ['@tuplestructpat']     = {
+        ctermfg = p.enum[cap], 
+        fg      = p.enum[gui], 
+    }, 
+    ['@partypeid']     = {
+        ctermfg = p.partypeid[cap], 
+        fg      = p.partypeid[gui], 
+    }, 
+    ['@recurstype']     = {
+        ctermfg = p.recurstype[cap], 
+        fg      = p.recurstype[gui], 
+    }, 
+    ['@scopedtype']     = {
+        ctermfg = p.scopedtype[cap], 
+        fg      = p.scopedtype[gui], 
+    }, 
     ['@type.builtin']     = {
         ctermfg = p.keyword[cap], 
         fg      = p.keyword[gui], 
@@ -418,7 +441,7 @@ local hl_groups = {
     ['@function.method']             = {link='@function'}, 
     ['@function.call']               = {link='@function'},
     ['@function.method.call']        = {link='@function'},
-    ['@function.macro']              = {link='@keyword'}, 
+    ['@function.macro']              = {link='@function'}, 
     ['@variable']                    = {link='Identifier'}, 
     ['@variable.parameter']          = {link='@param'}, 
     ['@variable.parameter.builtin']  = {link='@param'}, 

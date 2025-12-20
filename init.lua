@@ -11,4 +11,4 @@ require "lsp"
 require "treesitter"
 
 -- comment this line out if you want the default colorscheme
-vim.cmd "colo redblue"
+vim.cmd "colo black"
