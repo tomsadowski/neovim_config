@@ -12,8 +12,5 @@ If you aren't using a pearbear keyboard, you'll want to comment out the `require
 ## Colorschemes
 Note that these colorschemes use custom treesitter captures specified in the ./queries directory. 
 
-### Y
-![Y](docs/Y.png)  
-
-### dark
-![dark](docs/dark.png)  
+### oo
+![oo](docs/oo.png)  
