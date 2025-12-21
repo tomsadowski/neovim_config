@@ -1,4 +1,4 @@
--- loo
+-- lava
 
 local p = {
   black    = { 0,   0, "#000000"},
@@ -6,19 +6,19 @@ local p = {
   grey     = { 7,   7, "#c0c0c0"},
   white    = {15,  15, "#f0f0f0"},
 
-  dred     = { 1,   1, "#800000"},
   dyellow  = { 3,   3, "#808000"},
   dgreen   = { 2,   2, "#008000"},
   dblue    = { 4,   4, "#000080"},
 
-  red      = { 9,   9, "#f00000"},
   green    = {10,  10, "#00f000"},
   blue     = {12,  12, "#0000f0"},
 
   dcyan    = { 6,   6, "#406080"},
   dmagenta = { 5,   5, "#804080"},
+  dred     = { 1,   1, "#604080"},
 
-  cyan     = {14,  14, "#8080f0"},
+  red      = { 9,   9, "#b070f0"},
+  cyan     = {14,  14, "#70b0f0"},
   yellow   = {11,  11, "#f070b0"},
   magenta  = {13,  13, "#f0b070"},
 }
@@ -47,20 +47,23 @@ require "tsad-colorscheme-main" {
   scopedtype = p.magenta, 
   partypeid  = p.magenta,
 
+  bool       = p.red, 
+  literal    = p.red, 
+  str        = p.red, 
+
   curlineno  = p.cyan, 
   keyword    = p.cyan,
-  bool       = p.cyan, 
-  literal    = p.cyan, 
   normal     = p.cyan, 
   path       = p.cyan, 
   uselist    = p.cyan, 
+  field      = p.cyan, 
 
-  comment    = p.dcyan, 
+  comment    = p.dred, 
   lineno     = p.dcyan, 
   msgarea    = p.dcyan, 
 
   variable   = p.yellow, 
-  str        = p.yellow, 
+  bvar       = p.yellow, 
   enumdecl   = p.yellow, 
   letdecl    = p.yellow, 
   patdecl    = p.yellow, 

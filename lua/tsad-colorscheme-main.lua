@@ -353,6 +353,10 @@ return function(p)
           ctermfg = p.gentype[cap], 
           fg      = p.gentype[gui], 
       }, 
+      ['@field']     = {
+          ctermfg = p.field[cap], 
+          fg      = p.field[gui], 
+      }, 
       ['@tuplestructpat']     = {
           ctermfg = p.enum[cap], 
           fg      = p.enum[gui], 
@@ -370,16 +374,16 @@ return function(p)
           fg      = p.scopedtype[gui], 
       }, 
       ['@type.builtin']     = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
+          ctermfg = p.btype[cap], 
+          fg      = p.btype[gui], 
       }, 
       ['@variable.builtin'] = {
-          ctermfg = p.variable[cap], 
-          fg      = p.variable[gui], 
+          ctermfg = p.bvar[cap], 
+          fg      = p.bvar[gui], 
       }, 
       ['@variable.member'] = {
-          ctermfg = p.normal[cap], 
-          fg      = p.normal[gui], 
+          ctermfg = p.field[cap], 
+          fg      = p.field[gui], 
       }, 
       ['@function']                    = {link='Function'}, 
       ['@function.builtin']            = {link='@function'}, 

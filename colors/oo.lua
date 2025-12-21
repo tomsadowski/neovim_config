@@ -33,12 +33,14 @@ require "tsad-colorscheme-main" {
   normal     = p.cyan, 
   path       = p.cyan, 
   uselist    = p.cyan, 
+  field      = p.cyan, 
 
   comment    = p.dcyan, 
   lineno     = p.dcyan, 
   msgarea    = p.dcyan, 
 
   variable   = p.yellow, 
+  bvar       = p.yellow, 
   str        = p.yellow, 
   enumdecl   = p.yellow, 
   letdecl    = p.yellow, 

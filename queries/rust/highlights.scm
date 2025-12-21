@@ -14,6 +14,12 @@
   type: (scoped_type_identifier
     name: (type_identifier) @recurstype (#set! priority 101)))
 
+(field_expression ; [39, 32] - [39, 50]
+  value: (field_expression ; [39, 32] - [39, 43]
+    value: (self) ; [39, 32] - [39, 36]
+    field: (field_identifier) @field) ; [39, 37] - [39, 43]
+  field: (field_identifier)) ; [39, 44] - [39, 50]
+
 (struct_expression
   name: (scoped_type_identifier
     name: (type_identifier) @recurstype (#set! priority 101))
