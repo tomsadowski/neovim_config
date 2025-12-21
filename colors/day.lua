@@ -1,52 +1,53 @@
--- daywava
+-- day
 
+local d = require "palette"
 local p = {
-  black    = { 0,   0, "#14181c"},
-  dgrey    = { 8,   8, "#808080"},
-  grey     = { 7,   7, "#c0c0c0"},
-  white    = {15,  15, "#f0f0f0"},
+  dgrey    = {   d.dgrey[1],    d.dgrey[2], "#808080"},
+  grey     = {    d.grey[1],     d.grey[2], "#c0c0c0"},
+  white    = {   d.white[1],    d.white[2], "#f0f0f0"},
+  red      = {     d.red[1],      d.red[2], "#f00000"},
+  green    = {   d.green[1],    d.green[2], "#00f000"},
+  blue     = {    d.blue[1],     d.blue[2], "#0000f0"},
 
-  dred     = { 1,   1, "#800000"},
-  dyellow  = { 3,   3, "#808000"},
-  dgreen   = { 2,   2, "#008000"},
-  dblue    = { 4,   4, "#103030"},
+  black    = {   d.black[1],    d.black[2], "#14181c"},
 
-  led      = { 9,   9, "#f00000"},
-  green    = {10,  10, "#00f000"},
-  blue     = {12,  12, "#0000f0"},
+  dred     = {    d.dred[1],     d.dred[2], "#303010"},
+  dgreen   = {  d.dgreen[1],   d.dgreen[2], "#103030"},
+  dblue    = {   d.dblue[1],    d.dblue[2], "#301030"},
 
-  dcyan    = { 6,   6, "#407080"},
-  dmagenta = { 5,   5, "#804080"},
+  dyellow  = { d.dyellow[1],  d.dyellow[2], "#807040"},
+  dcyan    = {   d.dcyan[1],    d.dcyan[2], "#407080"},
+  dmagenta = {d.dmagenta[1], d.dmagenta[2], "#905090"},
 
-  cyan     = {14,  14, "#70c0d0"},
-  red      = {11,  11, "#d0c070"},
-  yellow   = {13,  13, "#e070e0"},
+  yellow   = { d.yellow[1],    d.yellow[2], "#d0c070"},
+  cyan     = {   d.cyan[1],      d.cyan[2], "#70c0d0"},
+  magenta  = {d.magenta[1],   d.magenta[2], "#e070e0"},
 }
 require "tsad-colorscheme-main" {
   black      = p.black, 
   canvas     = p.black, 
 
-  errorbg    = p.dmagenta,
-  errorfg    = p.yellow,
+  errorbg    = p.dblue,
+  errorfg    = p.dmagenta,
 
-  warnbg     = p.dyellow, 
-  warnfg     = p.red, 
+  warnbg     = p.dred, 
+  warnfg     = p.dyellow, 
 
-  hintbg     = p.dcyan, 
-  hintfg     = p.cyan, 
+  hintbg     = p.dgreen, 
+  hintfg     = p.dcyan, 
 
   search     = p.dgreen, 
   visual     = p.dblue, 
 
-  enum       = p.yellow, 
-  recurstype = p.yellow, 
-  gentype    = p.yellow, 
-  func       = p.yellow, 
-  matchparen = p.yellow, 
-  type       = p.yellow, 
-  scopedtype = p.yellow, 
-  partypeid  = p.yellow,
-  btype       = p.yellow, 
+  enum       = p.magenta, 
+  recurstype = p.magenta, 
+  gentype    = p.magenta, 
+  func       = p.magenta, 
+  matchparen = p.magenta, 
+  type       = p.magenta, 
+  scopedtype = p.magenta, 
+  partypeid  = p.magenta,
+  btype      = p.magenta, 
 
   curlineno  = p.cyan, 
   keyword    = p.cyan,
@@ -60,13 +61,13 @@ require "tsad-colorscheme-main" {
   lineno     = p.dcyan, 
   msgarea    = p.dcyan, 
 
-  variable   = p.red, 
-  bvar       = p.red, 
-  str        = p.red, 
-  bool       = p.red, 
-  literal    = p.red, 
-  letdecl    = p.red, 
-  patdecl    = p.red, 
-  param      = p.red, 
-  args       = p.red, 
+  variable   = p.yellow, 
+  bvar       = p.yellow, 
+  str        = p.yellow, 
+  bool       = p.yellow, 
+  literal    = p.yellow, 
+  letdecl    = p.yellow, 
+  patdecl    = p.yellow, 
+  param      = p.yellow, 
+  args       = p.yellow, 
 }
