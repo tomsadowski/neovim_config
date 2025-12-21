@@ -171,8 +171,8 @@
   (_) @variable.parameter)
 
 ; Function calls
-;(call_expression
-;  function: (identifier) @function.call (#set! priority 104))
+(call_expression
+  function: (identifier) @function.call (#set! priority 104))
 (call_expression
   function: (scoped_identifier
   path: (identifier) @path (#set! priority 105)

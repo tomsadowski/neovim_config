@@ -14,3 +14,6 @@ Note that these colorschemes use custom treesitter captures specified in the ./q
 
 ### oo
 ![oo](docs/oo.png)  
+
+### lava
+![lava](docs/lava.png)  
