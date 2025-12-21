@@ -15,6 +15,9 @@ Note that these colorschemes use custom treesitter captures specified in the ./q
 ### wava
 ![wava](docs/wava.png)  
 
+### day
+![day](docs/day.png)  
+
 ### oo
 ![oo](docs/oo.png)  
 
