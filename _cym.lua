@@ -1,6 +1,6 @@
 -- oo
 
-local p = require "palette"
+local p = vim.deepcopy(require "palette")
 require "tsad-colorscheme-main" {
   black      = p.black, 
   canvas     = p.black, 
