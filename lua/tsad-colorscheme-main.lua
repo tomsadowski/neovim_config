@@ -305,6 +305,10 @@ return function(p)
           ctermfg = p.func[cap], 
           fg      = p.func[gui], 
       }, 
+      ['@declaration'] = {
+          ctermfg = p.param[cap], 
+          fg      = p.param[gui], 
+      }, 
       ['@param'] = {
           ctermfg = p.param[cap], 
           fg      = p.param[gui], 
