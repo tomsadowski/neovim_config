@@ -2,8 +2,6 @@
 
 local p = vim.deepcopy(require "palette")
   
-p.black   [3] = "#14181c"
-  
 p.dred    [3] = "#303010"
 p.dgreen  [3] = "#103030"
 p.dblue   [3] = "#301030"
