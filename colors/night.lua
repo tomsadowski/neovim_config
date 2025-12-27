@@ -10,7 +10,7 @@ p.dgrey[3]    = "#505080"
   
 p.grey[3]     = "#a0a0f0"
 p.green[3]    = "#80c080"
-p.magenta[3]  = "#d08090"
+p.magenta[3]  = "#d07090"
 
 require "tsad-colorscheme-main" {
   black      = p.black, 
