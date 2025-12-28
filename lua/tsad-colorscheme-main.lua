@@ -13,8 +13,8 @@ return function(p)
           bg      = p.canvas[gui],
       },
       SignColumn = {
-          ctermbg = p.black[cap], 
-          bg      = p.black[gui]
+          ctermbg = p.canvas[cap], 
+          bg      = p.canvas[gui]
       }, 
       Search = {
           ctermbg = p.search[cap], 
@@ -31,8 +31,8 @@ return function(p)
       LineNr = {
           ctermfg = p.lineno[cap], 
           fg      = p.lineno[gui], 
-          ctermbg = p.black[cap], 
-          bg      = p.black[gui], 
+          ctermbg = p.canvas[cap], 
+          bg      = p.canvas[gui], 
       }, 
 
       CursorLineNr = {
@@ -129,14 +129,14 @@ return function(p)
       MsgArea = {
           ctermfg = p.msgarea[cap], 
           fg      = p.msgarea[gui],
-          ctermbg = p.black[cap], 
-          bg      = p.black[gui],
+          ctermbg = p.canvas[cap], 
+          bg      = p.canvas[gui],
       }, 
       StatusLine = {
           ctermfg = p.msgarea[cap],
           fg      = p.msgarea[gui], 
-          ctermbg = p.black[cap],
-          bg      = p.black[gui], 
+          ctermbg = p.canvas[cap],
+          bg      = p.canvas[gui], 
       },
 
       DiffText = {
@@ -189,24 +189,24 @@ return function(p)
           fg      = p.variable[gui], 
       },
       ['@variable.builtin'] = {
-        ctermfg = p.bvar[cap], 
-        fg      = p.bvar[gui], 
+        ctermfg = p.variable[cap], 
+        fg      = p.variable[gui], 
       }, 
       ['@variable.member'] = {
-        ctermfg = p.field[cap], 
-        fg      = p.field[gui], 
+        ctermfg = p.variable[cap], 
+        fg      = p.variable[gui], 
       }, 
       ['@variable.parameter'] = {
-        ctermfg = p.param[cap], 
-        fg      = p.param[gui], 
+        ctermfg = p.variable[cap], 
+        fg      = p.variable[gui], 
       }, 
       ['@variable.parameter.builtin'] = {
-        ctermfg = p.param[cap], 
-        fg      = p.param[gui], 
+        ctermfg = p.variable[cap], 
+        fg      = p.variable[gui], 
       }, 
       ['@property'] = {
-        ctermfg = p.field[cap], 
-        fg      = p.field[gui], 
+        ctermfg = p.variable[cap], 
+        fg      = p.variable[gui], 
       }, 
 
       ['@constant'] = {
@@ -315,52 +315,52 @@ return function(p)
       }, 
 
       ['@keyword'] = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       Keyword = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       ['@keyword.coroutine'] = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       ['@keyword.function'] = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       ['@keyword.operator'] = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       ['@keyword.import'] = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       ['@keyword.type'] = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       ['@keyword.modifier'] = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       StorageClass = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       },
       ['@keyword.repeat'] = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       Repeat = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       },
       ['@keyword.return'] = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       ['@keyword.debug'] = {
           ctermfg = p.normal[cap], 
@@ -371,24 +371,24 @@ return function(p)
           fg      = p.normal[gui], 
       }, 
       ['@keyword.exception'] = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       ['@keyword.conditional'] = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       ['@keyword.conditional.ternary'] = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       ['@keyword.directive'] = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
       ['@keyword.directive.define'] = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
 
       ['@character'] = {
@@ -535,12 +535,12 @@ return function(p)
       },
 
       ['@boolean'] = {
-          ctermfg = p.bool[cap], 
-          fg      = p.bool[gui], 
+          ctermfg = p.literal[cap], 
+          fg      = p.literal[gui], 
       }, 
       Boolean = {
-          ctermfg = p.bool[cap], 
-          fg      = p.bool[gui], 
+          ctermfg = p.literal[cap], 
+          fg      = p.literal[gui], 
       },
 
       Cursor         = {link='Normal'}, 
@@ -643,83 +643,10 @@ return function(p)
       DiagnosticDeprecated        = {link='Normal'},
       DiagnosticUnnecessary       = {link='Normal'},
 
-      ['@literal'] = {
-          ctermfg = p.literal[cap], 
-          fg      = p.literal[gui], 
-      }, 
-      ['@tupleparam'] = {
-          ctermfg = p.path[cap], 
-          fg      = p.path[gui], 
-      }, 
-      ['@calledfrom'] = {
-          ctermfg = p.path[cap], 
-          fg      = p.path[gui], 
-      }, 
-      ['@indexid'] = {
-          ctermfg = p.func[cap], 
-          fg      = p.func[gui], 
-      }, 
-      ['@param'] = {
-          ctermfg = p.param[cap], 
-          fg      = p.param[gui], 
-      }, 
-      ['@patdecl'] = {
-          ctermfg = p.patdecl[cap], 
-          fg      = p.patdecl[gui], 
-      }, 
-      ['@path'] = {
-          ctermfg = p.path[cap], 
-          fg      = p.path[gui], 
-      }, 
-      ['@fieldexpression'] = {
+      ['@normal'] = {
           ctermfg = p.normal[cap], 
           fg      = p.normal[gui], 
       }, 
-      ['@uselist'] = {
-          ctermfg = p.uselist[cap],
-          fg      = p.uselist[gui], 
-      }, 
-      ['@arglist'] = {
-          ctermfg = p.args[cap], 
-          fg      = p.args[gui], 
-      }, 
-      ['@tuplist'] = {
-          ctermfg = p.args[cap], 
-          fg      = p.args[gui], 
-      }, 
-      ['@declist'] = {
-          ctermfg = p.normal[cap], 
-          fg      = p.normal[gui], 
-      }, 
-      ['@enumdecl'] = {
-          ctermfg = p.enumdecl[cap], 
-          fg      = p.enumdecl[gui], 
-      }, 
-      ['@letdecl'] = {
-          ctermfg = p.letdecl[cap], 
-          fg      = p.letdecl[gui], 
-      }, 
-      ['@field'] = {
-          ctermfg = p.field[cap], 
-          fg      = p.field[gui], 
-      }, 
-      ['@field.decl'] = {
-          ctermfg = p.field[cap], 
-          fg      = p.field[gui], 
-      }, 
-      ['@tuplestructpat'] = {
-          ctermfg = p.enum[cap], 
-          fg      = p.enum[gui], 
-      }, 
-      ['@scopedtype'] = {
-        ctermfg = p.scopedtype[cap], 
-        fg      = p.scopedtype[gui], 
-      }, 
-      ['@identifier'] = {
-        ctermfg = p.field[cap], 
-        fg      = p.field[gui], 
-      }, 
-
       ['@module'] = {
           ctermfg = p.normal[cap], 
           fg      = p.normal[gui], 

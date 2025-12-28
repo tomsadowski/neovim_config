@@ -1,4 +1,4 @@
--- lava
+-- fire
 
 local p = vim.deepcopy(require "palette")
 
@@ -12,7 +12,6 @@ p.dgreen[3]   = "#103010"
 p.green[3]    = "#f0b070"
 
 require "tsad-colorscheme-main" {
-  black      = p.black, 
   canvas     = p.black, 
 
   errorbg    = p.black,
@@ -33,26 +32,14 @@ require "tsad-colorscheme-main" {
 
   normal      = p.grey, 
   keyword     = p.grey,
-  path        = p.grey, 
-  uselist     = p.grey, 
   curlineno   = p.grey, 
-  enumdecl    = p.grey, 
 
-  args       = p.green, 
-  bool       = p.green, 
   literal    = p.green, 
-  field      = p.green, 
   str        = p.green, 
-  scopedtype = p.green, 
   type       = p.green, 
   enum       = p.green, 
   func       = p.green, 
   matchparen = p.green, 
-  partypeid  = p.green,
   btype      = p.green, 
   variable   = p.green, 
-  bvar       = p.green, 
-  letdecl    = p.green, 
-  patdecl    = p.green, 
-  param      = p.green, 
 }
