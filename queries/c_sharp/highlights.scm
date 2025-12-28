@@ -42,6 +42,12 @@
 
 (interpolation) @none
 
+(constant_pattern (identifier) @normal)
+(member_access_expression
+  expression: (identifier) @normal)
+(member_access_expression expression: (member_access_expression
+    name: (identifier) @normal (#set! priority 101)))
+
 (member_access_expression
   name: (identifier) @variable.member)
 
@@ -61,7 +67,13 @@
   ] @module)
 
 (qualified_name
-  (identifier) @type)
+  name: (identifier) @type)
+
+(qualified_name
+  qualifier: (qualified_name) @normal (#set! priority 101))
+
+(qualified_name
+  qualifier: (identifier) @normal)
 
 (namespace_declaration
   name: (identifier) @module)
@@ -98,9 +110,10 @@
 
 (implicit_parameter) @variable.parameter
 
-(parameter_list
-  (parameter
-    type: (identifier) @type))
+(method_declaration returns: (generic_name) @normal (#set! priority 101))
+(method_declaration returns: (array_type)   @normal (#set! priority 101))
+(parameter type: (generic_name) @normal (#set! priority 101))
+(parameter type: (identifier)   @normal (#set! priority 101))
 
 (integer_literal) @number
 
@@ -133,7 +146,7 @@
   "false"
 ] @boolean
 
-(predefined_type) @type.builtin
+(predefined_type) @normal
 
 (implicit_type) @keyword
 
@@ -217,7 +230,7 @@
   "module"
   "this"
   "base"
-] @variable.builtin
+] @normal
 
 (constructor_declaration
   name: (identifier) @constructor)
@@ -252,7 +265,7 @@
     (identifier) @type
     (type
       (generic_name
-        (identifier) @type))
+        (identifier) @normal))
   ])
 
 (object_creation_expression

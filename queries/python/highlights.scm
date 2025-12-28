@@ -14,7 +14,6 @@
 ((identifier) @constant
  (#match? @constant "^[A-Z][A-Z_]*$"))
 
-; me
 (subscript 
   value: (identifier)
   subscript: (identifier) @param (#set! priority 105))
