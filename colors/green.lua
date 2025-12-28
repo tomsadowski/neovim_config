@@ -1,47 +1,46 @@
--- fire
+-- green
 
 local p = vim.deepcopy(require "palette")
 
-p.black[3]    = "#101810"
+p.dgreen[3]   = "#002000"
   
-p.dcyan[3]    = "#708070"
-p.cyan[3]     = "#90d0f0"
-  
+p.green[3]    = "#208020"
+
 p.dmagenta[3] = "#301030"
+p.dred[3]     = "#103010"
 
-p.dyellow[3]   = "#103010"
-
-p.yellow[3]    = "#d0b090"
+p.blue[3]     = "#90b0f0"
+p.red[3]      = "#f09090"
 
 require "tsad-colorscheme-main" {
-  canvas     = p.black, 
+  canvas     = p.dgreen, 
 
-  errorbg    = p.black,
-  errorfg    = p.dcyan,
+  errorbg    = p.dgreen,
+  errorfg    = p.green,
 
-  warnbg     = p.black, 
-  warnfg     = p.dcyan, 
+  warnbg     = p.dgreen, 
+  warnfg     = p.green, 
 
-  hintbg     = p.black, 
-  hintfg     = p.dcyan, 
+  hintbg     = p.dgreen, 
+  hintfg     = p.green, 
 
-  search     = p.dyellow, 
+  search     = p.dred, 
   visual     = p.dmagenta, 
 
-  comment    = p.dcyan, 
-  lineno     = p.dcyan, 
-  msgarea    = p.dcyan, 
+  comment    = p.green, 
+  lineno     = p.green, 
+  msgarea    = p.green, 
 
-  normal      = p.cyan, 
-  keyword     = p.cyan,
-  curlineno   = p.cyan, 
+  normal      = p.blue, 
+  keyword     = p.blue,
+  curlineno   = p.blue, 
 
-  literal    = p.yellow, 
-  str        = p.yellow, 
-  type       = p.yellow, 
-  enum       = p.yellow, 
-  func       = p.yellow, 
-  matchparen = p.yellow, 
-  btype      = p.yellow, 
-  variable   = p.yellow, 
+  literal    = p.red, 
+  str        = p.red, 
+  type       = p.red, 
+  enum       = p.red, 
+  func       = p.red, 
+  matchparen = p.red, 
+  btype      = p.red, 
+  variable   = p.red, 
 }
