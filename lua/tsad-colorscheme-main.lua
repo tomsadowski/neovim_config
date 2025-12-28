@@ -1,7 +1,6 @@
 return function(p)
   local cap = 2
   local gui = 3
-
   local hl_groups = {
       Normal = {
           ctermfg = p.normal[cap], 
@@ -21,53 +20,101 @@ return function(p)
           ctermbg = p.search[cap], 
           bg      = p.search[gui], 
       },
+      Visual = {
+          ctermbg = p.visual[cap], 
+          bg      = p.visual[gui], 
+      },
+      MatchParen = {
+          ctermfg = p.matchparen[cap], 
+          fg      = p.matchparen[gui], 
+      }, 
       LineNr = {
           ctermfg = p.lineno[cap], 
           fg      = p.lineno[gui], 
           ctermbg = p.black[cap], 
           bg      = p.black[gui], 
       }, 
-      DiffAdd = {
-          ctermfg = p.normal[cap], 
-          fg      = p.normal[gui], 
-      }, 
-      DiffChange = {
-          ctermfg = p.normal[cap], 
-          fg      = p.normal[gui], 
-      }, 
-      DiffDelete = {
-          ctermfg = p.normal[cap], 
-          fg      = p.normal[gui], 
-      }, 
+
       CursorLineNr = {
           ctermfg = p.curlineno[cap], 
           fg      = p.curlineno[gui],
-          ctermbg = p.canvas[cap], 
-          bg      = p.canvas[gui],
       }, 
-      MsgArea = {
-          ctermfg = p.msgarea[cap], 
-          fg      = p.msgarea[gui],
-          ctermbg = p.black[cap], 
-          bg      = p.black[gui],
-      }, 
+
       WarningMsg = {
           ctermfg = p.warnfg[cap], 
           fg      = p.warnfg[gui],
-          ctermbg = p.warnbg[cap], 
-          bg      = p.warnbg[gui],
+      }, 
+      DiagnosticWarn = {
+          ctermfg = p.warnfg[cap], 
+          fg      = p.warnfg[gui],
+      },
+      DiagnosticSignWarn = {
+          ctermfg = p.warnfg[cap], 
+          fg      = p.warnfg[gui],
+      },
+      DiagnosticVirtualTextWarn = {
+          ctermfg = p.warnfg[cap], 
+          fg      = p.warnfg[gui],
+      },
+      DiagnosticVirtualLinesWarn = {
+          ctermfg = p.warnfg[cap], 
+          fg      = p.warnfg[gui],
+      },
+      DiagnosticFloatingWarn = {
+          ctermfg = p.warnfg[cap], 
+          fg      = p.warnfg[gui],
+      },
+      DiagnosticUnderlineWarn = {
+          ctermfg = p.warnfg[cap], 
+          fg      = p.warnfg[gui],
+      },
+
+      Error = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui]
       }, 
       ErrorMsg = {
           ctermfg = p.errorfg[cap], 
           fg      = p.errorfg[gui],
-          ctermbg = p.errorbg[cap], 
-          bg      = p.errorbg[gui],
       }, 
+      DiagnosticError = {
+          ctermfg = p.errorfg[cap], 
+          fg      = p.errorfg[gui],
+      },
+      DiagnosticVirtualTextError = {
+          ctermfg = p.errorfg[cap], 
+          fg      = p.errorfg[gui],
+      },
+      DiagnosticVirtualLinesError = {
+          ctermfg = p.errorfg[cap], 
+          fg      = p.errorfg[gui],
+      },
+      DiagnosticUnderlineError = {
+          ctermfg = p.errorfg[cap], 
+          fg      = p.errorfg[gui],
+      },
+      DiagnosticFloatingError = {
+          ctermfg = p.errorfg[cap], 
+          fg      = p.errorfg[gui],
+      },
+      DiagnosticSignError = {
+          ctermfg = p.errorfg[cap], 
+          fg      = p.errorfg[gui],
+      },
+
+      DiagnosticHint = {
+          ctermfg = p.hintfg[cap],
+          fg      = p.hintfg[gui],
+      },
+      DiagnosticUnderlineHint     = {link='Normal'},
+      DiagnosticVirtualLinesHint  = {link='Normal'},
+      DiagnosticVirtualTextHint   = {link='NONE'},
+      DiagnosticFloatingHint      = {link='Normal'},
+      DiagnosticSignHint          = {link='DiagnosticHint'},
+
       EndOfBuffer = {
           ctermfg = p.msgarea[cap], 
           fg      = p.msgarea[gui], 
-          ctermbg = p.black[cap],
-          bg      = p.black[gui],
       }, 
       NormalFloat = {
           ctermbg = p.canvas[cap], 
@@ -79,86 +126,40 @@ return function(p)
           ctermbg = p.canvas[cap], 
           bg      = p.canvas[gui],
       }, 
+      MsgArea = {
+          ctermfg = p.msgarea[cap], 
+          fg      = p.msgarea[gui],
+          ctermbg = p.black[cap], 
+          bg      = p.black[gui],
+      }, 
       StatusLine = {
           ctermfg = p.msgarea[cap],
           fg      = p.msgarea[gui], 
           ctermbg = p.black[cap],
           bg      = p.black[gui], 
       },
-      Visual = {
-          ctermbg = p.visual[cap], 
-          bg      = p.visual[gui], 
-      },
 
-      Constant  = {
-          ctermfg = p.variable[cap], 
-          fg      = p.variable[gui], 
-      }, 
-      Number  = {
-          ctermfg = p.literal[cap], 
-          fg      = p.literal[gui], 
-      }, 
-      Comment = {
-          ctermfg = p.comment[cap], 
-          fg      = p.comment[gui], 
-      }, 
-      MatchParen = {
-          ctermfg = p.matchparen[cap], 
-          fg      = p.matchparen[gui], 
-          --bold = true,
-      }, 
-      Delimiter = {
-          ctermfg = p.normal[cap], 
-          fg      = p.normal[gui], 
-      },
-      Operator = {
+      DiffText = {
           ctermfg = p.normal[cap], 
           fg      = p.normal[gui], 
       }, 
-      Identifier = {
-          ctermfg = p.variable[cap], 
-          fg      = p.variable[gui], 
-      },
-      Macro = {
+      ['@diff.plus'] = {
           ctermfg = p.normal[cap], 
           fg      = p.normal[gui], 
       }, 
-      Keyword = {
-          ctermfg = p.keyword[cap], 
-          fg      = p.keyword[gui], 
-      }, 
-      String = {
-          ctermfg = p.str[cap], 
-          fg      = p.str[gui], 
-      },
-      Function = {
-          ctermfg = p.func[cap], 
-          fg      = p.func[gui], 
-          --bold = true,
-      },
-      Type = {
-          ctermfg = p.type[cap], 
-          fg      = p.type[gui], 
-          --bold = true,
-      },
-      Structure = {
+      DiffAdd = {
           ctermfg = p.normal[cap], 
           fg      = p.normal[gui], 
-      }, 
-      Class = {
-          ctermfg = p.normal[cap], 
-          fg      = p.normal[gui], 
-      },
-      Enum = {
-          ctermfg = p.enum[cap], 
-          fg      = p.enum[gui], 
-          --bold = true,
-      },
-      Error = {
-          ctermfg = p.normal[cap], 
-          fg      = p.normal[gui]
       }, 
       Added = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
+      ['@diff.delta'] = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
+      DiffChange = {
           ctermfg = p.normal[cap], 
           fg      = p.normal[gui], 
       }, 
@@ -166,15 +167,382 @@ return function(p)
           ctermfg = p.normal[cap], 
           fg      = p.normal[gui], 
       }, 
+      ['@diff.minus'] = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
+      DiffDelete = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
       Removed = {
           ctermfg = p.normal[cap], 
           fg      = p.normal[gui], 
       }, 
-      Boolean   = {
+
+      ['@variable'] = {
+        ctermfg = p.variable[cap], 
+        fg      = p.variable[gui], 
+      }, 
+      Identifier = {
+          ctermfg = p.variable[cap], 
+          fg      = p.variable[gui], 
+      },
+      ['@variable.builtin'] = {
+        ctermfg = p.bvar[cap], 
+        fg      = p.bvar[gui], 
+      }, 
+      ['@variable.member'] = {
+        ctermfg = p.field[cap], 
+        fg      = p.field[gui], 
+      }, 
+      ['@variable.parameter'] = {
+        ctermfg = p.param[cap], 
+        fg      = p.param[gui], 
+      }, 
+      ['@variable.parameter.builtin'] = {
+        ctermfg = p.param[cap], 
+        fg      = p.param[gui], 
+      }, 
+      ['@property'] = {
+        ctermfg = p.field[cap], 
+        fg      = p.field[gui], 
+      }, 
+
+      ['@constant'] = {
+          ctermfg = p.variable[cap], 
+          fg      = p.variable[gui], 
+      }, 
+      Constant = {
+          ctermfg = p.variable[cap], 
+          fg      = p.variable[gui], 
+      }, 
+      ['@constant.builtin'] = {
+          ctermfg = p.variable[cap], 
+          fg      = p.variable[gui], 
+      }, 
+      ['@constant.macro'] = {
+          ctermfg = p.variable[cap], 
+          fg      = p.variable[gui], 
+      }, 
+
+      ['@number'] = {
+          ctermfg = p.literal[cap], 
+          fg      = p.literal[gui], 
+      }, 
+      Number = {
+          ctermfg = p.literal[cap], 
+          fg      = p.literal[gui], 
+      }, 
+      ['@number.float'] = {
+          ctermfg = p.literal[cap], 
+          fg      = p.literal[gui], 
+      }, 
+      Float = {
+          ctermfg = p.literal[cap], 
+          fg      = p.literal[gui], 
+      }, 
+
+      ['@comment'] = {
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui], 
+      }, 
+      Comment = {
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui], 
+      }, 
+      SpecialComment = {
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui], 
+      }, 
+      ['@comment.documentation'] = {
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui], 
+      }, 
+      ['@comment.error'] = {
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui], 
+      }, 
+      ['@comment.warning'] = {
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui], 
+      }, 
+      ['@comment.todo'] = {
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui], 
+      }, 
+      ['@comment.note'] = {
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui], 
+      }, 
+
+      ['@punctuation'] = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
+      ['@punctuation.delimiter'] = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
+      Delimiter = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      },
+      ['@punctuation.bracket'] = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
+      ['@punctuation.special'] = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
+      ['@punctuation.special.query'] = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
+
+      ['@operator'] = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
+      Operator = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
+      ['@operator.try'] = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
+
+      ['@keyword'] = {
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
+      }, 
+      Keyword = {
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
+      }, 
+      ['@keyword.coroutine'] = {
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
+      }, 
+      ['@keyword.function'] = {
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
+      }, 
+      ['@keyword.operator'] = {
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
+      }, 
+      ['@keyword.import'] = {
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
+      }, 
+      ['@keyword.type'] = {
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
+      }, 
+      ['@keyword.modifier'] = {
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
+      }, 
+      StorageClass = {
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
+      },
+      ['@keyword.repeat'] = {
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
+      }, 
+      Repeat = {
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
+      },
+      ['@keyword.return'] = {
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
+      }, 
+      ['@keyword.debug'] = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
+      Debug = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
+      ['@keyword.exception'] = {
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
+      }, 
+      ['@keyword.conditional'] = {
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
+      }, 
+      ['@keyword.conditional.ternary'] = {
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
+      }, 
+      ['@keyword.directive'] = {
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
+      }, 
+      ['@keyword.directive.define'] = {
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
+      }, 
+
+      ['@character'] = {
+          ctermfg = p.str[cap], 
+          fg      = p.str[gui], 
+      }, 
+      Character = {
+          ctermfg = p.str[cap], 
+          fg      = p.str[gui], 
+      }, 
+      ['@character.special'] = {
+          ctermfg = p.str[cap], 
+          fg      = p.str[gui], 
+      }, 
+      SpecialChar = {
+          ctermfg = p.str[cap], 
+          fg      = p.str[gui], 
+      }, 
+      Special = {
+          ctermfg = p.str[cap], 
+          fg      = p.str[gui], 
+      }, 
+
+      ['@string'] = {
+          ctermfg = p.str[cap], 
+          fg      = p.str[gui], 
+      }, 
+      String = {
+          ctermfg = p.str[cap], 
+          fg      = p.str[gui], 
+      },
+      ['@string.documentation'] = {
+          ctermfg = p.str[cap], 
+          fg      = p.str[gui], 
+      }, 
+      ['@string.regexp'] = {
+          ctermfg = p.str[cap], 
+          fg      = p.str[gui], 
+      }, 
+      ['@string.escape'] = {
+          ctermfg = p.str[cap], 
+          fg      = p.str[gui], 
+      }, 
+      ['@string.special'] = {
+          ctermfg = p.str[cap], 
+          fg      = p.str[gui], 
+      }, 
+      ['@string.special.symbol'] = {
+          ctermfg = p.str[cap], 
+          fg      = p.str[gui], 
+      }, 
+      ['@string.special.path'] = {
+          ctermfg = p.str[cap], 
+          fg      = p.str[gui], 
+      }, 
+      ['@string.special.url'] = {
+          ctermfg = p.str[cap], 
+          fg      = p.str[gui], 
+      }, 
+
+      ['@function'] = {
+          ctermfg = p.func[cap], 
+          fg      = p.func[gui], 
+      }, 
+      Function = {
+          ctermfg = p.func[cap], 
+          fg      = p.func[gui], 
+      },
+      ['@function.builtin'] = {
+          ctermfg = p.func[cap], 
+          fg      = p.func[gui], 
+      }, 
+      ['@function.method'] = {
+          ctermfg = p.func[cap], 
+          fg      = p.func[gui], 
+      }, 
+      ['@function.call'] = {
+          ctermfg = p.func[cap], 
+          fg      = p.func[gui], 
+      },
+      ['@function.method.call'] = {
+          ctermfg = p.func[cap], 
+          fg      = p.func[gui], 
+      },
+      ['@function.macro'] = {
+          ctermfg = p.func[cap], 
+          fg      = p.func[gui], 
+      }, 
+      Macro = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
+      ['@constructor'] = {
+          ctermfg = p.func[cap], 
+          fg      = p.func[gui], 
+      }, 
+
+      ['@type'] = {
+          ctermfg = p.type[cap], 
+          fg      = p.type[gui], 
+      },
+      Type = {
+          ctermfg = p.type[cap], 
+          fg      = p.type[gui], 
+      },
+      ['@type.definition'] = {
+          ctermfg = p.type[cap], 
+          fg      = p.type[gui], 
+      }, 
+      Typedef = {
+          ctermfg = p.type[cap], 
+          fg      = p.type[gui], 
+      }, 
+      ['@type.builtin'] = {
+        ctermfg = p.btype[cap], 
+        fg      = p.btype[gui], 
+      }, 
+
+      ['@struct'] = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
+      Structure = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
+
+      ['@enum'] = {
+          ctermfg = p.enum[cap], 
+          fg      = p.enum[gui], 
+      }, 
+      Enum = {
+          ctermfg = p.enum[cap], 
+          fg      = p.enum[gui], 
+      },
+
+      ['@class'] = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      }, 
+      Class = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
+      },
+
+      ['@boolean'] = {
+          ctermfg = p.bool[cap], 
+          fg      = p.bool[gui], 
+      }, 
+      Boolean = {
           ctermfg = p.bool[cap], 
           fg      = p.bool[gui], 
       },
-      DiffText       = {link='Normal'}, 
+
       Cursor         = {link='Normal'}, 
       lCursor        = {link='Cursor'}, 
       CursorIM       = {link='Cursor'}, 
@@ -200,6 +568,7 @@ return function(p)
       Whitespace     = {link='Normal'}, 
       FloatTitle     = {link='Comment'}, 
       FloatFooter    = {link='Comment'}, 
+
       Pmenu          = {link='NormalNC'}, 
       PmenuSel       = {link='Search'}, 
       PmenuKind      = {link='Pmenu'}, 
@@ -210,13 +579,16 @@ return function(p)
       PmenuThumb     = {link='Pmenu'}, 
       PmenuMatch     = {link='Pmenu'}, 
       PmenuMatchSel  = {link='Pmenu'}, 
+
       SpellBad       = {link='Normal'}, 
       SpellCap       = {link='Normal'}, 
       SpellLocal     = {link='Normal'}, 
       SpellRare      = {link='Normal'}, 
+
       StatusLineNC     = {link='StatusLine'}, 
       StatusLineTerm   = {link='StatusLine'}, 
       StatusLineTermNC = {link='StatusLine'}, 
+
       TabLine     = {link='Normal'}, 
       TabLineFill = {link='Normal'}, 
       TabLineSel  = {link='Normal'},
@@ -231,24 +603,16 @@ return function(p)
       WildMenu       = {link='Search'}, 
       ColorColumn    = {link='NONE'}, 
       Conceal        = {link='NONE'}, 
-      Character = {link='String'}, 
-      Float     = {link='Number'}, 
+
       Statement   = {link='Normal'},
       Conditional = {link='Keyword'},
-      Repeat      = {link='Keyword'},
       Label       = {link='Operator'},
       Exception   = {link='Keyword'},
       PreProc     = {link='Normal'}, 
       Include     = {link='PreProc'},
       Define      = {link='PreProc'}, 
       PreCondit   = {link='Keyword'}, 
-      StorageClass = {link='Keyword'},
-      Typedef      = {link='Type'}, 
-      Special        = {link='Normal'}, 
-      SpecialChar    = {link='Normal'}, 
       Tag            = {link='Normal'}, 
-      SpecialComment = {link='Normal'}, 
-      Debug          = {link='Normal'}, 
       Underlined = {link='Normal'}, 
       Ignore     = {link='Normal'}, 
       Todo       = {link='Normal'}, 
@@ -262,52 +626,38 @@ return function(p)
       LspCodeLensSeparator        = {link='Normal'},
       LspSignatureActiveParameter = {link='Normal'},
 
-      DiagnosticError             = {link='ErrorMsg'},
-      DiagnosticWarn              = {link='WarningMsg'},
       DiagnosticInfo              = {link='Normal'},
-      DiagnosticOk                = {link='Normal'},
-      DiagnosticHint              = {
-        ctermfg = p.hintfg[cap],
-        fg      = p.hintfg[gui],
-        ctermbg = p.hintbg[cap],
-        bg      = p.hintbg[gui],
-      },
-
-      DiagnosticVirtualTextError  = {link='DiagnosticError'},
-      DiagnosticVirtualTextWarn   = {link='NONE'},
-      DiagnosticVirtualTextInfo   = {link='NONE'},
-      DiagnosticVirtualTextHint   = {link='NONE'},
-      DiagnosticVirtualTextOk     = {link='NONE'},
-      DiagnosticVirtualLinesError = {link='Normal'},
-      DiagnosticVirtualLinesWarn  = {link='Normal'},
-      DiagnosticVirtualLinesInfo  = {link='Normal'},
-      DiagnosticVirtualLinesHint  = {link='Normal'},
-      DiagnosticVirtualLinesOk    = {link='Normal'},
-      DiagnosticUnderlineError    = {link='Normal'},
-      DiagnosticUnderlineWarn     = {link='Normal'},
-      DiagnosticUnderlineInfo     = {link='Normal'},
-      DiagnosticUnderlineHint     = {link='Normal'},
-      DiagnosticUnderlineOk       = {link='Normal'},
-      DiagnosticFloatingError     = {link='Normal'},
-      DiagnosticFloatingWarn      = {link='Normal'},
-      DiagnosticFloatingInfo      = {link='Normal'},
-      DiagnosticFloatingHint      = {link='Normal'},
-      DiagnosticFloatingOk        = {link='Normal'},
-      DiagnosticSignError         = {link='DiagnosticError'},
-      DiagnosticSignWarn          = {link='DiagnosticWarn'},
-      DiagnosticSignHint          = {link='DiagnosticHint'},
       DiagnosticSignInfo          = {link='Normal'},
+      DiagnosticFloatingInfo      = {link='Normal'},
+      DiagnosticUnderlineInfo     = {link='Normal'},
+      DiagnosticVirtualTextInfo   = {link='NONE'},
+      DiagnosticVirtualLinesInfo  = {link='Normal'},
+
+      DiagnosticOk                = {link='Normal'},
+      DiagnosticUnderlineOk       = {link='Normal'},
+      DiagnosticVirtualTextOk     = {link='NONE'},
+      DiagnosticVirtualLinesOk    = {link='Normal'},
       DiagnosticSignOk            = {link='Normal'},
+      DiagnosticFloatingOk        = {link='Normal'},
+
       DiagnosticDeprecated        = {link='Normal'},
       DiagnosticUnnecessary       = {link='Normal'},
 
+      ['@literal'] = {
+          ctermfg = p.literal[cap], 
+          fg      = p.literal[gui], 
+      }, 
+      ['@tupleparam'] = {
+          ctermfg = p.path[cap], 
+          fg      = p.path[gui], 
+      }, 
+      ['@calledfrom'] = {
+          ctermfg = p.path[cap], 
+          fg      = p.path[gui], 
+      }, 
       ['@indexid'] = {
           ctermfg = p.func[cap], 
           fg      = p.func[gui], 
-      }, 
-      ['@declaration'] = {
-          ctermfg = p.param[cap], 
-          fg      = p.param[gui], 
       }, 
       ['@param'] = {
           ctermfg = p.param[cap], 
@@ -333,10 +683,10 @@ return function(p)
           ctermfg = p.args[cap], 
           fg      = p.args[gui], 
       }, 
-    --['@tuplist'] = {
-    --    ctermfg = p.normal[cap], 
-    --    fg      = p.normal[gui], 
-    --}, 
+      ['@tuplist'] = {
+          ctermfg = p.args[cap], 
+          fg      = p.args[gui], 
+      }, 
       ['@declist'] = {
           ctermfg = p.normal[cap], 
           fg      = p.normal[gui], 
@@ -349,113 +699,44 @@ return function(p)
           ctermfg = p.letdecl[cap], 
           fg      = p.letdecl[gui], 
       }, 
+      ['@field'] = {
+          ctermfg = p.field[cap], 
+          fg      = p.field[gui], 
+      }, 
+      ['@field.decl'] = {
+          ctermfg = p.field[cap], 
+          fg      = p.field[gui], 
+      }, 
+      ['@tuplestructpat'] = {
+          ctermfg = p.enum[cap], 
+          fg      = p.enum[gui], 
+      }, 
+      ['@scopedtype'] = {
+        ctermfg = p.scopedtype[cap], 
+        fg      = p.scopedtype[gui], 
+      }, 
+      ['@identifier'] = {
+        ctermfg = p.field[cap], 
+        fg      = p.field[gui], 
+      }, 
+
       ['@module'] = {
           ctermfg = p.normal[cap], 
           fg      = p.normal[gui], 
       }, 
-      ['@gentype']     = {
-          ctermfg = p.gentype[cap], 
-          fg      = p.gentype[gui], 
+      ['@module.builtin'] = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui], 
       }, 
-      ['@field']     = {
-          ctermfg = p.field[cap], 
-          fg      = p.field[gui], 
-      }, 
-      ['@tuplestructpat']     = {
-          ctermfg = p.enum[cap], 
-          fg      = p.enum[gui], 
-      }, 
-      ['@partypeid']     = {
-          ctermfg = p.partypeid[cap], 
-          fg      = p.partypeid[gui], 
-      }, 
-      ['@recurstype']     = {
-          ctermfg = p.recurstype[cap], 
-          fg      = p.recurstype[gui], 
-      }, 
-      ['@scopedtype']     = {
-          ctermfg = p.scopedtype[cap], 
-          fg      = p.scopedtype[gui], 
-      }, 
-      ['@type.builtin']     = {
-          ctermfg = p.btype[cap], 
-          fg      = p.btype[gui], 
-      }, 
-      ['@variable.builtin'] = {
-          ctermfg = p.bvar[cap], 
-          fg      = p.bvar[gui], 
-      }, 
-      ['@variable.member'] = {
-          ctermfg = p.field[cap], 
-          fg      = p.field[gui], 
-      }, 
-      ['@function']                    = {link='Function'}, 
-      ['@function.builtin']            = {link='@function'}, 
-      ['@function.method']             = {link='@function'}, 
-      ['@function.call']               = {link='@function'},
-      ['@function.method.call']        = {link='@function'},
-      ['@function.macro']              = {link='@function'}, 
-      ['@variable']                    = {link='Identifier'}, 
-      ['@variable.parameter']          = {link='@param'}, 
-      ['@variable.parameter.builtin']  = {link='@param'}, 
-      ['@operator']                    = {link='Operator'}, 
-      ['@boolean']                     = {link='Boolean'}, 
-      ['@number']                      = {link='Number'}, 
-      ['@number.float']                = {link='Number'}, 
-      ['@constant']                    = {link='Constant'}, 
-      ['@constant.builtin']            = {link='@constant'}, 
-      ['@constant.macro']              = {link='@constant'}, 
-      ['@module.builtin']              = {link='@keyword'}, 
-      ['@string']                      = {link='String'}, 
-      ['@string.documentation']        = {link='@string'}, 
-      ['@string.regexp']               = {link='@string'}, 
-      ['@string.escape']               = {link='@string'}, 
-      ['@string.special']              = {link='@string'}, 
-      ['@string.special.symbol']       = {link='@string.special'}, 
-      ['@string.special.path']         = {link='@string.special'}, 
-      ['@string.special.url']          = {link='@string.special'}, 
-      ['@character']                   = {link='@string'}, 
-      ['@character.special']           = {link='@string'}, 
-      ['@type']                        = {link='Type'},
-      ['@type.definition']             = {link='@type'}, 
+
       ['@attribute']                   = {link='Operator'}, 
       ['@attribute.builtin']           = {link='@keyword'}, 
-      ['@property']                    = {link='Normal'}, 
-      ['@constructor']                 = {link='@function'}, 
-      ['@struct']                      = {link='Structure'}, 
-      ['@enum']                        = {link='Enum'}, 
-      ['@operator.try']                = {link='Operator'}, 
-      ['@keyword']                     = {link='Keyword'}, 
-      ['@keyword.coroutine']           = {link='@keyword'}, 
-      ['@keyword.function']            = {link='@keyword'}, 
-      ['@keyword.operator']            = {link='@keyword'}, 
-      ['@keyword.import']              = {link='@keyword'}, 
-      ['@keyword.type']                = {link='@keyword'}, 
-      ['@keyword.modifier']            = {link='@keyword'}, 
-      ['@keyword.repeat']              = {link='@keyword'}, 
-      ['@keyword.return']              = {link='@keyword'}, 
-      ['@keyword.debug']               = {link='@keyword'}, 
-      ['@keyword.exception']           = {link='@keyword'}, 
-      ['@keyword.conditional']         = {link='@keyword'}, 
-      ['@keyword.conditional.ternary'] = {link='@keyword.conditional'}, 
-      ['@keyword.directive']           = {link='@keyword'}, 
-      ['@keyword.directive.define']    = {link='@keyword.directive'}, 
-      ['@punctuation']                 = {link='Delimiter'}, 
-      ['@punctuation.delimiter']       = {link='@punctuation'}, 
-      ['@punctuation.bracket']         = {link='@punctuation'}, 
-      ['@punctuation.special']         = {link='@punctuation'}, 
-      ['@punctuation.special.query']   = {link='@punctuation'}, 
-      ['@class']                       = {link='Class'}, 
-      ['@comment']                     = {link='Comment'}, 
-      ['@comment.documentation']       = {link='@comment'}, 
-      ['@comment.error']               = {link='@comment'}, 
-      ['@comment.warning']             = {link='@comment'}, 
-      ['@comment.todo']                = {link='@comment'}, 
-      ['@comment.note']                = {link='@comment'}, 
+
       ['@tag']                         = {link='@type'}, 
       ['@tag.builtin']                 = {link='@type'}, 
       ['@tag.attribute']               = {link='@type'}, 
       ['@tag.delimiter']               = {link='Delimiter'}, 
+      ['@label']                       = {link='Label'}, 
       ['@markup']                      = {link='Normal'}, 
       ['@markup.secondary']            = {link='@markup'}, 
       ['@markup.italic']               = {link='@markup'}, 
@@ -478,24 +759,7 @@ return function(p)
       ['@markup.list']                 = {link='@markup'}, 
       ['@markup.list.checked']         = {link='@markup.list'}, 
       ['@markup.list.unchecked']       = {link='@markup.list.unchecked'}, 
-      ['@label']                       = {link='Label'}, 
-      ['@diff.plus']                   = {link='Normal'}, 
-      ['@diff.minus']                  = {link='Normal'}, 
-      ['@diff.delta']                  = {link='Normal'}, 
   }
-
-  --  'winborder'		string	(default "")
-  --              global
-  --      Defines the default border style of floating windows. 
-  --      The default value
-  --      is empty, which is equivalent to "none". Valid values include:
-  --      - "bold": Bold line box.
-  --      - "double": Double-line box.
-  --      - "none": No border.
-  --      - "rounded": Like "single", but with rounded corners ("╭" etc.).
-  --      - "shadow": Drop shadow effect, by blending with the background.
-  --      - "single": Single-line box.
-  --      - "solid": Adds padding by a single whitespace cell.
 
   vim.cmd("set background=dark")
   vim.cmd("set winborder=rounded")

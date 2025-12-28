@@ -1,18 +1,30 @@
--- _night
+-- rgb
 
 local p = vim.deepcopy(require "palette")
+
+p.black[3]    = "#161620"
+  
+p.dgrey[3]    = "#707090"
+p.grey[3]     = "#d0d0e0"
+  
+p.dgreen[3]   = "#103010"
+p.green[3]    = "#70d080"
+
+p.dmagenta[3] = "#201020"
+p.magenta[3]  = "#f08090"
+
 require "tsad-colorscheme-main" {
   black      = p.black, 
   canvas     = p.black, 
 
-  errorbg    = p.dmagenta,
-  errorfg    = p.magenta,
+  errorbg    = p.black,
+  errorfg    = p.dgrey,
 
-  warnbg     = p.dblue, 
-  warnfg     = p.grey, 
+  warnbg     = p.black, 
+  warnfg     = p.dgrey, 
 
-  hintbg     = p.dgreen, 
-  hintfg     = p.green, 
+  hintbg     = p.black, 
+  hintfg     = p.dgrey, 
 
   search     = p.dgreen, 
   visual     = p.dmagenta, 
@@ -27,13 +39,15 @@ require "tsad-colorscheme-main" {
   partypeid  = p.magenta,
   btype      = p.magenta, 
 
-  curlineno  = p.white, 
-  keyword    = p.white,
-  normal     = p.white, 
-  field      = p.white, 
-  path       = p.white, 
-  uselist    = p.white, 
-  enumdecl   = p.white, 
+  funcargtype = p.white, 
+  curlineno  = p.grey, 
+  keyword    = p.grey,
+  normal     = p.grey, 
+  field      = p.grey, 
+  path       = p.grey, 
+  declaration = p.grey,
+  uselist    = p.grey, 
+  enumdecl   = p.grey, 
 
   comment    = p.dgrey, 
   lineno     = p.dgrey, 

@@ -1,4 +1,4 @@
--- _day
+-- blackmagyel
 
 local p = vim.deepcopy(require "palette")
 require "tsad-colorscheme-main" {
@@ -30,10 +30,12 @@ require "tsad-colorscheme-main" {
   curlineno  = p.cyan, 
   keyword    = p.cyan,
   normal     = p.cyan, 
+  declaration = p.cyan,
   field      = p.cyan, 
   path       = p.cyan, 
   uselist    = p.cyan, 
   enumdecl   = p.cyan, 
+  funcargtype = p.white, 
 
   comment    = p.dcyan, 
   lineno     = p.dcyan, 
