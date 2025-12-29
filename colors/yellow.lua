@@ -1,26 +1,23 @@
--- wire
+-- yellow
 
 local p = vim.deepcopy(require "palette")
+p.black[3]    = "#303010"
+p.dcyan[3]    = "#a09040"
 
-p.black[3]    = "#161020"
-  
-p.dcyan[3]    = "#705090"
-p.cyan[3]     = "#a0c0f0"
-  
 p.dmagenta[3] = "#301030"
 p.dyellow[3]  = "#103010"
-p.yellow[3]   = "#f0c070"
+
+p.cyan[3]     = "#c0d060"
+p.yellow[3]   = "#e0c060"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
-
   errorbg    = p.black,
-  errorfg    = p.dcyan,
-
   warnbg     = p.black, 
-  warnfg     = p.dcyan, 
-
   hintbg     = p.black, 
+
+  errorfg    = p.dcyan,
+  warnfg     = p.dcyan, 
   hintfg     = p.dcyan, 
 
   search     = p.dyellow, 
@@ -30,9 +27,9 @@ require "tsad-colorscheme-main" {
   lineno     = p.dcyan, 
   msgarea    = p.dcyan, 
 
-  normal      = p.cyan, 
-  keyword     = p.cyan,
-  curlineno   = p.cyan, 
+  normal     = p.cyan, 
+  keyword    = p.cyan,
+  curlineno  = p.cyan, 
 
   literal    = p.yellow, 
   str        = p.yellow, 

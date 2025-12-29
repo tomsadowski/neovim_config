@@ -1,38 +1,35 @@
 -- magenta
 
 local p = vim.deepcopy(require "palette")
+p.black[3]    = "#302030"
+p.dcyan[3]    = "#a070a0"
 
-p.dmagenta[3]  = "#200020"
-p.magenta[3]   = "#a020a0"
-  
-p.dcyan[3]     = "#301030"
-p.dyellow[3]   = "#103010"
+p.dmagenta[3] = "#301030"
+p.dyellow[3]  = "#103010"
 
-p.cyan[3]      = "#00e0e0"
-p.yellow[3]    = "#d0d000"
+p.cyan[3]     = "#d0a0f0"
+p.yellow[3]   = "#f0a0d0"
 
 require "tsad-colorscheme-main" {
-  canvas     = p.dmagenta, 
+  canvas     = p.black, 
+  errorbg    = p.black,
+  warnbg     = p.black, 
+  hintbg     = p.black, 
 
-  errorbg    = p.dmagenta,
-  errorfg    = p.magenta,
-
-  warnbg     = p.dmagenta, 
-  warnfg     = p.magenta, 
-
-  hintbg     = p.dmagenta, 
-  hintfg     = p.magenta, 
+  errorfg    = p.dcyan,
+  warnfg     = p.dcyan, 
+  hintfg     = p.dcyan, 
 
   search     = p.dyellow, 
-  visual     = p.dcyan, 
+  visual     = p.dmagenta, 
 
-  comment    = p.magenta, 
-  lineno     = p.magenta, 
-  msgarea    = p.magenta, 
+  comment    = p.dcyan, 
+  lineno     = p.dcyan, 
+  msgarea    = p.dcyan, 
 
-  normal      = p.cyan, 
-  keyword     = p.cyan,
-  curlineno   = p.cyan, 
+  normal     = p.cyan, 
+  keyword    = p.cyan,
+  curlineno  = p.cyan, 
 
   literal    = p.yellow, 
   str        = p.yellow, 
