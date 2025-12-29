@@ -1,8 +1,8 @@
 -- blue
 
 local p = vim.deepcopy(require "palette")
-p.black[3]    = "#202030"
-p.dcyan[3]    = "#8080b0"
+p.black[3]    = "#1c1c20"
+p.dcyan[3]    = "#707080"
 
 p.dmagenta[3] = "#301030"
 p.dyellow[3]  = "#103010"
