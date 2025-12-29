@@ -13,6 +13,9 @@
 (let_declaration       value: (identifier)       @variable)
 (let_declaration     pattern: (identifier)       @variable)
 (for_expression      pattern: (identifier)       @variable)
+(for_expression        value: (identifier)       @variable)
+(for_expression (reference_expression
+                       value: (identifier)       @variable))
 (scoped_identifier      name: (identifier)       @variable)
 (compound_assignment_expr     (identifier)       @variable)
 (tuple_expression             (identifier)       @variable)
@@ -37,8 +40,12 @@
 (closure_parameters           (_)                @variable.parameter)
 (arguments (reference_expression  
                        value: (identifier)       @variable.parameter))
+(tuple_struct_pattern   type: (identifier)       @type   
+                              (identifier)       @variable.parameter)
 (tuple_struct_pattern   type: (identifier)          
                               (identifier)       @variable.parameter)
+(tuple_struct_pattern   type: (identifier) (reference_pattern
+                              (identifier)       @variable.parameter))
 (parameter (ref_pattern                  
                               (identifier)       @variable.parameter))
 (parameter (ref_pattern (mut_pattern                  
@@ -99,8 +106,8 @@
 (let_declaration     pattern: (tuple_struct_pattern 
                         type: (identifier) 
                               (identifier)        @normal))
-(scoped_type_identifier path: (identifier)        @normal)
-(scoped_type_identifier path: (scoped_identifier) @normal)
+(scoped_type_identifier path: (identifier)        @normal (#set! priority 101))
+(scoped_type_identifier path: (scoped_identifier) @normal (#set! priority 101))
 (scoped_identifier      path: (identifier)        @normal)
 (scoped_identifier      path: (scoped_identifier) @normal)
 (field_expression      value: (self)              @normal (#set! priority 101))

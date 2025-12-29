@@ -1,14 +1,14 @@
 -- yellow
 
 local p = vim.deepcopy(require "palette")
-p.black[3]    = "#303010"
-p.dcyan[3]    = "#a09040"
+p.black[3]    = "#202010"
+p.dcyan[3]    = "#808040"
 
 p.dmagenta[3] = "#301030"
 p.dyellow[3]  = "#103010"
 
-p.cyan[3]     = "#c0d060"
-p.yellow[3]   = "#e0c060"
+p.cyan[3]     = "#c0e060"
+p.yellow[3]   = "#e0c050"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
