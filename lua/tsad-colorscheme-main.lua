@@ -61,8 +61,8 @@ return function(p)
           fg      = p.warnfg[gui],
       },
       DiagnosticFloatingWarn = {
-          ctermfg = p.warnfg[cap], 
-          fg      = p.warnfg[gui],
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui],
       },
       DiagnosticUnderlineWarn = {
           ctermfg = p.warnfg[cap], 
@@ -94,8 +94,8 @@ return function(p)
           fg      = p.errorfg[gui],
       },
       DiagnosticFloatingError = {
-          ctermfg = p.errorfg[cap], 
-          fg      = p.errorfg[gui],
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui],
       },
       DiagnosticSignError = {
           ctermfg = p.errorfg[cap], 
@@ -109,7 +109,10 @@ return function(p)
       DiagnosticUnderlineHint     = {link='Normal'},
       DiagnosticVirtualLinesHint  = {link='Normal'},
       DiagnosticVirtualTextHint   = {link='NONE'},
-      DiagnosticFloatingHint      = {link='Normal'},
+      DiagnosticFloatingHint      = {
+          ctermfg = p.normal[cap], 
+          fg      = p.normal[gui],
+      },
       DiagnosticSignHint          = {link='DiagnosticHint'},
 
       EndOfBuffer = {

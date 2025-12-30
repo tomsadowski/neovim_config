@@ -1,9 +1,9 @@
 -- TREESITTER ----------------------------------------------------
 
 vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
-  pattern = {'*.CPP', '*.H', '*.cpp', '*.h'},
+  pattern = {'*.CPP', '*.H', '*.cpp', '*.cc', '*.h'},
   callback = function(args)
-    vim.treesitter.start(args.buf, 'c')
+    vim.treesitter.start(args.buf, 'cpp')
   end
 })
 --vim.api.nvim_create_autocmd( 'FileType', { pattern = 'rust',
