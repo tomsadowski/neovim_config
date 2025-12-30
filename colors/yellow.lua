@@ -1,8 +1,8 @@
 -- yellow
 
 local p = vim.deepcopy(require "palette")
-p.black[3]    = "#282818"
-p.dcyan[3]    = "#a0a060"
+p.black[3]    = "#20201e"
+p.dcyan[3]    = "#909080"
 
 p.dmagenta[3] = "#301030"
 p.dyellow[3]  = "#103010"
