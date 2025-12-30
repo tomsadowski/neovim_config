@@ -1,13 +1,13 @@
 -- yellow
 
 local p = vim.deepcopy(require "palette")
-p.black[3]    = "#303020"
-p.dcyan[3]    = "#909060"
+p.black[3]    = "#282818"
+p.dcyan[3]    = "#a0a060"
 
 p.dmagenta[3] = "#301030"
 p.dyellow[3]  = "#103010"
 
-p.cyan[3]     = "#c0f0a0"
+p.cyan[3]     = "#b0f090"
 p.yellow[3]   = "#f0b090"
 
 require "tsad-colorscheme-main" {
