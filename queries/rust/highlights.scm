@@ -44,6 +44,8 @@
 
 (closure_parameters           (_)                @variable.parameter)
 
+(match_expression (reference_expression  
+                       value: (identifier)       @variable.parameter))
 (arguments (reference_expression  
                        value: (identifier)       @variable.parameter))
 
@@ -125,6 +127,8 @@
 
 (attribute_item (attribute 
                               (identifier)        @normal))
+
+((trait_bounds) @normal (#set! priority 101))
 
 (inner_attribute_item (attribute 
                               (identifier)        @normal))

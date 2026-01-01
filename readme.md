@@ -15,8 +15,8 @@ Note that these colorschemes use custom treesitter captures specified in the ./q
 ### green
 ![green](docs/green.png)  
 
-### fire
-![fire](docs/fire.png)  
-
 ### yellow
 ![yellow](docs/yellow.png)  
+
+### fire
+![fire](docs/fire.png)  
