@@ -41,32 +41,32 @@ return function(p)
       }, 
 
       WarningMsg = {
-          ctermfg = p.warnfg[cap], 
-          fg      = p.warnfg[gui],
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui],
       }, 
       DiagnosticWarn = {
-          ctermfg = p.warnfg[cap], 
-          fg      = p.warnfg[gui],
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui],
       },
       DiagnosticSignWarn = {
-          ctermfg = p.warnfg[cap], 
-          fg      = p.warnfg[gui],
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui],
       },
       DiagnosticVirtualTextWarn = {
-          ctermfg = p.warnfg[cap], 
-          fg      = p.warnfg[gui],
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui],
       },
       DiagnosticVirtualLinesWarn = {
-          ctermfg = p.warnfg[cap], 
-          fg      = p.warnfg[gui],
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui],
       },
       DiagnosticFloatingWarn = {
           ctermfg = p.normal[cap], 
           fg      = p.normal[gui],
       },
       DiagnosticUnderlineWarn = {
-          ctermfg = p.warnfg[cap], 
-          fg      = p.warnfg[gui],
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui],
       },
 
       Error = {
@@ -74,37 +74,37 @@ return function(p)
           fg      = p.normal[gui]
       }, 
       ErrorMsg = {
-          ctermfg = p.errorfg[cap], 
-          fg      = p.errorfg[gui],
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui],
       }, 
       DiagnosticError = {
-          ctermfg = p.errorfg[cap], 
-          fg      = p.errorfg[gui],
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui],
       },
       DiagnosticVirtualTextError = {
-          ctermfg = p.errorfg[cap], 
-          fg      = p.errorfg[gui],
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui],
       },
       DiagnosticVirtualLinesError = {
-          ctermfg = p.errorfg[cap], 
-          fg      = p.errorfg[gui],
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui],
       },
       DiagnosticUnderlineError = {
-          ctermfg = p.errorfg[cap], 
-          fg      = p.errorfg[gui],
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui],
       },
       DiagnosticFloatingError = {
           ctermfg = p.normal[cap], 
           fg      = p.normal[gui],
       },
       DiagnosticSignError = {
-          ctermfg = p.errorfg[cap], 
-          fg      = p.errorfg[gui],
+          ctermfg = p.comment[cap], 
+          fg      = p.comment[gui],
       },
 
       DiagnosticHint = {
-          ctermfg = p.hintfg[cap],
-          fg      = p.hintfg[gui],
+          ctermfg = p.comment[cap],
+          fg      = p.comment[gui],
       },
       DiagnosticUnderlineHint     = {link='Normal'},
       DiagnosticVirtualLinesHint  = {link='Normal'},

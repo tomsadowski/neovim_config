@@ -1,22 +1,17 @@
--- green
+-- _log
 
 local p = vim.deepcopy(require "palette")
 p.black[3]    = "#161b18"
-
 p.dcyan[3]    = "#202430"
 p.dmagenta[3] = "#302024"
 
-p.dgreen[3]   = "#809070"
+p.dgreen[3]   = "#908070"
 
-p.cyan[3]     = "#b0c0e0"
-p.magenta[3]  = "#d0a0b0"
+p.magenta[3]  = "#b0b0b0"
+p.cyan[3]     = "#b880a8"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
-
-  errorfg    = p.dgreen,
-  warnfg     = p.dgreen, 
-  hintfg     = p.dgreen, 
 
   search     = p.dmagenta, 
   visual     = p.dcyan, 

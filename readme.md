@@ -12,14 +12,6 @@ If you aren't using a pearbear keyboard, you'll want to comment out the `require
 ## Colorschemes
 Note that these colorschemes use custom treesitter captures specified in the ./queries directory. 
 
-### bogiron
-![bogiron](docs/bogiron.png)  
+### shells
+![shells](docs/shells.png)  
 
-### yellow
-![yellow](docs/yellow.png)  
-
-### green
-![green](docs/green.png)  
-
-### fire
-![fire](docs/fire.png)  

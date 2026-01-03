@@ -1,27 +1,18 @@
 -- fire
 
 local p = vim.deepcopy(require "palette")
-
 p.black[3]    = "#161620"
+p.dmagenta[3] = "#302030"
+p.dyellow[3]  = "#203030"
   
-p.dcyan[3]    = "#707090"
-p.cyan[3]     = "#d0d0f0"
-  
-p.dmagenta[3] = "#301030"
-p.dyellow[3]  = "#103010"
-p.yellow[3]   = "#f0b070"
+p.dcyan[3]    = "#905090"
+--p.cyan[3]     = "#a0a0f0"
+--p.yellow[3]   = "#c09060"
+p.cyan[3]     = "#a0a0f0"
+p.yellow[3]   = "#b09060"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
-
-  errorbg    = p.black,
-  errorfg    = p.dcyan,
-
-  warnbg     = p.black, 
-  warnfg     = p.dcyan, 
-
-  hintbg     = p.black, 
-  hintfg     = p.dcyan, 
 
   search     = p.dyellow, 
   visual     = p.dmagenta, 
