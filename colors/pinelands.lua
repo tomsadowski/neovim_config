@@ -1,4 +1,4 @@
--- shells
+-- pinelands
 
 local p = vim.deepcopy(require "palette")
 p.black[3]   = "#262620"
@@ -6,10 +6,10 @@ p.black[3]   = "#262620"
 p.dred[3]    = "#402020"
 p.dblue[3]   = "#202040"
 
-p.magenta[3] = "#e080a0"
+p.magenta[3] = "#809070"
 
-p.yellow[3]  = "#e0c080"
-p.cyan[3]    = "#60d0a0"
+p.yellow[3]  = "#d0b070"
+p.cyan[3]    = "#e080a0"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
