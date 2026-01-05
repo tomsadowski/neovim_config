@@ -318,12 +318,12 @@ return function(p)
       }, 
 
       ['@keyword'] = {
-          ctermfg = p.normal[cap], 
-          fg      = p.normal[gui], 
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
       }, 
       Keyword = {
-          ctermfg = p.normal[cap], 
-          fg      = p.normal[gui], 
+          ctermfg = p.keyword[cap], 
+          fg      = p.keyword[gui], 
       }, 
       ['@keyword.coroutine'] = {
           ctermfg = p.normal[cap], 

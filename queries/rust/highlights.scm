@@ -18,7 +18,7 @@
 (for_expression (reference_expression
                        value: (identifier)       @variable))
 
-(scoped_identifier      name: (identifier)       @variable)
+;(scoped_identifier      name: (identifier)       @variable)
 (compound_assignment_expr     (identifier)       @variable)
 (tuple_expression             (identifier)       @variable)
 (index_expression             (identifier)       @variable)
@@ -51,6 +51,13 @@
 
 (tuple_struct_pattern   type: (identifier)       @type   
                               (identifier)       @variable.parameter)
+
+(tuple_struct_pattern   type: (scoped_identifier
+                              name: (identifier) @type))  
+(scoped_identifier
+                              name: (identifier) @type)  
+(match_pattern                (scoped_identifier
+                              name: (identifier) @type))  
 
 (tuple_struct_pattern   type: (identifier)          
                               (identifier)       @variable.parameter)
@@ -159,11 +166,6 @@
 (enum_variant           name: (identifier)        @normal (#set! priority 101))
 
 [
-  (escape_sequence)
-  (shorthand_field_identifier)
-  (shebang)
-  (mutable_specifier)
-  (lifetime)
   "use"
   "mod"
   "default"
@@ -201,6 +203,13 @@
   "loop"
   "while"
   "for"
+] @keyword
+[
+  (escape_sequence)
+  (shorthand_field_identifier)
+  (shebang)
+  (mutable_specifier)
+  (lifetime)
   "!"
   "!="
   "%"
