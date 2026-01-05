@@ -9,9 +9,9 @@ p.dblue[3]   = "#202040"
 p.dgrey[3]   = "#606060"
 p.grey[3]    = "#c0c0c0"
 
-p.yellow[3]  = "#c09020"
-p.magenta[3] = "#d060a0"
-p.cyan[3]    = "#50a0a0"
+p.yellow[3]  = "#80c000"
+p.magenta[3] = "#d06070"
+p.cyan[3]    = "#60a0c0"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 

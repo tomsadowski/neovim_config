@@ -15,3 +15,6 @@ Note that these colorschemes use custom treesitter captures specified in the ./q
 ### tom
 ![tom](docs/tom.png)  
 
+### pom
+![pom](docs/pom.png)  
+
