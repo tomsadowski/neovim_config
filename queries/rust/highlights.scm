@@ -166,6 +166,7 @@
 (enum_variant           name: (identifier)        @normal (#set! priority 101))
 
 [
+  (mutable_specifier)
   "use"
   "mod"
   "default"
@@ -208,7 +209,6 @@
   (escape_sequence)
   (shorthand_field_identifier)
   (shebang)
-  (mutable_specifier)
   (lifetime)
   "!"
   "!="
