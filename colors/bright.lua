@@ -1,17 +1,20 @@
--- pom
+-- lom
 
 local p = vim.deepcopy(require "palette")
-p.black[3]   = "#111111"
+p.black[3]   = "#404040"
 
 p.dred[3]    = "#402020"
 p.dblue[3]   = "#202040"
 
-p.dgrey[3]   = "#606060"
-p.grey[3]    = "#c0c0c0"
+p.dgrey[3]   = "#808080"
 
-p.yellow[3]  = "#90b000"
-p.magenta[3] = "#d06070"
-p.cyan[3]    = "#60a0c0"
+p.dgreen[3]  = "#c0a0c0"
+
+p.grey[3]    = "#ffffff"
+
+p.yellow[3]  = "#d0ff80"
+p.magenta[3] = "#ffa0a0"
+p.cyan[3]    = "#a0c0ff"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
@@ -20,7 +23,7 @@ require "tsad-colorscheme-main" {
 
   visual     = p.dblue, 
 
-  comment    = p.dgrey, 
+  comment    = p.dgreen, 
   lineno     = p.dgrey, 
   msgarea    = p.dgrey, 
 

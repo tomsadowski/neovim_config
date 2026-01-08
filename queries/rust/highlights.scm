@@ -18,6 +18,10 @@
 (for_expression (reference_expression
                        value: (identifier)       @variable))
 
+((field_identifier)       @normal)
+((identifier)       @normal)
+((type_identifier)       @normal)
+((primitive_type)       @normal)
 ;(scoped_identifier      name: (identifier)       @variable)
 (compound_assignment_expr     (identifier)       @variable)
 (tuple_expression             (identifier)       @variable)
