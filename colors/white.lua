@@ -2,11 +2,9 @@
 
 local p = vim.deepcopy(require "palette")
 
-p.magenta[3] = "#c000c0"
---p.dgreen[3]  = "#a000a0"
---p.magenta[3] = "#008000"
-p.red[3]     = "#e00000"
-p.blue[3]    = "#0000e0"
+p.magenta[3] = "#b000b0"
+p.red[3]     = "#c00000"
+p.blue[3]    = "#0000c0"
 
 require "tsad-colorscheme-main-bold" {
   canvas     = p.white, 

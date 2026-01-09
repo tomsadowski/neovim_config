@@ -11,18 +11,18 @@
 (assignment_expression  left: (identifier)       @variable)
 (assignment_expression right: (identifier)       @variable)
 (let_declaration       value: (identifier)       @variable)
-(let_declaration     pattern: (identifier)       @variable)
+(let_declaration     pattern: (identifier)       @variable (#set! priority 101))
 (for_expression      pattern: (identifier)       @variable)
 (for_expression        value: (identifier)       @variable)
 
 (for_expression (reference_expression
                        value: (identifier)       @variable))
 
-((field_identifier)       @normal)
+((field_identifier) @normal)
 ((identifier)       @normal)
-((type_identifier)       @normal)
-((primitive_type)       @normal)
-;(scoped_identifier      name: (identifier)       @variable)
+((type_identifier)  @normal)
+((primitive_type)   @normal)
+(array_expression             (identifier)       @variable)
 (compound_assignment_expr     (identifier)       @variable)
 (tuple_expression             (identifier)       @variable)
 (index_expression             (identifier)       @variable)

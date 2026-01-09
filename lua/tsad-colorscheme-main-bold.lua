@@ -35,6 +35,7 @@ return function(p)
           fg      = p.lineno[gui], 
           ctermbg = p.canvas[cap], 
           bg      = p.canvas[gui], 
+          bold = true,
       }, 
 
       CursorLineNr = {
@@ -46,30 +47,37 @@ return function(p)
       WarningMsg = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui],
+        bold = true,
       }, 
       DiagnosticWarn = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui],
+        bold = true,
       },
       DiagnosticSignWarn = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui],
+        bold = true,
       },
       DiagnosticVirtualTextWarn = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui],
+        bold = true,
       },
       DiagnosticVirtualLinesWarn = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui],
+        bold = true,
       },
       DiagnosticFloatingWarn = {
           ctermfg = p.normal[cap], 
           fg      = p.normal[gui],
+        bold = true,
       },
       DiagnosticUnderlineWarn = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui],
+        bold = true,
       },
 
       Error = {
@@ -79,22 +87,27 @@ return function(p)
       ErrorMsg = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui],
+        bold = true,
       }, 
       DiagnosticError = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui],
+        bold = true,
       },
       DiagnosticVirtualTextError = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui],
+        bold = true,
       },
       DiagnosticVirtualLinesError = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui],
+        bold = true,
       },
       DiagnosticUnderlineError = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui],
+        bold = true,
       },
       DiagnosticFloatingError = {
           ctermfg = p.normal[cap], 
@@ -103,11 +116,13 @@ return function(p)
       DiagnosticSignError = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui],
+        bold = true,
       },
 
       DiagnosticHint = {
           ctermfg = p.comment[cap],
           fg      = p.comment[gui],
+        bold = true,
       },
       DiagnosticUnderlineHint     = {link='Normal'},
       DiagnosticVirtualLinesHint  = {link='Normal'},
@@ -137,12 +152,14 @@ return function(p)
           fg      = p.msgarea[gui],
           ctermbg = p.canvas[cap], 
           bg      = p.canvas[gui],
+          bold = true,
       }, 
       StatusLine = {
           ctermfg = p.msgarea[cap],
           fg      = p.msgarea[gui], 
           ctermbg = p.canvas[cap],
           bg      = p.canvas[gui], 
+          bold = true,
       },
 
       DiffText = {
@@ -267,34 +284,42 @@ return function(p)
       ['@comment'] = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui], 
+        bold = true,
       }, 
       Comment = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui], 
+        bold = true,
       }, 
       SpecialComment = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui], 
+        bold = true,
       }, 
       ['@comment.documentation'] = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui], 
+        bold = true,
       }, 
       ['@comment.error'] = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui], 
+        bold = true,
       }, 
       ['@comment.warning'] = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui], 
+        bold = true,
       }, 
       ['@comment.todo'] = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui], 
+        bold = true,
       }, 
       ['@comment.note'] = {
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui], 
+        bold = true,
       }, 
 
       ['@punctuation'] = {
