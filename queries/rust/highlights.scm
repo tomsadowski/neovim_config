@@ -1,3 +1,7 @@
+((field_identifier) @normal)
+((identifier)       @normal)
+((type_identifier)  @normal)
+((primitive_type)   @normal)
 (line_comment)                                   @comment
 (block_comment)                                  @comment
 (outer_doc_comment_marker)                       @comment.documentation
@@ -14,14 +18,12 @@
 (let_declaration     pattern: (identifier)       @variable (#set! priority 101))
 (for_expression      pattern: (identifier)       @variable)
 (for_expression        value: (identifier)       @variable)
+(let_condition       pattern: (tuple_struct_pattern)
+                              (identifier)       @variable)
 
 (for_expression (reference_expression
                        value: (identifier)       @variable))
 
-((field_identifier) @normal)
-((identifier)       @normal)
-((type_identifier)  @normal)
-((primitive_type)   @normal)
 (array_expression             (identifier)       @variable)
 (compound_assignment_expr     (identifier)       @variable)
 (tuple_expression             (identifier)       @variable)
