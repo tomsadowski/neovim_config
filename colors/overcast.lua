@@ -5,7 +5,7 @@ local p = vim.deepcopy(require "palette")
 p.grey[3]     = "#a0a0a0"
 p.dgrey[3]    = "#505050"
 p.dred[3]     = "#900000"
-p.dgreen[3]   = "#408040"
+p.dgreen[3]   = "#208020"
 p.dblue[3]    = "#0000c0"
 
 require "tsad-colorscheme-main-bold" {
