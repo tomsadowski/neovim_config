@@ -1,4 +1,4 @@
--- god
+-- d-rgb
 
 local p = vim.deepcopy(require "palette")
 
@@ -7,10 +7,10 @@ p.grey[3]     = "#606060"
 
 p.white[3]    = "#c0c0c0"
 
-p.magenta[3]  = "#608050"
+p.blue[3]     = "#4040a0"
 
-p.yellow[3]   = "#d07070"
-p.cyan[3]     = "#70a0f0"
+p.red[3]      = "#d07070"
+p.green[3]    = "#70a070"
 
 require "tsad-colorscheme-main-bold" {
   canvas     = p.dgrey, 
@@ -25,15 +25,15 @@ require "tsad-colorscheme-main-bold" {
   normal     = p.white, 
   curlineno  = p.white, 
 
-  comment    = p.magenta, 
+  comment    = p.blue, 
 
-  literal    = p.yellow, 
-  str        = p.yellow, 
-  btype      = p.yellow, 
-  variable   = p.yellow, 
+  literal    = p.red, 
+  str        = p.red, 
+  btype      = p.red, 
+  variable   = p.red, 
 
-  type       = p.cyan, 
-  enum       = p.cyan, 
-  func       = p.cyan, 
-  matchparen = p.cyan, 
+  type       = p.green, 
+  enum       = p.green, 
+  func       = p.green, 
+  matchparen = p.green, 
 }

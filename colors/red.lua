@@ -1,39 +1,20 @@
 -- red
 
 local p = vim.deepcopy(require "palette")
-p.black[3]   = "#000000"
-
-p.dred[3]     = "#402020"
-p.dblue[3]    = "#202040"
-
-p.dgrey[3]    = "#606000"
-p.magenta[3]  = "#606000"
-p.dgreen[3]   = "#400000"
-
-p.cyan[3]     = "#000080"
-
-p.grey[3]     = "#006060"
-
-p.yellow[3]   = "#600060"
-
-
-
 
 require "tsad-colorscheme-main" {
-  canvas     = p.black, 
-
-  search     = p.dred, 
-
+  canvas     = p.dred, 
+  search     = p.dgreen, 
   visual     = p.dblue, 
 
-  comment    = p.dgreen, 
-  lineno     = p.cyan, 
-  msgarea    = p.dgrey, 
+  comment    = p.black, 
 
-  normal     = p.grey, 
-  curlineno  = p.magenta, 
+  msgarea    = p.red, 
+  lineno     = p.red, 
+  keyword    = p.red,
 
-  keyword    = p.cyan,
+  normal     = p.white, 
+  curlineno  = p.white, 
 
   literal    = p.yellow, 
   str        = p.yellow, 

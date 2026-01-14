@@ -1,3 +1,4 @@
+
 ((field_identifier) @normal)
 ((identifier)       @normal)
 ((type_identifier)  @normal)
@@ -15,7 +16,6 @@
 (assignment_expression  left: (identifier)       @variable)
 (assignment_expression right: (identifier)       @variable)
 (let_declaration       value: (identifier)       @variable)
-(let_declaration     pattern: (identifier)       @variable (#set! priority 101))
 (for_expression      pattern: (identifier)       @variable)
 (for_expression        value: (identifier)       @variable)
 (let_condition       pattern: (tuple_struct_pattern)
@@ -55,15 +55,11 @@
 (arguments (reference_expression  
                        value: (identifier)       @variable.parameter))
 
-(tuple_struct_pattern   type: (identifier)       @type   
-                              (identifier)       @variable.parameter)
 
-(tuple_struct_pattern   type: (scoped_identifier
-                              name: (identifier) @type))  
-(scoped_identifier
-                              name: (identifier) @type)  
+
 (match_pattern                (scoped_identifier
                               name: (identifier) @type))  
+(match_pattern                (identifier)       @variable)
 
 (tuple_struct_pattern   type: (identifier)          
                               (identifier)       @variable.parameter)
@@ -95,9 +91,7 @@
 (attribute (scoped_identifier         
                               (identifier)       @function.macro .))
 
-(function_item          name: (identifier)       @function)
 
-(function_item   return_type: (generic_type)     @normal (#set! priority 101))
 
 (function_signature_item      (identifier)       @function)
 (generic_function             (identifier)       @function)
@@ -105,21 +99,13 @@
 (generic_function   function: (field_expression   
                        field: (field_identifier) @function))
 
-(generic_function (scoped_identifier   
-                        name: (identifier)       @function))
 
-(macro_invocation             "!"                @function.call (#set! priority 101))
 (call_expression    function: (identifier)       @function.call)
 
 (call_expression    function: (field_expression   
                        field: (field_identifier) @function.call))
 
-(call_expression    function: (scoped_identifier   
-                        name: (identifier)       @function.call))
 
-(impl_item                            (type_identifier) @type)
-(struct_item                          (type_identifier) @type)
-(enum_item                            (type_identifier) @type)
 (ordered_field_declaration_list type: (type_identifier) @type)
 (ordered_field_declaration_list type: (primitive_type)  @type)
 (ordered_field_declaration_list type: (generic_type)    @type)
@@ -134,21 +120,16 @@
 (struct_expression              name: (scoped_type_identifier         
                                 name: (type_identifier) @type))
 
-((identifier) @enum (#any-of? @enum "Some" "None" "Ok" "Err"))
 
 (mod_item               name: (identifier)        @normal)
 
 (attribute_item (attribute 
                               (identifier)        @normal))
 
-((trait_bounds) @normal (#set! priority 101))
 
 (inner_attribute_item (attribute 
                               (identifier)        @normal))
 
-((use_list)                                       @normal (#set! priority 101))
-((scoped_use_list)                                @normal (#set! priority 101))
-((use_declaration)                                @normal (#set! priority 101))
 
 (parameter              type: (type_identifier)   @normal)
 (parameter              type: (primitive_type)    @normal)
@@ -158,18 +139,8 @@
                         type: (identifier) 
                               (identifier)        @normal))
 
-(scoped_type_identifier path: (identifier)        @normal (#set! priority 101))
-(scoped_type_identifier path: (scoped_identifier) @normal (#set! priority 101))
-(scoped_identifier      path: (identifier)        @normal)
-(scoped_identifier      path: (scoped_identifier
-                        name: (identifier)        @normal))
-(field_expression      value: (self)              @normal (#set! priority 101))
 (field_expression      value: (identifier)        @normal)
 
-(field_expression      value: (field_expression      
-                       field: (field_identifier)  @normal (#set! priority 102)))
-
-(enum_variant           name: (identifier)        @normal (#set! priority 101))
 
 [
   (mutable_specifier)
@@ -269,3 +240,53 @@
   "#"
   "_"
 ] @normal
+((identifier) @enum (#any-of? @enum "Some" "None" "Ok" "Err"))
+(tuple_struct_pattern   type: (scoped_identifier
+                              name: (identifier) @type))  
+(scoped_identifier
+                              name: (identifier) @type)  
+
+(call_expression    function: (scoped_identifier   
+                        name: (identifier)       @type))
+
+(call_expression    function: (identifier) @type)
+(generic_function (scoped_identifier   
+                   name: (identifier)       @type))
+(impl_item                            (type_identifier) @normal)
+(struct_item                    name: (type_identifier) @normal)
+(enum_item                      name: (type_identifier) @normal)
+(let_declaration     pattern: (identifier)       @variable)
+(function_item          name: (identifier)       @normal)
+(macro_invocation             "!"                @function.call)
+((trait_bounds) @normal)
+(scoped_type_identifier path: (identifier)        @normal)
+(scoped_type_identifier path: (scoped_identifier) @normal)
+(field_expression      value: (self)              @normal)
+(field_expression      value: (field_expression      
+                       field: (field_identifier)  @normal))
+(field_expression      field: (integer_literal)  @variable)
+
+(enum_variant           name: (identifier)        @normal)
+
+(generic_function   function: (field_expression   
+                       value: (identifier) @variable))
+(call_expression    function: (field_expression   
+                       value: (self) @variable))
+(call_expression    function: (field_expression   
+                       value: (identifier) @variable))
+(call_expression    function: (field_expression
+                       value: (field_expression
+                              field: (field_identifier) @variable
+                              )))
+(scoped_identifier      path: (identifier)        @normal)
+(scoped_identifier      path: (scoped_identifier
+                        name: (identifier)        @normal))
+(tuple_struct_pattern   type: (identifier)       @type   
+                              (identifier)       @variable.parameter)
+(function_item   return_type: (generic_type)     @normal)
+(function_item   return_type: (type_identifier)    @normal)
+(function_item   return_type: (primitive_type)     @normal)
+
+((use_list)              @normal (#set! priority 101))
+((scoped_use_list)       @normal (#set! priority 101))
+((use_declaration)       @normal (#set! priority 101))
