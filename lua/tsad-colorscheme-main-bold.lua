@@ -621,13 +621,13 @@ return function(p)
       }, 
 
       ['@enum'] = {
-          ctermfg = p.enum[cap], 
-          fg      = p.enum[gui], 
+          ctermfg = p.type[cap], 
+          fg      = p.type[gui], 
         bold = true,
       }, 
       Enum = {
-          ctermfg = p.enum[cap], 
-          fg      = p.enum[gui], 
+          ctermfg = p.type[cap], 
+          fg      = p.type[gui], 
         bold = true,
       },
 

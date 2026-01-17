@@ -2,6 +2,8 @@
 
 local p = vim.deepcopy(require "palette")
 
+p.dgrey[3] = "#606060"
+
 require "tsad-colorscheme-main-bold" {
   canvas     = p.grey, 
 
@@ -17,13 +19,13 @@ require "tsad-colorscheme-main-bold" {
 
   comment    = p.dgreen, 
 
-  literal    = p.dred, 
-  str        = p.dred, 
+  literal    = p.dgrey, 
+  str        = p.dgrey, 
   btype      = p.dred, 
   variable   = p.dred, 
   matchparen = p.dred, 
 
-  type       = p.dblue, 
-  enum       = p.dblue, 
-  func       = p.dblue, 
+  type       = p.blue, 
+  enum       = p.blue, 
+  func       = p.blue, 
 }
