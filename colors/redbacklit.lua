@@ -1,14 +1,14 @@
--- blackdayred
+-- redbacklit
 
 local p = vim.deepcopy(require "palette")
 
-p.dcyan[3]    = "#40a0ff"
-p.magenta[3]  = "#a040c0"
-p.red[3]      = "#ff5070"
-p.dyellow[3]  = "#a0c000"
+p.dcyan[3]    = "#4080c0"
+p.magenta[3]  = "#c020ff"
+p.red[3]      = "#ff5050"
+p.dyellow[3]  = "#506000"
 
 p.dgrey[3]  = "#404040"
-p.grey[3]   = "#f0f0f0"
+p.grey[3]   = "#d0d0d0"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
@@ -22,7 +22,7 @@ require "tsad-colorscheme-main" {
   normal     = p.grey, 
   curlineno  = p.grey, 
 
-  comment    = p.magenta, 
+  comment    = p.dyellow, 
 
   keyword    = p.dcyan,
   literal    = p.dcyan, 
@@ -31,7 +31,7 @@ require "tsad-colorscheme-main" {
   variable   = p.red, 
   btype      = p.red, 
 
-  matchparen = p.dyellow, 
-  type       = p.dyellow, 
-  func       = p.dyellow, 
+  matchparen = p.magenta, 
+  type       = p.magenta, 
+  func       = p.magenta, 
 }
