@@ -3,9 +3,9 @@
 local p = vim.deepcopy(require "palette")
 
 p.dcyan[3]    = "#40a0ff"
-p.magenta[3]  = "#a040c0"
-p.red[3]      = "#ff5070"
-p.dyellow[3]  = "#a0c000"
+p.magenta[3]  = "#7040c0"
+p.red[3]      = "#ff4070"
+p.dyellow[3]  = "#60d000"
 
 p.dgrey[3]  = "#404040"
 p.grey[3]   = "#f0f0f0"
