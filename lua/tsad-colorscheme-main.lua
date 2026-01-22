@@ -106,8 +106,8 @@ return function(p)
           ctermfg = p.comment[cap],
           fg      = p.comment[gui],
       },
-      DiagnosticUnderlineHint     = {link='Normal'},
-      DiagnosticVirtualLinesHint  = {link='Normal'},
+      DiagnosticUnderlineHint     = {link='NONE'},
+      DiagnosticVirtualLinesHint  = {link='NONE'},
       DiagnosticVirtualTextHint   = {link='NONE'},
       DiagnosticFloatingHint      = {
           ctermfg = p.normal[cap], 
