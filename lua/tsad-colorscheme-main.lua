@@ -65,8 +65,7 @@ return function(p)
           fg      = p.normal[gui],
       },
       DiagnosticUnderlineWarn = {
-          ctermfg = p.comment[cap], 
-          fg      = p.comment[gui],
+        underline=true,
       },
 
       Error = {
@@ -90,8 +89,7 @@ return function(p)
           fg      = p.comment[gui],
       },
       DiagnosticUnderlineError = {
-          ctermfg = p.comment[cap], 
-          fg      = p.comment[gui],
+        underline=true,
       },
       DiagnosticFloatingError = {
           ctermfg = p.normal[cap], 
@@ -106,7 +104,9 @@ return function(p)
           ctermfg = p.comment[cap],
           fg      = p.comment[gui],
       },
-      DiagnosticUnderlineHint     = {link='NONE'},
+      DiagnosticUnderlineHint     = {
+        underline=true,
+      },
       DiagnosticVirtualLinesHint  = {link='NONE'},
       DiagnosticVirtualTextHint   = {link='NONE'},
       DiagnosticFloatingHint      = {
@@ -632,12 +632,14 @@ return function(p)
       DiagnosticInfo              = {link='Normal'},
       DiagnosticSignInfo          = {link='Normal'},
       DiagnosticFloatingInfo      = {link='Normal'},
-      DiagnosticUnderlineInfo     = {link='Normal'},
+      DiagnosticUnderlineInfo     = {
+        underline=true,
+      },
       DiagnosticVirtualTextInfo   = {link='NONE'},
       DiagnosticVirtualLinesInfo  = {link='Normal'},
 
       DiagnosticOk                = {link='Normal'},
-      DiagnosticUnderlineOk       = {link='Normal'},
+      DiagnosticUnderlineOk       = {link='NONE'},
       DiagnosticVirtualTextOk     = {link='NONE'},
       DiagnosticVirtualLinesOk    = {link='Normal'},
       DiagnosticSignOk            = {link='Normal'},

@@ -604,8 +604,8 @@ return function(p)
         bold = true,
       }, 
       ['@type.builtin'] = {
-        ctermfg = p.btype[cap], 
-        fg      = p.btype[gui], 
+        ctermfg = p.normal[cap], 
+        fg      = p.normal[gui], 
         bold = true,
       }, 
 
