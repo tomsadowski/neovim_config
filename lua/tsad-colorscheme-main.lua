@@ -64,9 +64,6 @@ return function(p)
           ctermfg = p.normal[cap], 
           fg      = p.normal[gui],
       },
-      DiagnosticUnderlineWarn = {
-        underline=true,
-      },
 
       Error = {
           ctermfg = p.normal[cap], 
@@ -88,9 +85,6 @@ return function(p)
           ctermfg = p.comment[cap], 
           fg      = p.comment[gui],
       },
-      DiagnosticUnderlineError = {
-        underline=true,
-      },
       DiagnosticFloatingError = {
           ctermfg = p.normal[cap], 
           fg      = p.normal[gui],
@@ -103,9 +97,6 @@ return function(p)
       DiagnosticHint = {
           ctermfg = p.comment[cap],
           fg      = p.comment[gui],
-      },
-      DiagnosticUnderlineHint     = {
-        underline=true,
       },
       DiagnosticVirtualLinesHint  = {link='NONE'},
       DiagnosticVirtualTextHint   = {link='NONE'},
@@ -546,6 +537,32 @@ return function(p)
           fg      = p.literal[gui], 
       },
 
+      DiagnosticUnderlineWarn = {
+        ctermbg   = p.diagundbg[cap],
+        bg        = p.diagundbg[gui],
+        underline = p.diagund,
+      },
+      DiagnosticUnderlineError = {
+        ctermbg   = p.diagundbg[cap],
+        bg        = p.diagundbg[gui],
+        underline = p.diagund,
+      },
+      DiagnosticUnderlineHint     = {
+        ctermbg   = p.diagundbg[cap],
+        bg        = p.diagundbg[gui],
+        underline = p.diagund,
+      },
+      DiagnosticUnderlineInfo     = {
+        ctermbg   = p.diagundbg[cap],
+        bg        = p.diagundbg[gui],
+        underline = p.diagund,
+      },
+      DiagnosticUnderlineOk       = {
+        ctermbg   = p.diagundbg[cap],
+        bg        = p.diagundbg[gui],
+        underline = p.diagund,
+      },
+
       Cursor         = {link='Normal'}, 
       lCursor        = {link='Cursor'}, 
       CursorIM       = {link='Cursor'}, 
@@ -632,14 +649,10 @@ return function(p)
       DiagnosticInfo              = {link='Normal'},
       DiagnosticSignInfo          = {link='Normal'},
       DiagnosticFloatingInfo      = {link='Normal'},
-      DiagnosticUnderlineInfo     = {
-        underline=true,
-      },
       DiagnosticVirtualTextInfo   = {link='NONE'},
       DiagnosticVirtualLinesInfo  = {link='Normal'},
 
       DiagnosticOk                = {link='Normal'},
-      DiagnosticUnderlineOk       = {link='NONE'},
       DiagnosticVirtualTextOk     = {link='NONE'},
       DiagnosticVirtualLinesOk    = {link='Normal'},
       DiagnosticSignOk            = {link='Normal'},
