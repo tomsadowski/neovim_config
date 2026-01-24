@@ -12,12 +12,5 @@ If you aren't using a pearbear keyboard, you'll want to comment out the `require
 ## Colorschemes
 Note that these colorschemes use custom treesitter captures specified in the ./queries directory. 
 
-### magic
-![magic](pics/magic.png)
-
-### blackdayred
-![blackdayred](pics/blackdayred.png)
-
-### redbacklight
-![redbacklight](pics/redbacklight.png)
-![redbacklight2](pics/redbacklight2.png)
+### god
+![god](pics/god.png)
