@@ -12,5 +12,5 @@ If you aren't using a pearbear keyboard, you'll want to comment out the `require
 ## Colorschemes
 Note that these colorschemes use custom treesitter captures specified in the ./queries directory. 
 
-### cyangreen
-![cyangreen](pics/cyangreen.png)
+### cyan
+![cyan](pics/cyan.png)
