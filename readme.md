@@ -14,6 +14,3 @@ Note that these colorschemes use custom treesitter captures specified in the ./q
 
 ### cyan
 ![cyan](pics/cyan.png)
-
-### blue
-![blue](pics/blue.png)

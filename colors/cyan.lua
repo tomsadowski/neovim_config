@@ -2,16 +2,14 @@
 
 local p = vim.deepcopy(require "palette")
 
-  -- scalar relation start
-  p.black[3]  = "#012018"
-  p.dgrey[3]  = "#024030"
-  p.dcyan[3]  = "#048060"
-  p.cyan[3]   = "#60d0a0"
-  -- scalar relation end
+  p.black[3]  = "#003030"
+  p.dgrey[3]  = "#005858"
+  p.dcyan[3]  = "#00a0a0"
+  p.cyan[3]   = "#90e0e0"
 
-  p.blue[3]   = "#8090c0"
-  p.yellow[3] = "#a8a030"
-  p.red[3]    = "#c08090"
+  p.blue[3]   = "#a0a0e0"
+  p.yellow[3] = "#c0e060"
+  p.red[3]    = "#e0a080"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
