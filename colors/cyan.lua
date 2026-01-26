@@ -3,11 +3,11 @@
 local p = vim.deepcopy(require "palette")
 
   p.black[3]  = "#003030"
-  p.dgrey[3]  = "#005858"
-  p.dcyan[3]  = "#00a0a0"
-  p.cyan[3]   = "#90e0e0"
+  p.dgrey[3]  = "#005050"
+  p.dcyan[3]  = "#008080"
+  p.cyan[3]   = "#90d0d0"
 
-  p.blue[3]   = "#a0a0e0"
+  p.blue[3]   = "#20a0c0"
   p.yellow[3] = "#c0e060"
   p.red[3]    = "#e0a080"
 
