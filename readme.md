@@ -14,9 +14,3 @@ Note that these colorschemes use custom treesitter captures specified in the ./q
 
 ### god
 ![god](pics/god.png)
-
-### dcyan
-![dcyan](pics/dcyan.png)
-
-### cyan
-![cyan](pics/cyan.png)
