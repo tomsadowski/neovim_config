@@ -538,29 +538,24 @@ return function(p)
       },
 
       DiagnosticUnderlineWarn = {
-        ctermbg   = p.diagundbg[cap],
-        bg        = p.diagundbg[gui],
-        underline = p.diagund,
+        ctermbg   = p.diagund[cap],
+        bg        = p.diagund[gui],
       },
       DiagnosticUnderlineError = {
-        ctermbg   = p.diagundbg[cap],
-        bg        = p.diagundbg[gui],
-        underline = p.diagund,
+        ctermbg   = p.diagund[cap],
+        bg        = p.diagund[gui],
       },
       DiagnosticUnderlineHint     = {
-        ctermbg   = p.diagundbg[cap],
-        bg        = p.diagundbg[gui],
-        underline = p.diagund,
+        ctermbg   = p.diagund[cap],
+        bg        = p.diagund[gui],
       },
       DiagnosticUnderlineInfo     = {
-        ctermbg   = p.diagundbg[cap],
-        bg        = p.diagundbg[gui],
-        underline = p.diagund,
+        ctermbg   = p.diagund[cap],
+        bg        = p.diagund[gui],
       },
       DiagnosticUnderlineOk       = {
-        ctermbg   = p.diagundbg[cap],
-        bg        = p.diagundbg[gui],
-        underline = p.diagund,
+        ctermbg   = p.diagund[cap],
+        bg        = p.diagund[gui],
       },
 
       Cursor         = {link='Normal'}, 

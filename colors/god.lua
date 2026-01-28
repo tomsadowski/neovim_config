@@ -3,10 +3,10 @@
 local p = vim.deepcopy(require "palette")
 
   p.black[3]    = "#102020"
-  p.blue[3]     = "#304040"
-  p.dcyan[3]    = "#709090"
+  p.dgrey[3]    = "#709090"
   p.white[3]    = "#e0ffff"
 
+  p.dcyan[3]    = "#304040"
   p.dyellow[3]  = "#606000"
   p.dmagenta[3] = "#600060"
 
@@ -16,15 +16,14 @@ local p = vim.deepcopy(require "palette")
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
+
   search     = p.dyellow, 
   visual     = p.dmagenta, 
+  diagund    = p.dcyan,
 
-  diagund    = false,
-  diagundbg  = p.blue,
-
-  msgarea    = p.dcyan, 
-  lineno     = p.dcyan, 
-  comment    = p.dcyan, 
+  msgarea    = p.dgrey, 
+  lineno     = p.dgrey, 
+  comment    = p.dgrey, 
 
   normal     = p.white, 
   curlineno  = p.white, 
