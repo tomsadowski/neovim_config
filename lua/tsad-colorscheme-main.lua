@@ -641,20 +641,20 @@ return function(p)
       LspCodeLensSeparator        = {link='Normal'},
       LspSignatureActiveParameter = {link='Normal'},
 
-      DiagnosticInfo              = {link='Normal'},
-      DiagnosticSignInfo          = {link='Normal'},
-      DiagnosticFloatingInfo      = {link='Normal'},
+      DiagnosticInfo              = {link='NONE'},
+      DiagnosticSignInfo          = {link='NONE'},
+      DiagnosticFloatingInfo      = {link='NONE'},
       DiagnosticVirtualTextInfo   = {link='NONE'},
-      DiagnosticVirtualLinesInfo  = {link='Normal'},
+      DiagnosticVirtualLinesInfo  = {link='NONE'},
 
-      DiagnosticOk                = {link='Normal'},
+      DiagnosticOk                = {link='NONE'},
       DiagnosticVirtualTextOk     = {link='NONE'},
-      DiagnosticVirtualLinesOk    = {link='Normal'},
-      DiagnosticSignOk            = {link='Normal'},
-      DiagnosticFloatingOk        = {link='Normal'},
+      DiagnosticVirtualLinesOk    = {link='NONE'},
+      DiagnosticSignOk            = {link='NONE'},
+      DiagnosticFloatingOk        = {link='NONE'},
 
-      DiagnosticDeprecated        = {link='Normal'},
-      DiagnosticUnnecessary       = {link='Normal'},
+      DiagnosticDeprecated        = {link='NONE'},
+      DiagnosticUnnecessary       = {link='NONE'},
 
       ['@normal'] = {
           ctermfg = p.normal[cap], 
