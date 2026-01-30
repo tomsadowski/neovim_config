@@ -79,3 +79,19 @@
   name: (identifier) @function.special)
 
 (comment) @comment
+
+(comment) @comment
+(identifier) @variable
+(string_literal) @string
+
+(call_expression
+  function: (identifier) @function)
+
+(field_expression      field: (field_identifier) @variable.member)
+(field_expression      argument: (identifier)        @normal)
+(field_expression      argument: (field_expression      
+                       field: (field_identifier)  @normal (#set! priority 102)))
+
+(function_declarator
+  declarator: (field_identifier) @function)
+

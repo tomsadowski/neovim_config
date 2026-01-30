@@ -706,11 +706,11 @@ return function(p)
   vim.cmd("syntax clear")
   vim.cmd("highlight clear")
 
-  require "nvim-treesitter.configs".setup {
-      highlight = {
-          enable = true,
-      }
-  }
+--require "nvim-treesitter.configs".setup {
+--    highlight = {
+--        enable = true,
+--    }
+--}
   vim.api.nvim_create_autocmd('LspAttach', {
       callback = function(args)
           local client = vim.lsp.get_client_by_id(args.data.client_id)

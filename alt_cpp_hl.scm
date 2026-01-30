@@ -1,38 +1,38 @@
 ; Functions
 
 (comment) @comment
-(identifier) @variable
+(identifier) @normal
 (string_literal) @string
 (raw_string_literal) @string
 (number_literal) @number
 
 (template_function
-  name: (identifier) @function)
+  name: (identifier) @variable)
 
 (template_method
-  name: (field_identifier) @function)
+  name: (field_identifier) @variable)
 
 (template_function
-  name: (identifier) @function)
+  name: (identifier) @variable)
 
 (function_declarator
   declarator: (qualified_identifier
-    name: (identifier) @function))
+    name: (identifier) @variable))
 
 (call_expression
   function: (qualified_identifier
-    name: (identifier) @function))
+    name: (identifier) @variable))
 
 (call_expression
-  function: (identifier) @function)
+  function: (identifier) @variable)
 
-(field_expression      field: (field_identifier) @variable.member)
+(field_expression      field: (field_identifier) @normal)
 (field_expression      argument: (identifier)        @normal)
 (field_expression      argument: (field_expression      
                        field: (field_identifier)  @normal (#set! priority 102)))
 
 (function_declarator
-  declarator: (field_identifier) @function)
+  declarator: (field_identifier) @variable)
 
 ; Types
 
@@ -51,6 +51,10 @@
 (module_name
   (identifier) @module)
 
+[
+ "." 
+ ","
+ ] @keyword
 [
  "NULL"
  "switch"
