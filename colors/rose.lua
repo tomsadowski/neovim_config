@@ -1,18 +1,18 @@
--- godscolors
+-- rose
 
 local p = vim.deepcopy(require "palette")
 
-  p.black[3]    = "#101820"
-  p.dgrey[3]    = "#607080"
-  p.white[3]    = "#d0e0f0"
+  p.black[3]    = "#000810"
+  p.dgrey[3]    = "#204060"
+  p.white[3]    = "#b0c0d0"
 
-  p.dcyan[3]    = "#102030"
-  p.dyellow[3]  = "#203010"
-  p.dmagenta[3] = "#301020"
+  p.dcyan[3]    = "#002020"
+  p.dyellow[3]  = "#202000"
+  p.dmagenta[3] = "#200020"
 
-  p.cyan[3]     = "#9090d0"
-  p.yellow[3]   = "#b0c050"
-  p.magenta[3]  = "#d07070"
+  p.cyan[3]     = "#00a0a0"
+  p.yellow[3]   = "#90c050"
+  p.magenta[3]  = "#c07070"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
