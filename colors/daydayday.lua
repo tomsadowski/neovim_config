@@ -1,18 +1,18 @@
--- mosscave
+-- lava
 
 local p = vim.deepcopy(require "palette")
 
-  p.black[3]    = "#14181c"
-  p.dgrey[3]    = "#708090"
-  p.white[3]    = "#e0e8f0"
+  p.black[3]    = "#2c3034"
+  p.dgrey[3]    = "#9098a0"
+  p.white[3]    = "#e0e8ff"
 
-  p.dcyan[3]    = "#002020"
-  p.dyellow[3]  = "#203000"
-  p.dmagenta[3] = "#200020"
+  p.dcyan[3]    = "#302040"
+  p.dyellow[3]  = "#383830"
+  p.dmagenta[3] = "#402030"
 
-  p.cyan[3]     = "#b0b0f0"
-  p.yellow[3]   = "#f0f0a0"
-  p.magenta[3]  = "#f0a0d0"
+  p.cyan[3]     = "#b0a0ff"
+  p.yellow[3]   = "#ffe080"
+  p.magenta[3]  = "#ffa0c0"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
