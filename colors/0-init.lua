@@ -1,18 +1,18 @@
--- lava
+-- zap
 
 local p = vim.deepcopy(require "palette")
 
-  p.black[3]    = "#182020"
-  p.dgrey[3]    = "#607070"
-  p.white[3]    = "#d0e0e0"
+  p.black[3]    = "#2c3434"
+  p.dgrey[3]    = "#809090"
+  p.white[3]    = "#e0ffff"
 
-  p.dcyan[3]    = "#201030"
-  p.dyellow[3]  = "#303020"
-  p.dmagenta[3] = "#301820"
+  p.dcyan[3]    = "#304040"
+  p.dyellow[3]  = "#404030"
+  p.dmagenta[3] = "#403040"
 
-  p.cyan[3]     = "#a090d0"
-  p.green[3]    = "#90c060"
-  p.red[3]      = "#d08090"
+  p.cyan[3]     = "#80e0e0"
+  p.yellow[3]   = "#f0f0a0"
+  p.magenta[3]  = "#f0b0f0"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
@@ -28,14 +28,14 @@ require "tsad-colorscheme-main" {
   normal     = p.white, 
   curlineno  = p.white, 
 
-  matchparen = p.red, 
-  type       = p.red, 
-  func       = p.red, 
+  matchparen = p.magenta, 
+  type       = p.magenta, 
+  func       = p.magenta, 
 
   keyword    = p.cyan,
   literal    = p.cyan, 
   str        = p.cyan, 
 
-  variable   = p.green, 
-  btype      = p.green, 
+  variable   = p.yellow, 
+  btype      = p.yellow, 
 }

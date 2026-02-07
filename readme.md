@@ -10,7 +10,10 @@ If you aren't using a pearbear keyboard, you'll want to comment out the `require
 - Treesitter binaries located in ./parser
 
 ## Colorschemes
-Note that these colorschemes use custom treesitter captures specified in the ./queries directory. 
+Note that these colorschemes use custom treesitter captures specified in the ./queries directory.  
+
+### zap
+![zap](pics/zap.png)
 
 ### drunkbuzzlightyear
 ![drunkbuzzlightyear](pics/drunkbuzzlightyear.png)
