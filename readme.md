@@ -9,8 +9,8 @@ The colorschemes herein follow a couple of guidelines that make for a balance be
 
 ## Colorschemes
 
-### zap
-![zap](pics/zap.png)
+### myc-day
+![myc-day](pics/myc-day.png)
 
 ### drunkbuzzlightyear
 ![drunkbuzzlightyear](pics/drunkbuzzlightyear.png)

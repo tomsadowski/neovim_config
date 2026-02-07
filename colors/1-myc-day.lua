@@ -1,18 +1,18 @@
--- rose
+-- zap
 
 local p = vim.deepcopy(require "palette")
 
-  p.black[3]    = "#000810"
-  p.dgrey[3]    = "#204060"
-  p.white[3]    = "#b0c0d0"
+  p.black[3]    = "#2c3030"
+  p.dgrey[3]    = "#809090"
+  p.white[3]    = "#e0ffff"
 
-  p.dcyan[3]    = "#002020"
-  p.dyellow[3]  = "#202000"
-  p.dmagenta[3] = "#200020"
+  p.dcyan[3]    = "#304040"
+  p.dyellow[3]  = "#404030"
+  p.dmagenta[3] = "#403040"
 
-  p.cyan[3]     = "#00a0a0"
-  p.yellow[3]   = "#a0c050"
-  p.magenta[3]  = "#d070a0"
+  p.cyan[3]     = "#80e0e0"
+  p.yellow[3]   = "#e0e080"
+  p.magenta[3]  = "#e0a0e0"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
