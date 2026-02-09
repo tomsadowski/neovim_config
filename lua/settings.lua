@@ -38,6 +38,7 @@ vim.cmd('set mouse=')
 
 -- lsp
 vim.cmd "com LspCap lua =vim.lsp.get_clients()[1].server_capabilities"
+vim.cmd "com LspStop lua vim.lsp.stop_client(vim.lsp.get_clients())"
 
 -- misc
 vim.o.undofile = false

@@ -1,24 +1,24 @@
--- lava
+-- light
 
 local p = vim.deepcopy(require "palette")
 
-  p.black[3]    = "#141818"
-  p.dgrey[3]    = "#687070"
+  p.black[3]    = "#2c3030"
+  p.dgrey[3]    = "#809090"
   p.white[3]    = "#d0e0e0"
 
-  p.dcyan[3]    = "#201030"
-  p.dyellow[3]  = "#303020"
-  p.dmagenta[3] = "#301820"
+  p.dcyan[3]    = "#204040"
+  p.dgreen[3]   = "#204020"
+  p.dyellow[3]  = "#404020"
 
-  p.cyan[3]     = "#a090d0"
-  p.green[3]    = "#90c060"
-  p.red[3]      = "#d08090"
+  p.cyan[3]     = "#b0b0d0"
+  p.green[3]    = "#90e0c0"
+  p.yellow[3]   = "#d0d090"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
 
-  search     = p.dyellow, 
-  visual     = p.dmagenta, 
+  search     = p.dgreen, 
+  visual     = p.dyellow, 
   diagund    = p.dcyan,
 
   msgarea    = p.dgrey, 
@@ -28,9 +28,9 @@ require "tsad-colorscheme-main" {
   normal     = p.white, 
   curlineno  = p.white, 
 
-  matchparen = p.red, 
-  type       = p.red, 
-  func       = p.red, 
+  matchparen = p.yellow, 
+  type       = p.yellow, 
+  func       = p.yellow, 
 
   keyword    = p.cyan,
   literal    = p.cyan, 
