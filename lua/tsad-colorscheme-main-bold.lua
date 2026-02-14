@@ -736,26 +736,26 @@ return function(p)
       LspCodeLensSeparator        = {link='Normal'},
       LspSignatureActiveParameter = {link='Normal'},
 
-      DiagnosticInfo              = {link='Normal'},
-      DiagnosticSignInfo          = {link='Normal'},
-      DiagnosticFloatingInfo      = {link='Normal'},
+      DiagnosticInfo              = {link='NONE'},
+      DiagnosticSignInfo          = {link='NONE'},
+      DiagnosticFloatingInfo      = {link='NONE'},
       DiagnosticUnderlineInfo     = {
         underline = true,
       },
       DiagnosticVirtualTextInfo   = {link='NONE'},
-      DiagnosticVirtualLinesInfo  = {link='Normal'},
+      DiagnosticVirtualLinesInfo  = {link='NONE'},
 
-      DiagnosticOk                = {link='Normal'},
+      DiagnosticOk                = {link='NONE'},
       DiagnosticUnderlineOk       = {
         underline = true,
       },
       DiagnosticVirtualTextOk     = {link='NONE'},
-      DiagnosticVirtualLinesOk    = {link='Normal'},
-      DiagnosticSignOk            = {link='Normal'},
-      DiagnosticFloatingOk        = {link='Normal'},
+      DiagnosticVirtualLinesOk    = {link='NONE'},
+      DiagnosticSignOk            = {link='NONE'},
+      DiagnosticFloatingOk        = {link='NONE'},
 
-      DiagnosticDeprecated        = {link='Normal'},
-      DiagnosticUnnecessary       = {link='Normal'},
+      DiagnosticDeprecated        = {link='NONE'},
+      DiagnosticUnnecessary       = {link='NONE'},
 
       ['@normal'] = {
           ctermfg = p.normal[cap], 
@@ -810,11 +810,6 @@ return function(p)
   vim.cmd("syntax clear")
   vim.cmd("highlight clear")
 
-  require "nvim-treesitter.configs".setup {
-      highlight = {
-          enable = true,
-      }
-  }
   vim.api.nvim_create_autocmd('LspAttach', {
       callback = function(args)
           local client = vim.lsp.get_client_by_id(args.data.client_id)

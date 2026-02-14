@@ -1,6 +1,18 @@
--- myc
+-- godscolors
 
 local p = vim.deepcopy(require "palette")
+
+  p.black[3]    = "#020303"
+  p.dgrey[3]    = "#708080"
+  p.white[3]    = "#e0f0f0"
+
+  p.dcyan[3]    = "#003030"
+  p.dyellow[3]  = "#303000"
+  p.dmagenta[3] = "#300030"
+
+  p.cyan[3]     = "#00d0d0"
+  p.yellow[3]   = "#f0f040"
+  p.magenta[3]  = "#ff70ff"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 

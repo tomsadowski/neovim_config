@@ -1,20 +1,20 @@
--- carrot
+-- lava
 
 local p = vim.deepcopy(require "palette")
 
-  p.black[3]    = "#104040"
-  p.dgrey[3]    = "#408080"
-  p.white[3]    = "#ffffff"
+  p.black[3]    = "#141818"
+  p.dgrey[3]    = "#687070"
+  p.white[3]    = "#d0e0e0"
 
-  p.dcyan[3]    = "#304040"
-  p.dyellow[3]  = "#404030"
-  p.dmagenta[3] = "#403040"
+  p.dcyan[3]    = "#201030"
+  p.dyellow[3]  = "#303020"
+  p.dmagenta[3] = "#301820"
 
-  p.cyan[3]     = "#00e0e0"
-  p.green[3]    = "#a0e060"
-  p.red[3]      = "#ffa060"
+  p.cyan[3]     = "#a090d0"
+  p.green[3]    = "#90c060"
+  p.red[3]      = "#d08090"
 
-require "tsad-colorscheme-main" {
+require "tsad-colorscheme-main-bold" {
   canvas     = p.black, 
 
   search     = p.dyellow, 

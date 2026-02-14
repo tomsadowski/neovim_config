@@ -1,18 +1,18 @@
--- drunkbuzzlightyear
+-- carrot
 
 local p = vim.deepcopy(require "palette")
 
-  p.black[3]    = "#1c2020"
-  p.dgrey[3]    = "#788080"
-  p.white[3]    = "#d0e0e0"
+  p.black[3]    = "#506060"
+  p.dgrey[3]    = "#90a0a0"
+  p.white[3]    = "#f0ffff"
 
-  p.dcyan[3]    = "#201030"
-  p.dyellow[3]  = "#303020"
-  p.dmagenta[3] = "#301820"
+  p.dcyan[3]    = "#304040"
+  p.dyellow[3]  = "#304020"
+  p.dmagenta[3] = "#403020"
 
-  p.cyan[3]     = "#a090d0"
-  p.green[3]    = "#90c060"
-  p.red[3]      = "#d08090"
+  p.cyan[3]     = "#90ffff"
+  p.green[3]    = "#a0ff60"
+  p.red[3]      = "#ffa060"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
