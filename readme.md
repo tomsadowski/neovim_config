@@ -9,17 +9,8 @@ The colorschemes herein follow a couple of guidelines that make for a balance be
 
 ## Colorschemes
 
-### carrot
-![carrot](pics/carrot.png)
-
-### myc-day
-![myc-day](pics/myc-day.png)
+### ygc
+![ygc](pics/ygc.png)
 
 ### drunkbuzzlightyear
 ![drunkbuzzlightyear](pics/drunkbuzzlightyear.png)
-
-### smarties
-![smarties](pics/smarties.png)
-
-### mosscave
-![mosscave](pics/mosscave.png)
