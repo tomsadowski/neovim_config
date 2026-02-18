@@ -21,7 +21,7 @@ vim.o.tabstop=2
 -- perimeter
 vim.o.number = true   
 vim.o.laststatus = 1  
-vim.o.signcolumn = 'yes'
+--vim.o.signcolumn = 'yes'
 
 -- fold
 vim.o.foldmethod = 'syntax'

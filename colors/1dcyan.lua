@@ -2,26 +2,28 @@
 
 local p = vim.deepcopy(require "palette")
 
-require "tsad-colorscheme-main-bold" {
+require "tsad-colorscheme-main" {
   canvas     = p.dcyan, 
+
   search     = p.dyellow, 
-  visual     = p.dgrey, 
-  diagund    = p.dgreen,
+  visual     = p.black, 
+  diagund    = p.dblue,
 
   msgarea    = p.cyan, 
   lineno     = p.cyan, 
-  comment    = p.cyan, 
 
-  normal     = p.dblue, 
-  curlineno  = p.dblue, 
+  comment    = p.dblue, 
+
+  normal     = p.white, 
+  curlineno  = p.white, 
 
   matchparen = p.yellow, 
   type       = p.yellow, 
   func       = p.yellow, 
 
-  keyword    = p.dmagenta,
-  literal    = p.dmagenta, 
-  str        = p.dmagenta, 
+  keyword    = p.cyan,
+  literal    = p.cyan, 
+  str        = p.cyan, 
 
   variable   = p.green, 
   btype      = p.green, 
