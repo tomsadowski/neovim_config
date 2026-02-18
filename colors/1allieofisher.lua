@@ -1,4 +1,4 @@
--- allieofisher_pallete_3
+-- allieofisher_pallete_1
 
 local p = vim.deepcopy(require "palette")
 
@@ -6,20 +6,20 @@ local p = vim.deepcopy(require "palette")
   p.dyellow[3]  = "#202000"
   p.dmagenta[3] = "#201020"
 
-  p.dblue[3]    = "#2d3142"
-  p.dgrey[3]    = "#848fa2"
-  p.white[3]    = "#e1daae"
+  p.black[3]    = "#0a284b"
+  p.dgrey[3]    = "#235fa4"
+  p.white[3]    = "#a691ae"
 
-  p.red[3]      = "#cc2d35"
-  p.yellow[3]   = "#ff934f"
-  p.blue[3]     = "#058ed9"
+  p.yellow[3]   = "#e8f086"
+  p.green[3]    = "#6fde6e"
+  p.red[3]      = "#ff4242"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
 
-  search     = p.dblue, 
-  visual     = p.dblue, 
-  diagund    = p.dblue,
+  search     = p.dyellow, 
+  visual     = p.dmagenta, 
+  diagund    = p.dcyan,
 
   msgarea    = p.dgrey, 
   lineno     = p.dgrey, 
@@ -28,9 +28,9 @@ require "tsad-colorscheme-main" {
   normal     = p.white, 
   curlineno  = p.white, 
 
-  matchparen = p.blue, 
-  type       = p.blue, 
-  func       = p.blue, 
+  matchparen = p.green, 
+  type       = p.green, 
+  func       = p.green, 
 
   keyword    = p.red,
   literal    = p.red, 

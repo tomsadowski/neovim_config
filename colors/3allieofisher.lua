@@ -15,11 +15,11 @@ local p = vim.deepcopy(require "palette")
   p.blue[3]     = "#058ed9"
 
 require "tsad-colorscheme-main" {
-  canvas     = p.black, 
+  canvas     = p.dblue, 
 
-  search     = p.dblue, 
-  visual     = p.dblue, 
-  diagund    = p.dblue,
+  search     = p.black, 
+  visual     = p.black, 
+  diagund    = p.black,
 
   msgarea    = p.dgrey, 
   lineno     = p.dgrey, 
