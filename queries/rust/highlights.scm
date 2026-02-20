@@ -445,4 +445,10 @@
 
 ((use_declaration)       @normal (#set! priority 101))
 
+(where_predicate 
+  left: (type_identifier) @variable.parameter)
+
+(type_parameter 
+  name: (type_identifier) @variable.parameter)
+
 ((identifier) @type (#any-of? @type "Some" "None" "Ok" "Err"))

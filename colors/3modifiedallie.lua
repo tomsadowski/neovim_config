@@ -1,24 +1,24 @@
--- allieofisher_pallete_2
+-- 3modifiedallie
 
 local p = vim.deepcopy(require "palette")
-  p.dblue[3]    = "#2e4052"
-  p.dgrey[3]    = "#929084"
-  p.white[3]    = "#bdd9bf"
+
+  p.dgrey[3]    = "#606080"
+  p.white[3]    = "#e0d0a0"
 
   p.dcyan[3]    = "#002030"
   p.dyellow[3]  = "#302000"
-  p.dmagenta[3] = "#301010"
+  p.dmagenta[3] = "#300020"
 
-  p.cyan[3]     = "#a997df"
-  p.yellow[3]   = "#ffc857"
-  p.magenta[3]  = "#e5323b"
+  p.cyan[3]     = "#40a0f0"
+  p.yellow[3]   = "#f09040"
+  p.magenta[3]  = "#d04060"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
 
   search     = p.dyellow, 
-  visual     = p.dmagenta, 
-  diagund    = p.dcyan,
+  visual     = p.dcyan, 
+  diagund    = p.dmagenta,
 
   msgarea    = p.dgrey, 
   lineno     = p.dgrey, 
@@ -27,13 +27,13 @@ require "tsad-colorscheme-main" {
   normal     = p.white, 
   curlineno  = p.white, 
 
-  keyword    = p.magenta,
-  literal    = p.magenta, 
-  str        = p.magenta, 
-
   matchparen = p.cyan, 
   type       = p.cyan, 
   func       = p.cyan, 
+
+  keyword    = p.magenta,
+  literal    = p.magenta, 
+  str        = p.magenta, 
 
   variable   = p.yellow, 
   btype      = p.yellow, 

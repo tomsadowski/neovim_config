@@ -2,18 +2,6 @@
 
 local p = vim.deepcopy(require "palette")
 
-  p.dcyan[3]    = "#002020"
-  p.dyellow[3]  = "#202000"
-  p.dmagenta[3] = "#201020"
-
-  p.dblue[3]    = "#2d3142"
-  p.dgrey[3]    = "#848fa2"
-  p.white[3]    = "#e1daae"
-
-  p.red[3]      = "#cc2d35"
-  p.yellow[3]   = "#ff934f"
-  p.cyan[3]     = "#058ed9"
-
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
 
