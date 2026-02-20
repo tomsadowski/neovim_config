@@ -14,9 +14,3 @@ The colorschemes herein follow a couple of guidelines that make for a balance be
 
 ### allieofisherpallete3
 ![allieofisherpallete3](pics/allieofisherpallete3.png)
-
-### ygc
-![ygc](pics/ygc.png)
-
-### drunkbuzzlightyear
-![drunkbuzzlightyear](pics/drunkbuzzlightyear.png)
