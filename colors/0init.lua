@@ -1,4 +1,4 @@
--- blueboofer
+-- feb
 
 local p = vim.deepcopy(require "palette")
 
@@ -7,11 +7,11 @@ local p = vim.deepcopy(require "palette")
   p.dgreen[3]   = "#004000"
   p.dmagenta[3] = "#400040"
 
-  p.dcyan[3]    = "#608080"
+  p.dcyan[3]    = "#708080"
   p.yellow[3]   = "#c0a080"
   p.green[3]    = "#60c0a0"
   p.cyan[3]     = "#c0d0e0"
-  p.magenta[3]  = "#e07090"
+  p.magenta[3]  = "#d07090"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 

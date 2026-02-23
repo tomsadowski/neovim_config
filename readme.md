@@ -11,6 +11,3 @@ The colorschemes herein follow a couple of guidelines that make for a balance be
 
 ### feb
 ![feb](pics/feb.png)
-
-### allieofisherpallete3
-![allieofisherpallete3](pics/allieofisherpallete3.png)
