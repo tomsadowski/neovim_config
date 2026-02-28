@@ -174,6 +174,11 @@ return function(p)
           fg      = p.normal[gui], 
       }, 
 
+      ['@item'] = {
+        ctermfg = p.item[cap], 
+        fg      = p.item[gui], 
+      }, 
+
       ['@variable'] = {
         ctermfg = p.variable[cap], 
         fg      = p.variable[gui], 

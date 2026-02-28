@@ -362,14 +362,23 @@
 (impl_item 
   (type_identifier) @normal)
 
+(trait_item 
+  name: (type_identifier) @item)
+
+(impl_item 
+  trait: (type_identifier) @item)
+
+(impl_item 
+  type:  (type_identifier) @item)
+
 (struct_item 
-  name: (type_identifier) @normal)
+  name: (type_identifier) @item)
 
 (enum_item 
-  name: (type_identifier) @normal)
+  name: (type_identifier) @item)
 
 (function_item          
-  name: (identifier) @normal)
+  name: (identifier) @item)
 
 (let_declaration     
   pattern: (identifier) @variable)
