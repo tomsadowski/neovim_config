@@ -1,4 +1,4 @@
--- full
+-- darkfull
 
 local p = vim.deepcopy(require "palette")
 
@@ -10,7 +10,7 @@ local p = vim.deepcopy(require "palette")
   p.dyellow[3]  = "#404000"
 
   p.yellow[3]   = "#f0d060"
-  p.cyan[3]     = "#40e0d0"
+  p.cyan[3]     = "#60e0c0"
   p.magenta[3]  = "#b0a0f0"
   p.red[3]      = "#f06060"
 
