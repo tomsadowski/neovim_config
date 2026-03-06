@@ -7,14 +7,14 @@ local p = vim.deepcopy(require "palette")
   p.dcyan[3]    = "#103040"
   p.dgreen[3]   = "#104020"
 
-  p.black[3]    = "#0a0602"
-  p.dyellow[3]  = "#605040"
-  p.yellow[3]   = "#d0a070"
+  p.black[3]    = "#20160c"
+  p.dyellow[3]  = "#806040"
+  p.yellow[3]   = "#f0c090"
 
-  p.green[3]    = "#60e0a0"
-  p.cyan[3]     = "#80a0f0"
-  p.magenta[3]  = "#d090f0"
-  p.red[3]      = "#d05060"
+  p.green[3]    = "#a0e070"
+  p.cyan[3]     = "#90d0f0"
+  p.magenta[3]  = "#d0a0e0"
+  p.red[3]      = "#e06070"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
@@ -35,11 +35,11 @@ require "tsad-colorscheme-main" {
   type       = p.green, 
   func       = p.green, 
 
+  variable   = p.cyan, 
+  btype      = p.cyan, 
+
   keyword    = p.red,
 
   literal    = p.magenta, 
   str        = p.magenta, 
-
-  variable   = p.cyan, 
-  btype      = p.cyan, 
 }
