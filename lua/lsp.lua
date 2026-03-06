@@ -21,6 +21,22 @@
 --)
 vim.api.nvim_create_autocmd(
     'FileType', {
+        pattern  = 'python',
+        callback = function(args) 
+            vim.lsp.start({
+                    name = 'pylsp',
+                    cmd = {'pylsp'},
+                    root_dir = vim.fs.root(
+                        args.buf, 
+                        {'.git'}
+                    )
+                }
+            )
+        end
+    }
+)
+vim.api.nvim_create_autocmd(
+    'FileType', {
         pattern  = 'rust',
         callback = function(args) 
             vim.lsp.start({

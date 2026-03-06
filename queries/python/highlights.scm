@@ -1,11 +1,13 @@
-; Identifier naming conventions
+
+(identifier) @variable
 
 (attribute
-  object: (identifier) @path (#set! priority 105)
+  object: (identifier) @normal
   attribute: (identifier))
 
-
-;(identifier) @variable
+function: (attribute
+  object: (identifier) @variable
+  attribute: (identifier))
 
 
 ((identifier) @constructor
@@ -57,7 +59,7 @@
   (none)
   (true)
   (false)
-] @constant.builtin
+] @number
 
 [
   (integer)
