@@ -35,11 +35,11 @@ require "tsad-colorscheme-main" {
   type       = p.green, 
   func       = p.green, 
 
+  variable   = p.cyan, 
+  btype      = p.cyan, 
+
   keyword    = p.red,
 
   literal    = p.magenta, 
   str        = p.magenta, 
-
-  variable   = p.cyan, 
-  btype      = p.cyan, 
 }

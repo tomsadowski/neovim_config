@@ -9,5 +9,8 @@ The colorschemes herein follow a couple of guidelines that make for a balance be
 
 ## Colorschemes
 
+### yellowsoil
+![yellowsoil](pics/yellowsoil.png)
+
 ### feb
 ![feb](pics/feb.png)
