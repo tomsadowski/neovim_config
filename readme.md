@@ -9,6 +9,9 @@ The colorschemes herein follow a couple of guidelines that make for a balance be
 
 ## Colorschemes
 
+### nightsoil
+![nightsoil](pics/nightsoil.png)
+
 ### tent
 ![tent](pics/tent.png)
 
