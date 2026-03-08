@@ -1,4 +1,4 @@
--- tent
+-- arcade
 
 local p = vim.deepcopy(require "palette")
 
@@ -11,10 +11,10 @@ local p = vim.deepcopy(require "palette")
   p.dyellow[3]  = "#605040"
   p.yellow[3]   = "#e0a060"
 
-  p.green[3]    = "#60a080"
-  p.cyan[3]     = "#9090d0"
+  p.green[3]    = "#e0a060"
+  p.cyan[3]     = "#90a0f0"
   p.magenta[3]  = "#c070c0"
-  p.red[3]      = "#d05050"
+  p.red[3]      = "#c04050"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
