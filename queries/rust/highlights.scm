@@ -461,3 +461,8 @@
   name: (type_identifier) @variable.parameter)
 
 ((identifier) @type (#any-of? @type "Some" "None" "Ok" "Err"))
+
+return_type: (generic_type 
+  type: (scoped_type_identifier) @normal (#set! priority 105)
+  type_arguments: (type_arguments 
+    (unit_type))) 

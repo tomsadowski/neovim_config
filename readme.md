@@ -9,17 +9,5 @@ The colorschemes herein follow a couple of guidelines that make for a balance be
 
 ## Colorschemes
 
-### pineland
-![pineland](pics/pineland.png)
-
-### nightsoil
-![nightsoil](pics/nightsoil.png)
-
-### tent
-![tent](pics/tent.png)
-
-### yellowsoil
-![yellowsoil](pics/yellowsoil.png)
-
-### feb
-![feb](pics/feb.png)
+### daysoil
+![daysoil](pics/daysoil.png)
