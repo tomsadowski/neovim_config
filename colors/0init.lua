@@ -12,7 +12,7 @@ local p = vim.deepcopy(require "palette")
   p.dcyan[3]    = "#103040"
   p.dmagenta[3] = "#402030"
 
-  p.red[3]      = "#f06060"
+  p.red[3]      = "#e06060"
   p.green[3]    = "#70a070"
   p.cyan[3]     = "#a0b0d0"
   p.magenta[3]  = "#b07090"
