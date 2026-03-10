@@ -1,20 +1,20 @@
--- pineland
+-- daysoil
 
 local p = vim.deepcopy(require "palette")
 
-  p.dred[3]     = "#400000"
-  p.dmagenta[3] = "#400040"
-  p.dcyan[3]    = "#004040"
-  p.dgreen[3]   = "#004000"
+  p.black[3]    = "#20160c"
+  p.dyellow[3]  = "#806040"
+  p.yellow[3]   = "#f0c090"
 
-  p.black[3]    = "#0a0602"
-  p.dyellow[3]  = "#605040"
-  p.yellow[3]   = "#d0a070"
+  p.dred[3]     = "#402020"
+  p.dgreen[3]   = "#183018"
+  p.dcyan[3]    = "#103040"
+  p.dmagenta[3] = "#402030"
 
-  p.green[3]    = "#609060"
-  p.cyan[3]     = "#8080c0"
-  p.magenta[3]  = "#906090"
-  p.red[3]      = "#a04040"
+  p.red[3]      = "#f06060"
+  p.green[3]    = "#70a070"
+  p.cyan[3]     = "#a0b0c0"
+  p.magenta[3]  = "#e080a0"
 
 require "tsad-colorscheme-main" {
   canvas     = p.black, 
@@ -30,13 +30,13 @@ require "tsad-colorscheme-main" {
   normal     = p.yellow, 
   curlineno  = p.yellow, 
 
-  variable   = p.cyan, 
-  btype      = p.cyan, 
-
   item       = p.green, 
   matchparen = p.green, 
   type       = p.green, 
   func       = p.green, 
+
+  variable   = p.cyan, 
+  btype      = p.cyan, 
 
   keyword    = p.red,
 
