@@ -10,10 +10,4 @@ The colorschemes herein follow a couple of guidelines that make for a balance be
 ## Colorschemes
 
 ### greysoil
-![greysoil](pics/greysoil.png)
-
-### nightsoil
-![nightsoil](pics/nightsoil.png)
-
-### daysoil
-![daysoil](pics/daysoil.png)
+###![greysoil](pics/greysoil.png)
