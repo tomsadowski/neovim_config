@@ -1,22 +1,24 @@
 -- daysoil
 
-local p = vim.deepcopy(require "palette")
+local c = require "color"
+local p = vim.deepcopy(c.palette)
 
-  p.black[3]    = "#20160c"
-  p.dyellow[3]  = "#806040"
-  p.yellow[3]   = "#f0c090"
+  p.black.g    = "#202020"
 
-  p.dred[3]     = "#402020"
-  p.dgreen[3]   = "#183018"
-  p.dcyan[3]    = "#103040"
-  p.dmagenta[3] = "#402030"
+  p.dyellow.g  = "#706050"
+  p.yellow.g   = "#c0b090"
 
-  p.red[3]      = "#f06060"
-  p.green[3]    = "#70a070"
-  p.cyan[3]     = "#a0b0c0"
-  p.magenta[3]  = "#e080a0"
+  p.dred.g     = "#402020"
+  p.dgreen.g   = "#183018"
+  p.dcyan.g    = "#103040"
+  p.dmagenta.g = "#402030"
 
-require "tsad-colorscheme-main" {
+  p.red.g      = "#d06060"
+  p.green.g    = "#70a070"
+  p.cyan.g     = "#90a0d0"
+  p.magenta.g  = "#a070a0"
+
+c.apply {
   canvas     = p.black, 
 
   search     = p.dcyan, 

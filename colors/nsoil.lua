@@ -1,23 +1,22 @@
--- greysoil
+-- soil
 
-local p = vim.deepcopy(require "palette")
+local c = require "color"
+local p = vim.deepcopy(c.palette)
 
-  p.black[3]    = "#181614"
+  p.dyellow.g  = "#806040"
+  p.yellow.g   = "#e0c090"
 
-  p.dyellow[3]  = "#806040"
-  p.yellow[3]   = "#e0c090"
+  p.dred.g     = "#402020"
+  p.dgreen.g   = "#183018"
+  p.dcyan.g    = "#103040"
+  p.dmagenta.g = "#402030"
 
-  p.dred[3]     = "#402020"
-  p.dgreen[3]   = "#183018"
-  p.dcyan[3]    = "#103040"
-  p.dmagenta[3] = "#402030"
+  p.red.g      = "#e06060"
+  p.green.g    = "#70a070"
+  p.cyan.g     = "#a0b0d0"
+  p.magenta.g  = "#b07090"
 
-  p.red[3]      = "#e06060"
-  p.green[3]    = "#70a070"
-  p.cyan[3]     = "#a0b0d0"
-  p.magenta[3]  = "#b07090"
-
-require "tsad-colorscheme-main" {
+c.apply {
   canvas     = p.black, 
 
   search     = p.dcyan, 

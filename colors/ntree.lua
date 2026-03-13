@@ -1,26 +1,26 @@
--- pineland
+-- tree
 
-local p = vim.deepcopy(require "palette")
+local c = require "color"
+local p = vim.deepcopy(c.palette)
 
-  p.dyellow[3]  = "#303000"
-  p.dmagenta[3] = "#300030"
-  p.dcyan[3]    = "#003030"
+  p.dred.g     = "#201000"
+  p.dmagenta.g = "#200020"
+  p.dcyan.g    = "#001020"
 
-  p.dgrey[3]    = "#404040"
-  p.grey[3]     = "#a0a0a0"
+  p.dgrey.g    = "#504030"
+  p.grey.g     = "#a0a0a0"
 
-  p.yellow[3]   = "#808000"
-  p.cyan[3]     = "#008080"
+  p.yellow.g   = "#608000"
+  p.cyan.g     = "#5070c0"
+  p.magenta.g  = "#8040a0"
+  p.red.g      = "#804020"
 
-  p.magenta[3]  = "#8040c0"
-  p.red[3]      = "#c02060"
-
-require "tsad-colorscheme-main" {
+c.apply {
   canvas     = p.black, 
 
   search     = p.dcyan, 
   visual     = p.dmagenta, 
-  diagund    = p.dyellow,
+  diagund    = p.dred,
 
   msgarea    = p.dgrey, 
   lineno     = p.dgrey, 
