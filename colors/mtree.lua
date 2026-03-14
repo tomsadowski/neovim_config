@@ -1,7 +1,19 @@
--- tree
+-- mtree
 
 local c = require "color"
 local p = vim.deepcopy(c.palette)
+
+  p.dblue.g    = "#262626"
+  p.dmagenta.g = "#302030"
+  p.dcyan.g    = "#203040"
+
+  p.dgrey.g    = "#304050"
+  p.grey.g     = "#c0c0c0"
+
+  p.yellow.g   = "#80a040"
+  p.cyan.g     = "#6090d0"
+  p.magenta.g  = "#9070c0"
+  p.red.g      = "#806050"
 
 c.apply {
   canvas     = p.black, 

@@ -8,7 +8,7 @@ c.apply {
 
   search     = p.dcyan, 
   visual     = p.dgreen, 
-  diagund    = p.dred,
+  diagund    = p.dblue,
 
   msgarea    = p.dyellow, 
   lineno     = p.dyellow, 
