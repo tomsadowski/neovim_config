@@ -1,19 +1,21 @@
--- ntree
+-- daytree
 
 local c = require "color"
 local p = vim.deepcopy(c.palette)
 
-  p.dblue.g    = "#201000"
-  p.dmagenta.g = "#200020"
-  p.dcyan.g    = "#001020"
+  p.black.g    = "#282828"
 
-  p.dgrey.g    = "#504840"
-  p.grey.g     = "#a0a0a0"
+  p.dblue.g    = "#262626"
+  p.dmagenta.g = "#302030"
+  p.dcyan.g    = "#203040"
 
-  p.yellow.g   = "#608000"
-  p.cyan.g     = "#5070c0"
-  p.magenta.g  = "#8040a0"
-  p.red.g      = "#804020"
+  p.dgrey.g    = "#606060"
+  p.grey.g     = "#d0d0d0"
+
+  p.yellow.g   = "#80c000"
+  p.cyan.g     = "#80c0ff"
+  p.magenta.g  = "#b090ff"
+  p.red.g      = "#c08040"
 
 c.apply {
   canvas     = p.black, 
