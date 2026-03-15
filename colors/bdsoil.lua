@@ -3,9 +3,9 @@
 local c = require "color"
 local p = vim.deepcopy(c.palette)
 
-  p.black.g    = "#202020"
+  p.black.g    = "#282828"
 
-  p.dyellow.g  = "#706050"
+  p.dyellow.g  = "#706860"
   p.yellow.g   = "#c0b090"
 
   p.dblue.g    = "#303030"
