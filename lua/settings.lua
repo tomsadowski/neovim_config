@@ -19,7 +19,7 @@ vim.o.shiftwidth=2
 vim.o.tabstop=2
 
 -- perimeter
-vim.o.number = true   
+vim.o.number = false   
 vim.o.laststatus = 1  
 vim.o.signcolumn = 'yes'
 

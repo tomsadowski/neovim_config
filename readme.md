@@ -11,3 +11,6 @@ The colorschemes herein follow a couple of guidelines that make for a balance be
 
 ### dgod
 ![dgod](pics/dgod.png)
+
+### ngod
+![ngod](pics/ngod.png)
