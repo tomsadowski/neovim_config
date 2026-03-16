@@ -1,22 +1,22 @@
--- daygod
+-- nightgod
 
 local c = require "color"
 local p = vim.deepcopy(c.palette)
 
-  p.black.g    = "#202020"
+  p.black.g    = "#101010"
 
-  p.dyellow.g  = "#706860"
-  p.yellow.g   = "#c0b0a0"
+  p.dgrey.g    = "#64605c"
+  p.grey.g     = "#b8b0a8"
 
   p.dblue.g    = "#303030"
   p.dgreen.g   = "#183018"
   p.dcyan.g    = "#103040"
   p.dmagenta.g = "#402030"
 
-  p.red.g      = "#c06030"
-  p.green.g    = "#90b000"
-  p.cyan.g     = "#60a0f0"
-  p.magenta.g  = "#c060e0"
+  p.red.g      = "#a06040"
+  p.green.g    = "#70a010"
+  p.cyan.g     = "#5090c0"
+  p.magenta.g  = "#b050b0"
 
 c.apply {
   canvas     = p.black, 
@@ -25,12 +25,12 @@ c.apply {
   visual     = p.dgreen, 
   diagund    = p.dblue,
 
-  msgarea    = p.dyellow, 
-  lineno     = p.dyellow, 
-  comment    = p.dyellow, 
+  msgarea    = p.dgrey, 
+  lineno     = p.dgrey, 
+  comment    = p.dgrey, 
 
-  normal     = p.yellow, 
-  curlineno  = p.yellow, 
+  normal     = p.grey, 
+  curlineno  = p.grey, 
 
   item       = p.green, 
   matchparen = p.green, 
