@@ -1,4 +1,4 @@
--- nightgod
+-- tree
 
 local c = require "color"
 local p = vim.deepcopy(c.palette)
@@ -9,12 +9,12 @@ local p = vim.deepcopy(c.palette)
   p.grey.g     = "#b8b0a8"
 
   p.dblue.g    = "#202020"
-  p.dgreen.g   = "#183018"
+  p.dyellow.g  = "#183018"
   p.dcyan.g    = "#103040"
   p.dmagenta.g = "#402030"
 
   p.red.g      = "#a06040"
-  p.green.g    = "#70a018"
+  p.yellow.g   = "#70a018"
   p.cyan.g     = "#5090c0"
   p.magenta.g  = "#a050a0"
 
@@ -22,7 +22,7 @@ c.apply {
   canvas     = p.black, 
 
   search     = p.dcyan, 
-  visual     = p.dgreen, 
+  visual     = p.dyellow, 
   diagund    = p.dblue,
 
   msgarea    = p.dgrey, 
@@ -32,10 +32,10 @@ c.apply {
   normal     = p.grey, 
   curlineno  = p.grey, 
 
-  item       = p.green, 
-  matchparen = p.green, 
-  type       = p.green, 
-  func       = p.green, 
+  item       = p.yellow, 
+  matchparen = p.yellow, 
+  type       = p.yellow, 
+  func       = p.yellow, 
 
   variable   = p.cyan, 
   btype      = p.cyan, 
