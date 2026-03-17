@@ -9,6 +9,9 @@ The colorschemes herein follow a couple of guidelines that make for a balance be
 
 ## Colorschemes
 
+### god
+![god](pics/god.png)
+
 ### dgod
 ![dgod](pics/dgod.png)
 
