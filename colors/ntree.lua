@@ -1,4 +1,4 @@
--- tree
+-- nighttree
 
 local c = require "color"
 local p = vim.deepcopy(c.palette)
