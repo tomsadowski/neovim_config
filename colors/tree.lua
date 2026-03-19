@@ -4,14 +4,14 @@ local c = require "color"
 local p = vim.deepcopy(c.palette)
 
   p.black.g    = "#080808"
+  p.grey.g     = "#64605c"
+  p.white.g    = "#b8b0a8"
 
-  p.dgrey.g    = "#64605c"
-  p.grey.g     = "#b8b0a8"
-
+  p.dgrey.g    = "#202020"
   p.dblue.g    = "#202020"
-  p.dyellow.g  = "#183018"
+  p.dyellow.g  = "#283008"
   p.dcyan.g    = "#103040"
-  p.dmagenta.g = "#402030"
+  p.dmagenta.g = "#302030"
 
   p.red.g      = "#a06040"
   p.yellow.g   = "#70a018"
@@ -25,11 +25,11 @@ c.apply {
   visual     = p.dyellow, 
   diagund    = p.dblue,
 
-  msgarea    = p.dgrey, 
   lineno     = p.dgrey, 
-  comment    = p.dgrey, 
+  msgarea    = p.grey, 
+  comment    = p.grey, 
 
-  normal     = p.grey, 
+  normal     = p.white, 
   curlineno  = p.grey, 
 
   item       = p.yellow, 
