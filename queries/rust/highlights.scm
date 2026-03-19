@@ -460,6 +460,12 @@
 (type_parameter 
   name: (type_identifier) @variable.parameter)
 
+(impl_item 
+  type: (generic_type 
+    type: (type_identifier) 
+    type_arguments: (type_arguments 
+      (type_identifier) @variable.parameter)))
+
 ((identifier) @type (#any-of? @type "Some" "None" "Ok" "Err"))
 
 return_type: (generic_type 

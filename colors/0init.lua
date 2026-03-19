@@ -25,12 +25,12 @@ c.apply {
   visual     = p.dyellow, 
   diagund    = p.dblue,
 
+  lineno     = p.dblue, 
   msgarea    = p.dgrey, 
-  lineno     = p.dgrey, 
   comment    = p.dgrey, 
 
   normal     = p.grey, 
-  curlineno  = p.grey, 
+  curlineno  = p.dgrey, 
 
   item       = p.yellow, 
   matchparen = p.yellow, 

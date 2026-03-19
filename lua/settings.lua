@@ -19,9 +19,9 @@ vim.o.shiftwidth=2
 vim.o.tabstop=2
 
 -- perimeter
-vim.o.number = false   
+vim.o.number = true   
 vim.o.laststatus = 1  
-vim.o.signcolumn = 'yes'
+vim.o.signcolumn = 'no'
 
 -- fold
 vim.o.foldmethod = 'syntax'
