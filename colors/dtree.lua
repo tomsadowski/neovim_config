@@ -3,9 +3,9 @@
 local c = require "color"
 local p = vim.deepcopy(c.palette)
 
-  p.black.g    = "#080808"
+  p.black.g    = "#101010"
   p.grey.g     = "#64605c"
-  p.white.g    = "#d0c8c0"
+  p.white.g    = "#f0e0d0"
 
   p.dgrey.g    = "#303030"
   p.dblue.g    = "#303030"
@@ -14,9 +14,9 @@ local p = vim.deepcopy(c.palette)
   p.dmagenta.g = "#302030"
 
   p.red.g      = "#b07050"
-  p.yellow.g   = "#a0c018"
-  p.cyan.g     = "#50c0e0"
-  p.magenta.g  = "#c060c0"
+  p.yellow.g   = "#a0c030"
+  p.cyan.g     = "#70c0f0"
+  p.magenta.g  = "#d070d0"
 
 c.apply {
   canvas     = p.black, 
