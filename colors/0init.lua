@@ -1,4 +1,4 @@
--- daytree
+-- tree
 
 local c = require "color"
 local p = vim.deepcopy(c.palette)
@@ -12,10 +12,10 @@ local p = vim.deepcopy(c.palette)
   p.dyellow.g  = "#283008"
   p.dcyan.g    = "#103040"
 
-  p.red.g      = "#e08040"
-  p.yellow.g   = "#c0d010"
-  p.cyan.g     = "#70d0f0"
-  p.magenta.g  = "#f080b0"
+  p.red.g      = "#d08040"
+  p.yellow.g   = "#b0d011"
+  p.cyan.g     = "#80c0f0"
+  p.magenta.g  = "#e080b0"
 
 c.apply {
   canvas     = p.black, 
@@ -25,6 +25,7 @@ c.apply {
   diagund    = p.dblue,
 
   lineno     = p.dgrey, 
+  signcol    = p.dgrey, 
   msgarea    = p.grey, 
   comment    = p.grey, 
 

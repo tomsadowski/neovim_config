@@ -64,24 +64,24 @@ M.apply = function(p)
     }, 
 
     WarningMsg = {
-      ctermfg = p.comment.t, 
-      fg      = p.comment.g,
+      ctermfg = p.signcol.t, 
+      fg      = p.signcol.g,
     }, 
     DiagnosticWarn = {
-      ctermfg = p.comment.t, 
-      fg      = p.comment.g,
+      ctermfg = p.signcol.t, 
+      fg      = p.signcol.g,
     },
     DiagnosticSignWarn = {
-      ctermfg = p.comment.t, 
-      fg      = p.comment.g,
+      ctermfg = p.signcol.t, 
+      fg      = p.signcol.g,
     },
     DiagnosticVirtualTextWarn = {
-      ctermfg = p.comment.t, 
-      fg      = p.comment.g,
+      ctermfg = p.signcol.t, 
+      fg      = p.signcol.g,
     },
     DiagnosticVirtualLinesWarn = {
-      ctermfg = p.comment.t, 
-      fg      = p.comment.g,
+      ctermfg = p.signcol.t, 
+      fg      = p.signcol.g,
     },
     DiagnosticFloatingWarn = {
       ctermfg = p.normal.t, 
@@ -93,33 +93,33 @@ M.apply = function(p)
       fg      = p.normal.g
     }, 
     ErrorMsg = {
-      ctermfg = p.comment.t, 
-      fg      = p.comment.g,
+      ctermfg = p.signcol.t, 
+      fg      = p.signcol.g,
     }, 
     DiagnosticError = {
-      ctermfg = p.comment.t, 
-      fg      = p.comment.g,
+      ctermfg = p.signcol.t, 
+      fg      = p.signcol.g,
     },
     DiagnosticVirtualTextError = {
-      ctermfg = p.comment.t, 
-      fg      = p.comment.g,
+      ctermfg = p.signcol.t, 
+      fg      = p.signcol.g,
     },
     DiagnosticVirtualLinesError = {
-      ctermfg = p.comment.t, 
-      fg      = p.comment.g,
+      ctermfg = p.signcol.t, 
+      fg      = p.signcol.g,
     },
     DiagnosticFloatingError = {
       ctermfg = p.normal.t, 
       fg      = p.normal.g,
     },
     DiagnosticSignError = {
-      ctermfg = p.comment.t, 
-      fg      = p.comment.g,
+      ctermfg = p.signcol.t, 
+      fg      = p.signcol.g,
     },
 
     DiagnosticHint = {
-      ctermfg = p.comment.t,
-      fg      = p.comment.g,
+      ctermfg = p.signcol.t,
+      fg      = p.signcol.g,
     },
     DiagnosticVirtualLinesHint  = {link='NONE'},
     DiagnosticVirtualTextHint   = {link='NONE'},
@@ -660,14 +660,14 @@ M.apply = function(p)
     Ignore     = {link='Normal'}, 
     Todo       = {link='Normal'}, 
 
-    LspReferenceText            = {link='Normal'}, 
-    LspReferenceRead            = {link='Normal'},
-    LspReferenceWrite           = {link='Normal'},
-    LspReferenceTarget          = {link='Normal'},
-    LspInlayHint                = {link='Normal'},
-    LspCodeLens                 = {link='Normal'},
-    LspCodeLensSeparator        = {link='Normal'},
-    LspSignatureActiveParameter = {link='Normal'},
+    LspReferenceText            = {link='NONE'}, 
+    LspReferenceRead            = {link='NONE'},
+    LspReferenceWrite           = {link='NONE'},
+    LspReferenceTarget          = {link='NONE'},
+    LspInlayHint                = {link='NONE'},
+    LspCodeLens                 = {link='NONE'},
+    LspCodeLensSeparator        = {link='NONE'},
+    LspSignatureActiveParameter = {link='NONE'},
 
     DiagnosticInfo              = {link='NONE'},
     DiagnosticSignInfo          = {link='NONE'},

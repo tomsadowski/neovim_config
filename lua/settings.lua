@@ -3,7 +3,7 @@
 -- search
 -- Case-insensitive searching UNLESS \C or one or more 
 -- capital letters in the search term
-vim.o.ignorecase = true
+--vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- split
@@ -21,7 +21,7 @@ vim.o.tabstop=2
 -- perimeter
 vim.o.number = true   
 vim.o.laststatus = 1  
-vim.o.signcolumn = 'no'
+vim.o.signcolumn = 'yes'
 
 -- fold
 vim.o.foldmethod = 'syntax'
