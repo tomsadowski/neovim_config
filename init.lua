@@ -1,14 +1,17 @@
--- comment this line out if you aren't using a pearbear
-require "keymaps"
 
--- comment this line out if you want default settings
-require "settings"
 
--- supplementary lsp settings
-require "lsp"
+-- make sure you have the lsp libraries on your path
+vim.cmd "packadd! tsadlsp"
+require "tsad_lsp_settings"
 
--- supplementary treesitter settings
-require "treesitter"
 
--- comment this line out if you want the default colorscheme
-vim.cmd "colo 0init"
+vim.cmd "packadd! pearbear"
+require "pearbear_keymaps"
+
+
+vim.cmd "packadd! tsadsettings"
+require "tsad_settings"
+
+
+vim.cmd "packadd! tsadcolor"
+vim.cmd "colo nature"

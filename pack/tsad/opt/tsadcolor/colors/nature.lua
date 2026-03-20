@@ -1,5 +1,6 @@
--- tree
+-- nature
 
+require "treesitter"
 local c = require "color"
 local p = vim.deepcopy(c.palette)
 
