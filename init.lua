@@ -12,6 +12,16 @@ require "pearbear_keymaps"
 vim.cmd "packadd! tsadsettings"
 require "tsad_settings"
 
+-- uncomment this once vim.pack is in the stable release
+--
+--vim.pack.add({
+--  { 
+--    src = 'https://github.com/tomsadowski/tsad_nvim_colorschemes',
+--    name = 'tsad_colorschemes',
+--    version = 'main',
+--  },
+--})
+--require "tsad_colorschemes"
 
 vim.cmd "packadd! tsadcolor"
 vim.cmd "colo nature"
