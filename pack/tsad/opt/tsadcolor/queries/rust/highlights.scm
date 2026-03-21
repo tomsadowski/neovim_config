@@ -453,7 +453,7 @@
 
 ((scoped_use_list)       @normal (#set! priority 101))
 
-((use_declaration)       @normal (#set! priority 101))
+;(use_declaration       @normal (#set! priority 101))
 
 ((identifier) @type (#any-of? @type "Some" "None" "Ok" "Err"))
 
@@ -485,6 +485,5 @@ type: (generic_type
     (type_identifier) @type.parameter))
 
 type: (generic_type 
-;    type: (type_identifier) 
   type_arguments: (type_arguments 
     (type_identifier) @type.parameter))
