@@ -399,7 +399,7 @@
            field: (field_identifier) @normal))
 
 (field_expression      
-  field: (integer_literal) @variable)
+  field: (integer_literal) @number)
 
 (enum_variant
   name: (identifier) @normal)
@@ -435,6 +435,7 @@
 (function_item 
   return_type: (generic_type)     @normal)
 
+
 (function_item 
   return_type: (type_identifier)  @normal)
 
@@ -454,21 +455,36 @@
 
 ((use_declaration)       @normal (#set! priority 101))
 
-(where_predicate 
-  left: (type_identifier) @variable.parameter)
-
-(type_parameter 
-  name: (type_identifier) @variable.parameter)
-
-(impl_item 
-  type: (generic_type 
-    type: (type_identifier) 
-    type_arguments: (type_arguments 
-      (type_identifier) @variable.parameter)))
-
 ((identifier) @type (#any-of? @type "Some" "None" "Ok" "Err"))
 
 return_type: (generic_type 
   type: (scoped_type_identifier) @normal (#set! priority 105)
   type_arguments: (type_arguments 
     (unit_type))) 
+
+(where_predicate 
+  left: (type_identifier) @type.parameter)
+
+(type_parameter 
+  name: (type_identifier) @type.parameter)
+
+return_type: (generic_type
+  type: (type_identifier)
+  type_arguments: (type_arguments
+    (reference_type
+      type: (type_identifier) @type.parameter)))
+
+return_type: (generic_type 
+  type: (type_identifier) 
+  type_arguments: (type_arguments 
+    (type_identifier) @type.parameter)) 
+
+type: (generic_type
+  type: (type_identifier)
+  type_arguments: (type_arguments
+    (type_identifier) @type.parameter))
+
+type: (generic_type 
+;    type: (type_identifier) 
+  type_arguments: (type_arguments 
+    (type_identifier) @type.parameter))

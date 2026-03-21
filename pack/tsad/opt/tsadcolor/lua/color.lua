@@ -684,6 +684,11 @@ M.apply = function(p)
     DiagnosticDeprecated        = {link='NONE'},
     DiagnosticUnnecessary       = {link='NONE'},
 
+    ['@type.parameter'] = {
+      ctermfg = p.typeparam.t, 
+      fg      = p.typeparam.g, 
+    }, 
+
     ['@normal'] = {
       ctermfg = p.normal.t, 
       fg      = p.normal.g, 
