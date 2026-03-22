@@ -487,3 +487,6 @@ type: (generic_type
 type: (generic_type 
   type_arguments: (type_arguments 
     (type_identifier) @type.parameter))
+type: (generic_type 
+  type_arguments: (type_arguments 
+    (primitive_type) @type.parameter))
