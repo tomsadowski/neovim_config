@@ -11,7 +11,7 @@ vim.o.splitright = true
 
 -- text view
 vim.o.scrolloff = 10
-vim.o.wrap = true
+vim.o.wrap = false
 
 -- tab
 vim.o.expandtab = true
