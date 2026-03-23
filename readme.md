@@ -9,5 +9,8 @@
 
 ## Colorschemes
 
+### mellow
+![mellow](pics/mellow.png)
+
 ### nature
 ![nature](pics/nature.png)
