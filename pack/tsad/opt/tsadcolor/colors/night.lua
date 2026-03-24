@@ -1,23 +1,23 @@
--- bold
+-- night
 
 require "treesitter"
 local c = require "color"
 local p = vim.deepcopy(c.palette)
 local p2 = vim.deepcopy(c.palette)
 
-  p.black.g    = "#303030"
-  p.dblue.g    = "#404040"
-  p.dgrey.g    = "#505050"
-  p.grey.g     = "#808080"
-  p.white.g    = "#ffffff"
+  p.black.g    = "#0c0c0c"
+  p.dblue.g    = "#303030"
+  p.dgrey.g    = "#404040"
+  p.grey.g     = "#605c58"
+  p.white.g    = "#b0aca8"
 
   p.dyellow.g  = "#283008"
   p.dcyan.g    = "#103040"
 
-  p.red.g      = "#c08040"
-  p.yellow.g   = "#70d030"
-  p.cyan.g     = "#70c0ff"
-  p.magenta.g  = "#ff80ff"
+  p.red.g      = "#b07050"
+  p.yellow.g   = "#68a020"
+  p.cyan.g     = "#6090d0"
+  p.magenta.g  = "#b060b0"
 
 c.apply {
   canvas     = p.black, 
