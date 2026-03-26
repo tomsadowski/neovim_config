@@ -6,17 +6,17 @@ local p = vim.deepcopy(c.palette)
 local p2 = vim.deepcopy(c.palette)
 
   p.black.g    = "#181818"
-  p.dblue.g    = "#404040"
+  p.dblue.g    = "#303030"
   p.dgrey.g    = "#505050"
-  p.grey.g     = "#808080"
+  p.grey.g     = "#707070"
   p.white.g    = "#d0d0d0"
 
   p.dyellow.g  = "#203018"
   p.dcyan.g    = "#103040"
 
-  p.red.g      = "#c08050"
-  p.yellow.g   = "#70b040"
-  p.cyan.g     = "#70b8e0"
+  p.red.g      = "#b08060"
+  p.yellow.g   = "#80b040"
+  p.cyan.g     = "#80b0d0"
   p.magenta.g  = "#c080a0"
 
 c.apply {
