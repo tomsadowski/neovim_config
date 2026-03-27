@@ -9,6 +9,9 @@
 
 ## Colorschemes
 
+### deep
+![deep](pics/deep.png)
+
 ### soaked
 ![soaked_rust](pics/soaked_rust.png)
 ![soaked_lua](pics/soaked_lua.png)
