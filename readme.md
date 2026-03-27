@@ -9,6 +9,10 @@
 
 ## Colorschemes
 
+### soaked
+![soaked_rust](pics/soaked_rust.png)
+![soaked_lua](pics/soaked_lua.png)
+
 ### mellow
 ![mellow](pics/mellow.png)
 
