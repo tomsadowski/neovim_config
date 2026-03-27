@@ -1,4 +1,4 @@
--- rain
+-- friday
 
 require "treesitter"
 local c = require "color"
@@ -6,7 +6,7 @@ local p = vim.deepcopy(c.palette)
 local p2 = vim.deepcopy(c.palette)
 
   p.black.g    = "#181818"
-  p.dblue.g    = "#242424"
+  p.dblue.g    = "#303030"
   p.dgrey.g    = "#505050"
   p.grey.g     = "#707070"
   p.white.g    = "#c0b0b0"
@@ -17,7 +17,7 @@ local p2 = vim.deepcopy(c.palette)
   p.red.g      = "#a88060"
   p.yellow.g   = "#60a060"
   p.cyan.g     = "#80a0d0"
-  p.magenta.g  = "#c07090"
+  p.magenta.g  = "#c080a0"
 
 c.apply {
   canvas     = p.black, 
