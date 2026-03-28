@@ -9,6 +9,9 @@
 
 ## Colorschemes
 
+### wet
+![wet](pics/wet.png)
+
 ### rain
 ![rain](pics/rain.png)
 
@@ -21,6 +24,3 @@
 
 ### mellow
 ![mellow](pics/mellow.png)
-
-### nature
-![nature](pics/nature.png)
