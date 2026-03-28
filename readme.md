@@ -9,6 +9,9 @@
 
 ## Colorschemes
 
+### rain
+![rain](pics/rain.png)
+
 ### deep
 ![deep](pics/deep.png)
 
