@@ -490,6 +490,13 @@ type: (generic_type
 type: (generic_type 
   type_arguments: (type_arguments 
     (type_identifier) @type.parameter))
-type: (generic_type 
-  type_arguments: (type_arguments 
-    (primitive_type) @type.parameter))
+
+type_arguments: (type_arguments 
+  (primitive_type) @type.parameter)
+
+
+(attribute_item
+  (attribute
+    (identifier)
+    arguments: (token_tree
+      (identifier) @variable)))

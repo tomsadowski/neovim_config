@@ -9,6 +9,9 @@
 
 ## Colorschemes
 
+### sunshower
+![sunshower](pics/sunshower.png)
+
 ### wet
 ![wet](pics/wet.png)
 
