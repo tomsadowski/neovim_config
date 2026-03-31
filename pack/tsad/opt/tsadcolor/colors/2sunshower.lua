@@ -1,23 +1,23 @@
--- today
+-- sunshower
 
 require "treesitter"
 local c = require "color"
 local p = vim.deepcopy(c.palette)
 local p2 = vim.deepcopy(c.palette)
 
-  p.black.g    = "#181818"
-  p.dblue.g    = "#404040"
-  p.dgrey.g    = "#505050"
-  p.grey.g     = "#808080"
-  p.white.g    = "#e0e0d8"
+  p.black.g    = "#161616"
+  p.dblue.g    = "#242424"
+  p.dgrey.g    = "#4c4c4c"
+  p.grey.g     = "#606060"
+  p.white.g    = "#c8c0b8"
 
-  p.dyellow.g  = "#283008"
+  p.dyellow.g  = "#203018"
   p.dcyan.g    = "#103040"
 
-  p.red.g      = "#e09060"
-  p.yellow.g   = "#b0d040"
-  p.cyan.g     = "#80d8f0"
-  p.magenta.g  = "#e088e0"
+  p.red.g      = "#b86830"
+  p.yellow.g   = "#809816"
+  p.cyan.g     = "#50a0e0"
+  p.magenta.g  = "#e058a0"
 
 c.apply {
   canvas     = p.black, 
