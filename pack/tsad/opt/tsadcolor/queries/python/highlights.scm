@@ -10,8 +10,8 @@ function: (attribute
   attribute: (identifier))
 
 
-((identifier) @constructor
- (#match? @constructor "^[A-Z]"))
+;((identifier) @constructor
+; (#match? @constructor "^[A-Z]"))
 
 ((identifier) @constant
  (#match? @constant "^[A-Z][A-Z_]*$"))

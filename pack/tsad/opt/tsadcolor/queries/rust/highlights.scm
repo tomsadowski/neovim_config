@@ -139,6 +139,9 @@
 (assignment_expression 
   right: (identifier) @variable)
 
+(if_expression
+  (identifier) @variable)
+
 (let_declaration
   value: (identifier) @variable)
 
@@ -449,11 +452,8 @@
   (mutable_specifier)
   (identifier) @variable))
 
-((use_list)              @normal (#set! priority 101))
 
-((scoped_use_list)       @normal (#set! priority 101))
 
-;(use_declaration       @normal (#set! priority 101))
 
 ((identifier) @type (#any-of? @type "Some" "None" "Ok" "Err"))
 
@@ -494,9 +494,29 @@ type: (generic_type
 type_arguments: (type_arguments 
   (primitive_type) @type.parameter)
 
-
 (attribute_item
   (attribute
     (identifier)
     arguments: (token_tree
       (identifier) @variable)))
+
+((scoped_use_list) 
+ path: (identifier) @normal (#set! priority 105))
+(use_list 
+  (self) @type (#set! priority 105))
+(use_list 
+  (identifier) @type (#set! priority 105))
+(use_list 
+  (scoped_identifier
+    path: (identifier) @normal
+    name: (identifier) @type) (#set! priority 105))
+(scoped_use_list      
+  path: (scoped_identifier 
+    name: (identifier) @normal)) (#set! priority 105)
+(use_declaration      
+  argument: (scoped_identifier 
+    path: (identifier) @normal (#set! priority 105)
+    name: (identifier) @type)) (#set! priority 105)
+(use_declaration      
+  argument: (scoped_identifier 
+    name: (identifier) @type)) (#set! priority 105)
