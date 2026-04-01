@@ -11,19 +11,3 @@
 
 ### sunshower
 ![sunshower](pics/sunshower.png)
-
-### wet
-![wet](pics/wet.png)
-
-### rain
-![rain](pics/rain.png)
-
-### deep
-![deep](pics/deep.png)
-
-### soaked
-![soaked_rust](pics/soaked_rust.png)
-![soaked_lua](pics/soaked_lua.png)
-
-### mellow
-![mellow](pics/mellow.png)
