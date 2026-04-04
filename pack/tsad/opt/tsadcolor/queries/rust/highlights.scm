@@ -199,6 +199,9 @@
 (block 
   (identifier)  @variable)
 
+(const_item 
+  name: (identifier)  @variable)
+
 (closure_parameters 
   (_) @variable.parameter)
 
